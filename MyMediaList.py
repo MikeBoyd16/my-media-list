@@ -7,7 +7,8 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        my_media_list = {}
+        self.my_media_list = {}
+        self.media_selection = None
 
         # Initialize window title and dimensions
         self.title = "MyMediaList"
@@ -25,7 +26,8 @@ class MyListWindow(QMainWindow):
 
         # Initialize window
         self.init_window()
-        self.select_media = SelectMedia()
+        self.add_media = AddMedia()
+        self.select_media = SelectMedia(self.add_media)
 
     def init_window(self):
         # Add menu
@@ -76,18 +78,18 @@ class MyListWindow(QMainWindow):
 
         for line in file:
             line = line.replace("\n", "")
-            self.movie_list.append(line)
+            self.my_media_list.append(line)
 
-        for i in range(len(self.movie_list)):
-            movie = QListWidgetItem(self.movie_list[i])
-            self.movie_list_area.addItem(movie)
+        for i in range(len(self.my_media_list)):
+            media = QListWidgetItem(self.my_media_list[i])
+            self.media_list_area.addItem(media)
 
     def go_to_select(self):
         self.select_media.show()
 
 
 class SelectMedia(QDialog):
-    def __init__(self):
+    def __init__(self, add_media):
         super().__init__()
         self.title = "Media Select"
         self.left = 100
@@ -95,6 +97,7 @@ class SelectMedia(QDialog):
         self.width = 200
         self.height = 200
 
+        self.add_media = add_media
         self.select_media_combo = QComboBox(self)
         self.ok = QPushButton("OK", self)
 
@@ -123,6 +126,64 @@ class SelectMedia(QDialog):
         return self.select_media_combo.currentText()
 
     def close_dialog(self):
+        self.add_media.show()
+        self.hide()
+
+
+class AddMedia(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.labels = {"Type": QLabel(), "Favorite": QLabel(), "Name": QLabel(),
+                       "Artist": QLabel(), "Album": QLabel(), "Duration": QLabel(),
+                       "Genres": QLabel(), "Record Labels": QLabel(), "Producers": QLabel()}
+        self.inputs = {"Type": QComboBox(), "Favorite": QComboBox(), "Name": QLineEdit(),
+                       "Artist": QLineEdit(), "Album": QLineEdit(), "Duration": QLineEdit(),
+                       "Genres": QLineEdit(), "Record Labels": QLineEdit(), "Producers": QLineEdit()}
+        self.init_window_properties()
+        self.init_widgets()
+        self.init_window()
+
+    def init_window_properties(self):
+        self.title = "Add Music"
+        self.left = 100
+        self.top = 100
+        self.width = 250
+        self.height = 600
+
+    def init_widgets(self):
+        self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
+                                      "Reissue", "Live Album", "Remix Album"])
+        self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
+
+        for key in self.labels:
+            self.labels[key].setText(key)
+
+        self.submit = QPushButton("Submit", self)
+        self.submit.setFixedHeight(40)
+
+    def init_layout(self):
+        grid_layout = QGridLayout()
+
+        row = 0
+        for key in self.labels:
+            grid_layout.addWidget(self.labels[key], row, 0)
+            grid_layout.addWidget(self.inputs[key], row, 1)
+            row += 1
+
+        group_box = QGroupBox("")
+        group_box.setLayout(grid_layout)
+        v_box_layout = QVBoxLayout()
+        v_box_layout.addWidget(group_box)
+        v_box_layout.addWidget(self.submit)
+        self.setLayout(v_box_layout)
+
+    def init_window(self):
+        self.setWindowTitle(self.title)
+        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
+        self.init_layout()
+
+    def submit_media(self):
         self.hide()
 
 

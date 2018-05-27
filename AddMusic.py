@@ -1,43 +1,64 @@
-import sys
-from PyQt5 import QtCore, QtGui
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QAction, \
-    QFileDialog, QTextEdit, QListWidget, QListWidgetItem, QLineEdit, QComboBox
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 from SelectMedia import *
 
 
 class AddMusic(QMainWindow):
     def __init__(self):
-        super().__init__()
+        super(AddMusic, self).__init__()
+        self.labels = {"Type": QLabel(), "Favorite": QLabel(), "Name": QLabel(),
+                       "Artist": QLabel(), "Album": QLabel(), "Duration": QLabel(),
+                       "Genres": QLabel(), "Record Labels": QLabel(), "Producers": QLabel()}
+        self.inputs = {"Type": QComboBox(), "Favorite": QComboBox(), "Name": QLineEdit(),
+                       "Artist": QLineEdit(), "Album": QLineEdit(), "Duration": QLineEdit(),
+                       "Genres": QLineEdit(), "Record Labels": QLineEdit(), "Producers": QLineEdit()}
+        self.init_window_properties()
+        self.central_widget = QWidget()
+        self.setCentralWidget(self.central_widget)
+        self.init_widgets()
+        self.init_window()
 
-        # Initialize window title and dimensions
+    def init_window_properties(self):
         self.title = "Add Music"
         self.left = 100
         self.top = 100
-        self.width = 770
-        self.height = 580
+        self.width = 250
+        self.height = 600
 
-        # Initialize widgets
-        self.select_media_combo = QComboBox(self)
-        self.back = QPushButton("Back", self)
-        self.next = QPushButton("Next", self)
+    def init_widgets(self):
+        self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
+                                      "Reissue", "Live Album", "Remix Album"])
+        self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
 
-        # Initialize window
-        self.init_window()
+        for key in self.labels:
+            self.labels[key].setText(key)
+
+        self.submit = QPushButton("Submit", self)
+        self.submit.setFixedHeight(40)
+
+    def init_layout(self):
+        grid_layout = QGridLayout(self.central_widget)
+
+        row = 0
+        for key in self.labels:
+            grid_layout.addWidget(self.labels[key], row, 0)
+            grid_layout.addWidget(self.inputs[key], row, 1)
+            row += 1
+
+        group_box = QGroupBox("")
+        group_box.setLayout(grid_layout)
+        v_box_layout = QVBoxLayout(self.central_widget)
+        v_box_layout.addWidget(group_box)
+        v_box_layout.addWidget(self.submit)
+        self.setLayout(v_box_layout)
 
     def init_window(self):
-        # Set window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
-
-        # Set back button dimensions and positioning
-        self.back.move(250, 325)
-        self.back.clicked.connect(self.go_to_select_media)
-
-        # Set next button dimensions and positioning
-        self.next.move(400, 325)
-
-        # CSS
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
+        self.init_layout()
 
-    def go_to_select_media(self):
+    def submit_media(self):
+
         self.hide()

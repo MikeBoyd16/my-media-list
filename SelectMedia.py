@@ -25,13 +25,6 @@ class SelectMedia(QMainWindow):
         self.back = QPushButton("Back", self)
         self.next = QPushButton("Next", self)
 
-        # Initialize Add Media windows
-        self.add_movie = AddMovie()
-        self.add_tv = AddTV()
-        self.add_music = AddMusic()
-        self.add_book = AddBook()
-        self.add_video_game = AddVideoGame()
-
         # Initialize window
         self.init_window()
 

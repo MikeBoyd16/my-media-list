@@ -1,15 +1,13 @@
 import sys
-from PyQt5 import QtCore, QtGui
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QAction, QFileDialog, QTextEdit, QListWidget, \
-    QListWidgetItem, QLineEdit, QComboBox
-from SelectMedia import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 
 class MyListWindow(QMainWindow):
-    movie_list = []
-
     def __init__(self):
         super().__init__()
+        my_media_list = {}
 
         # Initialize window title and dimensions
         self.title = "MyMediaList"
@@ -48,21 +46,21 @@ class MyListWindow(QMainWindow):
         self.movie_details_area.setGeometry(350, 50, 350, 450)
 
         # Set button dimensions and positioning
-        self.add_movie.setIcon(QtGui.QIcon("add_movie.png"))
-        self.add_movie.setIconSize(QtCore.QSize(24, 24))
+        self.add_movie.setIcon(QIcon("add_movie.png"))
+        self.add_movie.setIconSize(QSize(24, 24))
         self.add_movie.setFixedSize(50, 50)
         self.add_movie.move(10, 100)
         self.add_movie.setStyleSheet("QPushButton {background: #61E722;}")
         self.add_movie.clicked.connect(self.go_to_select)
 
-        self.remove_movie.setIcon(QtGui.QIcon("remove_movie.png"))
-        self.remove_movie.setIconSize(QtCore.QSize(24, 24))
+        self.remove_movie.setIcon(QIcon("remove_movie.png"))
+        self.remove_movie.setIconSize(QSize(24, 24))
         self.remove_movie.setFixedSize(50, 50)
         self.remove_movie.move(10, 180)
         self.remove_movie.setStyleSheet("QPushButton {background: #E72222;}")
 
-        self.edit_movie.setIcon(QtGui.QIcon("edit_movie.png"))
-        self.edit_movie.setIconSize(QtCore.QSize(24, 24))
+        self.edit_movie.setIcon(QIcon("edit_movie.png"))
+        self.edit_movie.setIconSize(QSize(24, 24))
         self.edit_movie.setFixedSize(50, 50)
         self.edit_movie.move(10, 260)
         self.edit_movie.setStyleSheet("QPushButton {background: #E7E122;}")
@@ -86,6 +84,46 @@ class MyListWindow(QMainWindow):
 
     def go_to_select(self):
         self.select_media.show()
+
+
+class SelectMedia(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.title = "Media Select"
+        self.left = 100
+        self.top = 100
+        self.width = 200
+        self.height = 200
+
+        self.select_media_combo = QComboBox(self)
+        self.ok = QPushButton("OK", self)
+
+        self.init_window()
+
+    def init_layout(self):
+        grid_layout = QGridLayout()
+        grid_layout.addWidget(self.select_media_combo, 0, 0)
+        grid_layout.addWidget(self.ok, 1, 0)
+        group_box = QGroupBox("")
+        group_box.setLayout(grid_layout)
+        v_box_layout = QVBoxLayout()
+        v_box_layout.addWidget(group_box)
+        self.setLayout(v_box_layout)
+
+    def init_window(self):
+        self.setWindowTitle(self.title)
+        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
+        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.ok.move(50, 50)
+        self.ok.clicked.connect(self.close_dialog)
+        self.select_media_combo.addItems(["Movie", "TV", "Music", "Book", "Video Game"])
+        self.init_layout()
+
+    def get_media_selection(self):
+        return self.select_media_combo.currentText()
+
+    def close_dialog(self):
+        self.hide()
 
 
 def main():

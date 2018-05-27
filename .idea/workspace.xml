@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="Remove">
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AddBook.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AddMovie.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AddMusic.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AddTV.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AddVideoGame.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/SelectMedia.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
+      <change beforePath="$PROJECT_DIR$/add_movie.png" afterPath="$PROJECT_DIR$/add_media.png" />
+      <change beforePath="$PROJECT_DIR$/edit_movie.png" afterPath="$PROJECT_DIR$/edit_media.png" />
+      <change beforePath="$PROJECT_DIR$/remove_movie.png" afterPath="$PROJECT_DIR$/remove_media.png" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,10 +20,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <state relative-caret-position="765">
+              <caret line="63" column="49" lean-forward="false" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
               <folding>
-                <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
               </folding>
             </state>
           </provider>
@@ -356,18 +355,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527459523939</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Remove unnecessary modules">
+      <created>1527459736323</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527459736323</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27818757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27818757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.50421494" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.49578503" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -400,6 +406,32 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -408,7 +440,8 @@
     <MESSAGE value="Add movie labels and line edits" />
     <MESSAGE value="Move MediaSelect class to MyMediaList module and add Music form" />
     <MESSAGE value="Add the AddMedia class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the AddMedia class" />
+    <MESSAGE value="Remove unnecessary modules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary modules" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -452,7 +485,8 @@
         <state relative-caret-position="1241">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -509,7 +543,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -566,7 +601,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -623,7 +659,8 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -680,7 +717,8 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -737,7 +775,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -747,7 +786,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -757,7 +797,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>
@@ -813,10 +854,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        <state relative-caret-position="765">
+          <caret line="63" column="49" lean-forward="false" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
-            <marker date="1527459499983" expanded="true" signature="6410:6570" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1527459932172" expanded="true" signature="6410:6570" ph="..." />
           </folding>
         </state>
       </provider>

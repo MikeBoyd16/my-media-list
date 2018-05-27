@@ -48,20 +48,20 @@ class MyListWindow(QMainWindow):
         self.movie_details_area.setGeometry(350, 50, 350, 450)
 
         # Set button dimensions and positioning
-        self.add_movie.setIcon(QIcon("add_movie.png"))
+        self.add_movie.setIcon(QIcon("add_media.png"))
         self.add_movie.setIconSize(QSize(24, 24))
         self.add_movie.setFixedSize(50, 50)
         self.add_movie.move(10, 100)
         self.add_movie.setStyleSheet("QPushButton {background: #61E722;}")
         self.add_movie.clicked.connect(self.go_to_select)
 
-        self.remove_movie.setIcon(QIcon("remove_movie.png"))
+        self.remove_movie.setIcon(QIcon("remove_media.png"))
         self.remove_movie.setIconSize(QSize(24, 24))
         self.remove_movie.setFixedSize(50, 50)
         self.remove_movie.move(10, 180)
         self.remove_movie.setStyleSheet("QPushButton {background: #E72222;}")
 
-        self.edit_movie.setIcon(QIcon("edit_movie.png"))
+        self.edit_movie.setIcon(QIcon("edit_media.png"))
         self.edit_movie.setIconSize(QSize(24, 24))
         self.edit_movie.setFixedSize(50, 50)
         self.edit_movie.move(10, 260)

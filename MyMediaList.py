@@ -1,4 +1,5 @@
 import sys
+import json
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -18,11 +19,11 @@ class MyListWindow(QMainWindow):
         self.height = 580
 
         # Initialize widgets
-        self.movie_list_area = QListWidget(self)
-        self.movie_details_area = QTextEdit(self)
-        self.add_movie = QPushButton("", self)
-        self.remove_movie = QPushButton("", self)
-        self.edit_movie = QPushButton("", self)
+        self.media_list_area = QListWidget(self)
+        self.media_details_area = QTextEdit(self)
+        self.add_media = QPushButton("", self)
+        self.remove_media = QPushButton("", self)
+        self.edit_media = QPushButton("", self)
 
         # Initialize window
         self.init_window()
@@ -39,50 +40,52 @@ class MyListWindow(QMainWindow):
         open_file.triggered.connect(self.import_file)
         file_menu.addAction(open_file)
 
+        save_file = QAction("&Export List", self)
+        save_file.triggered.connect(self.export_file)
+        file_menu.addAction(save_file)
+
         # Set window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
         # Set widget dimensions
-        self.movie_list_area.setGeometry(70, 50, 250, 450)
-        self.movie_details_area.setGeometry(350, 50, 350, 450)
+        self.media_list_area.setGeometry(70, 50, 250, 450)
+        self.media_details_area.setGeometry(350, 50, 350, 450)
 
         # Set button dimensions and positioning
-        self.add_movie.setIcon(QIcon("add_media.png"))
-        self.add_movie.setIconSize(QSize(24, 24))
-        self.add_movie.setFixedSize(50, 50)
-        self.add_movie.move(10, 100)
-        self.add_movie.setStyleSheet("QPushButton {background: #61E722;}")
-        self.add_movie.clicked.connect(self.go_to_select)
+        self.add_media.setIcon(QIcon("add_media.png"))
+        self.add_media.setIconSize(QSize(24, 24))
+        self.add_media.setFixedSize(50, 50)
+        self.add_media.move(10, 100)
+        self.add_media.setStyleSheet("QPushButton {background: #61E722;}")
+        self.add_media.clicked.connect(self.go_to_select)
 
-        self.remove_movie.setIcon(QIcon("remove_media.png"))
-        self.remove_movie.setIconSize(QSize(24, 24))
-        self.remove_movie.setFixedSize(50, 50)
-        self.remove_movie.move(10, 180)
-        self.remove_movie.setStyleSheet("QPushButton {background: #E72222;}")
+        self.remove_media.setIcon(QIcon("remove_media.png"))
+        self.remove_media.setIconSize(QSize(24, 24))
+        self.remove_media.setFixedSize(50, 50)
+        self.remove_media.move(10, 180)
+        self.remove_media.setStyleSheet("QPushButton {background: #E72222;}")
 
-        self.edit_movie.setIcon(QIcon("edit_media.png"))
-        self.edit_movie.setIconSize(QSize(24, 24))
-        self.edit_movie.setFixedSize(50, 50)
-        self.edit_movie.move(10, 260)
-        self.edit_movie.setStyleSheet("QPushButton {background: #E7E122;}")
+        self.edit_media.setIcon(QIcon("edit_media.png"))
+        self.edit_media.setIconSize(QSize(24, 24))
+        self.edit_media.setFixedSize(50, 50)
+        self.edit_media.move(10, 260)
+        self.edit_media.setStyleSheet("QPushButton {background: #E7E122;}")
 
         # Disable text editing
-        self.movie_details_area.setDisabled(True)
+        self.media_details_area.setDisabled(True)
 
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
 
     def import_file(self):
         file_name = QFileDialog.getOpenFileName(self, "Import File")
         file = open(file_name[0], "r")
+        self.my_media_list = json.load(file)
 
-        for line in file:
-            line = line.replace("\n", "")
-            self.my_media_list.append(line)
-
-        for i in range(len(self.my_media_list)):
-            media = QListWidgetItem(self.my_media_list[i])
-            self.media_list_area.addItem(media)
+    def export_file(self):
+        file_name = QFileDialog.getSaveFileName(self, "Import File")
+        file = open(file_name[0], "w")
+        json.dump(self.my_media_list, file)
 
     def go_to_select(self):
         self.select_media.show()

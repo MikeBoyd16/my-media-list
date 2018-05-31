@@ -9,19 +9,19 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.central_widget = QWidget()
+        self.setCentralWidget(self.central_widget)
+
         self.my_media_list = {}
 
         self.title = "MyMediaList"
         self.left = 100
         self.top = 100
-        self.width = 770
-        self.height = 580
+        self.width = 500
+        self.height = 600
 
         self.media_list_area = QListWidget(self)
         self.media_details_area = QTextEdit(self)
-        self.add_media = QPushButton("", self)
-        self.remove_media = QPushButton("", self)
-        self.edit_media = QPushButton("", self)
 
         self.init_window()
 
@@ -30,19 +30,19 @@ class MyListWindow(QMainWindow):
         file_menu = main_menu.addMenu("File")
         edit_menu = main_menu.addMenu("Edit")
 
-        open_file = QAction("&Import List", self)
+        open_file = QAction("Import List", self)
         open_file.triggered.connect(self.import_file)
         file_menu.addAction(open_file)
 
-        save_file = QAction("&Export List", self)
+        save_file = QAction("Export List", self)
         save_file.triggered.connect(self.export_file)
         file_menu.addAction(save_file)
 
-        add_media = QAction("&Add Media", self)
+        add_media = QAction("Add Media", self)
         add_media.triggered.connect(self.add_media_record)
         edit_menu.addAction(add_media)
 
-        edit_media = QAction("&Edit Media", self)
+        edit_media = QAction("Edit Media", self)
         edit_menu.addAction(edit_media)
 
         remove_media = QAction("Remove Media", self)
@@ -51,13 +51,20 @@ class MyListWindow(QMainWindow):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
-        self.media_list_area.setGeometry(70, 50, 250, 450)
-        self.media_details_area.setGeometry(350, 50, 350, 450)
-
         self.media_list_area.itemClicked.connect(self.show_media_record)
         self.media_details_area.setDisabled(True)
 
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
+        self.init_layout()
+
+    def init_layout(self):
+        box_layout = QHBoxLayout(self.central_widget)
+        box_layout.addWidget(self.media_list_area)
+        box_layout.addWidget(self.media_details_area)
+        box_layout.setContentsMargins(0, 0, 0, 0)
+        box_layout.setSpacing(0)
+
+        self.setLayout(box_layout)
 
     def update_list(self):
         self.media_list_area.clear()

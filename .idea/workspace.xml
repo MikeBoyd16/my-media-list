@@ -17,11 +17,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="54" column="62" lean-forward="false" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+                <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
               </folding>
             </state>
           </provider>
@@ -84,7 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -97,6 +96,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527556177457</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add datetime data to media records">
+      <created>1527734414833</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1527734414833</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -462,7 +469,8 @@
     <MESSAGE value="Rename images" />
     <MESSAGE value="Add import and export options for json files and rename variables" />
     <MESSAGE value="Add media record input to list area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add media record input to list area" />
+    <MESSAGE value="Add datetime data to media records" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add datetime data to media records" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -480,7 +488,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -497,7 +505,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -514,7 +522,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -531,7 +539,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -548,7 +556,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -565,7 +573,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -576,7 +584,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -587,7 +595,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>
@@ -604,17 +612,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5491">
           <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="213" column="0" lean-forward="true" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="54" column="62" lean-forward="false" selection-start-line="54" selection-start-column="62" selection-end-line="54" selection-end-column="62" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1527733341016" expanded="true" signature="7666:7826" ph="..." />
+            <marker date="1527795497851" expanded="true" signature="7174:7334" ph="..." />
           </folding>
         </state>
       </provider>

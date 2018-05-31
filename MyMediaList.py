@@ -28,6 +28,7 @@ class MyListWindow(QMainWindow):
     def init_window(self):
         main_menu = self.menuBar()
         file_menu = main_menu.addMenu("File")
+        edit_menu = main_menu.addMenu("Edit")
 
         open_file = QAction("&Import List", self)
         open_file.triggered.connect(self.import_file)
@@ -37,30 +38,21 @@ class MyListWindow(QMainWindow):
         save_file.triggered.connect(self.export_file)
         file_menu.addAction(save_file)
 
+        add_media = QAction("&Add Media", self)
+        add_media.triggered.connect(self.add_media_record)
+        edit_menu.addAction(add_media)
+
+        edit_media = QAction("&Edit Media", self)
+        edit_menu.addAction(edit_media)
+
+        remove_media = QAction("Remove Media", self)
+        edit_menu.addAction(remove_media)
+
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
         self.media_list_area.setGeometry(70, 50, 250, 450)
         self.media_details_area.setGeometry(350, 50, 350, 450)
-
-        self.add_media.setIcon(QIcon("add_media.png"))
-        self.add_media.setIconSize(QSize(24, 24))
-        self.add_media.setFixedSize(50, 50)
-        self.add_media.move(10, 100)
-        self.add_media.setStyleSheet("QPushButton {background: #61E722;}")
-        self.add_media.clicked.connect(self.add_media_record)
-
-        self.remove_media.setIcon(QIcon("remove_media.png"))
-        self.remove_media.setIconSize(QSize(24, 24))
-        self.remove_media.setFixedSize(50, 50)
-        self.remove_media.move(10, 180)
-        self.remove_media.setStyleSheet("QPushButton {background: #E72222;}")
-
-        self.edit_media.setIcon(QIcon("edit_media.png"))
-        self.edit_media.setIconSize(QSize(24, 24))
-        self.edit_media.setFixedSize(50, 50)
-        self.edit_media.move(10, 260)
-        self.edit_media.setStyleSheet("QPushButton {background: #E7E122;}")
 
         self.media_list_area.itemClicked.connect(self.show_media_record)
         self.media_details_area.setDisabled(True)

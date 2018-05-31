@@ -1,5 +1,6 @@
 import sys
 import json
+import datetime
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
@@ -61,6 +62,7 @@ class MyListWindow(QMainWindow):
         self.edit_media.move(10, 260)
         self.edit_media.setStyleSheet("QPushButton {background: #E7E122;}")
 
+        self.media_list_area.itemClicked.connect(self.show_media_record)
         self.media_details_area.setDisabled(True)
 
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
@@ -86,9 +88,15 @@ class MyListWindow(QMainWindow):
         select_media = SelectMedia()
         select_media.show()
         select_media.exec_()
-        self.my_media_list[select_media.get_media_selection() + "-" +
+        self.my_media_list[str(select_media.temp_input["Month Entered"]) + "." +
+                           str(select_media.temp_input["Day Entered"]) + "." +
+                           str(select_media.temp_input["Year Entered"]) + "-" +
+                           select_media.temp_input["Media"] + "-" +
                            select_media.temp_input["Name"]] = select_media.temp_input
         self.update_list()
+
+    def show_media_record(self):
+        pass
 
 
 class SelectMedia(QDialog):
@@ -133,6 +141,10 @@ class SelectMedia(QDialog):
         add_media_record.exec_()
         self.temp_input = add_media_record.temp_input
         self.temp_input["Media"] = self.select_media_combo.currentText()
+        now = datetime.datetime.now()
+        self.temp_input["Month Entered"] = now.month
+        self.temp_input["Day Entered"] = now.day
+        self.temp_input["Year Entered"] = now.year
         self.hide()
 
 

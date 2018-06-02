@@ -73,8 +73,7 @@ class MyListWindow(QMainWindow):
     def update_list(self):
         self.media_list_area.clear()
         for key in self.my_media_list:
-            self.media_list_area.addItem("[" + self.my_media_list[key]["Media"] + "] " +
-                                         self.my_media_list[key]["Name"])
+            self.media_list_area.addItem(key)
 
     def import_file(self):
         file_name = QFileDialog.getOpenFileName(self, "Import File")
@@ -91,15 +90,19 @@ class MyListWindow(QMainWindow):
         select_media = SelectMedia()
         select_media.show()
         select_media.exec_()
-        self.my_media_list[str(select_media.temp_input["Month Entered"]) + "." +
-                           str(select_media.temp_input["Day Entered"]) + "." +
-                           str(select_media.temp_input["Year Entered"]) + "-" +
+        self.my_media_list[select_media.temp_input["Name"] + "-" +
                            select_media.temp_input["Media"] + "-" +
-                           select_media.temp_input["Name"]] = select_media.temp_input
+                           str(select_media.temp_input["Month Entered"]) + "." +
+                           str(select_media.temp_input["Day Entered"]) + "." +
+                           str(select_media.temp_input["Year Entered"])] = select_media.temp_input
         self.update_list()
 
     def show_media_record(self):
-        pass
+        self.media_details_area.clear()
+        key = self.media_list_area.currentItem().text()
+        record = self.my_media_list[key]
+        for label in record:
+            self.media_details_area.append(label + ": " + str(record[label]) + "\n")
 
 
 class SelectMedia(QDialog):

@@ -15,15 +15,13 @@ class MyListWindow(QMainWindow):
         self.my_media_list = {}
 
         self.title = "MyMediaList"
-        self.left = 100
-        self.top = 100
-        self.width = 500
-        self.height = 600
+        self.left, self.top, self.width, self.height = 100, 100, 500, 600
 
         self.media_list_area = QListWidget(self)
         self.media_details_area = QTextEdit(self)
 
         self.init_window()
+        self.center()
 
     def init_window(self):
         main_menu = self.menuBar()
@@ -56,6 +54,12 @@ class MyListWindow(QMainWindow):
 
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
         self.init_layout()
+
+    def center(self):
+        frame_gm = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_gm.moveCenter(center_point)
+        self.move(frame_gm.topLeft())
 
     def init_layout(self):
         box_layout = QHBoxLayout(self.central_widget)

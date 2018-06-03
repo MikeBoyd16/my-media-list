@@ -21,7 +21,7 @@ class MyListWindow(QMainWindow):
         self.media_details_area = QTextEdit(self)
 
         self.init_window()
-        self.center()
+        self.center_window()
 
     def init_window(self):
         main_menu = self.menuBar()
@@ -55,11 +55,11 @@ class MyListWindow(QMainWindow):
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
         self.init_layout()
 
-    def center(self):
-        frame_gm = self.frameGeometry()
+    def center_window(self):
+        frame_geometry = self.frameGeometry()
         center_point = QDesktopWidget().availableGeometry().center()
-        frame_gm.moveCenter(center_point)
-        self.move(frame_gm.topLeft())
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
     def init_layout(self):
         box_layout = QHBoxLayout(self.central_widget)
@@ -119,6 +119,7 @@ class SelectMedia(QDialog):
         self.ok = QPushButton("OK", self)
 
         self.init_window()
+        self.center_window()
 
     def init_layout(self):
         grid_layout = QGridLayout()
@@ -138,6 +139,12 @@ class SelectMedia(QDialog):
         self.ok.clicked.connect(self.go_to_add_media)
         self.select_media_combo.addItems(["Movie", "TV", "Music", "Book", "Video Game"])
         self.init_layout()
+
+    def center_window(self):
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
     def get_media_selection(self):
         return self.select_media_combo.currentText()
@@ -167,6 +174,7 @@ class AddMedia(QDialog):
         self.init_window_properties()
         self.init_widgets()
         self.init_window()
+        self.center_window()
 
     def init_window_properties(self):
         self.title = "Add Music"
@@ -208,6 +216,12 @@ class AddMedia(QDialog):
         self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
         self.submit.clicked.connect(self.submit_media)
         self.init_layout()
+
+    def center_window(self):
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
     def submit_media(self):
         for key in self.inputs:

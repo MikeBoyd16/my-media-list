@@ -150,7 +150,7 @@ class SelectMedia(QDialog):
         return self.select_media_combo.currentText()
 
     def go_to_add_media(self):
-        add_media_record = AddMedia()
+        add_media_record = AddMedia(self.get_media_selection())
         add_media_record.exec_()
         self.temp_input = add_media_record.temp_input
         self.temp_input["Media"] = self.select_media_combo.currentText()
@@ -162,15 +162,123 @@ class SelectMedia(QDialog):
 
 
 class AddMedia(QDialog):
-    def __init__(self):
+    music_widgets = \
+        {
+            "Name": "line",
+            "Artist": "line",
+            "Album": "line",
+            "Released": "line",
+            "Duration": "line",
+            "Genre": "combo",
+            "Record Label": "line",
+            "Songwriter": "line",
+            "Producer": "line",
+            "Type": "combo",
+            "Favorite": "combo",
+        }
+    audiobook_widgets = \
+        {
+            "Title": "line",
+            "Series": "line",
+            "Author": "line",
+            "Narrator": "line",
+            "Year": "line",
+            "Genre": "combo",
+            "Listening Length": "line",
+            "Score": "combo",
+            "Tags": "line"
+        }
+    movie_widgets = \
+        {
+            "Title": "line",
+            "Year": "line",
+            "Duration": "line",
+            "MPAA": "combo",
+            "Genre": "combo",
+            "Actors": "line",
+            "Director": "line",
+            "Writers": "line",
+            "Producers": "line",
+            "Quality Score": "combo",
+            "Compatibility Score": "combo",
+            "Tags": "line"
+        }
+    tv_widgets = \
+        {
+            "Title": "line",
+            "Year": "line",
+            "Season": "combo",
+            "Episode": "combo",
+            "Duration": "line",
+            "Content Rating": "combo",
+            "Genre": "combo",
+            "Actors": "line",
+            "Creators": "line",
+            "Writers": "line",
+            "Producers": "line",
+            "Quality Score": "combo",
+            "Compatibility Score": "combo",
+            "Tags": "line"
+        }
+    anime_widgets = \
+        {
+            "Title": "line",
+            "Year": "line",
+            "Type": "combo",
+            "Episode": "line",
+            "Duration": "line",
+            "Content Rating": "combo",
+            "Source": "combo",
+            "Genre": "combo",
+            "Studio": "line",
+            "Producers": "line",
+            "Quality Score": "combo",
+            "Compatibility Score": "combo",
+            "Tags": "line"
+        }
+    book_widgets = \
+        {
+            "Title": "line",
+            "Series": "line",
+            "Author": "line",
+            "Year": "line",
+            "Genre": "combo",
+            "Pages": "line",
+            "Score": "combo",
+            "Tags": "line"
+        }
+    manga_widgets = \
+        {
+            "Title": "line",
+            "Volume": "line",
+            "Genre": "combo",
+            "Writer": "line",
+            "Illustrator": "line",
+            "Publisher": "line",
+            "Demographic": "combo"
+        }
+    video_game_widgets = \
+        {
+            "Title": "line",
+            "Platform": "combo",
+            "Year": "line", "Genres":
+            "combo", "Developers": "line",
+            "Publisher": "line",
+            "Hours Played": "line",
+            "Campaign Finished?": "combo",
+            "Achievement Progress": "line",
+            "Quality Score": "combo",
+            "Compatibility Score": "combo",
+            "Tags": "line",
+            "Comments": "line"
+        }
+
+    def __init__(self, media_type):
         super().__init__()
+        self.media_type = media_type
         self.temp_input = {}
-        self.labels = {"Type": QLabel(), "Favorite": QLabel(), "Name": QLabel(),
-                       "Artist": QLabel(), "Album": QLabel(), "Duration": QLabel(),
-                       "Genres": QLabel(), "Record Labels": QLabel(), "Producers": QLabel()}
-        self.inputs = {"Type": QComboBox(), "Favorite": QComboBox(), "Name": QLineEdit(),
-                       "Artist": QLineEdit(), "Album": QLineEdit(), "Duration": QLineEdit(),
-                       "Genres": QLineEdit(), "Record Labels": QLineEdit(), "Producers": QLineEdit()}
+        self.labels = {}
+        self.inputs = {}
         self.init_window_properties()
         self.init_widgets()
         self.init_window()

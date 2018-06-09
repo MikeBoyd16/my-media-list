@@ -90,12 +90,13 @@ class MyListWindow(QMainWindow):
         select_media = SelectMedia()
         select_media.show()
         select_media.exec_()
-        self.my_media_list[select_media.temp_input["Name"] + "-" +
-                           select_media.temp_input["Media"] + "-" +
-                           str(select_media.temp_input["Month Entered"]) + "." +
-                           str(select_media.temp_input["Day Entered"]) + "." +
-                           str(select_media.temp_input["Year Entered"])] = select_media.temp_input
-        self.update_list()
+        if "Title" in select_media.temp_input:  # Title as a key won't exist if the dialog is closed prematurely
+            self.my_media_list[select_media.temp_input["Title"] + "-" +
+                               select_media.temp_input["Media"] + "-" +
+                               str(select_media.temp_input["Month Entered"]) + "." +
+                               str(select_media.temp_input["Day Entered"]) + "." +
+                               str(select_media.temp_input["Year Entered"])] = select_media.temp_input
+            self.update_list()
 
     def show_media_record(self):
         self.media_details_area.clear()
@@ -166,7 +167,7 @@ class AddMedia(QDialog):
         {
             "Type": "combo",
             "Favorite": "combo",
-            "Name": "line",
+            "Title": "line",
             "Main Artist": "line",
             "Featured Artist": "line",
             "Album": "line",

@@ -164,26 +164,27 @@ class SelectMedia(QDialog):
 class AddMedia(QDialog):
     music_widgets = \
         {
+            "Type": "combo",
+            "Favorite": "combo",
             "Name": "line",
-            "Artist": "line",
+            "Main Artist": "line",
+            "Featured Artist": "line",
             "Album": "line",
             "Released": "line",
             "Duration": "line",
-            "Genre": "combo",
+            "Genres": "line",
             "Record Label": "line",
-            "Songwriter": "line",
-            "Producer": "line",
-            "Type": "combo",
-            "Favorite": "combo",
+            "Songwriters": "line",
+            "Producers": "line"
         }
     audiobook_widgets = \
         {
             "Title": "line",
             "Series": "line",
-            "Author": "line",
-            "Narrator": "line",
+            "Authors": "line",
+            "Narrators": "line",
             "Year": "line",
-            "Genre": "combo",
+            "Genres": "line",
             "Listening Length": "line",
             "Score": "combo",
             "Tags": "line"
@@ -194,9 +195,9 @@ class AddMedia(QDialog):
             "Year": "line",
             "Duration": "line",
             "MPAA": "combo",
-            "Genre": "combo",
+            "Genres": "line",
             "Actors": "line",
-            "Director": "line",
+            "Directors": "line",
             "Writers": "line",
             "Producers": "line",
             "Quality Score": "combo",
@@ -211,7 +212,7 @@ class AddMedia(QDialog):
             "Episode": "combo",
             "Duration": "line",
             "Content Rating": "combo",
-            "Genre": "combo",
+            "Genres": "line",
             "Actors": "line",
             "Creators": "line",
             "Writers": "line",
@@ -229,7 +230,7 @@ class AddMedia(QDialog):
             "Duration": "line",
             "Content Rating": "combo",
             "Source": "combo",
-            "Genre": "combo",
+            "Genres": "line",
             "Studio": "line",
             "Producers": "line",
             "Quality Score": "combo",
@@ -240,9 +241,9 @@ class AddMedia(QDialog):
         {
             "Title": "line",
             "Series": "line",
-            "Author": "line",
+            "Authors": "line",
             "Year": "line",
-            "Genre": "combo",
+            "Genres": "line",
             "Pages": "line",
             "Score": "combo",
             "Tags": "line"
@@ -251,19 +252,20 @@ class AddMedia(QDialog):
         {
             "Title": "line",
             "Volume": "line",
-            "Genre": "combo",
-            "Writer": "line",
-            "Illustrator": "line",
-            "Publisher": "line",
+            "Genres": "line",
+            "Writers": "line",
+            "Illustrators": "line",
+            "Publishers": "line",
             "Demographic": "combo"
         }
     video_game_widgets = \
         {
             "Title": "line",
             "Platform": "combo",
-            "Year": "line", "Genres":
-            "combo", "Developers": "line",
-            "Publisher": "line",
+            "Year": "line",
+            "Genres": "line",
+            "Developers": "line",
+            "Publishers": "line",
             "Hours Played": "line",
             "Campaign Finished?": "combo",
             "Achievement Progress": "line",
@@ -292,12 +294,22 @@ class AddMedia(QDialog):
         self.height = 600
 
     def init_widgets(self):
-        self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
-                                      "Reissue", "Live Album", "Remix Album"])
-        self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
+        widgets = {}
+        if self.media_type == "Music":
+            widgets = AddMedia.music_widgets
 
-        for key in self.labels:
+        for key, value in widgets.items():
+            self.labels[key] = QLabel()
             self.labels[key].setText(key)
+            if value == "line":
+                self.inputs[key] = QLineEdit()
+            elif value == "combo":
+                self.inputs[key] = QComboBox()
+
+        if self.media_type == "Music":
+            self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
+                                          "Reissue", "Live Album", "Remix Album"])
+            self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
 
         self.submit = QPushButton("Submit", self)
         self.submit.setFixedHeight(40)

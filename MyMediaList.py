@@ -349,7 +349,12 @@ class AddMedia(QDialog):
             if isinstance(self.inputs[key], QComboBox):
                 self.temp_input[key] = self.inputs[key].currentText()
             else:
-                self.temp_input[key] = self.inputs[key].text()
+                if "," in self.inputs[key].text():  # If there are multiple inputs for one category, split them
+                    input_list = self.inputs[key].text()
+                    input_list = input_list.split(",")
+                    self.temp_input[key] = input_list
+                else:
+                    self.temp_input[key] = self.inputs[key].text()
         self.hide()
 
 

@@ -1,0 +1,20 @@
+{
+	"Song 1-Music-6.9.2018": {
+		"Type": "Single",
+		"Favorite": "Yes",
+		"Title": "Song 1",
+		"Main Artist": "A",
+		"Featured Artist": "A",
+		"Album": "A",
+		"Released": "2010",
+		"Duration": "2:45",
+		"Genres": ["Electronic", "Trance", "Acoustic"],
+		"Record Label": "B",
+		"Songwriters": ["C", "D", "E"],
+		"Producers": ["A", "B"],
+		"Media": "Music",
+		"Month Entered": 6,
+		"Day Entered": 9,
+		"Year Entered": 2018
+	}
+}

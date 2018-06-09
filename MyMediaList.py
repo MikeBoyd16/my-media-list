@@ -50,10 +50,10 @@ class MyListWindow(QMainWindow):
         self.setGeometry(self.left, self.top, self.width, self.height)
 
         self.media_list_area.itemClicked.connect(self.show_media_record)
-        self.media_details_area.setDisabled(True)
+        self.media_details_area.isReadOnly()
 
-        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
         self.init_layout()
+        self.init_widget_styles()
 
     def center_window(self):
         frame_geometry = self.frameGeometry()
@@ -69,6 +69,25 @@ class MyListWindow(QMainWindow):
         box_layout.setSpacing(0)
 
         self.setLayout(box_layout)
+
+    def init_widget_styles(self):
+        """
+        Sets the stylesheet properties for widgets
+        """
+        self.media_list_area.setStyleSheet("""
+                        .QListWidget {
+                            background-color: #1f2041;
+                            color: #e9d2c0;
+                            font-weight:bold;
+                            }
+                        """)
+        self.media_details_area.setStyleSheet("""
+                        .QTextEdit {
+                            background-color: #e9d2c0;
+                            color: #1f2041;
+                            font-weight:bold;
+                            }
+                        """)
 
     def update_list(self):
         self.media_list_area.clear()

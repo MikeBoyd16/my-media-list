@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/test_media_list.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
     </list>
@@ -18,11 +17,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="-261">
+              <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+                <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
               </folding>
             </state>
           </provider>
@@ -444,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528560993080</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Convert multiple inputs for a single category into a list">
+      <created>1528565244038</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1528565244038</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -544,7 +550,8 @@
     <MESSAGE value="Add individual media widget types" />
     <MESSAGE value="Add widget creation for music category" />
     <MESSAGE value="Fix closing dialog crash bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix closing dialog crash bug" />
+    <MESSAGE value="Convert multiple inputs for a single category into a list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert multiple inputs for a single category into a list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,7 +569,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -579,7 +586,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -596,7 +603,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -613,7 +620,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -630,7 +637,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -647,7 +654,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -658,7 +665,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -669,7 +676,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>
@@ -691,11 +698,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="-261">
+          <caret line="45" column="52" lean-forward="true" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528565210724" expanded="true" signature="11798:11958" ph="..." />
+            <marker date="1528568632006" expanded="true" signature="12453:12613" ph="..." />
           </folding>
         </state>
       </provider>

@@ -96,13 +96,14 @@ class MyListWindow(QMainWindow):
 
     def open_file(self):
         file_name = QFileDialog.getOpenFileName(self, "Open File")
-        file = open(file_name[0], "r")
-        self.my_media_list = json.load(file)
-        self.update_list()
+        if file_name[0]:
+            file = open(file_name[0], "r")
+            self.my_media_list = json.load(file)
+            self.update_list()
 
     def save_file(self):
         file_name = QFileDialog.getSaveFileName(self, "Save File")
-        if file_name:
+        if file_name[0]:
             file = open(file_name[0], "w")
             json.dump(self.my_media_list, file)
 

@@ -28,23 +28,23 @@ class MyListWindow(QMainWindow):
         file_menu = main_menu.addMenu("File")
         edit_menu = main_menu.addMenu("Edit")
 
-        open_file = QAction("Import List", self)
-        open_file.triggered.connect(self.import_file)
+        open_file = QAction(QIcon("import_list.png"), "Import List", self)
+        open_file.triggered.connect(self.open_file)
         file_menu.addAction(open_file)
 
-        save_file = QAction("Export List", self)
-        save_file.triggered.connect(self.export_file)
+        save_file = QAction(QIcon("export_list.png"), "Export List", self)
+        save_file.triggered.connect(self.save_file)
         file_menu.addAction(save_file)
 
-        add_media = QAction("Add Media", self)
+        add_media = QAction(QIcon("add_media.png"),"Add Media", self)
         add_media.triggered.connect(self.add_media_record)
         edit_menu.addAction(add_media)
 
-        edit_media = QAction("Edit Media", self)
-        edit_menu.addAction(edit_media)
-
-        remove_media = QAction("Remove Media", self)
+        remove_media = QAction(QIcon("remove_media.png"), "Remove Media", self)
         edit_menu.addAction(remove_media)
+
+        edit_media = QAction(QIcon("edit_media.png"), "Edit Media", self)
+        edit_menu.addAction(edit_media)
 
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
@@ -94,16 +94,17 @@ class MyListWindow(QMainWindow):
         for key in self.my_media_list:
             self.media_list_area.addItem(key)
 
-    def import_file(self):
-        file_name = QFileDialog.getOpenFileName(self, "Import File")
+    def open_file(self):
+        file_name = QFileDialog.getOpenFileName(self, "Open File")
         file = open(file_name[0], "r")
         self.my_media_list = json.load(file)
         self.update_list()
 
-    def export_file(self):
-        file_name = QFileDialog.getSaveFileName(self, "Import File")
-        file = open(file_name[0], "w")
-        json.dump(self.my_media_list, file)
+    def save_file(self):
+        file_name = QFileDialog.getSaveFileName(self, "Save File")
+        if file_name:
+            file = open(file_name[0], "w")
+            json.dump(self.my_media_list, file)
 
     def add_media_record(self):
         select_media = SelectMedia()

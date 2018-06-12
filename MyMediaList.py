@@ -98,9 +98,16 @@ class MyListWindow(QMainWindow):
 
     def update_list(self):
         self.media_list_area.clear()
-        for key in self.my_media_list:
+        for key, value in self.my_media_list.items():
             list_item = QListWidgetItem(key)
             list_item.setSizeHint(QSize(40, 40))
+
+            # Set different versions of the same icon for a list item that is selected or not selected
+            list_item_icon = QIcon()
+            list_item_icon.addPixmap(QPixmap("images/" + str(value["Media"]) + ".png"), QIcon.Normal)
+            list_item_icon.addPixmap(QPixmap("images/" + str(value["Media"]) + " Selected.png"), QIcon.Selected)
+            list_item.setIcon(list_item_icon)
+
             self.media_list_area.addItem(list_item)
 
     def open_file(self):
@@ -168,7 +175,7 @@ class SelectMedia(QDialog):
         self.setGeometry(self.left, self.top, self.width, self.height)
         self.ok.move(50, 50)
         self.ok.clicked.connect(self.go_to_add_media)
-        self.select_media_combo.addItems(["Movie", "TV", "Music", "Book", "Video Game"])
+        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Games"])
         self.init_layout()
 
     def center_window(self):

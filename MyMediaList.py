@@ -175,7 +175,7 @@ class SelectMedia(QDialog):
         self.setGeometry(self.left, self.top, self.width, self.height)
         self.ok.move(50, 50)
         self.ok.clicked.connect(self.go_to_add_media)
-        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Games"])
+        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
         self.init_layout()
 
     def center_window(self):
@@ -335,6 +335,20 @@ class AddMedia(QDialog):
         widgets = {}
         if self.media_type == "Music":
             widgets = AddMedia.music_widgets
+        elif self.media_type == "Audiobook":
+            widgets = AddMedia.audiobook_widgets
+        elif self.media_type == "Movie":
+            widgets = AddMedia.movie_widgets
+        elif self.media_type == "TV":
+            widgets = AddMedia.tv_widgets
+        elif self.media_type == "Anime":
+            widgets = AddMedia.anime_widgets
+        elif self.media_type == "Book":
+            widgets = AddMedia.book_widgets
+        elif self.media_type == "Manga":
+            widgets = AddMedia.manga_widgets
+        elif self.media_type == "Video Game":
+            widgets = AddMedia.video_game_widgets
 
         for key, value in widgets.items():
             self.labels[key] = QLabel()

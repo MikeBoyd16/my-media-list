@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/add_media.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/attribution.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/edit_media.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/export_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/import_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/remove_media.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/anime.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/audiobook.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/book.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/movie.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/music.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/tv.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/video_game.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/add_media.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/edit_media.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/export_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/import_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/movie_list.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/remove_media.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
+      <change beforePath="$PROJECT_DIR$/images/attribution.txt" afterPath="$PROJECT_DIR$/images/attribution.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +25,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="155">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+                <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
               </folding>
             </state>
           </provider>
@@ -482,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528647086741</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Move images into images folder and add attribution text file">
+      <created>1528647760818</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1528647760818</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -497,7 +501,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2776607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2776607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -586,7 +590,8 @@
     <MESSAGE value="Add stylesheet initialization method for main window" />
     <MESSAGE value="Add icons to menu items in main window" />
     <MESSAGE value="Fix close open/save file dialog crash bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix close open/save file dialog crash bug" />
+    <MESSAGE value="Move images into images folder and add attribution text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move images into images folder and add attribution text file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,7 +609,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -621,7 +626,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -638,7 +643,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -655,7 +660,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -672,7 +677,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -689,7 +694,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -700,7 +705,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -711,7 +716,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>
@@ -733,11 +738,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="98" column="24" lean-forward="false" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+        <state relative-caret-position="155">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1528646994385" expanded="true" signature="12638:12798" ph="..." />
+            <marker date="1528765762835" expanded="true" signature="13149:13309" ph="..." />
           </folding>
         </state>
       </provider>

@@ -9,6 +9,7 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+        # self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from main window
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
@@ -28,22 +29,22 @@ class MyListWindow(QMainWindow):
         file_menu = main_menu.addMenu("File")
         edit_menu = main_menu.addMenu("Edit")
 
-        open_file = QAction(QIcon("import_list.png"), "Import List", self)
+        open_file = QAction(QIcon("images/import_list.png"), "Import List", self)
         open_file.triggered.connect(self.open_file)
         file_menu.addAction(open_file)
 
-        save_file = QAction(QIcon("export_list.png"), "Export List", self)
+        save_file = QAction(QIcon("images/export_list.png"), "Export List", self)
         save_file.triggered.connect(self.save_file)
         file_menu.addAction(save_file)
 
-        add_media = QAction(QIcon("add_media.png"),"Add Media", self)
+        add_media = QAction(QIcon("images/add_media.png"),"Add Media", self)
         add_media.triggered.connect(self.add_media_record)
         edit_menu.addAction(add_media)
 
-        remove_media = QAction(QIcon("remove_media.png"), "Remove Media", self)
+        remove_media = QAction(QIcon("images/remove_media.png"), "Remove Media", self)
         edit_menu.addAction(remove_media)
 
-        edit_media = QAction(QIcon("edit_media.png"), "Edit Media", self)
+        edit_media = QAction(QIcon("images/edit_media.png"), "Edit Media", self)
         edit_menu.addAction(edit_media)
 
         self.setWindowTitle(self.title)
@@ -79,6 +80,11 @@ class MyListWindow(QMainWindow):
                             background-color: #1f2041;
                             color: #e9d2c0;
                             font-weight:bold;
+                            font-size: 13px;
+                            }
+                        .QListWidget:item:selected:active {
+                            background-color: #e9d2c0;
+                            color: #1f2041;
                             }
                         """)
         self.media_details_area.setStyleSheet("""
@@ -86,13 +92,16 @@ class MyListWindow(QMainWindow):
                             background-color: #e9d2c0;
                             color: #1f2041;
                             font-weight:bold;
+                            font-size: 13px;
                             }
                         """)
 
     def update_list(self):
         self.media_list_area.clear()
         for key in self.my_media_list:
-            self.media_list_area.addItem(key)
+            list_item = QListWidgetItem(key)
+            list_item.setSizeHint(QSize(40, 40))
+            self.media_list_area.addItem(list_item)
 
     def open_file(self):
         file_name = QFileDialog.getOpenFileName(self, "Open File")

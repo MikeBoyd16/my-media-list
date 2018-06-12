@@ -22,7 +22,6 @@ class MyListWindow(QMainWindow):
         self.media_details_area = QTextEdit(self)
 
         self.init_window()
-        self.center_window()
 
     def init_window(self):
         main_menu = self.menuBar()
@@ -54,13 +53,8 @@ class MyListWindow(QMainWindow):
         self.media_details_area.isReadOnly()
 
         self.init_layout()
-        self.init_widget_styles()
-
-    def center_window(self):
-        frame_geometry = self.frameGeometry()
-        center_point = QDesktopWidget().availableGeometry().center()
-        frame_geometry.moveCenter(center_point)
-        self.move(frame_geometry.topLeft())
+        self.init_styles()
+        self.center_window()
 
     def init_layout(self):
         box_layout = QHBoxLayout(self.central_widget)
@@ -71,7 +65,7 @@ class MyListWindow(QMainWindow):
 
         self.setLayout(box_layout)
 
-    def init_widget_styles(self):
+    def init_styles(self):
         """
         Sets the stylesheet properties for widgets
         """
@@ -95,6 +89,12 @@ class MyListWindow(QMainWindow):
                             font-size: 13px;
                             }
                         """)
+
+    def center_window(self):
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
     def update_list(self):
         self.media_list_area.clear()
@@ -147,16 +147,27 @@ class SelectMedia(QDialog):
     def __init__(self):
         super().__init__()
         self.temp_input = {}
+
         self.title = "Media Select"
-        self.left = 100
-        self.top = 100
-        self.width = 200
-        self.height = 200
+        self.left, self.top, self.width, self.height = 100, 100, 200, 200
 
         self.select_media_combo = QComboBox(self)
         self.ok = QPushButton("OK", self)
 
         self.init_window()
+
+    def init_window(self):
+        self.setWindowTitle(self.title)
+        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
+        self.setGeometry(self.left, self.top, self.width, self.height)
+
+        self.ok.move(50, 50)
+        self.ok.clicked.connect(self.go_to_add_media)
+
+        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
+
+        self.init_layout()
+        self.init_styles()
         self.center_window()
 
     def init_layout(self):
@@ -169,14 +180,12 @@ class SelectMedia(QDialog):
         v_box_layout.addWidget(group_box)
         self.setLayout(v_box_layout)
 
-    def init_window(self):
-        self.setWindowTitle(self.title)
-        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
-        self.setGeometry(self.left, self.top, self.width, self.height)
-        self.ok.move(50, 50)
-        self.ok.clicked.connect(self.go_to_add_media)
-        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
-        self.init_layout()
+    def init_styles(self):
+        self.setStyleSheet("""
+                        QMainWindow {
+                            background: #BCBCBC;
+                            }
+                        """)
 
     def center_window(self):
         frame_geometry = self.frameGeometry()
@@ -319,17 +328,41 @@ class AddMedia(QDialog):
         self.temp_input = {}
         self.labels = {}
         self.inputs = {}
-        self.init_window_properties()
+
+        self.title = "Add Music"
+        self.left, self.top, self.width, self.height = 100, 100, 250, 600
+
         self.init_widgets()
+        self.submit = QPushButton("Submit", self)
+
         self.init_window()
+
+    def init_window(self):
+        self.setWindowTitle(self.title)
+        self.setGeometry(self.left, self.top, self.width, self.height)
+
+        self.submit.setFixedHeight(40)
+        self.submit.clicked.connect(self.submit_media)
+
+        self.init_layout()
+        self.init_styles()
         self.center_window()
 
-    def init_window_properties(self):
-        self.title = "Add Music"
-        self.left = 100
-        self.top = 100
-        self.width = 250
-        self.height = 600
+    def init_layout(self):
+        grid_layout = QGridLayout()
+
+        row = 0
+        for key in self.labels:
+            grid_layout.addWidget(self.labels[key], row, 0)
+            grid_layout.addWidget(self.inputs[key], row, 1)
+            row += 1
+
+        group_box = QGroupBox("")
+        group_box.setLayout(grid_layout)
+        v_box_layout = QVBoxLayout()
+        v_box_layout.addWidget(group_box)
+        v_box_layout.addWidget(self.submit)
+        self.setLayout(v_box_layout)
 
     def init_widgets(self):
         """
@@ -369,31 +402,12 @@ class AddMedia(QDialog):
                                           "Reissue", "Live Album", "Remix Album"])
             self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
 
-        self.submit = QPushButton("Submit", self)
-        self.submit.setFixedHeight(40)
-
-    def init_layout(self):
-        grid_layout = QGridLayout()
-
-        row = 0
-        for key in self.labels:
-            grid_layout.addWidget(self.labels[key], row, 0)
-            grid_layout.addWidget(self.inputs[key], row, 1)
-            row += 1
-
-        group_box = QGroupBox("")
-        group_box.setLayout(grid_layout)
-        v_box_layout = QVBoxLayout()
-        v_box_layout.addWidget(group_box)
-        v_box_layout.addWidget(self.submit)
-        self.setLayout(v_box_layout)
-
-    def init_window(self):
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
-        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
-        self.submit.clicked.connect(self.submit_media)
-        self.init_layout()
+    def init_styles(self):
+        self.setStyleSheet("""
+                        QMainWindow {
+                            background: #BCBCBC;
+                            }
+                        """)
 
     def center_window(self):
         frame_geometry = self.frameGeometry()

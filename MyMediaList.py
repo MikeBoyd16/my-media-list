@@ -332,6 +332,10 @@ class AddMedia(QDialog):
         self.height = 600
 
     def init_widgets(self):
+        """
+        Populates the form with the correct widgets for the selected media type
+        """
+        # Set the form's widget template to the template for the selected media type
         widgets = {}
         if self.media_type == "Music":
             widgets = AddMedia.music_widgets
@@ -350,6 +354,7 @@ class AddMedia(QDialog):
         elif self.media_type == "Video Game":
             widgets = AddMedia.video_game_widgets
 
+        # Populate the form with widgets based on the selected template
         for key, value in widgets.items():
             self.labels[key] = QLabel()
             self.labels[key].setText(key)
@@ -358,6 +363,7 @@ class AddMedia(QDialog):
             elif value == "combo":
                 self.inputs[key] = QComboBox()
 
+        # Fill the combo boxes with the correct items based on the selected media type
         if self.media_type == "Music":
             self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
                                           "Reissue", "Live Album", "Remix Album"])

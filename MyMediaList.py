@@ -109,6 +109,7 @@ class MyListWindow(QMainWindow):
             list_item.setIcon(list_item_icon)
 
             self.media_list_area.addItem(list_item)
+        self.media_list_area.setIconSize(QSize(30, 30))
 
     def open_file(self):
         file_name = QFileDialog.getOpenFileName(self, "Open File")

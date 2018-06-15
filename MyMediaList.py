@@ -66,9 +66,7 @@ class MyListWindow(QMainWindow):
         self.setLayout(box_layout)
 
     def init_styles(self):
-        """
-        Sets the stylesheet properties for widgets
-        """
+        """Sets the stylesheet properties for widgets"""
         self.media_list_area.setStyleSheet("""
                         .QListWidget {
                             background-color: #1f2041;
@@ -182,6 +180,7 @@ class SelectMedia(QDialog):
         self.setLayout(v_box_layout)
 
     def init_styles(self):
+        """Sets the stylesheet properties for widgets"""
         self.setStyleSheet("""
                         QMainWindow {
                             background: #BCBCBC;
@@ -213,7 +212,7 @@ class AddMedia(QDialog):
     music_widgets = \
         {
             "Type": "combo",
-            "Favorite": "combo",
+            "Rating": "combo",
             "Title": "line",
             "Main Artist": "line",
             "Featured Artist": "line",
@@ -223,7 +222,7 @@ class AddMedia(QDialog):
             "Genres": "line",
             "Record Label": "line",
             "Songwriters": "line",
-            "Producers": "line"
+            "Producers": "line",
         }
     audiobook_widgets = \
         {
@@ -250,14 +249,15 @@ class AddMedia(QDialog):
             "Producers": "line",
             "Quality Score": "combo",
             "Compatibility Score": "combo",
-            "Tags": "line"
+            "Tags": "line",
+            "Comments": "line"
         }
     tv_widgets = \
         {
             "Title": "line",
             "Year": "line",
-            "Season": "combo",
-            "Episode": "combo",
+            "Season": "line",
+            "Episode": "line",
             "Duration": "line",
             "Content Rating": "combo",
             "Genres": "line",
@@ -267,7 +267,8 @@ class AddMedia(QDialog):
             "Producers": "line",
             "Quality Score": "combo",
             "Compatibility Score": "combo",
-            "Tags": "line"
+            "Tags": "line",
+            "Comments": "line"
         }
     anime_widgets = \
         {
@@ -283,7 +284,8 @@ class AddMedia(QDialog):
             "Producers": "line",
             "Quality Score": "combo",
             "Compatibility Score": "combo",
-            "Tags": "line"
+            "Tags": "line",
+            "Comments": "line"
         }
     book_widgets = \
         {
@@ -294,7 +296,8 @@ class AddMedia(QDialog):
             "Genres": "line",
             "Pages": "line",
             "Score": "combo",
-            "Tags": "line"
+            "Tags": "line",
+            "Comments": "line"
         }
     manga_widgets = \
         {
@@ -304,7 +307,9 @@ class AddMedia(QDialog):
             "Writers": "line",
             "Illustrators": "line",
             "Publishers": "line",
-            "Demographic": "combo"
+            "Demographic": "combo",
+            "Score": "combo",
+            "Tags": "line"
         }
     video_game_widgets = \
         {
@@ -401,9 +406,38 @@ class AddMedia(QDialog):
         if self.media_type == "Music":
             self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
                                           "Reissue", "Live Album", "Remix Album"])
-            self.inputs["Favorite"].addItems(["Yes", "No", "N/A"])
+            self.inputs["Rating"].addItems(["Bad", "Fine", "Good", "Great"])
+        elif self.media_type == "Audiobook":
+            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "Movie":
+            self.inputs["MPAA"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
+            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "TV":
+            self.inputs["Content Rating"].addItems(["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA"])
+            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "Anime":
+            self.inputs["Type"].addItems(["TV", "Movie", "OVA", "Special"])
+            self.inputs["Content Rating"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
+            self.inputs["Source"].addItems(["Original", "Manga", "4-koma Manga", "Visual Novel", "Light Novel",
+                                            "Novel", "Video Game", "Card Game"])
+            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "Book":
+            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "Manga":
+            self.inputs["Demographic"].addItems(["Kodomo", "Shonen", "Shoujo", "Josei", "Seinen", "Seijin",
+                                                 "Mina", "4-koma"])
+            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        elif self.media_type == "Video Game":
+            self.inputs["Platform"].addItems(["PC", "3DS", "DS", "GBA"])
+            self.inputs["Campaign Finished?"].addItems(["Yes", "No"])
+            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
 
     def init_styles(self):
+        """Sets the stylesheet properties for widgets"""
         self.setStyleSheet("""
                         QMainWindow {
                             background: #BCBCBC;

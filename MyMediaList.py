@@ -96,14 +96,15 @@ class MyListWindow(QMainWindow):
 
     def update_list(self):
         self.media_list_area.clear()
-        for key, value in self.my_media_list.items():
-            list_item = QListWidgetItem(key)
-            list_item.setSizeHint(QSize(40, 40))
+        for key, data in self.my_media_list.items():
+            list_item = QListWidgetItem(data["Title"])
+            list_item.setData(Qt.UserRole, data)
+            list_item.setSizeHint(QSize(35, 35))
 
             # Set different versions of the same icon for a list item that is selected or not selected
             list_item_icon = QIcon()
-            list_item_icon.addPixmap(QPixmap("images/" + str(value["Media"]) + ".png"), QIcon.Normal)
-            list_item_icon.addPixmap(QPixmap("images/" + str(value["Media"]) + " Selected.png"), QIcon.Selected)
+            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + ".png"), QIcon.Normal)
+            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + " Selected.png"), QIcon.Selected)
             list_item.setIcon(list_item_icon)
 
             self.media_list_area.addItem(list_item)
@@ -136,10 +137,12 @@ class MyListWindow(QMainWindow):
 
     def show_media_record(self):
         self.media_details_area.clear()
-        key = self.media_list_area.currentItem().text()
-        record = self.my_media_list[key]
-        for label in record:
-            self.media_details_area.append(label + ": " + str(record[label]) + "\n")
+        item = self.media_list_area.currentItem()
+        item_data = item.data(Qt.UserRole)
+        item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + str(item_data["Month Entered"]) + "." + \
+                   str(item_data["Day Entered"]) + "." + str(item_data["Year Entered"])
+        for label in self.my_media_list[item_key]:
+            self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
 
 
 class SelectMedia(QDialog):
@@ -217,7 +220,7 @@ class AddMedia(QDialog):
             "Main Artist": "line",
             "Featured Artist": "line",
             "Album": "line",
-            "Released": "line",
+            "Year": "line",
             "Duration": "line",
             "Genres": "line",
             "Record Label": "line",

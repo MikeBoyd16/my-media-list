@@ -128,19 +128,15 @@ class MyListWindow(QMainWindow):
         select_media.show()
         select_media.exec_()
         if "Title" in select_media.temp_input:  # Title as a key won't exist if the dialog is closed prematurely
-            self.my_media_list[select_media.temp_input["Title"] + "-" +
-                               select_media.temp_input["Media"] + "-" +
-                               str(select_media.temp_input["Month Entered"]) + "." +
-                               str(select_media.temp_input["Day Entered"]) + "." +
-                               str(select_media.temp_input["Year Entered"])] = select_media.temp_input
+            self.my_media_list[select_media.temp_input["Title"] + "-" + select_media.temp_input["Media"] + "-" +
+                               select_media.temp_input["Date Entered"]] = select_media.temp_input
             self.update_list()
 
     def show_media_record(self):
         self.media_details_area.clear()
         item = self.media_list_area.currentItem()
         item_data = item.data(Qt.UserRole)
-        item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + str(item_data["Month Entered"]) + "." + \
-                   str(item_data["Day Entered"]) + "." + str(item_data["Year Entered"])
+        item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
         for label in self.my_media_list[item_key]:
             self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
 
@@ -205,9 +201,7 @@ class SelectMedia(QDialog):
         self.temp_input = add_media_record.temp_input
         self.temp_input["Media"] = self.select_media_combo.currentText()
         now = datetime.datetime.now()
-        self.temp_input["Month Entered"] = now.month
-        self.temp_input["Day Entered"] = now.day
-        self.temp_input["Year Entered"] = now.year
+        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year)
         self.hide()
 
 

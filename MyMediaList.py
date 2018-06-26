@@ -24,45 +24,46 @@ class MyListWindow(QMainWindow):
         self.init_window()
 
     def init_window(self):
+        """Initializes the window, its dimensions, and content"""
+
+        # Initialize the menu and its actions
         main_menu = self.menuBar()
         file_menu = main_menu.addMenu("File")
         edit_menu = main_menu.addMenu("Edit")
-
         open_file = QAction(QIcon("images/import_list.png"), "Import List", self)
         open_file.triggered.connect(self.open_file)
         file_menu.addAction(open_file)
-
         save_file = QAction(QIcon("images/export_list.png"), "Export List", self)
         save_file.triggered.connect(self.save_file)
         file_menu.addAction(save_file)
-
         add_media = QAction(QIcon("images/add_media.png"),"Add Media", self)
         add_media.triggered.connect(self.add_media_record)
         edit_menu.addAction(add_media)
-
         remove_media = QAction(QIcon("images/remove_media.png"), "Remove Media", self)
         edit_menu.addAction(remove_media)
-
         edit_media = QAction(QIcon("images/edit_media.png"), "Edit Media", self)
         edit_menu.addAction(edit_media)
 
+        # Set the window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
+        # Connect the selection of a list item with its associated data
         self.media_list_area.itemClicked.connect(self.show_media_record)
         self.media_details_area.isReadOnly()
 
+        # Initialize window layout and styles and center it on the screen
         self.init_layout()
         self.init_styles()
         self.center_window()
 
     def init_layout(self):
+        """Initializes the layout for the widgets in the window"""
         box_layout = QHBoxLayout(self.central_widget)
         box_layout.addWidget(self.media_list_area)
         box_layout.addWidget(self.media_details_area)
         box_layout.setContentsMargins(0, 0, 0, 0)
         box_layout.setSpacing(0)
-
         self.setLayout(box_layout)
 
     def init_styles(self):
@@ -89,28 +90,38 @@ class MyListWindow(QMainWindow):
                         """)
 
     def center_window(self):
+        """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
 
     def update_list(self):
+        """Updates the list area widget with the current set of list items"""
+
+        # Clear the current set of list items from the list area
         self.media_list_area.clear()
+
+        # Create list items for each record in the media list
         for key, data in self.my_media_list.items():
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
 
-            # Set different versions of the same icon for a list item that is selected or not selected
+            # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
             list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + ".png"), QIcon.Normal)
             list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + " Selected.png"), QIcon.Selected)
             list_item.setIcon(list_item_icon)
 
+            # Add the list item to the list area
             self.media_list_area.addItem(list_item)
+
+        # Set the icon size of all list item icons in the list area
         self.media_list_area.setIconSize(QSize(30, 30))
 
     def open_file(self):
+        """Opens a json file and loads file data into the list area"""
         file_name = QFileDialog.getOpenFileName(self, "Open File")
         if file_name[0]:
             file = open(file_name[0], "r")
@@ -118,12 +129,14 @@ class MyListWindow(QMainWindow):
             self.update_list()
 
     def save_file(self):
+        """Creates a new, or overwrites an existing, json file with the content in the list area"""
         file_name = QFileDialog.getSaveFileName(self, "Save File")
         if file_name[0]:
             file = open(file_name[0], "w")
             json.dump(self.my_media_list, file)
 
     def add_media_record(self):
+        """Adds a new media record to the media list"""
         select_media = SelectMedia()
         select_media.show()
         select_media.exec_()
@@ -133,6 +146,7 @@ class MyListWindow(QMainWindow):
             self.update_list()
 
     def show_media_record(self):
+        """Displays the currently selected list item's media record"""
         self.media_details_area.clear()
         item = self.media_list_area.currentItem()
         item_data = item.data(Qt.UserRole)
@@ -155,20 +169,28 @@ class SelectMedia(QDialog):
         self.init_window()
 
     def init_window(self):
+        """Initialize the window, its dimensions, and content"""
+
+        # Set the window title and dimensions
         self.setWindowTitle(self.title)
-        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
         self.setGeometry(self.left, self.top, self.width, self.height)
 
+        # Move the OK button to the correct position
         self.ok.move(50, 50)
+
+        # Display an AddMedia dialog form when OK is clicked
         self.ok.clicked.connect(self.go_to_add_media)
 
+        # Load the SelectMedia combo box with all supported media types
         self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
 
+        # Initialize window layout and styles and center it on the screen
         self.init_layout()
         self.init_styles()
         self.center_window()
 
     def init_layout(self):
+        """Initializes the layout for the widgets in the window"""
         grid_layout = QGridLayout()
         grid_layout.addWidget(self.select_media_combo, 0, 0)
         grid_layout.addWidget(self.ok, 1, 0)
@@ -179,23 +201,22 @@ class SelectMedia(QDialog):
         self.setLayout(v_box_layout)
 
     def init_styles(self):
-        """Sets the stylesheet properties for widgets"""
-        self.setStyleSheet("""
-                        QMainWindow {
-                            background: #BCBCBC;
-                            }
-                        """)
+        """Sets all stylesheet properties"""
+        self.setStyleSheet("QMainWindow {background: #BCBCBC;}")
 
     def center_window(self):
+        """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
 
     def get_media_selection(self):
+        """Returns the currently selected media type"""
         return self.select_media_combo.currentText()
 
     def go_to_add_media(self):
+        """Displays a new AddMedia dialog form and places the resulting input in a temporary dictionary variable"""
         add_media_record = AddMedia(self.get_media_selection())
         add_media_record.exec_()
         self.temp_input = add_media_record.temp_input
@@ -341,17 +362,25 @@ class AddMedia(QDialog):
         self.init_window()
 
     def init_window(self):
+        """Initialize the window, its dimensions, and content"""
+
+        # Set the window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
+        # Set the height for the Submit button
         self.submit.setFixedHeight(40)
+
+        # Connect a new media record submission with the Submit button
         self.submit.clicked.connect(self.submit_media)
 
+        # Initialize window layout and styles and center it on the screen
         self.init_layout()
         self.init_styles()
         self.center_window()
 
     def init_layout(self):
+        """Initializes the layout for the widgets in the window"""
         grid_layout = QGridLayout()
 
         row = 0
@@ -442,12 +471,14 @@ class AddMedia(QDialog):
                         """)
 
     def center_window(self):
+        """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
 
     def submit_media(self):
+        """Places the inputs from the input widgets into a temporary dictionary variable"""
         for key in self.inputs:
             if isinstance(self.inputs[key], QComboBox):
                 self.temp_input[key] = self.inputs[key].currentText()

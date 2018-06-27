@@ -224,12 +224,13 @@ class MyListWindow(QMainWindow):
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
         for label in self.my_media_list[item_key]:
-            if self.my_media_list[item_key][label]:  # Only display a label if there is data associated with it
-                # If a label's associated data is in a list, display a comma separated string of that data
-                if isinstance(self.my_media_list[item_key][label], list):
-                    self.media_details_area.append(label + ": " + ", ".join(self.my_media_list[item_key][label]) + "\n")
-                else:
-                    self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
+            if label not in ["Status", "Media", "Date Entered"]:  # Do not display certain labels and data
+                if self.my_media_list[item_key][label]:  # Only display a label if there is data associated with it
+                    # If a label's associated data is in a list, display a comma separated string of that data
+                    if isinstance(self.my_media_list[item_key][label], list):
+                        self.media_details_area.append(label + ": " + ", ".join(self.my_media_list[item_key][label]) + "\n")
+                    else:
+                        self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
 
 
 class SelectMedia(QDialog):

@@ -16,7 +16,7 @@ class MyListWindow(QMainWindow):
         self.my_media_list = {}
 
         self.title = "MyMediaList"
-        self.left, self.top, self.width, self.height = 100, 100, 500, 600
+        self.left, self.top, self.width, self.height = 100, 100, 600, 750
 
         self.media_list_area = QListWidget(self)
         self.media_details_area = QTextEdit(self)
@@ -50,11 +50,11 @@ class MyListWindow(QMainWindow):
 
         # Connect the selection of a list item with its associated data
         self.media_list_area.itemClicked.connect(self.show_media_record)
-        self.media_details_area.isReadOnly()
+        self.media_details_area.setReadOnly(True)
 
         # Initialize window layout and styles and center it on the screen
         self.init_layout()
-        self.init_styles()
+        self.update_styles()
         self.center_window()
 
     def init_layout(self):
@@ -66,27 +66,86 @@ class MyListWindow(QMainWindow):
         box_layout.setSpacing(0)
         self.setLayout(box_layout)
 
-    def init_styles(self):
+    def update_styles(self, selected_color=None):
         """Sets the stylesheet properties for widgets"""
         self.media_list_area.setStyleSheet("""
                         .QListWidget {
-                            background-color: #1f2041;
-                            color: #e9d2c0;
+                            background-color: #fffced;
                             font-weight:bold;
                             font-size: 13px;
-                            }
+                            border-style: solid;
+                            border-width: 2px;
+                            border-color: #7dbed1;
+                        }
                         .QListWidget:item:selected:active {
-                            background-color: #e9d2c0;
-                            color: #1f2041;
-                            }
+                            color: selected_color
+                            background-color: #7ecde5;
+                        }
+                        """)
+        self.media_list_area.verticalScrollBar().setStyleSheet("""
+                        .QScrollBar:vertical {
+                            border: 1px solid #999999;
+                            background:white;
+                            width:10px;
+                            margin: 0px 0px 0px 0px;
+                        }
+                        .QScrollBar::handle:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
+                            min-height: 0px;
+                        }
+                        .QScrollBar::add-line:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                            height: 0px;
+                            subcontrol-position: bottom;
+                            subcontrol-origin: margin;
+                        }
+                        .QScrollBar::sub-line:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                            height: 0 px;
+                            subcontrol-position: top;
+                            subcontrol-origin: margin;
+                        }
                         """)
         self.media_details_area.setStyleSheet("""
                         .QTextEdit {
-                            background-color: #e9d2c0;
+                            background-color: #fffced;
                             color: #1f2041;
-                            font-weight:bold;
+                            font-weight: bold;
                             font-size: 13px;
+                            border-style: solid;
+                            border-width: 2px;
+                            border-color: #7dbed1;
                             }
+        """)
+        self.media_details_area.verticalScrollBar().setStyleSheet("""
+                        .QScrollBar:vertical {
+                            border: 1px solid #999999;
+                            background:white;
+                            width:10px;
+                            margin: 0px 0px 0px 0px;
+                        }
+                        .QScrollBar::handle:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
+                            min-height: 0px;
+                        }
+                        .QScrollBar::add-line:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                            height: 0px;
+                            subcontrol-position: bottom;
+                            subcontrol-origin: margin;
+                        }
+                        .QScrollBar::sub-line:vertical {
+                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                            stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                            height: 0 px;
+                            subcontrol-position: top;
+                            subcontrol-origin: margin;
+                        }
                         """)
 
     def center_window(self):
@@ -107,11 +166,12 @@ class MyListWindow(QMainWindow):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
+            self.update_item_color(data, list_item)
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
-            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + ".png"), QIcon.Normal)
-            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + " Selected.png"), QIcon.Selected)
+            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + " Selected.png"), QIcon.Normal)
+            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + ".png"), QIcon.Selected)
             list_item.setIcon(list_item_icon)
 
             # Add the list item to the list area
@@ -119,6 +179,18 @@ class MyListWindow(QMainWindow):
 
         # Set the icon size of all list item icons in the list area
         self.media_list_area.setIconSize(QSize(30, 30))
+
+    def update_item_color(self, data, item):
+        """Changes the color of an item in the item list based on the item's score"""
+        if data["Score"] >= 8:
+            item.setForeground(QColor("#8bb262"))
+            self.update_styles("#8bb262")
+        elif data["Score"] >= 5:
+            item.setForeground(QColor("#cca65b"))
+            self.update_styles("#cca65b")
+        else:
+            item.setForeground(QColor("#b26262"))
+            self.update_styles("#b26262")
 
     def open_file(self):
         """Opens a json file and loads file data into the list area"""
@@ -152,7 +224,8 @@ class MyListWindow(QMainWindow):
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
         for label in self.my_media_list[item_key]:
-            self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
+            if self.my_media_list[item_key][label]:  # Only display a label if there is data associated with it
+                self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
 
 
 class SelectMedia(QDialog):
@@ -230,7 +303,7 @@ class AddMedia(QDialog):
     music_widgets = \
         {
             "Type": "combo",
-            "Rating": "combo",
+            "Score": "combo",
             "Title": "line",
             "Main Artist": "line",
             "Featured Artist": "line",
@@ -265,8 +338,7 @@ class AddMedia(QDialog):
             "Directors": "line",
             "Writers": "line",
             "Producers": "line",
-            "Quality Score": "combo",
-            "Compatibility Score": "combo",
+            "Score": "combo",
             "Tags": "line",
             "Comments": "line"
         }
@@ -283,8 +355,7 @@ class AddMedia(QDialog):
             "Creators": "line",
             "Writers": "line",
             "Producers": "line",
-            "Quality Score": "combo",
-            "Compatibility Score": "combo",
+            "Score": "combo",
             "Tags": "line",
             "Comments": "line"
         }
@@ -300,8 +371,7 @@ class AddMedia(QDialog):
             "Genres": "line",
             "Studio": "line",
             "Producers": "line",
-            "Quality Score": "combo",
-            "Compatibility Score": "combo",
+            "Score": "combo",
             "Tags": "line",
             "Comments": "line"
         }
@@ -340,8 +410,7 @@ class AddMedia(QDialog):
             "Hours Played": "line",
             "Campaign Finished?": "combo",
             "Achievement Progress": "line",
-            "Quality Score": "combo",
-            "Compatibility Score": "combo",
+            "Score": "combo",
             "Tags": "line",
             "Comments": "line"
         }
@@ -432,35 +501,22 @@ class AddMedia(QDialog):
         if self.media_type == "Music":
             self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
                                           "Reissue", "Live Album", "Remix Album"])
-            self.inputs["Rating"].addItems(["Bad", "Fine", "Good", "Great"])
-        elif self.media_type == "Audiobook":
-            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
         elif self.media_type == "Movie":
             self.inputs["MPAA"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
-            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
         elif self.media_type == "TV":
             self.inputs["Content Rating"].addItems(["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA"])
-            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
         elif self.media_type == "Anime":
             self.inputs["Type"].addItems(["TV", "Movie", "OVA", "Special"])
             self.inputs["Content Rating"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
             self.inputs["Source"].addItems(["Original", "Manga", "4-koma Manga", "Visual Novel", "Light Novel",
                                             "Novel", "Video Game", "Card Game"])
-            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-        elif self.media_type == "Book":
-            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
         elif self.media_type == "Manga":
             self.inputs["Demographic"].addItems(["Kodomo", "Shonen", "Shoujo", "Josei", "Seinen", "Seijin",
                                                  "Mina", "4-koma"])
-            self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
         elif self.media_type == "Video Game":
             self.inputs["Platform"].addItems(["PC", "3DS", "DS", "GBA"])
             self.inputs["Campaign Finished?"].addItems(["Yes", "No"])
-            self.inputs["Quality Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
-            self.inputs["Compatibility Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
+        self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""
@@ -481,7 +537,10 @@ class AddMedia(QDialog):
         """Places the inputs from the input widgets into a temporary dictionary variable"""
         for key in self.inputs:
             if isinstance(self.inputs[key], QComboBox):
-                self.temp_input[key] = self.inputs[key].currentText()
+                if key == "Score":
+                    self.temp_input[key] = int(self.inputs[key].currentText())
+                else:
+                    self.temp_input[key] = self.inputs[key].currentText()
             else:
                 if "," in self.inputs[key].text():  # If there are multiple inputs for one category, split them
                     input_list = self.inputs[key].text()

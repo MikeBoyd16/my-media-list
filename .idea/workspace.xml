@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="Rework the look and feel of the MainWindow's ListWidget and TextEdit">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/list.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/test_media_list2.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/test_media_list3.json" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
       <change beforePath="$PROJECT_DIR$/test-files/test_media_list.json" afterPath="$PROJECT_DIR$/test-files/test_media_list.json" />
@@ -18,11 +21,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8160">
-              <caret line="480" column="88" lean-forward="false" selection-start-line="480" selection-start-column="88" selection-end-line="480" selection-end-column="88" />
+            <state relative-caret-position="918">
+              <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+                <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
               </folding>
             </state>
           </provider>
@@ -85,7 +88,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -103,6 +105,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -547,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529971391858</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Add missing documentation for existing code">
+      <created>1530046358569</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1530046358569</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView">
@@ -564,14 +574,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2776607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.50632244" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.49367756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.5105374" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21536796" sideWeight="0.48946258" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -630,7 +640,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add import and export options for json files and rename variables" />
     <MESSAGE value="Add media record input to list area" />
     <MESSAGE value="Add datetime data to media records" />
     <MESSAGE value="Remove main window buttons and add them to the menu" />
@@ -655,7 +664,8 @@
     <MESSAGE value="Add combo items for all media types" />
     <MESSAGE value="Add media data directly to item and display the title only for each item" />
     <MESSAGE value="Switch 'month', 'day', and 'year' fields to a single 'date' field" />
-    <option name="LAST_COMMIT_MESSAGE" value="Switch 'month', 'day', and 'year' fields to a single 'date' field" />
+    <MESSAGE value="Add missing documentation for existing code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add missing documentation for existing code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -664,7 +674,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
@@ -673,7 +682,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -690,7 +699,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -707,7 +716,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -724,7 +733,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -741,7 +750,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -758,7 +767,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -769,7 +778,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -780,7 +789,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>
@@ -800,13 +809,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8160">
-          <caret line="480" column="88" lean-forward="false" selection-start-line="480" selection-start-column="88" selection-end-line="480" selection-end-column="88" />
+        <state relative-caret-position="918">
+          <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530046322814" expanded="true" signature="19431:19591" ph="..." />
+            <marker date="1530121293186" expanded="true" signature="22166:22326" ph="..." />
           </folding>
         </state>
       </provider>

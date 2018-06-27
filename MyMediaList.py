@@ -307,115 +307,119 @@ class SelectMedia(QDialog):
 class AddMedia(QDialog):
     music_widgets = \
         {
-            "Type": "combo",
-            "Score": "combo",
             "Title": "line",
-            "Main Artist": "line",
-            "Featured Artist": "line",
-            "Album": "line",
-            "Year": "line",
+            "Score": "combo",
+            "Type": "combo",
+            "Source Type": "combo",
+            "Source Name": "line",
             "Duration": "line",
-            "Genres": "line",
+            "Main Artist": "line",
+            "Featured Artists": "line",
             "Record Label": "line",
             "Songwriters": "line",
             "Producers": "line",
+            "Year": "line",
+            "Genres": "line",
+            "Comments": "line"
         }
     audiobook_widgets = \
         {
             "Title": "line",
+            "Score": "combo",
             "Series": "line",
+            "Listening Length": "line",
             "Authors": "line",
             "Narrators": "line",
             "Year": "line",
             "Genres": "line",
-            "Listening Length": "line",
-            "Score": "combo",
-            "Tags": "line"
+            "Tags": "line",
+            "Comments": "line"
         }
     movie_widgets = \
         {
             "Title": "line",
-            "Year": "line",
+            "Score": "combo",
             "Duration": "line",
-            "MPAA": "combo",
-            "Genres": "line",
             "Actors": "line",
             "Directors": "line",
             "Writers": "line",
             "Producers": "line",
-            "Score": "combo",
+            "Year": "line",
+            "MPAA": "combo",
+            "Genres": "line",
             "Tags": "line",
             "Comments": "line"
         }
     tv_widgets = \
         {
             "Title": "line",
-            "Year": "line",
+            "Score": "combo",
             "Season": "line",
             "Episode": "line",
             "Duration": "line",
-            "Content Rating": "combo",
-            "Genres": "line",
             "Actors": "line",
             "Creators": "line",
             "Writers": "line",
             "Producers": "line",
-            "Score": "combo",
+            "Year": "line",
+            "Content Rating": "combo",
+            "Genres": "line",
             "Tags": "line",
             "Comments": "line"
         }
     anime_widgets = \
         {
             "Title": "line",
-            "Year": "line",
+            "Score": "combo",
             "Type": "combo",
+            "Source": "combo",
             "Episode": "line",
             "Duration": "line",
-            "Content Rating": "combo",
-            "Source": "combo",
-            "Genres": "line",
             "Studio": "line",
             "Producers": "line",
-            "Score": "combo",
+            "Year": "line",
+            "Content Rating": "combo",
+            "Genres": "line",
             "Tags": "line",
             "Comments": "line"
         }
     book_widgets = \
         {
             "Title": "line",
+            "Score": "combo",
             "Series": "line",
+            "Pages": "line",
             "Authors": "line",
             "Year": "line",
             "Genres": "line",
-            "Pages": "line",
-            "Score": "combo",
             "Tags": "line",
             "Comments": "line"
         }
     manga_widgets = \
         {
             "Title": "line",
+            "Score": "combo",
             "Volume": "line",
-            "Genres": "line",
             "Writers": "line",
             "Illustrators": "line",
             "Publishers": "line",
             "Demographic": "combo",
-            "Score": "combo",
-            "Tags": "line"
+            "Genres": "line",
+            "Tags": "line",
+            "Comments": "line"
         }
     video_game_widgets = \
         {
             "Title": "line",
+            "Score": "combo",
             "Platform": "combo",
-            "Year": "line",
-            "Genres": "line",
-            "Developers": "line",
-            "Publishers": "line",
             "Hours Played": "line",
             "Campaign Finished?": "combo",
-            "Achievement Progress": "line",
-            "Score": "combo",
+            "Achievement Progress": "combo",
+            "Developers": "line",
+            "Publishers": "line",
+            "Year": "line",
+            "Genres": "line",
             "Tags": "line",
             "Comments": "line"
         }
@@ -447,6 +451,11 @@ class AddMedia(QDialog):
 
         # Connect a new media record submission with the Submit button
         self.submit.clicked.connect(self.submit_media)
+
+        # Check source type every time the selection changes
+        if self.media_type == "Music":
+            self.inputs["Type"].currentIndexChanged.connect(self.source_name_status)
+            self.inputs["Source Type"].currentIndexChanged.connect(self.source_name_status)
 
         # Initialize window layout and styles and center it on the screen
         self.init_layout()
@@ -504,8 +513,10 @@ class AddMedia(QDialog):
 
         # Fill the combo boxes with the correct items based on the selected media type
         if self.media_type == "Music":
-            self.inputs["Type"].addItems(["Single", "Remix", "Studio Album", "Extended Play",
-                                          "Reissue", "Live Album", "Remix Album"])
+            self.inputs["Type"].addItems(["Song", "Remix", "Album"])
+            self.inputs["Source Type"].addItems(["Single", "LP", "Extended Play", "Studio Album",
+                                                 "Live Album", "Remix Album", "Reissue"])
+            self.inputs["Source Name"].setDisabled(True)
         elif self.media_type == "Movie":
             self.inputs["MPAA"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
         elif self.media_type == "TV":
@@ -513,14 +524,23 @@ class AddMedia(QDialog):
         elif self.media_type == "Anime":
             self.inputs["Type"].addItems(["TV", "Movie", "OVA", "Special"])
             self.inputs["Content Rating"].addItems(["G", "PG", "PG-13", "R", "NC-17"])
-            self.inputs["Source"].addItems(["Original", "Manga", "4-koma Manga", "Visual Novel", "Light Novel",
+            self.inputs["Source"].addItems(["Original", "Manga", "4-koma", "Visual Novel", "Light Novel",
                                             "Novel", "Video Game", "Card Game"])
         elif self.media_type == "Manga":
             self.inputs["Demographic"].addItems(["Kodomo", "Shonen", "Shoujo", "Josei", "Seinen", "Seijin",
                                                  "Mina", "4-koma"])
         elif self.media_type == "Video Game":
-            self.inputs["Platform"].addItems(["PC", "3DS", "DS", "GBA"])
-            self.inputs["Campaign Finished?"].addItems(["Yes", "No"])
+            self.inputs["Platform"].addItems(["PC - Steam", "PC - Origin", "PC - Uplay", "PC - No DRM",
+                                              "Nintendo - Switch", "Nintendo - Wii U", "Nintendo - Wii",
+                                              "Nintendo - Gamecube", "Nintendo - N64", "Nintendo - SNES",
+                                              "Nintendo - NES", "Nintendo - 3DS", "Nintendo - DS", "Nintendo - GBA",
+                                              "Nintendo - GBC", "Nintendo - GB", "Microsoft - Xbox One X",
+                                              "Microsoft - Xbox One", "Microsoft - Xbox 360", "Microsoft - Xbox",
+                                              "Sony - Playstation 4", "Sony - Playstation 3", "Sony - Playstation 2",
+                                              "Sony - Playstation", "Sony - Vita", "Sony - PSP"])
+            self.inputs["Campaign Finished?"].addItems(["Yes", "No", "N/A"])
+            self.inputs["Achievement Progress"].addItems(["<10%", "10-19%", "20-29%", "30-39%", "40-49%", "50-59%",
+                                                          "60-69%", "70-79%", "80-89%", "90-99%", "100%", "N/A"])
         self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
 
     def init_styles(self):
@@ -537,6 +557,13 @@ class AddMedia(QDialog):
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
+
+    def source_name_status(self):
+        """Enables or disables the 'Source Name' line edit based on the input for the 'Source Type' input for music"""
+        if self.inputs["Type"].currentText() != "Album" and self.inputs["Source Type"].currentText() != "Single":
+            self.inputs["Source Name"].setDisabled(False)
+        else:
+            self.inputs["Source Name"].setDisabled(True)
 
     def submit_media(self):
         """Places the inputs from the input widgets into a temporary dictionary variable"""

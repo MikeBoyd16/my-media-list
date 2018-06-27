@@ -11,7 +11,7 @@
 		"Campaign Finished?": "Yes",
 		"Achievement Progress": "0.00",
 		"Score": 9,
-		"Tags": "Horror,Action,Sci-fi,Space,Third Person,Gore,Atmospheric,Aliens,Story Rich,Futuristic",
+		"Tags": ["Horror", "Action", "Sci-fi", "Space", "Third Person", "Gore", "Atmospheric", "Aliens", "Story Rich", "Futuristic"],
 		"Comments": "An amazing, adrenaline-fueled thrill ride. It's one of the few horror games I've played to go beyond the jump-scare and have a compelling story.",
 		"Media": "Video Game",
 		"Date Entered": "6.26.2018"

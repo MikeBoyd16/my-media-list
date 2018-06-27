@@ -225,7 +225,11 @@ class MyListWindow(QMainWindow):
         item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
         for label in self.my_media_list[item_key]:
             if self.my_media_list[item_key][label]:  # Only display a label if there is data associated with it
-                self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
+                # If a label's associated data is in a list, display a comma separated string of that data
+                if isinstance(self.my_media_list[item_key][label], list):
+                    self.media_details_area.append(label + ": " + ", ".join(self.my_media_list[item_key][label]) + "\n")
+                else:
+                    self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
 
 
 class SelectMedia(QDialog):
@@ -545,6 +549,12 @@ class AddMedia(QDialog):
                 if "," in self.inputs[key].text():  # If there are multiple inputs for one category, split them
                     input_list = self.inputs[key].text()
                     input_list = input_list.split(",")
+
+                    # If whitespace exists at the beginning of an input, remove it
+                    for idx in range(len(input_list)):
+                        if input_list[idx][0] == " ":
+                            input_list[idx] = input_list[idx][1:]
+
                     self.temp_input[key] = input_list
                 else:
                     self.temp_input[key] = self.inputs[key].text()

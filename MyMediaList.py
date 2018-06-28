@@ -162,7 +162,7 @@ class MyListWindow(QMainWindow):
         self.media_list_area.clear()
 
         # Create list items for each record in the media list
-        for key, data in self.my_media_list.items():
+        for key, data in reversed(list(self.my_media_list.items())):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
@@ -319,8 +319,7 @@ class AddMedia(QDialog):
             "Songwriters": "line",
             "Producers": "line",
             "Year": "line",
-            "Genres": "line",
-            "Comments": "line"
+            "Genres": "line"
         }
     audiobook_widgets = \
         {

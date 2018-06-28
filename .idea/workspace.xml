@@ -18,11 +18,11 @@
       <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyMediaList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="413" column="29" lean-forward="true" selection-start-line="413" selection-start-column="29" selection-end-line="413" selection-end-column="29" />
+            <state relative-caret-position="166">
+              <caret line="161" column="36" lean-forward="true" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+                <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
               </folding>
             </state>
           </provider>
@@ -62,9 +62,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="787" />
-    <option name="y" value="2" />
-    <option name="width" value="1186" />
+    <option name="x" value="881" />
+    <option name="width" value="776" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -85,7 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,6 +101,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530124461882</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Overhaul media widget content and ordering">
+      <created>1530132677264</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1530132677264</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -590,12 +596,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2776607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29662803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.5105374" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.48946258" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.48946258" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -658,7 +664,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove all spacing and margins in the main window" />
     <MESSAGE value="Center main window on the screen" />
     <MESSAGE value="Display list item data in the text area when selected" />
     <MESSAGE value="Center the dialog windows on the screen" />
@@ -683,7 +688,8 @@
     <MESSAGE value="Rework the look and feel of the MainWindow's ListWidget and TextEdit" />
     <MESSAGE value="Remove spaces from labels with multiple inputs and format those inputs as comma-separated strings when displayed" />
     <MESSAGE value="Prevent certain labels, and their associated data, from being displayed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prevent certain labels, and their associated data, from being displayed" />
+    <MESSAGE value="Overhaul media widget content and ordering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Overhaul media widget content and ordering" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,7 +706,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -717,7 +723,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -734,7 +740,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -751,7 +757,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -768,7 +774,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -785,7 +791,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -796,7 +802,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -807,7 +813,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,17 +837,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyMediaList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="413" column="29" lean-forward="true" selection-start-line="413" selection-start-column="29" selection-end-line="413" selection-end-column="29" />
+        <state relative-caret-position="166">
+          <caret line="161" column="36" lean-forward="true" selection-start-line="161" selection-start-column="36" selection-end-line="161" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1530130906475" expanded="true" signature="24863:25023" ph="..." />
+            <marker date="1530198283064" expanded="true" signature="24847:25007" ph="..." />
           </folding>
         </state>
       </provider>

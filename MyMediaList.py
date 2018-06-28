@@ -66,52 +66,26 @@ class MyListWindow(QMainWindow):
         box_layout.setSpacing(0)
         self.setLayout(box_layout)
 
-    def update_styles(self, selected_color=None):
+    def update_styles(self):
         """Sets the stylesheet properties for widgets"""
         self.media_list_area.setStyleSheet("""
                         .QListWidget {
-                            background-color: #fffced;
+                            background-color: #fffcf0;
                             font-weight:bold;
                             font-size: 13px;
                             border-style: solid;
                             border-width: 2px;
                             border-color: #7dbed1;
+                            outline: 0; /* Removes the dotted outline around selected list items */
                         }
                         .QListWidget:item:selected:active {
-                            color: selected_color
+                            color: #ffffff;
                             background-color: #7ecde5;
-                        }
-                        """)
-        self.media_list_area.verticalScrollBar().setStyleSheet("""
-                        .QScrollBar:vertical {
-                            border: 1px solid #999999;
-                            background:white;
-                            width:10px;
-                            margin: 0px 0px 0px 0px;
-                        }
-                        .QScrollBar::handle:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
-                            min-height: 0px;
-                        }
-                        .QScrollBar::add-line:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
-                            height: 0px;
-                            subcontrol-position: bottom;
-                            subcontrol-origin: margin;
-                        }
-                        .QScrollBar::sub-line:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
-                            height: 0 px;
-                            subcontrol-position: top;
-                            subcontrol-origin: margin;
                         }
                         """)
         self.media_details_area.setStyleSheet("""
                         .QTextEdit {
-                            background-color: #fffced;
+                            background-color: #fffcf0;
                             color: #1f2041;
                             font-weight: bold;
                             font-size: 13px;
@@ -120,7 +94,7 @@ class MyListWindow(QMainWindow):
                             border-color: #7dbed1;
                             }
         """)
-        self.media_details_area.verticalScrollBar().setStyleSheet("""
+        scrollbar_stylesheet = ("""
                         .QScrollBar:vertical {
                             border: 1px solid #999999;
                             background:white;
@@ -147,6 +121,8 @@ class MyListWindow(QMainWindow):
                             subcontrol-origin: margin;
                         }
                         """)
+        self.media_list_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
+        self.media_details_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -166,7 +142,7 @@ class MyListWindow(QMainWindow):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
-            self.update_item_color(data, list_item)
+            self.update_item_color(list_item, data)
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
@@ -180,17 +156,14 @@ class MyListWindow(QMainWindow):
         # Set the icon size of all list item icons in the list area
         self.media_list_area.setIconSize(QSize(30, 30))
 
-    def update_item_color(self, data, item):
+    def update_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
         if data["Score"] >= 8:
-            item.setForeground(QColor("#8bb262"))
-            self.update_styles("#8bb262")
+            item.setForeground(QColor("#6c993d"))
         elif data["Score"] >= 5:
-            item.setForeground(QColor("#cca65b"))
-            self.update_styles("#cca65b")
+            item.setForeground(QColor("#cc975b"))
         else:
-            item.setForeground(QColor("#b26262"))
-            self.update_styles("#b26262")
+            item.setForeground(QColor("#cc5151"))
 
     def open_file(self):
         """Opens a json file and loads file data into the list area"""

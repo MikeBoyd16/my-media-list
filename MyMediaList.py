@@ -486,7 +486,7 @@ class AddMedia(QDialog):
         # Fill the combo boxes with the correct items based on the selected media type
         if self.media_type == "Music":
             self.inputs["Type"].addItems(["Song", "Remix", "Album"])
-            self.inputs["Source Type"].addItems(["Single", "LP", "Extended Play", "Studio Album",
+            self.inputs["Source Type"].addItems(["Single", "LP", "EP", "Studio Album",
                                                  "Live Album", "Remix Album", "Reissue"])
             self.inputs["Source Name"].setDisabled(True)
         elif self.media_type == "Movie":
@@ -546,7 +546,8 @@ class AddMedia(QDialog):
                 else:
                     self.temp_input[key] = self.inputs[key].currentText()
             else:
-                if "," in self.inputs[key].text():  # If there are multiple inputs for one category, split them
+                # If there are multiple inputs for one category, split them
+                if "," in self.inputs[key].text() and key != "Comments":
                     input_list = self.inputs[key].text()
                     input_list = input_list.split(",")
 

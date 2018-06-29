@@ -291,7 +291,7 @@ class AddMedia(QDialog):
             "Record Label": "line",
             "Songwriters": "line",
             "Producers": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Genres": "line"
         }
     audiobook_widgets = \
@@ -302,7 +302,7 @@ class AddMedia(QDialog):
             "Listening Length": "line",
             "Authors": "line",
             "Narrators": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Genres": "line",
             "Tags": "line",
             "Comments": "line"
@@ -316,7 +316,7 @@ class AddMedia(QDialog):
             "Directors": "line",
             "Writers": "line",
             "Producers": "line",
-            "Year": "line",
+            "Release Date": "line",
             "MPAA": "combo",
             "Genres": "line",
             "Tags": "line",
@@ -333,7 +333,7 @@ class AddMedia(QDialog):
             "Creators": "line",
             "Writers": "line",
             "Producers": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Content Rating": "combo",
             "Genres": "line",
             "Tags": "line",
@@ -349,7 +349,7 @@ class AddMedia(QDialog):
             "Duration": "line",
             "Studio": "line",
             "Producers": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Content Rating": "combo",
             "Genres": "line",
             "Tags": "line",
@@ -362,7 +362,7 @@ class AddMedia(QDialog):
             "Series": "line",
             "Pages": "line",
             "Authors": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Genres": "line",
             "Tags": "line",
             "Comments": "line"
@@ -390,7 +390,7 @@ class AddMedia(QDialog):
             "Achievement Progress": "combo",
             "Developers": "line",
             "Publishers": "line",
-            "Year": "line",
+            "Release Date": "line",
             "Genres": "line",
             "Tags": "line",
             "Comments": "line"

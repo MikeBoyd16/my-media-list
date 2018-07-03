@@ -36,7 +36,10 @@ class MyListWindow(QMainWindow):
         # Set the window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
-        # self.header.setText("MyMediaList")
+
+        # Set header label's text and align it to the center
+        self.header.setText("MyMediaList")
+        self.header.setAlignment(Qt.AlignCenter)
 
         # Add icons to each push button
         self.import_list.setIcon(QIcon("images/import_list.png"))
@@ -80,23 +83,26 @@ class MyListWindow(QMainWindow):
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
 
-        # Initialize three layouts, one VBoxLayout and two HBoxLayouts
+        # Initialize four layouts, one VBoxLayout and three HBoxLayouts
         vbox_layout = QVBoxLayout(self.central_widget)
         hbox_layout1 = QHBoxLayout(self.central_widget)
         hbox_layout2 = QHBoxLayout(self.central_widget)
+        hbox_layout3 = QHBoxLayout(self.central_widget)
 
-        # Add the header and button widgets to the first HBoxLayout in the order they will be displayed
-        hbox_layout1.addWidget(self.import_list)
-        hbox_layout1.addWidget(self.export_list)
-        hbox_layout1.addWidget(self.save_list)
+        # Add header label to the first HBoxLayout
         hbox_layout1.addWidget(self.header)
-        hbox_layout1.addWidget(self.add_item)
-        hbox_layout1.addWidget(self.remove_item)
-        hbox_layout1.addWidget(self.edit_item)
 
-        # Add the list and detail area widgets to the second HBoxLayout in the order they will be displayed
-        hbox_layout2.addWidget(self.media_list_area)
-        hbox_layout2.addWidget(self.media_details_area)
+        # Add the header and button widgets to the second HBoxLayout
+        hbox_layout2.addWidget(self.import_list)
+        hbox_layout2.addWidget(self.export_list)
+        hbox_layout2.addWidget(self.save_list)
+        hbox_layout2.addWidget(self.add_item)
+        hbox_layout2.addWidget(self.remove_item)
+        hbox_layout2.addWidget(self.edit_item)
+
+        # Add the list and detail area widgets to the third HBoxLayout
+        hbox_layout3.addWidget(self.media_list_area)
+        hbox_layout3.addWidget(self.media_details_area)
 
         # Remove margins and spacing from each layout
         vbox_layout.setContentsMargins(0, 0, 0, 0)
@@ -105,69 +111,80 @@ class MyListWindow(QMainWindow):
         hbox_layout1.setSpacing(0)
         hbox_layout2.setContentsMargins(0, 0, 0, 0)
         hbox_layout2.setSpacing(0)
+        hbox_layout3.setContentsMargins(0, 0, 0, 0)
+        hbox_layout3.setSpacing(0)
 
         # Add both HBoxLayouts to the VBoxLayout
         vbox_layout.addLayout(hbox_layout1)
         vbox_layout.addLayout(hbox_layout2)
+        vbox_layout.addLayout(hbox_layout3)
 
         # Set the MainWindow layout to the VBoxLayout
         self.setLayout(vbox_layout)
 
     def update_styles(self):
         """Sets the stylesheet properties for widgets"""
+        self.header.setStyleSheet("""
+            .QLabel {
+                background-color: #7dbed1;
+                color: #fffcf0;
+                font-weight:bold;
+                font-size: 30px;
+            }
+        """)
         self.media_list_area.setStyleSheet("""
-                        .QListWidget {
-                            background-color: #fffcf0;
-                            font-weight:bold;
-                            font-size: 13px;
-                            border-style: solid;
-                            border-width: 2px;
-                            border-color: #7dbed1;
-                            outline: 0; /* Removes the dotted outline around selected list items */
-                        }
-                        .QListWidget:item:selected:active {
-                            color: #ffffff;
-                            background-color: #7ecde5;
-                        }
-                        """)
+            .QListWidget {
+                background-color: #fffcf0;
+                font-weight:bold;
+                font-size: 13px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #7dbed1;
+                outline: 0; /* Removes the dotted outline around selected list items */
+            }
+            .QListWidget:item:selected:active {
+                color: #ffffff;
+                background-color: #7ecde5;
+            }
+        """)
         self.media_details_area.setStyleSheet("""
-                        .QTextEdit {
-                            background-color: #fffcf0;
-                            color: #1f2041;
-                            font-weight: bold;
-                            font-size: 13px;
-                            border-style: solid;
-                            border-width: 2px;
-                            border-color: #7dbed1;
-                            }
+            .QTextEdit {
+                background-color: #fffcf0;
+                color: #1f2041;
+                font-weight: bold;
+                font-size: 13px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #7dbed1;
+                }
         """)
         scrollbar_stylesheet = ("""
-                        .QScrollBar:vertical {
-                            border: 1px solid #999999;
-                            background:white;
-                            width:10px;
-                            margin: 0px 0px 0px 0px;
-                        }
-                        .QScrollBar::handle:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
-                            min-height: 0px;
-                        }
-                        .QScrollBar::add-line:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
-                            height: 0px;
-                            subcontrol-position: bottom;
-                            subcontrol-origin: margin;
-                        }
-                        .QScrollBar::sub-line:vertical {
-                            background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                            stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
-                            height: 0 px;
-                            subcontrol-position: top;
-                            subcontrol-origin: margin;
-                        }
-                        """)
+                .QScrollBar:vertical {
+                    border: 1px solid #999999;
+                    background:white;
+                    width:10px;
+                    margin: 0px 0px 0px 0px;
+                }
+                .QScrollBar::handle:vertical {
+                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                    stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
+                    min-height: 0px;
+                }
+                .QScrollBar::add-line:vertical {
+                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                    stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                    height: 0px;
+                    subcontrol-position: bottom;
+                    subcontrol-origin: margin;
+                }
+                .QScrollBar::sub-line:vertical {
+                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                    stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                    height: 0 px;
+                    subcontrol-position: top;
+                    subcontrol-origin: margin;
+                }
+        """)
         self.media_list_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
         self.media_details_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
 

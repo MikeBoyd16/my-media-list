@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -615,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530581464252</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add header and title to the top of the main window.">
+      <created>1530583184550</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1530583184550</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView">
@@ -698,7 +704,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix closing dialog crash bug" />
     <MESSAGE value="Convert multiple inputs for a single category into a list" />
     <MESSAGE value="Add stylesheet initialization method for main window" />
     <MESSAGE value="Add icons to menu items in main window" />
@@ -723,7 +728,8 @@
     <MESSAGE value="Fix comments being turned into comma-separated lists when a comma is used." />
     <MESSAGE value="Change all instances of label names with 'Year' to 'Release Date'." />
     <MESSAGE value="Replace file menu with buttons and replace existing icons with new ones." />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace file menu with buttons and replace existing icons with new ones." />
+    <MESSAGE value="Add header and title to the top of the main window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add header and title to the top of the main window." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

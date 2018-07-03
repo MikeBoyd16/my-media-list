@@ -9,7 +9,7 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        # self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from main window
+        self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
@@ -20,33 +20,53 @@ class MyListWindow(QMainWindow):
 
         self.media_list_area = QListWidget(self)
         self.media_details_area = QTextEdit(self)
+        self.import_list = QPushButton(self)
+        self.export_list = QPushButton(self)
+        self.save_list = QPushButton(self)
+        self.header = QLabel(self)
+        self.add_item = QPushButton(self)
+        self.remove_item = QPushButton(self)
+        self.edit_item = QPushButton(self)
 
         self.init_window()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
 
-        # Initialize the menu and its actions
-        main_menu = self.menuBar()
-        file_menu = main_menu.addMenu("File")
-        edit_menu = main_menu.addMenu("Edit")
-        open_file = QAction(QIcon("images/import_list.png"), "Import List", self)
-        open_file.triggered.connect(self.open_file)
-        file_menu.addAction(open_file)
-        save_file = QAction(QIcon("images/export_list.png"), "Export List", self)
-        save_file.triggered.connect(self.save_file)
-        file_menu.addAction(save_file)
-        add_media = QAction(QIcon("images/add_media.png"),"Add Media", self)
-        add_media.triggered.connect(self.add_media_record)
-        edit_menu.addAction(add_media)
-        remove_media = QAction(QIcon("images/remove_media.png"), "Remove Media", self)
-        edit_menu.addAction(remove_media)
-        edit_media = QAction(QIcon("images/edit_media.png"), "Edit Media", self)
-        edit_menu.addAction(edit_media)
-
         # Set the window title and dimensions
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
+        # self.header.setText("MyMediaList")
+
+        # Add icons to each push button
+        self.import_list.setIcon(QIcon("images/import_list.png"))
+        self.export_list.setIcon(QIcon("images/export_list.png"))
+        self.save_list.setIcon(QIcon("images/save_list.png"))
+        self.add_item.setIcon(QIcon("images/add_item.png"))
+        self.remove_item.setIcon(QIcon("images/remove_item.png"))
+        self.edit_item.setIcon(QIcon("images/edit_item.png"))
+
+        # Resize each push button
+        self.import_list.setIconSize(QSize(50, 50))
+        self.import_list.setFixedSize(QSize(55, 55))
+        self.export_list.setIconSize(QSize(50, 50))
+        self.export_list.setFixedSize(QSize(55, 55))
+        self.save_list.setIconSize(QSize(50, 50))
+        self.save_list.setFixedSize(QSize(55, 55))
+        self.add_item.setIconSize(QSize(50, 50))
+        self.add_item.setFixedSize(QSize(55, 55))
+        self.remove_item.setIconSize(QSize(50, 50))
+        self.remove_item.setFixedSize(QSize(55, 55))
+        self.edit_item.setIconSize(QSize(50, 50))
+        self.edit_item.setFixedSize(QSize(55, 55))
+
+        # Connect each push button to the appropriate action
+        self.import_list.clicked.connect(self.open_file)
+        self.export_list.clicked.connect(self.save_file)
+        # self.save_list.clicked.connect(self.save_current_list)
+        self.add_item.clicked.connect(self.add_media_record)
+        # self.remove_item.clicked.connect(self.remove_media_record)
+        # self.edit_item.clicked.connect(self.edit_media_record)
 
         # Connect the selection of a list item with its associated data
         self.media_list_area.itemClicked.connect(self.show_media_record)
@@ -58,13 +78,40 @@ class MyListWindow(QMainWindow):
         self.center_window()
 
     def init_layout(self):
-        """Initializes the layout for the widgets in the window"""
-        box_layout = QHBoxLayout(self.central_widget)
-        box_layout.addWidget(self.media_list_area)
-        box_layout.addWidget(self.media_details_area)
-        box_layout.setContentsMargins(0, 0, 0, 0)
-        box_layout.setSpacing(0)
-        self.setLayout(box_layout)
+        """Initializes the layout and arranges the widgets in the proper order."""
+
+        # Initialize three layouts, one VBoxLayout and two HBoxLayouts
+        vbox_layout = QVBoxLayout(self.central_widget)
+        hbox_layout1 = QHBoxLayout(self.central_widget)
+        hbox_layout2 = QHBoxLayout(self.central_widget)
+
+        # Add the header and button widgets to the first HBoxLayout in the order they will be displayed
+        hbox_layout1.addWidget(self.import_list)
+        hbox_layout1.addWidget(self.export_list)
+        hbox_layout1.addWidget(self.save_list)
+        hbox_layout1.addWidget(self.header)
+        hbox_layout1.addWidget(self.add_item)
+        hbox_layout1.addWidget(self.remove_item)
+        hbox_layout1.addWidget(self.edit_item)
+
+        # Add the list and detail area widgets to the second HBoxLayout in the order they will be displayed
+        hbox_layout2.addWidget(self.media_list_area)
+        hbox_layout2.addWidget(self.media_details_area)
+
+        # Remove margins and spacing from each layout
+        vbox_layout.setContentsMargins(0, 0, 0, 0)
+        vbox_layout.setSpacing(0)
+        hbox_layout1.setContentsMargins(0, 0, 0, 0)
+        hbox_layout1.setSpacing(0)
+        hbox_layout2.setContentsMargins(0, 0, 0, 0)
+        hbox_layout2.setSpacing(0)
+
+        # Add both HBoxLayouts to the VBoxLayout
+        vbox_layout.addLayout(hbox_layout1)
+        vbox_layout.addLayout(hbox_layout2)
+
+        # Set the MainWindow layout to the VBoxLayout
+        self.setLayout(vbox_layout)
 
     def update_styles(self):
         """Sets the stylesheet properties for widgets"""

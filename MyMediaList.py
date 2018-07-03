@@ -126,20 +126,17 @@ class MyListWindow(QMainWindow):
         """Sets the stylesheet properties for widgets"""
         self.header.setStyleSheet("""
             .QLabel {
-                background-color: #7dbed1;
-                color: #fffcf0;
+                background-color: #697187;
+                color: #eaeaea;
                 font-weight:bold;
                 font-size: 30px;
             }
         """)
         self.media_list_area.setStyleSheet("""
             .QListWidget {
-                background-color: #fffcf0;
+                background-color: #ffffff;
                 font-weight:bold;
                 font-size: 13px;
-                border-style: solid;
-                border-width: 2px;
-                border-color: #7dbed1;
                 outline: 0; /* Removes the dotted outline around selected list items */
             }
             .QListWidget:item:selected:active {
@@ -149,13 +146,10 @@ class MyListWindow(QMainWindow):
         """)
         self.media_details_area.setStyleSheet("""
             .QTextEdit {
-                background-color: #fffcf0;
+                background-color: #f5f4fb;
                 color: #1f2041;
                 font-weight: bold;
                 font-size: 13px;
-                border-style: solid;
-                border-width: 2px;
-                border-color: #7dbed1;
                 }
         """)
         scrollbar_stylesheet = ("""
@@ -337,7 +331,8 @@ class SelectMedia(QDialog):
         self.temp_input = add_media_record.temp_input
         self.temp_input["Media"] = self.select_media_combo.currentText()
         now = datetime.datetime.now()
-        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year)
+        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + \
+                                          ":" + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
         self.hide()
 
 

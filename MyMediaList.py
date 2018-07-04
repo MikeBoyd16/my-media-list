@@ -171,7 +171,7 @@ class MyListWindow(QMainWindow):
         """)
         self.media_list_area.setStyleSheet("""
             .QListWidget {
-                background-color: #f2f3d9;
+                background-color: #f1f2e1;
                 font-weight:bold;
                 font-size: 13px;
                 outline: 0; /* Removes the dotted outline around selected list items */
@@ -195,25 +195,25 @@ class MyListWindow(QMainWindow):
                 .QScrollBar:vertical {
                     border: 1px solid #999999;
                     background: white;
-                    width:10px;
+                    width: 5px;
                     margin: 0px 0px 0px 0px;
                 }
                 .QScrollBar::handle:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209), stop:1 rgb(125, 189, 209));
+                    stop: 0 #19244C, stop: 0.5 #19244C, stop:1 #19244C);
                     min-height: 0px;
                 }
                 .QScrollBar::add-line:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
+                    stop: 0 #19244C, stop: 0.5 #19244C,  stop:1 #19244C);
                     height: 0px;
                     subcontrol-position: bottom;
                     subcontrol-origin: margin;
                 }
                 .QScrollBar::sub-line:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0  rgb(125, 189, 209), stop: 0.5 rgb(125, 189, 209),  stop:1 rgb(125, 189, 209));
-                    height: 0 px;
+                    stop: 0  #19244C, stop: 0.5 #19244C,  stop:1 #19244C);
+                    height: 0px;
                     subcontrol-position: top;
                     subcontrol-origin: margin;
                 }
@@ -256,13 +256,13 @@ class MyListWindow(QMainWindow):
     def update_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
         if data["Score"] >= 8:
-            item.setBackground(QColor("#f2f3d9"))
+            item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#468c00"))
         elif data["Score"] >= 5:
-            item.setBackground(QColor("#f2f3d9"))
+            item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#b06500"))
         else:
-            item.setBackground(QColor("#f2f3d9"))
+            item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#af0000"))
 
     def open_file(self):

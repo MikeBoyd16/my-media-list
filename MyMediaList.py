@@ -149,8 +149,8 @@ class MyListWindow(QMainWindow):
         """Sets the stylesheet properties for widgets"""
         self.central_widget.setStyleSheet("""
             .QPushButton {
-                background-color: rgb(41, 161, 211);
-                border: 1px solid rgb(148,208,233);
+                background-color: #19244C;
+                border: 1px solid #868C93;
                 font-weight: bold;
                 font-size: 12px;
                 color: #f7f7f7;
@@ -158,12 +158,12 @@ class MyListWindow(QMainWindow):
                 padding-left: 10px;
             }
             .QPushButton:hover {
-                background-color: rgb(148,208,233);
+                background-color: #868C93;
             }
         """)
         self.header.setStyleSheet("""
             .QLabel {
-                background-color: rgb(41, 161, 211);
+                background-color: #19244C;
                 color: #f7f7f7;
                 font-weight:bold;
                 font-size: 30px;
@@ -171,15 +171,21 @@ class MyListWindow(QMainWindow):
         """)
         self.media_list_area.setStyleSheet("""
             .QListWidget {
-                background-color: #f7f7f7;
+                background-color: #f2f3d9;
                 font-weight:bold;
                 font-size: 13px;
                 outline: 0; /* Removes the dotted outline around selected list items */
             }
+            .QListWidget::Item:hover{
+                background-color: #CDD0BF;
+            }
+            .QListWidget::Item:selected {
+                background-color: #CDD0BF;
+            }
         """)
         self.media_details_area.setStyleSheet("""
             .QTextEdit {
-                background-color: rgb(69, 73, 84);
+                background-color: #19244C;
                 color: #f7f7f7;
                 font-weight: bold;
                 font-size: 13px;
@@ -250,14 +256,14 @@ class MyListWindow(QMainWindow):
     def update_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
         if data["Score"] >= 8:
-            item.setBackground(QColor(138, 183, 28))
-            item.setForeground(QColor("#f7f7f7"))
+            item.setBackground(QColor("#f2f3d9"))
+            item.setForeground(QColor("#468c00"))
         elif data["Score"] >= 5:
-            item.setBackground(QColor(241, 176, 24))
-            item.setForeground(QColor("#f7f7f7"))
+            item.setBackground(QColor("#f2f3d9"))
+            item.setForeground(QColor("#b06500"))
         else:
-            item.setBackground(QColor(238, 78, 16))
-            item.setForeground(QColor("#f7f7f7"))
+            item.setBackground(QColor("#f2f3d9"))
+            item.setForeground(QColor("#af0000"))
 
     def open_file(self):
         """Opens a json file and loads file data into the list area"""

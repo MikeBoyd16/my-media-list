@@ -16,17 +16,19 @@ class MyListWindow(QMainWindow):
         self.my_media_list = {}
 
         self.title = "MyMediaList"
-        self.left, self.top, self.width, self.height = 100, 100, 600, 750
+        self.left, self.top, self.width, self.height = 100, 100, 680, 600
 
-        self.media_list_area = QListWidget(self)
-        self.media_details_area = QTextEdit(self)
+        self.header = QLabel(self)
         self.import_list = QPushButton(self)
         self.export_list = QPushButton(self)
         self.save_list = QPushButton(self)
-        self.header = QLabel(self)
+        self.search_list = QPushButton(self)
         self.add_item = QPushButton(self)
         self.remove_item = QPushButton(self)
         self.edit_item = QPushButton(self)
+        self.quit = QPushButton(self)
+        self.media_list_area = QListWidget(self)
+        self.media_details_area = QTextEdit(self)
 
         self.init_window()
 
@@ -38,38 +40,28 @@ class MyListWindow(QMainWindow):
         self.setGeometry(self.left, self.top, self.width, self.height)
 
         # Set header label's text and align it to the center
-        self.header.setText("MyMediaList")
+        self.header.setText("Media \nList")
         self.header.setAlignment(Qt.AlignCenter)
 
         # Add icons to each push button
         self.import_list.setIcon(QIcon("images/import_list.png"))
         self.export_list.setIcon(QIcon("images/export_list.png"))
         self.save_list.setIcon(QIcon("images/save_list.png"))
+        self.search_list.setIcon(QIcon("images/search_list.png"))
         self.add_item.setIcon(QIcon("images/add_item.png"))
         self.remove_item.setIcon(QIcon("images/remove_item.png"))
         self.edit_item.setIcon(QIcon("images/edit_item.png"))
-
-        # Resize each push button
-        self.import_list.setIconSize(QSize(50, 50))
-        self.import_list.setFixedSize(QSize(55, 55))
-        self.export_list.setIconSize(QSize(50, 50))
-        self.export_list.setFixedSize(QSize(55, 55))
-        self.save_list.setIconSize(QSize(50, 50))
-        self.save_list.setFixedSize(QSize(55, 55))
-        self.add_item.setIconSize(QSize(50, 50))
-        self.add_item.setFixedSize(QSize(55, 55))
-        self.remove_item.setIconSize(QSize(50, 50))
-        self.remove_item.setFixedSize(QSize(55, 55))
-        self.edit_item.setIconSize(QSize(50, 50))
-        self.edit_item.setFixedSize(QSize(55, 55))
+        self.quit.setIcon(QIcon("images/quit.png"))
 
         # Connect each push button to the appropriate action
         self.import_list.clicked.connect(self.open_file)
         self.export_list.clicked.connect(self.save_file)
         # self.save_list.clicked.connect(self.save_current_list)
+        # self.search_list.clicked.connect(self.search_current_list)
         self.add_item.clicked.connect(self.add_media_record)
         # self.remove_item.clicked.connect(self.remove_media_record)
         # self.edit_item.clicked.connect(self.edit_media_record)
+        # self.quit.clicked.connect(self.quit_program)
 
         # Connect the selection of a list item with its associated data
         self.media_list_area.itemClicked.connect(self.show_media_record)
@@ -84,70 +76,111 @@ class MyListWindow(QMainWindow):
         """Initializes the layout and arranges the widgets in the proper order."""
 
         # Initialize four layouts, one VBoxLayout and three HBoxLayouts
-        vbox_layout = QVBoxLayout(self.central_widget)
-        hbox_layout1 = QHBoxLayout(self.central_widget)
-        hbox_layout2 = QHBoxLayout(self.central_widget)
-        hbox_layout3 = QHBoxLayout(self.central_widget)
+        self.main_layout = QHBoxLayout(self.central_widget)
+        self.left_layout = QVBoxLayout(self.central_widget)
+        self.center_layout = QVBoxLayout(self.central_widget)
+        self.right_layout = QVBoxLayout(self.central_widget)
 
         # Add header label to the first HBoxLayout
-        hbox_layout1.addWidget(self.header)
+        self.left_layout.addWidget(self.header)
+        self.header.setFixedSize(130, 150)
 
         # Add the header and button widgets to the second HBoxLayout
-        hbox_layout2.addWidget(self.import_list)
-        hbox_layout2.addWidget(self.export_list)
-        hbox_layout2.addWidget(self.save_list)
-        hbox_layout2.addWidget(self.add_item)
-        hbox_layout2.addWidget(self.remove_item)
-        hbox_layout2.addWidget(self.edit_item)
+        self.left_layout.addWidget(self.import_list)
+        self.left_layout.addWidget(self.export_list)
+        self.left_layout.addWidget(self.save_list)
+        self.left_layout.addWidget(self.search_list)
+        self.left_layout.addWidget(self.add_item)
+        self.left_layout.addWidget(self.remove_item)
+        self.left_layout.addWidget(self.edit_item)
+        self.left_layout.addWidget(self.quit)
+
+        # Resize each push button
+        self.import_list.setIconSize(QSize(30, 30))
+        self.import_list.setFixedSize(QSize(130, 60))
+        self.export_list.setIconSize(QSize(30, 30))
+        self.export_list.setFixedSize(QSize(130, 60))
+        self.save_list.setIconSize(QSize(30, 30))
+        self.save_list.setFixedSize(QSize(130, 60))
+        self.search_list.setIconSize(QSize(30, 30))
+        self.search_list.setFixedSize(QSize(130, 60))
+        self.add_item.setIconSize(QSize(30, 30))
+        self.add_item.setFixedSize(QSize(130, 60))
+        self.remove_item.setIconSize(QSize(30, 30))
+        self.remove_item.setFixedSize(QSize(130, 60))
+        self.edit_item.setIconSize(QSize(30, 30))
+        self.edit_item.setFixedSize(QSize(130, 60))
+        self.quit.setIconSize(QSize(30, 30))
+        self.quit.setFixedSize(QSize(130, 60))
+
+        # Add text to the push buttons
+        self.import_list.setText("    Import")
+        self.export_list.setText("    Export")
+        self.save_list.setText("    Save")
+        self.search_list.setText("    Search")
+        self.add_item.setText("    Add")
+        self.remove_item.setText("    Remove")
+        self.edit_item.setText("    Edit")
+        self.quit.setText("    Quit")
 
         # Add the list and detail area widgets to the third HBoxLayout
-        hbox_layout3.addWidget(self.media_list_area)
-        hbox_layout3.addWidget(self.media_details_area)
+        self.center_layout.addWidget(self.media_list_area)
+        self.right_layout.addWidget(self.media_details_area)
 
         # Remove margins and spacing from each layout
-        vbox_layout.setContentsMargins(0, 0, 0, 0)
-        vbox_layout.setSpacing(0)
-        hbox_layout1.setContentsMargins(0, 0, 0, 0)
-        hbox_layout1.setSpacing(0)
-        hbox_layout2.setContentsMargins(0, 0, 0, 0)
-        hbox_layout2.setSpacing(0)
-        hbox_layout3.setContentsMargins(0, 0, 0, 0)
-        hbox_layout3.setSpacing(0)
+        self.main_layout.setContentsMargins(0, 0, 0, 0)
+        self.main_layout.setSpacing(0)
+        self.left_layout.setContentsMargins(0, 0, 0, 0)
+        self.left_layout.setSpacing(0)
+        self.center_layout.setContentsMargins(0, 0, 0, 0)
+        self.center_layout.setSpacing(0)
+        self.right_layout.setContentsMargins(0, 0, 0, 0)
+        self.right_layout.setSpacing(0)
 
         # Add both HBoxLayouts to the VBoxLayout
-        vbox_layout.addLayout(hbox_layout1)
-        vbox_layout.addLayout(hbox_layout2)
-        vbox_layout.addLayout(hbox_layout3)
+        self.main_layout.addLayout(self.left_layout)
+        self.main_layout.addLayout(self.center_layout)
+        self.main_layout.addLayout(self.right_layout)
 
         # Set the MainWindow layout to the VBoxLayout
-        self.setLayout(vbox_layout)
+        self.setLayout(self.main_layout)
 
     def update_styles(self):
         """Sets the stylesheet properties for widgets"""
+        self.central_widget.setStyleSheet("""
+            .QPushButton {
+                background-color: rgb(41, 161, 211);
+                border: 1px solid rgb(148,208,233);
+                font-weight: bold;
+                font-size: 12px;
+                color: #f7f7f7;
+                text-align: left;
+                padding-left: 10px;
+            }
+            .QPushButton:hover {
+                background-color: rgb(148,208,233);
+            }
+        """)
         self.header.setStyleSheet("""
             .QLabel {
-                background-color: #697187;
-                color: #eaeaea;
+                background-color: rgb(41, 161, 211);
+                color: #f7f7f7;
                 font-weight:bold;
                 font-size: 30px;
             }
         """)
         self.media_list_area.setStyleSheet("""
             .QListWidget {
-                background-color: #ffffff;
+                background-color: #f7f7f7;
                 font-weight:bold;
                 font-size: 13px;
                 outline: 0; /* Removes the dotted outline around selected list items */
             }
-            .QListWidget:item:selected:active {
-                color: #ffffff;
-                background-color: #7ecde5;
-            }
         """)
         self.media_details_area.setStyleSheet("""
             .QTextEdit {
-                background-color: #f5f4fb;
-                color: #1f2041;
+                background-color: rgb(69, 73, 84);
+                color: #f7f7f7;
                 font-weight: bold;
                 font-size: 13px;
                 }
@@ -155,7 +188,7 @@ class MyListWindow(QMainWindow):
         scrollbar_stylesheet = ("""
                 .QScrollBar:vertical {
                     border: 1px solid #999999;
-                    background:white;
+                    background: white;
                     width:10px;
                     margin: 0px 0px 0px 0px;
                 }
@@ -217,11 +250,14 @@ class MyListWindow(QMainWindow):
     def update_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
         if data["Score"] >= 8:
-            item.setForeground(QColor("#6c993d"))
+            item.setBackground(QColor(138, 183, 28))
+            item.setForeground(QColor("#f7f7f7"))
         elif data["Score"] >= 5:
-            item.setForeground(QColor("#cc975b"))
+            item.setBackground(QColor(241, 176, 24))
+            item.setForeground(QColor("#f7f7f7"))
         else:
-            item.setForeground(QColor("#cc5151"))
+            item.setBackground(QColor(238, 78, 16))
+            item.setForeground(QColor("#f7f7f7"))
 
     def open_file(self):
         """Opens a json file and loads file data into the list area"""

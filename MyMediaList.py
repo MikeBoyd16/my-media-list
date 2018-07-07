@@ -14,6 +14,7 @@ class MyListWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
 
         self.my_media_list = {}
+        self.current_file = ""
 
         self.title = "MyMediaList"
         self.left, self.top, self.width, self.height = 100, 100, 680, 600
@@ -56,7 +57,7 @@ class MyListWindow(QMainWindow):
         # Connect each push button to the appropriate action
         self.import_list_button.clicked.connect(self.import_list)
         self.export_list_button.clicked.connect(self.export_list)
-        # self.save_list_button.clicked.connect(self.save_list)
+        self.save_list_button.clicked.connect(self.save_list)
         # self.search_list_button.clicked.connect(self.search_current_list)
         self.add_item_button.clicked.connect(self.add_media_record)
         # self.remove_item_button.clicked.connect(self.remove_media_record)
@@ -269,6 +270,7 @@ class MyListWindow(QMainWindow):
         """Opens a json file and loads file data into the list area"""
         file_name = QFileDialog.getOpenFileName(self, "Open File")
         if file_name[0]:
+            self.current_file = file_name[0]
             file = open(file_name[0], "r")
             self.my_media_list = json.load(file)
             self.update_list()
@@ -278,6 +280,12 @@ class MyListWindow(QMainWindow):
         file_name = QFileDialog.getSaveFileName(self, "Save File")
         if file_name[0]:
             file = open(file_name[0], "w")
+            json.dump(self.my_media_list, file)
+
+    def save_list(self):
+        """Saves changes from the current session to the file the list was imported from"""
+        if self.current_file:
+            file = open(self.current_file, "w")
             json.dump(self.my_media_list, file)
 
     def add_media_record(self):

@@ -19,14 +19,14 @@ class MyListWindow(QMainWindow):
         self.left, self.top, self.width, self.height = 100, 100, 680, 600
 
         self.header = QLabel(self)
-        self.import_list = QPushButton(self)
-        self.export_list = QPushButton(self)
-        self.save_list = QPushButton(self)
-        self.search_list = QPushButton(self)
-        self.add_item = QPushButton(self)
-        self.remove_item = QPushButton(self)
-        self.edit_item = QPushButton(self)
-        self.quit = QPushButton(self)
+        self.import_list_button = QPushButton(self)
+        self.export_list_button = QPushButton(self)
+        self.save_list_button = QPushButton(self)
+        self.search_list_button = QPushButton(self)
+        self.add_item_button = QPushButton(self)
+        self.remove_item_button = QPushButton(self)
+        self.edit_item_button = QPushButton(self)
+        self.quit_button = QPushButton(self)
         self.media_list_area = QListWidget(self)
         self.media_details_area = QTextEdit(self)
 
@@ -44,24 +44,24 @@ class MyListWindow(QMainWindow):
         self.header.setAlignment(Qt.AlignCenter)
 
         # Add icons to each push button
-        self.import_list.setIcon(QIcon("images/import_list.png"))
-        self.export_list.setIcon(QIcon("images/export_list.png"))
-        self.save_list.setIcon(QIcon("images/save_list.png"))
-        self.search_list.setIcon(QIcon("images/search_list.png"))
-        self.add_item.setIcon(QIcon("images/add_item.png"))
-        self.remove_item.setIcon(QIcon("images/remove_item.png"))
-        self.edit_item.setIcon(QIcon("images/edit_item.png"))
-        self.quit.setIcon(QIcon("images/quit.png"))
+        self.import_list_button.setIcon(QIcon("images/import_list.png"))
+        self.export_list_button.setIcon(QIcon("images/export_list.png"))
+        self.save_list_button.setIcon(QIcon("images/save_list.png"))
+        self.search_list_button.setIcon(QIcon("images/search_list.png"))
+        self.add_item_button.setIcon(QIcon("images/add_item.png"))
+        self.remove_item_button.setIcon(QIcon("images/remove_item.png"))
+        self.edit_item_button.setIcon(QIcon("images/edit_item.png"))
+        self.quit_button.setIcon(QIcon("images/quit.png"))
 
         # Connect each push button to the appropriate action
-        self.import_list.clicked.connect(self.open_file)
-        self.export_list.clicked.connect(self.save_file)
-        # self.save_list.clicked.connect(self.save_current_list)
-        # self.search_list.clicked.connect(self.search_current_list)
-        self.add_item.clicked.connect(self.add_media_record)
-        # self.remove_item.clicked.connect(self.remove_media_record)
-        # self.edit_item.clicked.connect(self.edit_media_record)
-        # self.quit.clicked.connect(self.quit_program)
+        self.import_list_button.clicked.connect(self.import_list)
+        self.export_list_button.clicked.connect(self.export_list)
+        # self.save_list_button.clicked.connect(self.save_list)
+        # self.search_list_button.clicked.connect(self.search_current_list)
+        self.add_item_button.clicked.connect(self.add_media_record)
+        # self.remove_item_button.clicked.connect(self.remove_media_record)
+        # self.edit_item_button.clicked.connect(self.edit_media_record)
+        # self.quit_button.clicked.connect(self.quit_program)
 
         # Connect the selection of a list item with its associated data
         self.media_list_area.itemClicked.connect(self.show_media_record)
@@ -86,42 +86,42 @@ class MyListWindow(QMainWindow):
         self.header.setFixedSize(130, 150)
 
         # Add the header and button widgets to the second HBoxLayout
-        self.left_layout.addWidget(self.import_list)
-        self.left_layout.addWidget(self.export_list)
-        self.left_layout.addWidget(self.save_list)
-        self.left_layout.addWidget(self.search_list)
-        self.left_layout.addWidget(self.add_item)
-        self.left_layout.addWidget(self.remove_item)
-        self.left_layout.addWidget(self.edit_item)
-        self.left_layout.addWidget(self.quit)
+        self.left_layout.addWidget(self.import_list_button)
+        self.left_layout.addWidget(self.export_list_button)
+        self.left_layout.addWidget(self.save_list_button)
+        self.left_layout.addWidget(self.search_list_button)
+        self.left_layout.addWidget(self.add_item_button)
+        self.left_layout.addWidget(self.remove_item_button)
+        self.left_layout.addWidget(self.edit_item_button)
+        self.left_layout.addWidget(self.quit_button)
 
         # Resize each push button
-        self.import_list.setIconSize(QSize(30, 30))
-        self.import_list.setFixedSize(QSize(130, 60))
-        self.export_list.setIconSize(QSize(30, 30))
-        self.export_list.setFixedSize(QSize(130, 60))
-        self.save_list.setIconSize(QSize(30, 30))
-        self.save_list.setFixedSize(QSize(130, 60))
-        self.search_list.setIconSize(QSize(30, 30))
-        self.search_list.setFixedSize(QSize(130, 60))
-        self.add_item.setIconSize(QSize(30, 30))
-        self.add_item.setFixedSize(QSize(130, 60))
-        self.remove_item.setIconSize(QSize(30, 30))
-        self.remove_item.setFixedSize(QSize(130, 60))
-        self.edit_item.setIconSize(QSize(30, 30))
-        self.edit_item.setFixedSize(QSize(130, 60))
-        self.quit.setIconSize(QSize(30, 30))
-        self.quit.setFixedSize(QSize(130, 60))
+        self.import_list_button.setIconSize(QSize(30, 30))
+        self.import_list_button.setFixedSize(QSize(130, 60))
+        self.export_list_button.setIconSize(QSize(30, 30))
+        self.export_list_button.setFixedSize(QSize(130, 60))
+        self.save_list_button.setIconSize(QSize(30, 30))
+        self.save_list_button.setFixedSize(QSize(130, 60))
+        self.search_list_button.setIconSize(QSize(30, 30))
+        self.search_list_button.setFixedSize(QSize(130, 60))
+        self.add_item_button.setIconSize(QSize(30, 30))
+        self.add_item_button.setFixedSize(QSize(130, 60))
+        self.remove_item_button.setIconSize(QSize(30, 30))
+        self.remove_item_button.setFixedSize(QSize(130, 60))
+        self.edit_item_button.setIconSize(QSize(30, 30))
+        self.edit_item_button.setFixedSize(QSize(130, 60))
+        self.quit_button.setIconSize(QSize(30, 30))
+        self.quit_button.setFixedSize(QSize(130, 60))
 
         # Add text to the push buttons
-        self.import_list.setText("    Import")
-        self.export_list.setText("    Export")
-        self.save_list.setText("    Save")
-        self.search_list.setText("    Search")
-        self.add_item.setText("    Add")
-        self.remove_item.setText("    Remove")
-        self.edit_item.setText("    Edit")
-        self.quit.setText("    Quit")
+        self.import_list_button.setText("    Import")
+        self.export_list_button.setText("    Export")
+        self.save_list_button.setText("    Save")
+        self.search_list_button.setText("    Search")
+        self.add_item_button.setText("    Add")
+        self.remove_item_button.setText("    Remove")
+        self.edit_item_button.setText("    Edit")
+        self.quit_button.setText("    Quit")
 
         # Add the list and detail area widgets to the third HBoxLayout
         self.center_layout.addWidget(self.media_list_area)
@@ -239,7 +239,7 @@ class MyListWindow(QMainWindow):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
-            self.update_item_color(list_item, data)
+            self.set_item_color(list_item, data)
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
@@ -253,7 +253,7 @@ class MyListWindow(QMainWindow):
         # Set the icon size of all list item icons in the list area
         self.media_list_area.setIconSize(QSize(30, 30))
 
-    def update_item_color(self, item, data):
+    def set_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
         if data["Score"] >= 8:
             item.setBackground(QColor("#f1f2e1"))
@@ -265,7 +265,7 @@ class MyListWindow(QMainWindow):
             item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#af0000"))
 
-    def open_file(self):
+    def import_list(self):
         """Opens a json file and loads file data into the list area"""
         file_name = QFileDialog.getOpenFileName(self, "Open File")
         if file_name[0]:
@@ -273,7 +273,7 @@ class MyListWindow(QMainWindow):
             self.my_media_list = json.load(file)
             self.update_list()
 
-    def save_file(self):
+    def export_list(self):
         """Creates a new, or overwrites an existing, json file with the content in the list area"""
         file_name = QFileDialog.getSaveFileName(self, "Save File")
         if file_name[0]:

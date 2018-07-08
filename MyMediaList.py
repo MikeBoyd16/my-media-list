@@ -9,17 +9,79 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
         self.my_media_list = {}
         self.current_file = ""
 
-        self.title = "MyMediaList"
-        self.left, self.top, self.width, self.height = 100, 100, 680, 600
+        self.init_widgets()
+        self.init_window()
 
+    def init_window(self):
+        """Initializes the window, its dimensions, and content"""
+        self.setGeometry(100, 100, 680, 600)
+        self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
+
+        self.import_list_button.clicked.connect(self.import_list)
+        self.export_list_button.clicked.connect(self.export_list)
+        self.save_list_button.clicked.connect(self.save_list)
+        # self.search_list_button.clicked.connect(self.search_current_list)
+        self.add_item_button.clicked.connect(self.add_media_record)
+        # self.remove_item_button.clicked.connect(self.remove_media_record)
+        # self.edit_item_button.clicked.connect(self.edit_media_record)
+        # self.quit_button.clicked.connect(self.quit_program)
+        self.media_list_area.itemClicked.connect(self.show_media_record)
+
+        self.init_layout()
+        self.init_styles()
+        self.center_window()
+
+    def init_layout(self):
+        """Initializes the layout and arranges the widgets in the proper order."""
+        self.main_layout = QHBoxLayout(self.central_widget)
+        self.left_layout = QVBoxLayout(self.central_widget)
+        self.center_layout = QVBoxLayout(self.central_widget)
+        self.right_layout = QVBoxLayout(self.central_widget)
+
+        self.left_layout.addWidget(self.header)
+        self.left_layout.addWidget(self.import_list_button)
+        self.left_layout.addWidget(self.export_list_button)
+        self.left_layout.addWidget(self.save_list_button)
+        self.left_layout.addWidget(self.search_list_button)
+        self.left_layout.addWidget(self.add_item_button)
+        self.left_layout.addWidget(self.remove_item_button)
+        self.left_layout.addWidget(self.edit_item_button)
+        self.left_layout.addWidget(self.quit_button)
+
+        self.center_layout.addWidget(self.media_list_area)
+
+        self.right_layout.addWidget(self.media_details_area)
+
+        # Remove margins and spacing from each layout
+        self.main_layout.setContentsMargins(0, 0, 0, 0)
+        self.main_layout.setSpacing(0)
+        self.left_layout.setContentsMargins(0, 0, 0, 0)
+        self.left_layout.setSpacing(0)
+        self.center_layout.setContentsMargins(0, 0, 0, 0)
+        self.center_layout.setSpacing(0)
+        self.right_layout.setContentsMargins(0, 0, 0, 0)
+        self.right_layout.setSpacing(0)
+
+        self.main_layout.addLayout(self.left_layout)
+        self.main_layout.addLayout(self.center_layout)
+        self.main_layout.addLayout(self.right_layout)
+
+        self.setLayout(self.main_layout)
+
+    def init_widgets(self):
+        """Initializes widgets and their properties"""
         self.header = QLabel(self)
+        self.header.setText("Media \nList")
+        self.header.setAlignment(Qt.AlignCenter)
+        self.header.setFixedSize(130, 150)
+
         self.import_list_button = QPushButton(self)
         self.export_list_button = QPushButton(self)
         self.save_list_button = QPushButton(self)
@@ -28,21 +90,16 @@ class MyListWindow(QMainWindow):
         self.remove_item_button = QPushButton(self)
         self.edit_item_button = QPushButton(self)
         self.quit_button = QPushButton(self)
-        self.media_list_area = QListWidget(self)
-        self.media_details_area = QTextEdit(self)
 
-        self.init_window()
-
-    def init_window(self):
-        """Initializes the window, its dimensions, and content"""
-
-        # Set the window title and dimensions
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
-
-        # Set header label's text and align it to the center
-        self.header.setText("Media \nList")
-        self.header.setAlignment(Qt.AlignCenter)
+        # Add text to the push buttons
+        self.import_list_button.setText("    Import")
+        self.export_list_button.setText("    Export")
+        self.save_list_button.setText("    Save")
+        self.search_list_button.setText("    Search")
+        self.add_item_button.setText("    Add")
+        self.remove_item_button.setText("    Remove")
+        self.edit_item_button.setText("    Edit")
+        self.quit_button.setText("    Quit")
 
         # Add icons to each push button
         self.import_list_button.setIcon(QIcon("images/import_list.png"))
@@ -53,48 +110,6 @@ class MyListWindow(QMainWindow):
         self.remove_item_button.setIcon(QIcon("images/remove_item.png"))
         self.edit_item_button.setIcon(QIcon("images/edit_item.png"))
         self.quit_button.setIcon(QIcon("images/quit.png"))
-
-        # Connect each push button to the appropriate action
-        self.import_list_button.clicked.connect(self.import_list)
-        self.export_list_button.clicked.connect(self.export_list)
-        self.save_list_button.clicked.connect(self.save_list)
-        # self.search_list_button.clicked.connect(self.search_current_list)
-        self.add_item_button.clicked.connect(self.add_media_record)
-        # self.remove_item_button.clicked.connect(self.remove_media_record)
-        # self.edit_item_button.clicked.connect(self.edit_media_record)
-        # self.quit_button.clicked.connect(self.quit_program)
-
-        # Connect the selection of a list item with its associated data
-        self.media_list_area.itemClicked.connect(self.show_media_record)
-        self.media_details_area.setReadOnly(True)
-
-        # Initialize window layout and styles and center it on the screen
-        self.init_layout()
-        self.update_styles()
-        self.center_window()
-
-    def init_layout(self):
-        """Initializes the layout and arranges the widgets in the proper order."""
-
-        # Initialize four layouts, one VBoxLayout and three HBoxLayouts
-        self.main_layout = QHBoxLayout(self.central_widget)
-        self.left_layout = QVBoxLayout(self.central_widget)
-        self.center_layout = QVBoxLayout(self.central_widget)
-        self.right_layout = QVBoxLayout(self.central_widget)
-
-        # Add header label to the first HBoxLayout
-        self.left_layout.addWidget(self.header)
-        self.header.setFixedSize(130, 150)
-
-        # Add the header and button widgets to the second HBoxLayout
-        self.left_layout.addWidget(self.import_list_button)
-        self.left_layout.addWidget(self.export_list_button)
-        self.left_layout.addWidget(self.save_list_button)
-        self.left_layout.addWidget(self.search_list_button)
-        self.left_layout.addWidget(self.add_item_button)
-        self.left_layout.addWidget(self.remove_item_button)
-        self.left_layout.addWidget(self.edit_item_button)
-        self.left_layout.addWidget(self.quit_button)
 
         # Resize each push button
         self.import_list_button.setIconSize(QSize(30, 30))
@@ -114,39 +129,11 @@ class MyListWindow(QMainWindow):
         self.quit_button.setIconSize(QSize(30, 30))
         self.quit_button.setFixedSize(QSize(130, 60))
 
-        # Add text to the push buttons
-        self.import_list_button.setText("    Import")
-        self.export_list_button.setText("    Export")
-        self.save_list_button.setText("    Save")
-        self.search_list_button.setText("    Search")
-        self.add_item_button.setText("    Add")
-        self.remove_item_button.setText("    Remove")
-        self.edit_item_button.setText("    Edit")
-        self.quit_button.setText("    Quit")
+        self.media_list_area = QListWidget(self)
+        self.media_details_area = QTextEdit(self)
+        self.media_details_area.setReadOnly(True)
 
-        # Add the list and detail area widgets to the third HBoxLayout
-        self.center_layout.addWidget(self.media_list_area)
-        self.right_layout.addWidget(self.media_details_area)
-
-        # Remove margins and spacing from each layout
-        self.main_layout.setContentsMargins(0, 0, 0, 0)
-        self.main_layout.setSpacing(0)
-        self.left_layout.setContentsMargins(0, 0, 0, 0)
-        self.left_layout.setSpacing(0)
-        self.center_layout.setContentsMargins(0, 0, 0, 0)
-        self.center_layout.setSpacing(0)
-        self.right_layout.setContentsMargins(0, 0, 0, 0)
-        self.right_layout.setSpacing(0)
-
-        # Add both HBoxLayouts to the VBoxLayout
-        self.main_layout.addLayout(self.left_layout)
-        self.main_layout.addLayout(self.center_layout)
-        self.main_layout.addLayout(self.right_layout)
-
-        # Set the MainWindow layout to the VBoxLayout
-        self.setLayout(self.main_layout)
-
-    def update_styles(self):
+    def init_styles(self):
         """Sets the stylesheet properties for widgets"""
         self.central_widget.setStyleSheet("""
             .QPushButton {
@@ -229,8 +216,30 @@ class MyListWindow(QMainWindow):
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
 
+    def import_list(self):
+        """Opens a json file and loads file data into the list area"""
+        file_name = QFileDialog.getOpenFileName(self, "Open File")
+        if file_name[0]:
+            self.current_file = file_name[0]
+            file = open(file_name[0], "r")
+            self.my_media_list = json.load(file)
+            self.update_list()
+
+    def export_list(self):
+        """Creates a new, or overwrites an existing, json file with the content in the list area"""
+        file_name = QFileDialog.getSaveFileName(self, "Save File")
+        if file_name[0]:
+            file = open(file_name[0], "w")
+            json.dump(self.my_media_list, file)
+
+    def save_list(self):
+        """Saves changes from the current session to the file the list was imported from"""
+        if self.current_file:
+            file = open(self.current_file, "w")
+            json.dump(self.my_media_list, file)
+
     def update_list(self):
-        """Updates the list area widget with the current set of list items"""
+        """Updates the list area with the current set of list items"""
 
         # Clear the current set of list items from the list area
         self.media_list_area.clear()
@@ -266,28 +275,6 @@ class MyListWindow(QMainWindow):
             item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#af0000"))
 
-    def import_list(self):
-        """Opens a json file and loads file data into the list area"""
-        file_name = QFileDialog.getOpenFileName(self, "Open File")
-        if file_name[0]:
-            self.current_file = file_name[0]
-            file = open(file_name[0], "r")
-            self.my_media_list = json.load(file)
-            self.update_list()
-
-    def export_list(self):
-        """Creates a new, or overwrites an existing, json file with the content in the list area"""
-        file_name = QFileDialog.getSaveFileName(self, "Save File")
-        if file_name[0]:
-            file = open(file_name[0], "w")
-            json.dump(self.my_media_list, file)
-
-    def save_list(self):
-        """Saves changes from the current session to the file the list was imported from"""
-        if self.current_file:
-            file = open(self.current_file, "w")
-            json.dump(self.my_media_list, file)
-
     def add_media_record(self):
         """Adds a new media record to the media list"""
         select_media = SelectMedia()
@@ -317,39 +304,29 @@ class MyListWindow(QMainWindow):
 class SelectMedia(QDialog):
     def __init__(self):
         super().__init__()
+
         self.temp_input = {}
 
-        self.title = "Media Select"
-        self.left, self.top, self.width, self.height = 100, 100, 200, 200
-
-        self.select_media_combo = QComboBox(self)
-        self.ok = QPushButton("OK", self)
-
+        self.init_widgets()
         self.init_window()
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-
-        # Set the window title and dimensions
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setWindowTitle("Media Select")
+        self.setGeometry(100, 100, 200, 200)
 
         # Move the OK button to the correct position
         self.ok.move(50, 50)
 
-        # Display an AddMedia dialog form when OK is clicked
+        # Display an AddMedia form when OK is clicked
         self.ok.clicked.connect(self.go_to_add_media)
 
-        # Load the SelectMedia combo box with all supported media types
-        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
-
-        # Initialize window layout and styles and center it on the screen
         self.init_layout()
         self.init_styles()
         self.center_window()
 
     def init_layout(self):
-        """Initializes the layout for the widgets in the window"""
+        """Initializes the layout for widgets in the window"""
         grid_layout = QGridLayout()
         grid_layout.addWidget(self.select_media_combo, 0, 0)
         grid_layout.addWidget(self.ok, 1, 0)
@@ -358,6 +335,13 @@ class SelectMedia(QDialog):
         v_box_layout = QVBoxLayout()
         v_box_layout.addWidget(group_box)
         self.setLayout(v_box_layout)
+
+    def init_widgets(self):
+        """Initializes widgets and their properties"""
+        self.select_media_combo = QComboBox(self)
+        self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
+
+        self.ok = QPushButton("OK", self)
 
     def init_styles(self):
         """Sets all stylesheet properties"""
@@ -375,14 +359,15 @@ class SelectMedia(QDialog):
         return self.select_media_combo.currentText()
 
     def go_to_add_media(self):
-        """Displays a new AddMedia dialog form and places the resulting input in a temporary dictionary variable"""
+        """Displays a new AddMedia form and places the resulting
+        input in a temporary dictionary variable"""
         add_media_record = AddMedia(self.get_media_selection())
         add_media_record.exec_()
         self.temp_input = add_media_record.temp_input
         self.temp_input["Media"] = self.select_media_combo.currentText()
         now = datetime.datetime.now()
-        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + \
-                                          ":" + str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
+                                          str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
         self.hide()
 
 
@@ -512,23 +497,13 @@ class AddMedia(QDialog):
         self.labels = {}
         self.inputs = {}
 
-        self.title = "Add Music"
-        self.left, self.top, self.width, self.height = 100, 100, 250, 600
-
         self.init_widgets()
-        self.submit = QPushButton("Submit", self)
-
         self.init_window()
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-
-        # Set the window title and dimensions
-        self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
-
-        # Set the height for the Submit button
-        self.submit.setFixedHeight(40)
+        self.setWindowTitle("Add Music")
+        self.setGeometry(100, 100, 250, 600)
 
         # Connect a new media record submission with the Submit button
         self.submit.clicked.connect(self.submit_media)
@@ -538,7 +513,6 @@ class AddMedia(QDialog):
             self.inputs["Type"].currentIndexChanged.connect(self.source_name_status)
             self.inputs["Source Type"].currentIndexChanged.connect(self.source_name_status)
 
-        # Initialize window layout and styles and center it on the screen
         self.init_layout()
         self.init_styles()
         self.center_window()
@@ -624,6 +598,9 @@ class AddMedia(QDialog):
                                                           "60-69%", "70-79%", "80-89%", "90-99%", "100%", "N/A"])
         self.inputs["Score"].addItems(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"])
 
+        self.submit = QPushButton("Submit", self)
+        self.submit.setFixedHeight(40)
+
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""
         self.setStyleSheet("""
@@ -640,14 +617,16 @@ class AddMedia(QDialog):
         self.move(frame_geometry.topLeft())
 
     def source_name_status(self):
-        """Enables or disables the 'Source Name' line edit based on the input for the 'Source Type' input for music"""
+        """Enables or disables the 'Source Name' line edit based on
+        the input for the 'Source Type' input for music"""
         if self.inputs["Type"].currentText() != "Album" and self.inputs["Source Type"].currentText() != "Single":
             self.inputs["Source Name"].setDisabled(False)
         else:
             self.inputs["Source Name"].setDisabled(True)
 
     def submit_media(self):
-        """Places the inputs from the input widgets into a temporary dictionary variable"""
+        """Places the inputs from the input widgets into a temporary
+        dictionary variable"""
         for key in self.inputs:
             if isinstance(self.inputs[key], QComboBox):
                 if key == "Score":

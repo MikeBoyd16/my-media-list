@@ -24,14 +24,9 @@ class MyListWindow(QMainWindow):
         self.setGeometry(100, 100, 680, 600)
         self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
 
-        self.import_list_button.clicked.connect(self.import_list)
-        self.export_list_button.clicked.connect(self.export_list)
-        self.save_list_button.clicked.connect(self.save_list)
-        # self.search_list_button.clicked.connect(self.search_current_list)
-        self.add_item_button.clicked.connect(self.add_media_record)
-        # self.remove_item_button.clicked.connect(self.remove_media_record)
-        # self.edit_item_button.clicked.connect(self.edit_media_record)
-        # self.quit_button.clicked.connect(self.quit_program)
+        for button in self.buttons:
+            button_method = getattr(self, button)
+            self.buttons[button].clicked.connect(button_method)
         self.media_list_area.itemClicked.connect(self.show_media_record)
 
         self.init_layout()
@@ -46,14 +41,8 @@ class MyListWindow(QMainWindow):
         self.right_layout = QVBoxLayout(self.central_widget)
 
         self.left_layout.addWidget(self.header)
-        self.left_layout.addWidget(self.import_list_button)
-        self.left_layout.addWidget(self.export_list_button)
-        self.left_layout.addWidget(self.save_list_button)
-        self.left_layout.addWidget(self.search_list_button)
-        self.left_layout.addWidget(self.add_item_button)
-        self.left_layout.addWidget(self.remove_item_button)
-        self.left_layout.addWidget(self.edit_item_button)
-        self.left_layout.addWidget(self.quit_button)
+        for button in self.buttons:
+            self.left_layout.addWidget(self.buttons[button])
 
         self.center_layout.addWidget(self.media_list_area)
 
@@ -82,54 +71,20 @@ class MyListWindow(QMainWindow):
         self.header.setAlignment(Qt.AlignCenter)
         self.header.setFixedSize(130, 150)
 
-        self.import_list_button = QPushButton(self)
-        self.export_list_button = QPushButton(self)
-        self.save_list_button = QPushButton(self)
-        self.search_list_button = QPushButton(self)
-        self.add_item_button = QPushButton(self)
-        self.remove_item_button = QPushButton(self)
-        self.edit_item_button = QPushButton(self)
-        self.quit_button = QPushButton(self)
+        self.buttons = {"import_list": QPushButton(), "export_list": QPushButton(), "save_list": QPushButton(),
+                        "search_list": QPushButton(), "add_item": QPushButton(), "remove_item": QPushButton(),
+                        "edit_item": QPushButton(), "quit_program": QPushButton()}
 
-        # Add text to the push buttons
-        self.import_list_button.setText("    Import")
-        self.export_list_button.setText("    Export")
-        self.save_list_button.setText("    Save")
-        self.search_list_button.setText("    Search")
-        self.add_item_button.setText("    Add")
-        self.remove_item_button.setText("    Remove")
-        self.edit_item_button.setText("    Edit")
-        self.quit_button.setText("    Quit")
-
-        # Add icons to each push button
-        self.import_list_button.setIcon(QIcon("images/import_list.png"))
-        self.export_list_button.setIcon(QIcon("images/export_list.png"))
-        self.save_list_button.setIcon(QIcon("images/save_list.png"))
-        self.search_list_button.setIcon(QIcon("images/search_list.png"))
-        self.add_item_button.setIcon(QIcon("images/add_item.png"))
-        self.remove_item_button.setIcon(QIcon("images/remove_item.png"))
-        self.edit_item_button.setIcon(QIcon("images/edit_item.png"))
-        self.quit_button.setIcon(QIcon("images/quit.png"))
-
-        # Resize each push button
-        self.import_list_button.setIconSize(QSize(30, 30))
-        self.import_list_button.setFixedSize(QSize(130, 60))
-        self.export_list_button.setIconSize(QSize(30, 30))
-        self.export_list_button.setFixedSize(QSize(130, 60))
-        self.save_list_button.setIconSize(QSize(30, 30))
-        self.save_list_button.setFixedSize(QSize(130, 60))
-        self.search_list_button.setIconSize(QSize(30, 30))
-        self.search_list_button.setFixedSize(QSize(130, 60))
-        self.add_item_button.setIconSize(QSize(30, 30))
-        self.add_item_button.setFixedSize(QSize(130, 60))
-        self.remove_item_button.setIconSize(QSize(30, 30))
-        self.remove_item_button.setFixedSize(QSize(130, 60))
-        self.edit_item_button.setIconSize(QSize(30, 30))
-        self.edit_item_button.setFixedSize(QSize(130, 60))
-        self.quit_button.setIconSize(QSize(30, 30))
-        self.quit_button.setFixedSize(QSize(130, 60))
+        for button in self.buttons:
+            button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
+            self.buttons[button].setText("    " + button_text)
+            self.buttons[button].setIcon(QIcon("images/button-icons/" + button + ".png"))
+            self.buttons[button].setIconSize(QSize(30, 30))
+            self.buttons[button].setFixedSize(QSize(130, 60))
 
         self.media_list_area = QListWidget(self)
+        self.media_list_area.setIconSize(QSize(30, 30))
+
         self.media_details_area = QTextEdit(self)
         self.media_details_area.setReadOnly(True)
 
@@ -238,13 +193,12 @@ class MyListWindow(QMainWindow):
             file = open(self.current_file, "w")
             json.dump(self.my_media_list, file)
 
+    def search_list(self):
+        pass
+
     def update_list(self):
         """Updates the list area with the current set of list items"""
-
-        # Clear the current set of list items from the list area
-        self.media_list_area.clear()
-
-        # Create list items for each record in the media list
+        self.media_list_area.clear()  # Clear the current set of list items from the list area
         for key, data in reversed(list(self.my_media_list.items())):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
@@ -253,15 +207,11 @@ class MyListWindow(QMainWindow):
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
-            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + " Selected.png"), QIcon.Normal)
-            list_item_icon.addPixmap(QPixmap("images/" + str(data["Media"]) + ".png"), QIcon.Selected)
+            list_item_icon.addPixmap(QPixmap("images/list-item-icons/" + str(data["Media"]) + " Selected.png"), QIcon.Normal)
+            list_item_icon.addPixmap(QPixmap("images/list-item-icons/" + str(data["Media"]) + ".png"), QIcon.Selected)
             list_item.setIcon(list_item_icon)
 
-            # Add the list item to the list area
             self.media_list_area.addItem(list_item)
-
-        # Set the icon size of all list item icons in the list area
-        self.media_list_area.setIconSize(QSize(30, 30))
 
     def set_item_color(self, item, data):
         """Changes the color of an item in the item list based on the item's score"""
@@ -275,7 +225,7 @@ class MyListWindow(QMainWindow):
             item.setBackground(QColor("#f1f2e1"))
             item.setForeground(QColor("#af0000"))
 
-    def add_media_record(self):
+    def add_item(self):
         """Adds a new media record to the media list"""
         select_media = SelectMedia()
         select_media.show()
@@ -284,6 +234,15 @@ class MyListWindow(QMainWindow):
             self.my_media_list[select_media.temp_input["Title"] + "-" + select_media.temp_input["Media"] + "-" +
                                select_media.temp_input["Date Entered"]] = select_media.temp_input
             self.update_list()
+
+    def remove_item(self):
+        pass
+
+    def edit_item(self):
+        pass
+
+    def quit_program(self):
+        pass
 
     def show_media_record(self):
         """Displays the currently selected list item's media record"""
@@ -340,7 +299,6 @@ class SelectMedia(QDialog):
         """Initializes widgets and their properties"""
         self.select_media_combo = QComboBox(self)
         self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
-
         self.ok = QPushButton("OK", self)
 
     def init_styles(self):

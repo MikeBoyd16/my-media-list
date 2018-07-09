@@ -1,57 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/add_item.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/edit_item.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/export_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/import_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/quit_program.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/remove_item.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/save_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/search_list.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Anime Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Anime.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Audiobook Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Audiobook.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Book Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Book.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Manga Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Manga.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Movie Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Movie.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Music Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Music.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/TV Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/TV.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Video Game Selected.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/list-item-icons/Video Game.png" />
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="Assign button widgets in the main window to a dict and rework redundant code.">
+      <change beforePath="" afterPath="$PROJECT_DIR$/omnilog.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/my-media-list.iml" afterPath="$PROJECT_DIR$/.idea/omnilog.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="$PROJECT_DIR$/MyMediaList.py" />
-      <change beforePath="$PROJECT_DIR$/images/Anime Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Audiobook Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Book Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Manga Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Manga.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Movie Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Music Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/TV Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Video Game Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/Video Game.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/add_item.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/anime.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/audiobook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/book.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/edit_item.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/export_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/import_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/movie.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/music.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/quit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/remove_item.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/save_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/search_list.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/tv.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/MyMediaList.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,14 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyMediaList.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+      <file leaf-file-name="omnilog.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/omnilog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5100">
-              <caret line="300" column="119" lean-forward="false" selection-start-line="300" selection-start-column="119" selection-end-line="300" selection-end-column="119" />
+            <state relative-caret-position="2142">
+              <caret line="126" column="41" lean-forward="false" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+                <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,7 +77,7 @@
     <option name="width" value="776" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
@@ -144,8 +101,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="my-media-list" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-media-list" type="462c0819:PsiDirectoryNode" />
+              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -155,7 +112,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -377,13 +334,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add movie labels and line edits">
-      <created>1527130850779</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1527130850779</updated>
     </task>
     <task id="LOCAL-00003" summary="Move MediaSelect class to MyMediaList module and add Music form">
       <created>1527386709183</created>
@@ -721,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531059620947</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Assign button widgets in the main window to a dict and rework redundant code.">
+      <created>1531096451980</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1531096451980</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -736,16 +693,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29662803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29662803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21536796" sideWeight="0.5105374" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5021075" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.48946258" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21320346" sideWeight="0.48946258" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -804,7 +761,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Comment through the init_widgets method in the AddMedia class" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="Reorganize code" />
     <MESSAGE value="Increase the size of list item icons" />
     <MESSAGE value="Add combo items for all media types" />
@@ -829,7 +788,8 @@
     <MESSAGE value="Update variable and method names for the main window class." />
     <MESSAGE value="Add the 'Save List' functionality to the main window." />
     <MESSAGE value="Rearrange code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearrange code" />
+    <MESSAGE value="Assign button widgets in the main window to a dict and rework redundant code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Assign button widgets in the main window to a dict and rework redundant code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -840,13 +800,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -857,13 +817,13 @@
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -874,13 +834,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -891,13 +851,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -908,13 +868,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -925,35 +885,35 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -980,13 +940,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyMediaList.py">
+    <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5100">
-          <caret line="300" column="119" lean-forward="false" selection-start-line="300" selection-start-column="119" selection-end-line="300" selection-end-column="119" />
+        <state relative-caret-position="2142">
+          <caret line="126" column="41" lean-forward="false" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531096380127" expanded="true" signature="24154:24314" ph="..." />
+            <marker date="1531153714476" expanded="true" signature="24183:24343" ph="..." />
           </folding>
         </state>
       </provider>

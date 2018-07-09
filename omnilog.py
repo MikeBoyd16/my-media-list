@@ -21,7 +21,7 @@ class MyListWindow(QMainWindow):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 680, 600)
+        self.setGeometry(100, 100, 625, 600)
         self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
 
         for button in self.buttons:
@@ -67,9 +67,9 @@ class MyListWindow(QMainWindow):
     def init_widgets(self):
         """Initializes widgets and their properties"""
         self.header = QLabel(self)
-        self.header.setText("Media \nList")
+        self.header.setText("OmniLog")
         self.header.setAlignment(Qt.AlignCenter)
-        self.header.setFixedSize(130, 150)
+        self.header.setFixedSize(130, 125)
 
         self.buttons = {"import_list": QPushButton(), "export_list": QPushButton(), "save_list": QPushButton(),
                         "search_list": QPushButton(), "add_item": QPushButton(), "remove_item": QPushButton(),
@@ -92,44 +92,45 @@ class MyListWindow(QMainWindow):
         """Sets the stylesheet properties for widgets"""
         self.central_widget.setStyleSheet("""
             .QPushButton {
-                background-color: #19244C;
-                border: 1px solid #868C93;
+                background-color: #247ba0;
+                border: 1px solid #8CBDAF;
                 font-weight: bold;
                 font-size: 12px;
-                color: #f7f7f7;
+                color: #f3ffbd;
                 text-align: left;
                 padding-left: 10px;
             }
             .QPushButton:hover {
-                background-color: #868C93;
+                background-color: #8CBDAF;
             }
         """)
         self.header.setStyleSheet("""
             .QLabel {
-                background-color: #19244C;
-                color: #f7f7f7;
+                background-color: #f3ffbd;
+                color: #247ba0;
                 font-weight:bold;
-                font-size: 30px;
+                font-size: 26px;
             }
         """)
         self.media_list_area.setStyleSheet("""
             .QListWidget {
-                background-color: #f1f2e1;
+                background-color: #d8eeea;
+                color: #6d6d6d;
                 font-weight:bold;
                 font-size: 13px;
                 outline: 0; /* Removes the dotted outline around selected list items */
             }
             .QListWidget::Item:hover{
-                background-color: #CDD0BF;
+                background-color: #C5D7D3;
             }
             .QListWidget::Item:selected {
-                background-color: #CDD0BF;
+                background-color: #C5D7D3;
             }
         """)
         self.media_details_area.setStyleSheet("""
             .QTextEdit {
-                background-color: #19244C;
-                color: #f7f7f7;
+                background-color: #247ba0;
+                color: #f3ffbd;
                 font-weight: bold;
                 font-size: 13px;
                 }
@@ -203,7 +204,7 @@ class MyListWindow(QMainWindow):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
-            self.set_item_color(list_item, data)
+            # self.set_item_color(list_item, data)
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()

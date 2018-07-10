@@ -72,8 +72,8 @@ class MyListWindow(QMainWindow):
         self.header.setFixedSize(130, 125)
 
         self.buttons = {"import_list": QPushButton(), "export_list": QPushButton(), "save_list": QPushButton(),
-                        "search_list": QPushButton(), "add_item": QPushButton(), "remove_item": QPushButton(),
-                        "edit_item": QPushButton(), "quit_program": QPushButton()}
+                        "profile_management": QPushButton(), "search_list": QPushButton(), "add_item": QPushButton(),
+                        "remove_item": QPushButton(), "edit_item": QPushButton(), "quit_program": QPushButton()}
 
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
@@ -224,6 +224,9 @@ class MyListWindow(QMainWindow):
             self.my_media_list[select_media.temp_input["Title"] + "-" + select_media.temp_input["Media"] + "-" +
                                select_media.temp_input["Date Entered"]] = select_media.temp_input
             self.update_list()
+
+    def profile_management(self):
+        pass
 
     def remove_item(self):
         pass

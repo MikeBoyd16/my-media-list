@@ -118,6 +118,7 @@ class MyListWindow(QMainWindow):
                 color: #6d6d6d;
                 font-weight:bold;
                 font-size: 13px;
+                border: none;
                 outline: 0; /* Removes the dotted outline around selected list items */
             }
             .QListWidget::Item:hover{
@@ -133,30 +134,31 @@ class MyListWindow(QMainWindow):
                 color: #f3ffbd;
                 font-weight: bold;
                 font-size: 13px;
+                border: none;
                 }
         """)
         scrollbar_stylesheet = ("""
                 .QScrollBar:vertical {
-                    border: 1px solid #999999;
+                    border: 1px solid #6d6d6d;
                     background: white;
                     width: 5px;
                     margin: 0px 0px 0px 0px;
                 }
                 .QScrollBar::handle:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 #19244C, stop: 0.5 #19244C, stop:1 #19244C);
+                    stop: 0 #6d6d6d, stop: 0.5 #6d6d6d, stop:1 #6d6d6d);
                     min-height: 0px;
                 }
                 .QScrollBar::add-line:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 #19244C, stop: 0.5 #19244C,  stop:1 #19244C);
+                    stop: 0 #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
                     height: 0px;
                     subcontrol-position: bottom;
                     subcontrol-origin: margin;
                 }
                 .QScrollBar::sub-line:vertical {
                     background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0  #19244C, stop: 0.5 #19244C,  stop:1 #19244C);
+                    stop: 0  #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
                     height: 0px;
                     subcontrol-position: top;
                     subcontrol-origin: margin;
@@ -243,7 +245,7 @@ class MyListWindow(QMainWindow):
         pass
 
     def quit_program(self):
-        pass
+        sys.exit()
 
     def show_media_record(self):
         """Displays the currently selected list item's media record"""

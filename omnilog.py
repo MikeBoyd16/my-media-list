@@ -206,7 +206,6 @@ class MyListWindow(QMainWindow):
             list_item = QListWidgetItem(data["Title"])
             list_item.setData(Qt.UserRole, data)
             list_item.setSizeHint(QSize(35, 35))
-            # self.set_item_color(list_item, data)
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             list_item_icon = QIcon()
@@ -215,18 +214,6 @@ class MyListWindow(QMainWindow):
             list_item.setIcon(list_item_icon)
 
             self.media_list_area.addItem(list_item)
-
-    def set_item_color(self, item, data):
-        """Changes the color of an item in the item list based on the item's score"""
-        if data["Score"] >= 8:
-            item.setBackground(QColor("#f1f2e1"))
-            item.setForeground(QColor("#468c00"))
-        elif data["Score"] >= 5:
-            item.setBackground(QColor("#f1f2e1"))
-            item.setForeground(QColor("#b06500"))
-        else:
-            item.setBackground(QColor("#f1f2e1"))
-            item.setForeground(QColor("#af0000"))
 
     def add_item(self):
         """Adds a new media record to the media list"""

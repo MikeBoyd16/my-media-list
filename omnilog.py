@@ -36,11 +36,15 @@ class MyListWindow(QMainWindow):
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
         self.main_layout = QHBoxLayout(self.central_widget)
+        self.logo_layout = QGridLayout(self.central_widget)
         self.left_layout = QVBoxLayout(self.central_widget)
         self.center_layout = QVBoxLayout(self.central_widget)
         self.right_layout = QVBoxLayout(self.central_widget)
 
-        self.left_layout.addWidget(self.header)
+        self.logo_layout.addWidget(self.header_logo, 0, 0)
+        self.logo_layout.addWidget(self.header_title, 1, 0)
+        self.left_layout.addLayout(self.logo_layout)
+
         for button in self.buttons:
             self.left_layout.addWidget(self.buttons[button])
 
@@ -51,6 +55,8 @@ class MyListWindow(QMainWindow):
         # Remove margins and spacing from each layout
         self.main_layout.setContentsMargins(0, 0, 0, 0)
         self.main_layout.setSpacing(0)
+        self.logo_layout.setContentsMargins(0, 0, 0, 0)
+        self.logo_layout.setSpacing(0)
         self.left_layout.setContentsMargins(0, 0, 0, 0)
         self.left_layout.setSpacing(0)
         self.center_layout.setContentsMargins(0, 0, 0, 0)
@@ -66,10 +72,13 @@ class MyListWindow(QMainWindow):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
-        self.header = QLabel(self)
-        self.header.setText("OmniLog")
-        self.header.setAlignment(Qt.AlignCenter)
-        self.header.setFixedSize(130, 125)
+        self.header_logo = QLabel(self)
+        self.header_logo.setPixmap(QPixmap("images/omnilog_logo.png"))
+        self.header_logo.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.header_title = QLabel(self)
+        self.header_title.setText("OmniLog")
+        self.header_title.setAlignment(Qt.AlignCenter)
+        self.header_title.setFixedSize(130, 50)
 
         self.buttons = {"import_list": QPushButton(), "export_list": QPushButton(), "save_list": QPushButton(),
                         "profile_management": QPushButton(), "search_list": QPushButton(), "add_item": QPushButton(),
@@ -80,7 +89,7 @@ class MyListWindow(QMainWindow):
             self.buttons[button].setText("    " + button_text)
             self.buttons[button].setIcon(QIcon("images/button-icons/" + button + ".png"))
             self.buttons[button].setIconSize(QSize(30, 30))
-            self.buttons[button].setFixedSize(QSize(130, 60))
+            self.buttons[button].setFixedSize(QSize(130, 52))
 
         self.media_list_area = QListWidget(self)
         self.media_list_area.setIconSize(QSize(30, 30))
@@ -104,7 +113,12 @@ class MyListWindow(QMainWindow):
                 background-color: #8CBDAF;
             }
         """)
-        self.header.setStyleSheet("""
+        self.header_logo.setStyleSheet("""
+            .QLabel {
+                background-color: #f3ffbd;
+            }
+        """)
+        self.header_title.setStyleSheet("""
             .QLabel {
                 background-color: #f3ffbd;
                 color: #247ba0;

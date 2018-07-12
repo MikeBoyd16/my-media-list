@@ -21,7 +21,7 @@ class MyListWindow(QMainWindow):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 625, 600)
+        self.setGeometry(100, 100, 625, 650)
         self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
 
         for button in self.buttons:
@@ -81,12 +81,13 @@ class MyListWindow(QMainWindow):
         self.header_title.setFixedSize(130, 50)
 
         self.buttons = {"import_list": QPushButton(), "export_list": QPushButton(), "save_list": QPushButton(),
-                        "profile_management": QPushButton(), "search_list": QPushButton(), "add_item": QPushButton(),
-                        "remove_item": QPushButton(), "edit_item": QPushButton(), "quit_program": QPushButton()}
+                        "categories": QPushButton(), "fields": QPushButton(), "search_list": QPushButton(),
+                        "add_item": QPushButton(), "remove_item": QPushButton(), "edit_item": QPushButton(),
+                        "quit_program": QPushButton()}
 
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
-            self.buttons[button].setText("    " + button_text)
+            self.buttons[button].setText("  " + button_text)
             self.buttons[button].setIcon(QIcon("images/button-icons/" + button + ".png"))
             self.buttons[button].setIconSize(QSize(30, 30))
             self.buttons[button].setFixedSize(QSize(130, 52))
@@ -239,7 +240,10 @@ class MyListWindow(QMainWindow):
                                select_media.temp_input["Date Entered"]] = select_media.temp_input
             self.update_list()
 
-    def profile_management(self):
+    def categories(self):
+        pass
+
+    def fields(self):
         pass
 
     def remove_item(self):

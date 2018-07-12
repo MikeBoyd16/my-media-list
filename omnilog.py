@@ -272,25 +272,51 @@ class MyListWindow(QMainWindow):
 class ManageCategories(QDialog):
     def __init__(self):
         super().__init__()
+        self.category_count = 0
         self.init_widgets()
         self.init_window()
         self.init_layout()
         self.init_styles()
 
     def init_window(self):
+        """Initializes the window, its dimensions, and content"""
         self.setWindowTitle("Manage Categories")
-        self.setGeometry(100, 100, 400, 400)
+        self.setGeometry(100, 100, 300, 500)
         self.center_window()
 
     def init_layout(self):
-        pass
+        """Initializes the layout and arranges the widgets in the proper order."""
+        self.layouts = {"Main": QVBoxLayout(), "Controls": QHBoxLayout(), "Fields": QVBoxLayout(), "OK": QVBoxLayout()}
+        self.layouts["Main"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.layouts["OK"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        for layout in self.layouts:
+            if layout != "Main":
+                self.layouts["Main"].addLayout(self.layouts[layout])
+            if layout == "Controls":
+                self.layouts[layout].addWidget(self.buttons["add_category"])
+                self.layouts[layout].addWidget(self.buttons["remove_category"])
+            elif layout == "OK":
+                self.layouts[layout].addWidget(self.buttons["ok"])
+            self.layouts[layout].setContentsMargins(0, 0, 0, 0)
+            self.layouts[layout].setSpacing(0)
+
+        self.setLayout(self.layouts["Main"])
 
     def init_widgets(self):
-        self.add_category = QPushButton(self)
-        self.remove_category = QPushButton(self)
+        """Initializes widgets and their properties"""
+        self.buttons = {"add_category": QPushButton(), "remove_category": QPushButton(), "ok": QPushButton()}
+        for button in self.buttons:
+            button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
+            self.buttons[button].setText("  " + button_text)
+            self.buttons[button].setFixedSize(QSize(100, 40))
+        for button in self.buttons:
+            button_method = getattr(self, button)
+            self.buttons[button].clicked.connect(button_method)
+
         self.category_fields = {}
 
     def init_styles(self):
+        """Sets the stylesheet properties for widgets"""
         pass
 
     def center_window(self):
@@ -299,6 +325,23 @@ class ManageCategories(QDialog):
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
+
+    def add_category(self):
+        """Adds a new field where a category can be entered"""
+        self.category_count += 1
+        self.category_fields[self.category_count] = QLineEdit()
+        self.layouts["Fields"].addWidget(self.category_fields[self.category_count])
+
+    def remove_category(self):
+        """Removes an existing field where a category could be entered"""
+        if self.category_count != 0:
+            self.category_fields[self.category_count].setParent(None)
+            del(self.category_fields[self.category_count])
+            self.category_count -= 1
+
+    def ok(self):
+        """Returns focus to the main window"""
+        self.hide()
 
 
 class ManageFields(QDialog):
@@ -310,17 +353,21 @@ class ManageFields(QDialog):
         self.init_styles()
 
     def init_window(self):
+        """Initializes the window, its dimensions, and content"""
         self.setWindowTitle("Manage Fields")
         self.setGeometry(100, 100, 400, 400)
         self.center_window()
 
     def init_layout(self):
+        """Initializes the layout and arranges the widgets in the proper order."""
         pass
 
     def init_widgets(self):
+        """Initializes widgets and their properties"""
         pass
 
     def init_styles(self):
+        """Sets the stylesheet properties for widgets"""
         pass
 
     def center_window(self):

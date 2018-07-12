@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/images/button-icons/profile_management.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/omnilog.py" afterPath="$PROJECT_DIR$/omnilog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +17,11 @@
       <file leaf-file-name="omnilog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/omnilog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5287">
-              <caret line="584" column="91" lean-forward="false" selection-start-line="584" selection-start-column="91" selection-end-line="584" selection-end-column="91" />
+            <state relative-caret-position="571">
+              <caret line="299" column="63" lean-forward="true" selection-start-line="299" selection-start-column="63" selection-end-line="299" selection-end-column="63" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+                <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
               </folding>
             </state>
           </provider>
@@ -332,13 +331,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Remove all spacing and margins in the main window">
-      <created>1527803611411</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1527803611411</updated>
     </task>
     <task id="LOCAL-00012" summary="Center main window on the screen">
       <created>1527906218904</created>
@@ -676,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531356179653</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Restructure code for all classes.">
+      <created>1531401869399</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1531401869400</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView">
@@ -700,7 +699,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -762,7 +761,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Prevent certain labels, and their associated data, from being displayed" />
     <MESSAGE value="Overhaul media widget content and ordering" />
     <MESSAGE value="Reverse the order that the items appear in the list so that newer items are at the top." />
     <MESSAGE value="Consolidate stylesheet properties and change item coloring." />
@@ -787,7 +785,8 @@
     <MESSAGE value="Replace 'Profile' button with 'Categories' and 'Fields' buttons." />
     <MESSAGE value="Add image attribution." />
     <MESSAGE value="Add skeleton classes for 'Category Management' and 'Field Management'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add skeleton classes for 'Category Management' and 'Field Management'." />
+    <MESSAGE value="Restructure code for all classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructure code for all classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -804,7 +803,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -821,7 +820,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -838,7 +837,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -855,7 +854,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -872,7 +871,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -889,7 +888,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -900,7 +899,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -911,7 +910,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>
@@ -940,11 +939,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5287">
-          <caret line="584" column="91" lean-forward="false" selection-start-line="584" selection-start-column="91" selection-end-line="584" selection-end-column="91" />
+        <state relative-caret-position="571">
+          <caret line="299" column="63" lean-forward="true" selection-start-line="299" selection-start-column="63" selection-end-line="299" selection-end-column="63" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
+            <marker date="1531407337222" expanded="true" signature="28437:28597" ph="..." />
           </folding>
         </state>
       </provider>

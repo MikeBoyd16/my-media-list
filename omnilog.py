@@ -9,28 +9,19 @@ from PyQt5.QtWidgets import *
 class MyListWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
-
         self.my_media_list = {}
         self.current_file = ""
-
         self.init_widgets()
         self.init_window()
+        self.init_layout()
+        self.init_styles()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
         self.setGeometry(100, 100, 625, 650)
         self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
-
-        for button in self.buttons:
-            button_method = getattr(self, button)
-            self.buttons[button].clicked.connect(button_method)
-        self.media_list_area.itemClicked.connect(self.show_media_record)
-
-        self.init_layout()
-        self.init_styles()
         self.center_window()
 
     def init_layout(self):
@@ -84,16 +75,19 @@ class MyListWindow(QMainWindow):
                         "categories": QPushButton(), "fields": QPushButton(), "search_list": QPushButton(),
                         "add_item": QPushButton(), "remove_item": QPushButton(), "edit_item": QPushButton(),
                         "quit_program": QPushButton()}
-
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
             self.buttons[button].setText("  " + button_text)
             self.buttons[button].setIcon(QIcon("images/button-icons/" + button + ".png"))
             self.buttons[button].setIconSize(QSize(30, 30))
             self.buttons[button].setFixedSize(QSize(130, 52))
+        for button in self.buttons:
+            button_method = getattr(self, button)
+            self.buttons[button].clicked.connect(button_method)
 
         self.media_list_area = QListWidget(self)
         self.media_list_area.setIconSize(QSize(30, 30))
+        self.media_list_area.itemClicked.connect(self.show_media_record)
 
         self.media_details_area = QTextEdit(self)
         self.media_details_area.setReadOnly(True)
@@ -278,12 +272,26 @@ class MyListWindow(QMainWindow):
 class ManageCategories(QDialog):
     def __init__(self):
         super().__init__()
+        self.init_widgets()
         self.init_window()
+        self.init_layout()
+        self.init_styles()
 
     def init_window(self):
         self.setWindowTitle("Manage Categories")
         self.setGeometry(100, 100, 400, 400)
         self.center_window()
+
+    def init_layout(self):
+        pass
+
+    def init_widgets(self):
+        self.add_category = QPushButton(self)
+        self.remove_category = QPushButton(self)
+        self.category_fields = {}
+
+    def init_styles(self):
+        pass
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -296,12 +304,24 @@ class ManageCategories(QDialog):
 class ManageFields(QDialog):
     def __init__(self):
         super().__init__()
+        self.init_widgets()
         self.init_window()
+        self.init_layout()
+        self.init_styles()
 
     def init_window(self):
         self.setWindowTitle("Manage Fields")
         self.setGeometry(100, 100, 400, 400)
         self.center_window()
+
+    def init_layout(self):
+        pass
+
+    def init_widgets(self):
+        pass
+
+    def init_styles(self):
+        pass
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -314,25 +334,16 @@ class ManageFields(QDialog):
 class SelectMedia(QDialog):
     def __init__(self):
         super().__init__()
-
         self.temp_input = {}
-
         self.init_widgets()
         self.init_window()
+        self.init_layout()
+        self.init_styles()
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
         self.setWindowTitle("Media Select")
         self.setGeometry(100, 100, 200, 200)
-
-        # Move the OK button to the correct position
-        self.ok.move(50, 50)
-
-        # Display an AddMedia form when OK is clicked
-        self.ok.clicked.connect(self.go_to_add_media)
-
-        self.init_layout()
-        self.init_styles()
         self.center_window()
 
     def init_layout(self):
@@ -340,17 +351,23 @@ class SelectMedia(QDialog):
         grid_layout = QGridLayout()
         grid_layout.addWidget(self.select_media_combo, 0, 0)
         grid_layout.addWidget(self.ok, 1, 0)
+        self.ok.move(50, 50)
+
         group_box = QGroupBox("")
         group_box.setLayout(grid_layout)
+
         v_box_layout = QVBoxLayout()
         v_box_layout.addWidget(group_box)
+
         self.setLayout(v_box_layout)
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
         self.select_media_combo = QComboBox(self)
         self.select_media_combo.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
+
         self.ok = QPushButton("OK", self)
+        self.ok.clicked.connect(self.go_to_add_media)
 
     def init_styles(self):
         """Sets all stylesheet properties"""
@@ -503,27 +520,15 @@ class AddMedia(QDialog):
         super().__init__()
         self.media_type = media_type
         self.temp_input = {}
-        self.labels = {}
-        self.inputs = {}
-
         self.init_widgets()
         self.init_window()
+        self.init_layout()
+        self.init_styles()
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
         self.setWindowTitle("Add Music")
         self.setGeometry(100, 100, 250, 600)
-
-        # Connect a new media record submission with the Submit button
-        self.submit.clicked.connect(self.submit_media)
-
-        # Check source type every time the selection changes
-        if self.media_type == "Music":
-            self.inputs["Type"].currentIndexChanged.connect(self.source_name_status)
-            self.inputs["Source Type"].currentIndexChanged.connect(self.source_name_status)
-
-        self.init_layout()
-        self.init_styles()
         self.center_window()
 
     def init_layout(self):
@@ -547,7 +552,6 @@ class AddMedia(QDialog):
         """
         Populates the form with the correct widgets for the selected media type
         """
-        # Set the form's widget template to the template for the selected media type
         widgets = {}
         if self.media_type == "Music":
             widgets = AddMedia.music_widgets
@@ -567,6 +571,8 @@ class AddMedia(QDialog):
             widgets = AddMedia.video_game_widgets
 
         # Populate the form with widgets based on the selected template
+        self.labels = {}
+        self.inputs = {}
         for key, value in widgets.items():
             self.labels[key] = QLabel()
             self.labels[key].setText(key)
@@ -574,6 +580,9 @@ class AddMedia(QDialog):
                 self.inputs[key] = QLineEdit()
             elif value == "combo":
                 self.inputs[key] = QComboBox()
+        if self.media_type == "Music":
+            self.inputs["Type"].currentIndexChanged.connect(self.source_name_status)
+            self.inputs["Source Type"].currentIndexChanged.connect(self.source_name_status)
 
         # Fill the combo boxes with the correct items based on the selected media type
         if self.media_type == "Music":
@@ -609,6 +618,8 @@ class AddMedia(QDialog):
 
         self.submit = QPushButton("Submit", self)
         self.submit.setFixedHeight(40)
+        self.submit.clicked.connect(self.submit_media)
+
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""

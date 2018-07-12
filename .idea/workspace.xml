@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/images/button-icons/profile_management.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/omnilog.py" afterPath="$PROJECT_DIR$/omnilog.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +18,11 @@
       <file leaf-file-name="omnilog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/omnilog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="817">
-              <caret line="295" column="28" lean-forward="true" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
+            <state relative-caret-position="5287">
+              <caret line="584" column="91" lean-forward="false" selection-start-line="584" selection-start-column="91" selection-end-line="584" selection-end-column="91" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+                <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,8 +93,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,6 +104,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,13 +332,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Remove main window buttons and add them to the menu">
-      <created>1527795546829</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1527795546829</updated>
     </task>
     <task id="LOCAL-00011" summary="Remove all spacing and margins in the main window">
       <created>1527803611411</created>
@@ -675,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531355116277</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Add skeleton classes for 'Category Management' and 'Field Management'.">
+      <created>1531356179653</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1531356179653</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -690,16 +691,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29662803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29662803" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -761,7 +762,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Remove spaces from labels with multiple inputs and format those inputs as comma-separated strings when displayed" />
     <MESSAGE value="Prevent certain labels, and their associated data, from being displayed" />
     <MESSAGE value="Overhaul media widget content and ordering" />
     <MESSAGE value="Reverse the order that the items appear in the list so that newer items are at the top." />
@@ -786,7 +786,8 @@
     <MESSAGE value="Add logo" />
     <MESSAGE value="Replace 'Profile' button with 'Categories' and 'Fields' buttons." />
     <MESSAGE value="Add image attribution." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image attribution." />
+    <MESSAGE value="Add skeleton classes for 'Category Management' and 'Field Management'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add skeleton classes for 'Category Management' and 'Field Management'." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -803,7 +804,7 @@
           <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -820,7 +821,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -837,7 +838,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -854,7 +855,7 @@
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -871,7 +872,7 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -888,7 +889,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -899,7 +900,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -910,7 +911,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>
@@ -939,11 +940,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/omnilog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="295" column="28" lean-forward="true" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
+        <state relative-caret-position="5287">
+          <caret line="584" column="91" lean-forward="false" selection-start-line="584" selection-start-column="91" selection-end-line="584" selection-end-column="91" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531356041861" expanded="true" signature="25776:25936" ph="..." />
+            <marker date="1531401742529" expanded="true" signature="25970:26130" ph="..." />
           </folding>
         </state>
       </provider>

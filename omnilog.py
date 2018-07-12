@@ -241,10 +241,14 @@ class MyListWindow(QMainWindow):
             self.update_list()
 
     def categories(self):
-        pass
+        manage_categories = ManageCategories()
+        manage_categories.show()
+        manage_categories.exec_()
 
     def fields(self):
-        pass
+        manage_fields = ManageFields()
+        manage_fields.show()
+        manage_fields.exec_()
 
     def remove_item(self):
         pass
@@ -269,6 +273,42 @@ class MyListWindow(QMainWindow):
                         self.media_details_area.append(label + ": " + ", ".join(self.my_media_list[item_key][label]) + "\n")
                     else:
                         self.media_details_area.append(label + ": " + str(self.my_media_list[item_key][label]) + "\n")
+
+
+class ManageCategories(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.init_window()
+
+    def init_window(self):
+        self.setWindowTitle("Manage Categories")
+        self.setGeometry(100, 100, 400, 400)
+        self.center_window()
+
+    def center_window(self):
+        """Positions the window in the center of the screen"""
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
+
+
+class ManageFields(QDialog):
+    def __init__(self):
+        super().__init__()
+        self.init_window()
+
+    def init_window(self):
+        self.setWindowTitle("Manage Fields")
+        self.setGeometry(100, 100, 400, 400)
+        self.center_window()
+
+    def center_window(self):
+        """Positions the window in the center of the screen"""
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
 
 class SelectMedia(QDialog):

@@ -144,34 +144,34 @@ class MyListWindow(QMainWindow):
                 font-weight: bold;
                 font-size: 13px;
                 border: none;
-                }
+            }
         """)
         scrollbar_stylesheet = ("""
-                .QScrollBar:vertical {
-                    border: 1px solid #6d6d6d;
-                    background: white;
-                    width: 5px;
-                    margin: 0px 0px 0px 0px;
-                }
-                .QScrollBar::handle:vertical {
-                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 #6d6d6d, stop: 0.5 #6d6d6d, stop:1 #6d6d6d);
-                    min-height: 0px;
-                }
-                .QScrollBar::add-line:vertical {
-                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0 #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
-                    height: 0px;
-                    subcontrol-position: bottom;
-                    subcontrol-origin: margin;
-                }
-                .QScrollBar::sub-line:vertical {
-                    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
-                    stop: 0  #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
-                    height: 0px;
-                    subcontrol-position: top;
-                    subcontrol-origin: margin;
-                }
+            .QScrollBar:vertical {
+                border: 1px solid #6d6d6d;
+                background: white;
+                width: 5px;
+                margin: 0px 0px 0px 0px;
+            }
+            .QScrollBar::handle:vertical {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop: 0 #6d6d6d, stop: 0.5 #6d6d6d, stop:1 #6d6d6d);
+                min-height: 0px;
+            }
+            .QScrollBar::add-line:vertical {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop: 0 #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
+                height: 0px;
+                subcontrol-position: bottom;
+                subcontrol-origin: margin;
+            }
+            .QScrollBar::sub-line:vertical {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                stop: 0  #6d6d6d, stop: 0.5 #6d6d6d,  stop:1 #6d6d6d);
+                height: 0px;
+                subcontrol-position: top;
+                subcontrol-origin: margin;
+            }
         """)
         self.media_list_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
         self.media_details_area.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
@@ -281,25 +281,27 @@ class ManageCategories(QDialog):
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
         self.setWindowTitle("Manage Categories")
-        self.setGeometry(100, 100, 300, 500)
+        self.setGeometry(100, 100, 250, 500)
         self.center_window()
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
-        self.layouts = {"Main": QVBoxLayout(), "Controls": QHBoxLayout(), "Fields": QVBoxLayout(), "OK": QVBoxLayout()}
-        self.layouts["Main"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        self.layouts["OK"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.layouts = {"Main": QVBoxLayout(), "Top": QHBoxLayout(), "Center": QGridLayout(), "Bottom": QVBoxLayout()}
         for layout in self.layouts:
             if layout != "Main":
                 self.layouts["Main"].addLayout(self.layouts[layout])
-            if layout == "Controls":
+            if layout == "Top":
                 self.layouts[layout].addWidget(self.buttons["add_category"])
                 self.layouts[layout].addWidget(self.buttons["remove_category"])
-            elif layout == "OK":
+                self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+            elif layout == "Center":
+                self.layouts[layout].setAlignment(Qt.AlignCenter)
+            elif layout == "Bottom":
                 self.layouts[layout].addWidget(self.buttons["ok"])
-            self.layouts[layout].setContentsMargins(0, 0, 0, 0)
-            self.layouts[layout].setSpacing(0)
-
+                self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+                self.layouts[layout].addStretch(1)
+            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
+            self.layouts[layout].setSpacing(15)
         self.setLayout(self.layouts["Main"])
 
     def init_widgets(self):
@@ -314,6 +316,7 @@ class ManageCategories(QDialog):
             self.buttons[button].clicked.connect(button_method)
 
         self.category_fields = {}
+        self.category_buttons = {}
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""
@@ -329,14 +332,37 @@ class ManageCategories(QDialog):
     def add_category(self):
         """Adds a new field where a category can be entered"""
         self.category_count += 1
+
         self.category_fields[self.category_count] = QLineEdit()
-        self.layouts["Fields"].addWidget(self.category_fields[self.category_count])
+        self.category_fields[self.category_count].setPlaceholderText("Enter a new category")
+        self.category_fields[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_fields[self.category_count].setStyleSheet("""
+            .QLineEdit {
+                width: 120px; 
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        """)
+        self.layouts["Center"].addWidget(self.category_fields[self.category_count], self.category_count - 1, 0, 1, 1)
+
+        self.category_buttons[self.category_count] = QPushButton("Set Icon")
+        self.category_buttons[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_buttons[self.category_count].setStyleSheet("""
+            .QPushButton {
+                height: 50px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        """)
+        self.layouts["Center"].addWidget(self.category_buttons[self.category_count], self.category_count - 1, 1, 1, 6)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""
         if self.category_count != 0:
             self.category_fields[self.category_count].setParent(None)
             del(self.category_fields[self.category_count])
+            self.category_buttons[self.category_count].setParent(None)
+            del (self.category_buttons[self.category_count])
             self.category_count -= 1
 
     def ok(self):

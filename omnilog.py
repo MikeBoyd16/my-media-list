@@ -21,7 +21,7 @@ class MyListWindow(QMainWindow):
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
         self.setGeometry(100, 100, 625, 650)
-        self.setWindowFlags(Qt.FramelessWindowHint) # Removes the outer frame from the window
+        self.setWindowFlags(Qt.FramelessWindowHint)  # Removes the outer frame from the window
         self.center_window()
 
     def init_layout(self):
@@ -282,6 +282,7 @@ class ManageCategories(QDialog):
         """Initializes the window, its dimensions, and content"""
         self.setWindowTitle("Manage Categories")
         self.setGeometry(100, 100, 250, 500)
+        self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
     def init_layout(self):
@@ -295,6 +296,7 @@ class ManageCategories(QDialog):
                 self.layouts[layout].addWidget(self.buttons["remove_category"])
                 self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
             elif layout == "Center":
+                self.layouts[layout].setSizeConstraint(QLayout.SetFixedSize)
                 self.layouts[layout].setAlignment(Qt.AlignCenter)
             elif layout == "Bottom":
                 self.layouts[layout].addWidget(self.buttons["ok"])
@@ -320,7 +322,28 @@ class ManageCategories(QDialog):
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""
-        pass
+        self.setPalette(QPalette(QColor("#f3ffbd")))
+        self.setStyleSheet("""
+            .Self {
+                border: 1px solid #000000;
+            }
+            .QPushButton {
+                background-color: #247ba0;
+                border: 1px solid #8CBDAF;
+                font-weight: bold;
+                font-size: 12px;
+                color: #f3ffbd;
+                height: 50px;
+            }
+            .QPushButton:hover {
+                background-color: #8CBDAF;
+            }
+            .QLineEdit {
+                width: 120px; 
+                margin-top: 14px;
+                margin-bottom: 14px;
+            }
+        """)
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -336,25 +359,11 @@ class ManageCategories(QDialog):
         self.category_fields[self.category_count] = QLineEdit()
         self.category_fields[self.category_count].setPlaceholderText("Enter a new category")
         self.category_fields[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.category_fields[self.category_count].setStyleSheet("""
-            .QLineEdit {
-                width: 120px; 
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-        """)
         self.layouts["Center"].addWidget(self.category_fields[self.category_count], self.category_count - 1, 0, 1, 1)
 
         self.category_buttons[self.category_count] = QPushButton("Set Icon")
         self.category_buttons[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.category_buttons[self.category_count].setStyleSheet("""
-            .QPushButton {
-                height: 50px;
-                padding-left: 5px;
-                padding-right: 5px;
-            }
-        """)
-        self.layouts["Center"].addWidget(self.category_buttons[self.category_count], self.category_count - 1, 1, 1, 6)
+        self.layouts["Center"].addWidget(self.category_buttons[self.category_count], self.category_count - 1, 1, 1, 4)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""
@@ -362,7 +371,7 @@ class ManageCategories(QDialog):
             self.category_fields[self.category_count].setParent(None)
             del(self.category_fields[self.category_count])
             self.category_buttons[self.category_count].setParent(None)
-            del (self.category_buttons[self.category_count])
+            del(self.category_buttons[self.category_count])
             self.category_count -= 1
 
     def ok(self):

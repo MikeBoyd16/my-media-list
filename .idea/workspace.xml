@@ -2,8 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/add_media.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/main_window.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/manage_categories.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/manage_fields.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/select_media.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Lib/tcl8.5/init.tcl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/Activate.ps1" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_asyncio.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_bz2.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ctypes.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ctypes_test.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_decimal.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_elementtree.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_hashlib.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_lzma.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_msi.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_multiprocessing.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_overlapped.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_socket.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_sqlite3.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ssl.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testbuffer.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testcapi.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testconsole.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testimportmultiple.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testmultiphase.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_tkinter.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/activate" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/activate.bat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-console-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-datetime-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-debug-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-errorhandling-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-2-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l2-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-handle-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-heap-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-interlocked-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-libraryloader-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-localization-l1-2-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-memory-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-namedpipe-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processenvironment-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-1.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-profile-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-rtlsupport-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-string-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-2-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-sysinfo-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-timezone-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-util-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-conio-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-convert-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-environment-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-filesystem-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-heap-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-locale-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-math-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-multibyte-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-private-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-process-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-runtime-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-stdio-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-string-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-time-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-utility-l1-1-0.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/concrt140.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/deactivate.bat" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/msvcp140.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pyexpat.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python3.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python36.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pythoncom36.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pythonw.exe" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pywintypes36.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/select.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/sqlite3.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/tcl86t.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/tk86t.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/ucrtbase.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/unicodedata.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vccorlib140.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vcomp140.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vcruntime140.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/winsound.pyd" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/xlwings32.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/xlwings64.dll" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/pyvenv.cfg" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/omnilog.iml" afterPath="$PROJECT_DIR$/.idea/omnilog.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/omnilog.py" afterPath="$PROJECT_DIR$/omnilog.py" />
+      <change beforePath="$PROJECT_DIR$/omnilog.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list4.json" afterPath="$PROJECT_DIR$/test-files/test_media_list4.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,14 +109,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="omnilog.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/omnilog.py">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="335" column="25" lean-forward="false" selection-start-line="335" selection-start-column="25" selection-end-line="335" selection-end-column="25" />
+            <state relative-caret-position="221">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+                <element signature="e#4084#7049#0" expanded="false" />
+                <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage_categories.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage_fields.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select_media.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/select_media.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_media.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/add_media.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+              <folding>
+                <element signature="e#213#659#0" expanded="false" />
+                <element signature="e#694#1023#0" expanded="false" />
+                <element signature="e#1054#1437#0" expanded="false" />
+                <element signature="e#1465#1918#0" expanded="false" />
+                <element signature="e#1949#2369#0" expanded="false" />
+                <element signature="e#2399#2684#0" expanded="false" />
+                <element signature="e#2715#3041#0" expanded="false" />
+                <element signature="e#3077#3497#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,6 +210,16 @@
         <option value="$PROJECT_DIR$/SelectMedia.py" />
         <option value="$PROJECT_DIR$/MyMediaList.py" />
         <option value="$PROJECT_DIR$/omnilog.py" />
+        <option value="$PROJECT_DIR$/add-media.py" />
+        <option value="$PROJECT_DIR$/select-media.py" />
+        <option value="$PROJECT_DIR$/manage-categories.py" />
+        <option value="$PROJECT_DIR$/manage-fields.py" />
+        <option value="$PROJECT_DIR$/main-window.py" />
+        <option value="$PROJECT_DIR$/main_window.py" />
+        <option value="$PROJECT_DIR$/select_media.py" />
+        <option value="$PROJECT_DIR$/add_media.py" />
+        <option value="$PROJECT_DIR$/manage_fields.py" />
+        <option value="$PROJECT_DIR$/manage_categories.py" />
       </list>
     </option>
   </component>
@@ -93,7 +247,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -105,11 +258,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -123,7 +277,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.omnilog">
+  <component name="RunManager" selected="Python.main_window">
     <configuration name="AddMusic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -137,24 +291,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="my-media-list" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AddMusic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="MyList" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="my-media-list" />
-      <option name="SCRIPT_NAME" value="C:\Users\Michael\git-projects\my-media-list\MyMediaList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,19 +314,37 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="SearchMovies" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main-window" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="my-movie-list" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SearchMovies.py" />
+      <module name="omnilog" />
+      <option name="SCRIPT_NAME" value="C:\Users\Michael\git-projects\omnilog\main_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="omnilog" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_window.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -208,7 +362,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="omnilog" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omnilog.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Michael\git-projects\omnilog\main_window.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -302,19 +456,19 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.SearchMovies" />
-      <item index="1" class="java.lang.String" itemvalue="Python.MyList" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MyMediaList" />
-      <item index="3" class="java.lang.String" itemvalue="Python.AddMusic" />
-      <item index="4" class="java.lang.String" itemvalue="Python.omnilog" />
+      <item index="0" class="java.lang.String" itemvalue="Python.MyMediaList" />
+      <item index="1" class="java.lang.String" itemvalue="Python.AddMusic" />
+      <item index="2" class="java.lang.String" itemvalue="Python.omnilog" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main-window" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main_window" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.omnilog" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MyMediaList" />
-        <item index="2" class="java.lang.String" itemvalue="Python.AddMusic" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MyList" />
-        <item index="4" class="java.lang.String" itemvalue="Python.SearchMovies" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main_window" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main-window" />
+        <item index="2" class="java.lang.String" itemvalue="Python.omnilog" />
+        <item index="3" class="java.lang.String" itemvalue="Python.MyMediaList" />
+        <item index="4" class="java.lang.String" itemvalue="Python.AddMusic" />
       </list>
     </recent_temporary>
   </component>
@@ -331,13 +485,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Center the dialog windows on the screen">
-      <created>1527993770974</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1527993770974</updated>
     </task>
     <task id="LOCAL-00015" summary="Add individual media widget types">
       <created>1528164123790</created>
@@ -675,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531498227409</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Fix resizing button problem when adding and removing categories.">
+      <created>1531590960943</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1531590960943</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -699,7 +853,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -761,7 +915,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Consolidate stylesheet properties and change item coloring." />
     <MESSAGE value="Fix comments being turned into comma-separated lists when a comma is used." />
     <MESSAGE value="Change all instances of label names with 'Year' to 'Release Date'." />
     <MESSAGE value="Replace file menu with buttons and replace existing icons with new ones." />
@@ -786,7 +939,8 @@
     <MESSAGE value="Restructure code for all classes." />
     <MESSAGE value="Implement basic functionality for the 'ManageCategories' class." />
     <MESSAGE value="Add 'Add Icon' buttons next to the fields in the 'Categories' section and format the widgets." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add 'Add Icon' buttons next to the fields in the 'Categories' section and format the widgets." />
+    <MESSAGE value="Fix resizing button problem when adding and removing categories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix resizing button problem when adding and removing categories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -795,32 +949,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
-    <entry file="file://$PROJECT_DIR$/AddMusic.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelectMedia.py" />
     <entry file="file://$PROJECT_DIR$/AddMovie.py" />
     <entry file="file://$PROJECT_DIR$/AddTV.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -831,13 +971,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -848,13 +988,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -865,13 +1005,13 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -882,35 +1022,35 @@
     <entry file="file://$PROJECT_DIR$/AddMusic.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -937,13 +1077,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/omnilog.py">
+    <entry file="file://$PROJECT_DIR$/add_media.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="335" column="25" lean-forward="false" selection-start-line="335" selection-start-column="25" selection-end-line="335" selection-end-column="25" />
+        <state relative-caret-position="255">
+          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1531590857568" expanded="true" signature="29994:30154" ph="..." />
+            <element signature="e#213#659#0" expanded="false" />
+            <element signature="e#694#1023#0" expanded="false" />
+            <element signature="e#1054#1437#0" expanded="false" />
+            <element signature="e#1465#1918#0" expanded="false" />
+            <element signature="e#1949#2369#0" expanded="false" />
+            <element signature="e#2399#2684#0" expanded="false" />
+            <element signature="e#2715#3041#0" expanded="false" />
+            <element signature="e#3077#3497#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select_media.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_categories.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#4084#7049#0" expanded="false" />
+            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
           </folding>
         </state>
       </provider>

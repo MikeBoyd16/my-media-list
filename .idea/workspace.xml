@@ -2,103 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/add_media.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main_window.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manage_categories.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manage_fields.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/select_media.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Lib/tcl8.5/init.tcl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/Activate.ps1" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_asyncio.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_bz2.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ctypes.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ctypes_test.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_decimal.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_elementtree.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_hashlib.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_lzma.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_msi.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_multiprocessing.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_overlapped.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_socket.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_sqlite3.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_ssl.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testbuffer.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testcapi.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testconsole.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testimportmultiple.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_testmultiphase.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/_tkinter.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/activate" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/activate.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-console-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-datetime-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-debug-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-errorhandling-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-2-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l2-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-handle-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-heap-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-interlocked-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-libraryloader-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-localization-l1-2-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-memory-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-namedpipe-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processenvironment-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-1.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-profile-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-rtlsupport-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-string-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-2-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-sysinfo-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-timezone-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-util-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-conio-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-convert-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-environment-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-filesystem-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-heap-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-locale-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-math-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-multibyte-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-private-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-process-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-runtime-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-stdio-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-string-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-time-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-utility-l1-1-0.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/concrt140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/deactivate.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/msvcp140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pyexpat.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python3.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/python36.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pythoncom36.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pythonw.exe" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/pywintypes36.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/select.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/sqlite3.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/tcl86t.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/tk86t.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/ucrtbase.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/unicodedata.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vccorlib140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vcomp140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/vcruntime140.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/winsound.pyd" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/xlwings32.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/Scripts/xlwings64.dll" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/venv1/pyvenv.cfg" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/omnilog.iml" afterPath="$PROJECT_DIR$/.idea/omnilog.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/export_catalog.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/import_catalog.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/save_catalog.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/button-icons/search_catalog.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/omnilog.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list4.json" afterPath="$PROJECT_DIR$/test-files/test_media_list4.json" />
+      <change beforePath="$PROJECT_DIR$/add_media.py" afterPath="$PROJECT_DIR$/add_item.py" />
+      <change beforePath="$PROJECT_DIR$/images/button-icons/export_list.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/button-icons/import_list.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/button-icons/save_list.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/button-icons/search_list.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
+      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
+      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
+      <change beforePath="$PROJECT_DIR$/select_media.py" afterPath="$PROJECT_DIR$/select_category.py" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list2.json" afterPath="$PROJECT_DIR$/test-files/test_media_list2.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -109,14 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="308">
+              <caret line="236" column="75" lean-forward="false" selection-start-line="236" selection-start-column="75" selection-end-line="236" selection-end-column="75" />
               <folding>
-                <element signature="e#4084#7049#0" expanded="false" />
-                <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
               </folding>
             </state>
           </provider>
@@ -142,30 +60,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_media.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/select_media.py">
+      <file leaf-file-name="select_category.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198">
-              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="1105">
+              <caret line="65" column="42" lean-forward="false" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_media.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/add_media.py">
+      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            <state relative-caret-position="2550">
+              <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
               <folding>
-                <element signature="e#213#659#0" expanded="false" />
-                <element signature="e#694#1023#0" expanded="false" />
-                <element signature="e#1054#1437#0" expanded="false" />
-                <element signature="e#1465#1918#0" expanded="false" />
-                <element signature="e#1949#2369#0" expanded="false" />
-                <element signature="e#2399#2684#0" expanded="false" />
-                <element signature="e#2715#3041#0" expanded="false" />
-                <element signature="e#3077#3497#0" expanded="false" />
+                <element signature="e#215#661#0" expanded="false" />
+                <element signature="e#696#1025#0" expanded="false" />
+                <element signature="e#1056#1439#0" expanded="false" />
+                <element signature="e#1467#1920#0" expanded="false" />
+                <element signature="e#1951#2371#0" expanded="false" />
+                <element signature="e#2401#2686#0" expanded="false" />
+                <element signature="e#2717#3043#0" expanded="false" />
+                <element signature="e#3079#3499#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -186,6 +106,13 @@
       <find>export_list</find>
       <find>add_media</find>
       <find>set_item</find>
+      <find>show</find>
+      <find>show_med</find>
+      <find>my_media_list</find>
+      <find>media_type</find>
+      <find>submit_media</find>
+      <find>media</find>
+      <find>list</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,11 +142,13 @@
         <option value="$PROJECT_DIR$/manage-categories.py" />
         <option value="$PROJECT_DIR$/manage-fields.py" />
         <option value="$PROJECT_DIR$/main-window.py" />
-        <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/select_media.py" />
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
+        <option value="$PROJECT_DIR$/add_item.py" />
+        <option value="$PROJECT_DIR$/main_window.py" />
+        <option value="$PROJECT_DIR$/select_category.py" />
       </list>
     </option>
   </component>
@@ -246,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -254,11 +184,15 @@
               <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
               <item name="omnilog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,13 +419,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add individual media widget types">
-      <created>1528164123790</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1528164123790</updated>
     </task>
     <task id="LOCAL-00016" summary="Add widget creation for music category">
       <created>1528559211031</created>
@@ -829,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531590960943</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Separate each class into its own file.">
+      <created>1531670490906</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1531670490906</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView">
@@ -853,7 +787,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28030303" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -915,7 +849,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix comments being turned into comma-separated lists when a comma is used." />
     <MESSAGE value="Change all instances of label names with 'Year' to 'Release Date'." />
     <MESSAGE value="Replace file menu with buttons and replace existing icons with new ones." />
     <MESSAGE value="Add header and title to the top of the main window." />
@@ -940,11 +873,12 @@
     <MESSAGE value="Implement basic functionality for the 'ManageCategories' class." />
     <MESSAGE value="Add 'Add Icon' buttons next to the fields in the 'Categories' section and format the widgets." />
     <MESSAGE value="Fix resizing button problem when adding and removing categories." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix resizing button problem when adding and removing categories." />
+    <MESSAGE value="Separate each class into its own file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate each class into its own file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -959,8 +893,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -976,8 +910,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -993,8 +927,8 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1010,8 +944,8 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1027,8 +961,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1038,8 +972,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1049,8 +983,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1077,31 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_media.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
-          <folding>
-            <element signature="e#213#659#0" expanded="false" />
-            <element signature="e#694#1023#0" expanded="false" />
-            <element signature="e#1054#1437#0" expanded="false" />
-            <element signature="e#1465#1918#0" expanded="false" />
-            <element signature="e#1949#2369#0" expanded="false" />
-            <element signature="e#2399#2684#0" expanded="false" />
-            <element signature="e#2715#3041#0" expanded="false" />
-            <element signature="e#3077#3497#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select_media.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1120,11 +1029,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="308">
+          <caret line="236" column="75" lean-forward="false" selection-start-line="236" selection-start-column="75" selection-end-line="236" selection-end-column="75" />
           <folding>
-            <element signature="e#4084#7049#0" expanded="false" />
-            <marker date="1531668577389" expanded="true" signature="11188:11340" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1531754910778" expanded="true" signature="11109:11261" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select_category.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="42" lean-forward="false" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/add_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="257" column="50" lean-forward="false" selection-start-line="257" selection-start-column="50" selection-end-line="257" selection-end-column="50" />
+          <folding>
+            <element signature="e#215#661#0" expanded="false" />
+            <element signature="e#696#1025#0" expanded="false" />
+            <element signature="e#1056#1439#0" expanded="false" />
+            <element signature="e#1467#1920#0" expanded="false" />
+            <element signature="e#1951#2371#0" expanded="false" />
+            <element signature="e#2401#2686#0" expanded="false" />
+            <element signature="e#2717#3043#0" expanded="false" />
+            <element signature="e#3079#3499#0" expanded="false" />
           </folding>
         </state>
       </provider>

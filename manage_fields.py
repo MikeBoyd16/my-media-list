@@ -2,8 +2,8 @@ import sys
 import json
 import datetime
 from manage_categories import *
-from select_media import *
-from add_media import *
+from select_category import *
+from add_item import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *

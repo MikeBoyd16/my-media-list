@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="Add widgets and styles to the ManageFields window.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
-      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +39,7 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="1343">
               <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
               <folding />
             </state>
@@ -407,13 +405,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00017" summary="Fix closing dialog crash bug">
-      <created>1528560993080</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1528560993080</updated>
-    </task>
     <task id="LOCAL-00018" summary="Convert multiple inputs for a single category into a list">
       <created>1528565244038</created>
       <option name="number" value="00018" />
@@ -750,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531755136112</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Add widgets and styles to the 'manage_fields' window.">
+      <created>1531842687313</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1531842687314</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -836,7 +834,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Replace file menu with buttons and replace existing icons with new ones." />
     <MESSAGE value="Add header and title to the top of the main window." />
     <MESSAGE value="Add header and title to the top of the main window with their own layout." />
     <MESSAGE value="Change 'date entered' field to include hours, minutes, and seconds." />
@@ -861,7 +858,8 @@
     <MESSAGE value="Fix resizing button problem when adding and removing categories." />
     <MESSAGE value="Separate each class into its own file." />
     <MESSAGE value="Overhaul naming scheme for each class to reflect change from 'media' to 'catalog'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Overhaul naming scheme for each class to reflect change from 'media' to 'catalog'." />
+    <MESSAGE value="Add widgets and styles to the 'manage_fields' window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add widgets and styles to the 'manage_fields' window." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1046,7 +1044,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="1343">
           <caret line="87" column="22" lean-forward="false" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding />
         </state>

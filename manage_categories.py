@@ -97,7 +97,7 @@ class ManageCategories(QDialog):
         self.category_count += 1
 
         self.category_fields[self.category_count] = QLineEdit()
-        self.category_fields[self.category_count].setPlaceholderText("Enter a new category")
+        self.category_fields[self.category_count].setPlaceholderText("Enter a category name")
         self.category_fields[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.layouts["Center"].addWidget(self.category_fields[self.category_count], self.category_count - 1, 0, 1, 1)
 

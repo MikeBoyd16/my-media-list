@@ -134,8 +134,11 @@ class ManageFields(QDialog):
             del(self.field_names[self.row_count])
             self.field_combos[self.row_count].setParent(None)
             del(self.field_combos[self.row_count])
-            self.combo_items[self.row_count].setParent(None)
-            del(self.combo_items[self.row_count])
+            self.combo_buttons[self.row_count].setParent(None)
+            del (self.combo_buttons[self.row_count])
+            if self.row_count in self.combo_items:
+                self.combo_items[self.row_count].setParent(None)
+                del(self.combo_items[self.row_count])
             self.row_count -= 1
 
     def ok(self):

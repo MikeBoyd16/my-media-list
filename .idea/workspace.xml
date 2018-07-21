@@ -17,7 +17,7 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="4063">
               <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -40,8 +40,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="154" column="67" lean-forward="false" selection-start-line="154" selection-start-column="67" selection-end-line="154" selection-end-column="67" />
+            <state relative-caret-position="397">
+              <caret line="136" column="61" lean-forward="false" selection-start-line="136" selection-start-column="61" selection-end-line="136" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -164,7 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,6 +180,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -407,13 +407,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Add icons to menu items in main window">
-      <created>1528643160223</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1528643160223</updated>
     </task>
     <task id="LOCAL-00021" summary="Fix close open/save file dialog crash bug">
       <created>1528647086741</created>
@@ -751,7 +744,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532028003889</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Add &quot;get_combo_items&quot; functionality to the ManageFields class.">
+      <created>1532106249716</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1532106249717</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -837,7 +837,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Change 'date entered' field to include hours, minutes, and seconds." />
     <MESSAGE value="Overhaul the UI" />
     <MESSAGE value="Change the color scheme of the main window." />
     <MESSAGE value="Change the width and color of the scrollbar." />
@@ -862,7 +861,8 @@
     <MESSAGE value="Add widgets and styles to the 'manage_fields' window." />
     <MESSAGE value="Add widgets and styles to the ManageFields window." />
     <MESSAGE value="Implement the enable/disable feature for combo item buttons in the ManageFields window." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement the enable/disable feature for combo item buttons in the ManageFields window." />
+    <MESSAGE value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,7 +1036,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="4063">
           <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1047,8 +1047,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="154" column="67" lean-forward="false" selection-start-line="154" selection-start-column="67" selection-end-line="154" selection-end-column="67" />
+        <state relative-caret-position="397">
+          <caret line="136" column="61" lean-forward="false" selection-start-line="136" selection-start-column="61" selection-end-line="136" selection-end-column="61" />
           <folding />
         </state>
       </provider>

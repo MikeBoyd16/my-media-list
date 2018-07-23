@@ -26,27 +26,30 @@ class ManageCategories(QDialog):
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
-        self.layouts = {"Main": QVBoxLayout(), "header_layout": QHBoxLayout(), "Top": QHBoxLayout(), "Center": QGridLayout(), "Bottom": QVBoxLayout()}
+        self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(), "controls_layout": QHBoxLayout(),
+                        "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
+
+        self.layouts["header_layout"].addWidget(self.header)
+        self.header.setAlignment(Qt.AlignCenter)
+
+        self.layouts["controls_layout"].addWidget(self.buttons["add_category"])
+        self.layouts["controls_layout"].addWidget(self.buttons["remove_category"])
+        self.layouts["controls_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+
+        self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
+        self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
+
+        self.layouts["submit_layout"].addWidget(self.buttons["ok"])
+        self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.layouts["submit_layout"].addStretch(1)
+
         for layout in self.layouts:
-            if layout != "Main":
-                self.layouts["Main"].addLayout(self.layouts[layout])
-            if layout == "header_layout":
-                self.layouts["header_layout"].addWidget(self.header)
-                self.header.setAlignment(Qt.AlignCenter)
-            if layout == "Top":
-                self.layouts[layout].addWidget(self.buttons["add_category"])
-                self.layouts[layout].addWidget(self.buttons["remove_category"])
-                self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-            elif layout == "Center":
-                self.layouts[layout].setSizeConstraint(QLayout.SetFixedSize)
-                self.layouts[layout].setAlignment(Qt.AlignCenter)
-            elif layout == "Bottom":
-                self.layouts[layout].addWidget(self.buttons["ok"])
-                self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-                self.layouts[layout].addStretch(1)
+            if layout != "main_layout":
+                self.layouts["main_layout"].addLayout(self.layouts[layout])
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
-        self.setLayout(self.layouts["Main"])
+
+        self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
@@ -104,11 +107,13 @@ class ManageCategories(QDialog):
         self.category_fields[self.category_count] = QLineEdit()
         self.category_fields[self.category_count].setPlaceholderText("Enter a category name")
         self.category_fields[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.layouts["Center"].addWidget(self.category_fields[self.category_count], self.category_count - 1, 0, 1, 1)
+        self.layouts["fields_layout"].addWidget(self.category_fields[self.category_count],
+                                                self.category_count - 1, 0, 1, 1)
 
         self.category_buttons[self.category_count] = QPushButton("Set Icon")
         self.category_buttons[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.layouts["Center"].addWidget(self.category_buttons[self.category_count], self.category_count - 1, 1, 1, 4)
+        self.layouts["fields_layout"].addWidget(self.category_buttons[self.category_count],
+                                                self.category_count - 1, 1, 1, 4)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""

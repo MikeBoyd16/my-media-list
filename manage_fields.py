@@ -30,25 +30,27 @@ class ManageFields(QDialog):
         """Initializes the layout and arranges the widgets in the proper order."""
         self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(), "controls_layout": QHBoxLayout(),
                         "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
+
+        self.layouts["header_layout"].addWidget(self.header)
+        self.layouts["header_layout"].setAlignment(Qt.AlignCenter)
+
+        self.layouts["controls_layout"].addWidget(self.buttons["add_field"])
+        self.layouts["controls_layout"].addWidget(self.buttons["remove_field"])
+        self.layouts["controls_layout"].setAlignment(Qt.AlignCenter)
+
+        self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
+        self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
+
+        self.layouts["submit_layout"].addWidget(self.buttons["ok"])
+        self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.layouts["submit_layout"].addStretch(1)
+
         for layout in self.layouts:
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
-            if layout == "header_layout":
-                self.layouts[layout].addWidget(self.header)
-                self.layouts[layout].setAlignment(Qt.AlignCenter)
-            elif layout == "controls_layout":
-                self.layouts[layout].addWidget(self.buttons["add_field"])
-                self.layouts[layout].addWidget(self.buttons["remove_field"])
-                self.layouts[layout].setAlignment(Qt.AlignCenter)
-            elif layout == "fields_layout":
-                self.layouts[layout].setSizeConstraint(QLayout.SetFixedSize)
-                self.layouts[layout].setAlignment(Qt.AlignCenter)
-            elif layout == "submit_layout":
-                self.layouts[layout].addWidget(self.buttons["ok"])
-                self.layouts[layout].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-                self.layouts[layout].addStretch(1)
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
+
         self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):

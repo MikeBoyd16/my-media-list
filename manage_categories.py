@@ -20,17 +20,19 @@ class ManageCategories(QDialog):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setWindowTitle("Manage Categories")
         self.setGeometry(100, 100, 250, 500)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
-        self.layouts = {"Main": QVBoxLayout(), "Top": QHBoxLayout(), "Center": QGridLayout(), "Bottom": QVBoxLayout()}
+        self.layouts = {"Main": QVBoxLayout(), "header_layout": QHBoxLayout(), "Top": QHBoxLayout(), "Center": QGridLayout(), "Bottom": QVBoxLayout()}
         for layout in self.layouts:
             if layout != "Main":
                 self.layouts["Main"].addLayout(self.layouts[layout])
+            if layout == "header_layout":
+                self.layouts["header_layout"].addWidget(self.header)
+                self.header.setAlignment(Qt.AlignCenter)
             if layout == "Top":
                 self.layouts[layout].addWidget(self.buttons["add_category"])
                 self.layouts[layout].addWidget(self.buttons["remove_category"])
@@ -48,6 +50,7 @@ class ManageCategories(QDialog):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+        self.header = QLabel("Manage Categories")
         self.buttons = {"add_category": QPushButton(), "remove_category": QPushButton(), "ok": QPushButton()}
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
@@ -64,8 +67,10 @@ class ManageCategories(QDialog):
         """Sets the stylesheet properties for widgets"""
         self.setPalette(QPalette(QColor("#f3ffbd")))
         self.setStyleSheet("""
-            .Self {
-                border: 1px solid #000000;
+            .QLabel {
+                font-weight: bold;
+                font-size: 24px;
+                color: #247ba0;
             }
             .QPushButton {
                 background-color: #247ba0;

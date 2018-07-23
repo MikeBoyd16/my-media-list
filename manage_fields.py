@@ -164,7 +164,85 @@ class ManageFields(QDialog):
         one_based_list = 1
         row_offset = 3
         current_row = (self.layouts["fields_layout"].indexOf(current_button) + one_based_list) / row_offset
-        current_field = self.field_names[current_row].text()
-        text, ok = QInputDialog.getText(self, current_field + " Items", 'Enter field items:')
-        if ok:
-            self.combo_items[current_row] = text.split(",")
+
+        input_dialog = GetComboItems(self.field_names[current_row].text())
+        input_dialog.show()
+        input_dialog.exec_()
+
+        if input_dialog.input_field.text():
+            self.combo_items[current_row] = input_dialog.input_field.text().split(",")
+
+
+class GetComboItems(QDialog):
+    def __init__(self, field_name):
+        super().__init__()
+        self.field_name = field_name
+        self.init_widgets()
+        self.init_window()
+        self.init_layout()
+        self.init_styles()
+
+    def init_window(self):
+        """Initializes the window, its dimensions, and content"""
+        self.setGeometry(100, 100, 150, 150)
+        self.setWindowFlags(Qt.CustomizeWindowHint)
+        self.center_window()
+
+    def init_layout(self):
+        """Initializes the layout and arranges the widgets in the proper order."""
+        self.main_layout = QVBoxLayout(self)
+        self.main_layout.addWidget(self.header)
+        self.main_layout.addWidget(self.input_field)
+        self.main_layout.addWidget(self.ok)
+        self.main_layout.setContentsMargins(10, 10, 10, 10)
+        self.main_layout.setSpacing(15)
+        self.setLayout(self.main_layout)
+
+    def init_widgets(self):
+        """Initializes widgets and their properties"""
+        if self.field_name:
+            self.header = QLabel(self.field_name)
+        else:
+            self.header = QLabel("No Name")
+        self.header.setAlignment(Qt.AlignCenter)
+        self.input_field = QLineEdit()
+        self.input_field.setPlaceholderText("Enter field items")
+        self.ok = QPushButton("OK")
+        self.ok.clicked.connect(self.submit)
+
+    def init_styles(self):
+        """Sets the stylesheet properties for widgets"""
+        self.setPalette(QPalette(QColor("#f3ffbd")))
+        self.setStyleSheet("""
+            .QLabel {
+                font-weight: bold;
+                font-size: 24px;
+                color: #247ba0;
+                margin: 0;
+            }
+            .QPushButton {
+                background-color: #247ba0;
+                border: 1px solid #8CBDAF;
+                font-weight: bold;
+                font-size: 12px;
+                color: #f3ffbd;
+                height: 30px;
+            }
+            .QPushButton:hover {
+                background-color: #8CBDAF;
+            }
+            .QLineEdit {
+                width: 100px;
+            }
+        """)
+
+    def center_window(self):
+        """Positions the window in the center of the screen"""
+        frame_geometry = self.frameGeometry()
+        center_point = QDesktopWidget().availableGeometry().center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
+
+    def submit(self):
+        """Returns focus to the main window"""
+        self.hide()

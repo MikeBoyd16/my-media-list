@@ -40,8 +40,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="136" column="61" lean-forward="false" selection-start-line="136" selection-start-column="61" selection-end-line="136" selection-end-column="61" />
+            <state relative-caret-position="714">
+              <caret line="200" column="27" lean-forward="true" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -408,13 +408,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00021" summary="Fix close open/save file dialog crash bug">
-      <created>1528647086741</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1528647086741</updated>
-    </task>
     <task id="LOCAL-00022" summary="Move images into images folder and add attribution text file">
       <created>1528647760818</created>
       <option name="number" value="00022" />
@@ -751,7 +744,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532106249717</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked.">
+      <created>1532184203116</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1532184203116</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TodoView">
@@ -837,7 +837,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Overhaul the UI" />
     <MESSAGE value="Change the color scheme of the main window." />
     <MESSAGE value="Change the width and color of the scrollbar." />
     <MESSAGE value="Update variable and method names for the main window class." />
@@ -862,7 +861,8 @@
     <MESSAGE value="Add widgets and styles to the ManageFields window." />
     <MESSAGE value="Implement the enable/disable feature for combo item buttons in the ManageFields window." />
     <MESSAGE value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
+    <MESSAGE value="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -871,7 +871,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AddMovie.py" />
     <entry file="file://$PROJECT_DIR$/AddTV.py" />
     <entry file="file://$PROJECT_DIR$/AddBook.py" />
     <entry file="file://$PROJECT_DIR$/AddVideoGame.py" />
@@ -999,14 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage_categories.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -1034,6 +1025,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PyQt5/QtWidgets.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="105" column="8" lean-forward="false" selection-start-line="105" selection-start-column="8" selection-end-line="105" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_categories.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="41" lean-forward="false" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4063">
@@ -1047,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="136" column="61" lean-forward="false" selection-start-line="136" selection-start-column="61" selection-end-line="136" selection-end-column="61" />
+        <state relative-caret-position="714">
+          <caret line="200" column="27" lean-forward="true" selection-start-line="200" selection-start-column="27" selection-end-line="200" selection-end-column="27" />
           <folding />
         </state>
       </provider>

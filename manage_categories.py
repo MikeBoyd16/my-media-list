@@ -10,9 +10,10 @@ from PyQt5.QtWidgets import *
 
 
 class ManageCategories(QDialog):
-    def __init__(self):
+    def __init__(self, category_names):
         super().__init__()
-        self.category_count = 0
+        self.row = -1
+        self.category_names = category_names
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -102,28 +103,35 @@ class ManageCategories(QDialog):
 
     def add_category(self):
         """Adds a new field where a category can be entered"""
-        self.category_count += 1
+        self.row += 1
 
-        self.category_fields[self.category_count] = QLineEdit()
-        self.category_fields[self.category_count].setPlaceholderText("Enter a category name")
-        self.category_fields[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.layouts["fields_layout"].addWidget(self.category_fields[self.category_count],
-                                                self.category_count - 1, 0, 1, 1)
+        self.category_fields[self.row] = QLineEdit()
+        if self.row < len(self.category_names):
+            self.category_fields[self.row].setText(str(self.category_names[self.row]))
+        else:
+            self.category_fields[self.row].setPlaceholderText("Enter a category name")
+        self.category_fields[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.layouts["fields_layout"].addWidget(self.category_fields[self.row],
+                                                self.row, 0, 1, 1)
 
-        self.category_buttons[self.category_count] = QPushButton("Set Icon")
-        self.category_buttons[self.category_count].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.layouts["fields_layout"].addWidget(self.category_buttons[self.category_count],
-                                                self.category_count - 1, 1, 1, 4)
+        self.category_buttons[self.row] = QPushButton("Set Icon")
+        self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.layouts["fields_layout"].addWidget(self.category_buttons[self.row],
+                                                self.row, 1, 1, 4)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""
-        if self.category_count != 0:
-            self.category_fields[self.category_count].setParent(None)
-            del(self.category_fields[self.category_count])
-            self.category_buttons[self.category_count].setParent(None)
-            del(self.category_buttons[self.category_count])
-            self.category_count -= 1
+        if self.row >= 0:
+            self.category_fields[self.row].setParent(None)
+            del(self.category_fields[self.row])
+            self.category_buttons[self.row].setParent(None)
+            del(self.category_buttons[self.row])
+            self.row -= 1
 
     def ok(self):
         """Returns focus to the main window"""
+        self.category_names = []
+        for idx in range(len(self.category_fields)):
+            if self.category_fields[idx].text():
+                self.category_names.append(self.category_fields[idx].text())
         self.hide()

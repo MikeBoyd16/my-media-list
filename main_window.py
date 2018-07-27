@@ -17,6 +17,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
         self.catalog = {}
         self.category_names = []
+        self.category_icons = []
         self.current_file = ""
         self.init_widgets()
         self.init_window()
@@ -240,7 +241,7 @@ class MainWindow(QMainWindow):
             self.update_catalog()
 
     def categories(self):
-        manage_categories = ManageCategories(self.category_names)
+        manage_categories = ManageCategories(self.category_names, self.category_icons)
         manage_categories.show()
         manage_categories.exec_()
         self.category_names = manage_categories.category_names

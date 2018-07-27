@@ -10,10 +10,11 @@ from PyQt5.QtWidgets import *
 
 
 class ManageCategories(QDialog):
-    def __init__(self, category_names):
+    def __init__(self, category_names, category_icons):
         super().__init__()
         self.row = -1
         self.category_names = category_names
+        self.category_icons = category_icons
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -116,6 +117,7 @@ class ManageCategories(QDialog):
 
         self.category_buttons[self.row] = QPushButton("Set Icon")
         self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_buttons[self.row].clicked.connect(self.set_icon)
         self.layouts["fields_layout"].addWidget(self.category_buttons[self.row],
                                                 self.row, 1, 1, 4)
 
@@ -127,6 +129,31 @@ class ManageCategories(QDialog):
             self.category_buttons[self.row].setParent(None)
             del(self.category_buttons[self.row])
             self.row -= 1
+
+    def set_icon(self):
+        """Sets the icon for a particular category"""
+        current_button = self.sender()
+        one_based_list = 1
+        row_offset = 3
+        current_row = (self.layouts["fields_layout"].indexOf(current_button) + one_based_list) // row_offset
+
+        original_icon_path = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
+        if original_icon_path[0]:
+            icon_object = QImage()
+            icon_object.load(original_icon_path[0])
+            icon = QPixmap.fromImage(icon_object)
+            icon_object = icon.toImage()
+        else:
+            return
+
+        new_icon_path = "images/category-icons/" + str(self.category_fields[current_row].text()) + ".jpg"
+        icon_object.save(new_icon_path)
+        self.category_icons.insert(current_row, new_icon_path)
+
+        current_button.setText("")
+        current_button.setIcon(QIcon(self.category_icons[current_row]))
+        current_button.setIconSize(QSize(35, 35))
+
 
     def ok(self):
         """Returns focus to the main window"""

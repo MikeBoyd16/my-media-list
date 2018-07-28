@@ -112,12 +112,14 @@ class ManageCategories(QDialog):
         else:
             self.category_fields[self.row].setPlaceholderText("Enter a category name")
         self.category_fields[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_fields[self.row].textChanged.connect(self.set_icon_status)
         self.layouts["fields_layout"].addWidget(self.category_fields[self.row],
                                                 self.row, 0, 1, 1)
 
         self.category_buttons[self.row] = QPushButton("Set Icon")
         self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.category_buttons[self.row].clicked.connect(self.set_icon)
+        self.set_icon_status()
         self.layouts["fields_layout"].addWidget(self.category_buttons[self.row],
                                                 self.row, 1, 1, 4)
 
@@ -129,6 +131,19 @@ class ManageCategories(QDialog):
             self.category_buttons[self.row].setParent(None)
             del(self.category_buttons[self.row])
             self.row -= 1
+
+    def set_icon_status(self):
+        """Enables/disables combo buttons based on the field combo selection"""
+        for idx in range(self.row + 1):
+            if self.category_fields[idx].text():
+                self.category_buttons[idx].setEnabled(True)
+                self.category_buttons[idx].setStyleSheet("""
+                                    .QPushButton {background-color: #247ba0;}
+                                    .QPushButton:hover {background-color: #8CBDAF;}
+                                """)
+            else:
+                self.category_buttons[idx].setEnabled(False)
+                self.category_buttons[idx].setStyleSheet(".QPushButton {background-color: #D7E7EE;}")
 
     def set_icon(self):
         """Sets the icon for a particular category"""
@@ -153,7 +168,6 @@ class ManageCategories(QDialog):
         current_button.setText("")
         current_button.setIcon(QIcon(self.category_icons[current_row]))
         current_button.setIconSize(QSize(35, 35))
-
 
     def ok(self):
         """Returns focus to the main window"""

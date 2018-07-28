@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
       <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +17,7 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="4012">
               <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+            <state relative-caret-position="238">
+              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +40,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="122" column="94" lean-forward="false" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -104,6 +103,7 @@
       <find>combo_items</find>
       <find>category_count</find>
       <find>row_count</find>
+      <find>self.combo_button_status</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -184,7 +185,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,6 +253,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="omnilog" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="manage_categories" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="omnilog" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage_categories.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -381,19 +399,21 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.main_window" />
       <item index="1" class="java.lang.String" itemvalue="Python.manage_fields" />
       <item index="2" class="java.lang.String" itemvalue="Python.MyMediaList" />
       <item index="3" class="java.lang.String" itemvalue="Python.omnilog" />
       <item index="4" class="java.lang.String" itemvalue="Python.main-window" />
+      <item index="5" class="java.lang.String" itemvalue="Python.manage_categories" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.manage_fields" />
-        <item index="1" class="java.lang.String" itemvalue="Python.main-window" />
-        <item index="2" class="java.lang.String" itemvalue="Python.omnilog" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MyMediaList" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.manage_categories" />
+        <item index="1" class="java.lang.String" itemvalue="Python.manage_fields" />
+        <item index="2" class="java.lang.String" itemvalue="Python.main-window" />
+        <item index="3" class="java.lang.String" itemvalue="Python.omnilog" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MyMediaList" />
       </list>
     </recent_temporary>
   </component>
@@ -410,13 +430,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Reorganize code">
-      <created>1528774447245</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1528774447245</updated>
     </task>
     <task id="LOCAL-00028" summary="Increase the size of list item icons">
       <created>1528774808870</created>
@@ -754,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532447701794</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Add basic set_icon() functionality in ManageCategories.">
+      <created>1532708102855</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1532708102855</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView">
@@ -777,7 +797,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28246754" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28246754" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -840,7 +860,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Assign button widgets in the main window to a dict and rework redundant code." />
     <MESSAGE value="Change project name from 'my-media-list' to 'omnilog'." />
     <MESSAGE value="Update the style sheets for widgets in the main window." />
     <MESSAGE value="Remove the set_item_color() method." />
@@ -865,7 +884,8 @@
     <MESSAGE value="Rename and rearrange layouts in ManageCategories." />
     <MESSAGE value="Rearrange layouts in ManageFields." />
     <MESSAGE value="Maintain state of category names when the ManageCategories window closes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Maintain state of category names when the ManageCategories window closes." />
+    <MESSAGE value="Add basic set_icon() functionality in ManageCategories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add basic set_icon() functionality in ManageCategories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1011,6 +1031,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4012">
+          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1532617526257" expanded="true" signature="11278:11430" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="122" column="94" lean-forward="false" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1028,36 +1074,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="323" column="0" lean-forward="false" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage_fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1532617526257" expanded="true" signature="11278:11430" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="154" column="47" lean-forward="false" selection-start-line="154" selection-start-column="47" selection-end-line="154" selection-end-column="47" />
+        <state relative-caret-position="238">
+          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
       </provider>

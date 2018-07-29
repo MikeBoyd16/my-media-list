@@ -1,4 +1,5 @@
 import sys
+import os
 import json
 import datetime
 from manage_fields import *
@@ -10,11 +11,11 @@ from PyQt5.QtWidgets import *
 
 
 class ManageCategories(QDialog):
-    def __init__(self, category_names, category_icons):
+    def __init__(self, category_names, category_icon_paths):
         super().__init__()
         self.row = -1
         self.category_names = category_names
-        self.category_icons = category_icons
+        self.category_icon_paths = category_icon_paths
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -116,7 +117,12 @@ class ManageCategories(QDialog):
         self.layouts["fields_layout"].addWidget(self.category_fields[self.row],
                                                 self.row, 0, 1, 1)
 
-        self.category_buttons[self.row] = QPushButton("Set Icon")
+        self.category_buttons[self.row] = QPushButton()
+        if self.row < len(self.category_icon_paths):
+            self.category_buttons[self.row].setIcon(QIcon(self.category_icon_paths[self.row]))
+            self.category_buttons[self.row].setIconSize(QSize(35, 35))
+        else:
+            self.category_buttons[self.row].setText("Set Icon")
         self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.category_buttons[self.row].clicked.connect(self.set_icon)
         self.set_icon_status()
@@ -145,6 +151,8 @@ class ManageCategories(QDialog):
                 self.category_buttons[idx].setEnabled(False)
                 self.category_buttons[idx].setStyleSheet(".QPushButton {background-color: #D7E7EE;}")
 
+            self.update_icon_name(idx)
+
     def set_icon(self):
         """Sets the icon for a particular category"""
         current_button = self.sender()
@@ -163,11 +171,19 @@ class ManageCategories(QDialog):
 
         new_icon_path = "images/category-icons/" + str(self.category_fields[current_row].text()) + ".jpg"
         icon_object.save(new_icon_path)
-        self.category_icons.insert(current_row, new_icon_path)
+        self.category_icon_paths.insert(current_row, new_icon_path)
 
         current_button.setText("")
-        current_button.setIcon(QIcon(self.category_icons[current_row]))
+        current_button.setIcon(QIcon(self.category_icon_paths[current_row]))
         current_button.setIconSize(QSize(35, 35))
+
+    def update_icon_name(self, idx):
+        if -1 < self.row < len(self.category_icon_paths):
+            icon_path = "images/category-icons/" + str(self.category_fields[idx].text()) + ".jpg"
+            if icon_path != self.category_icon_paths[idx]:
+                os.rename(self.category_icon_paths[idx], icon_path)
+                self.category_icon_paths[idx] = icon_path
+                self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
 
     def ok(self):
         """Returns focus to the main window"""

@@ -20,6 +20,7 @@ class ManageCategories(QDialog):
         self.init_window()
         self.init_layout()
         self.init_styles()
+        self.init_categories()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
@@ -96,6 +97,24 @@ class ManageCategories(QDialog):
             }
         """)
 
+    def init_categories(self):
+        for idx in range(len(self.category_names)):
+            self.row += 1
+
+            self.category_fields[idx] = QLineEdit()
+            self.category_fields[idx].setText(str(self.category_names[idx]))
+            self.category_fields[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.category_fields[idx].textChanged.connect(self.set_icon_status)
+            self.layouts["fields_layout"].addWidget(self.category_fields[idx], idx, 0, 1, 1)
+
+            self.category_buttons[idx] = QPushButton()
+            self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            self.category_buttons[idx].setIconSize(QSize(30, 30))
+            self.category_buttons[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.category_buttons[idx].clicked.connect(self.set_icon)
+            self.set_icon_status()
+            self.layouts["fields_layout"].addWidget(self.category_buttons[idx], idx, 1, 1, 1)
+
     def center_window(self):
         """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
@@ -114,8 +133,7 @@ class ManageCategories(QDialog):
             self.category_fields[self.row].setPlaceholderText("Enter a category name")
         self.category_fields[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.category_fields[self.row].textChanged.connect(self.set_icon_status)
-        self.layouts["fields_layout"].addWidget(self.category_fields[self.row],
-                                                self.row, 0, 1, 1)
+        self.layouts["fields_layout"].addWidget(self.category_fields[self.row], self.row, 0, 1, 1)
 
         self.category_buttons[self.row] = QPushButton()
         if self.row < len(self.category_icon_paths):
@@ -126,8 +144,7 @@ class ManageCategories(QDialog):
         self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.category_buttons[self.row].clicked.connect(self.set_icon)
         self.set_icon_status()
-        self.layouts["fields_layout"].addWidget(self.category_buttons[self.row],
-                                                self.row, 1, 1, 1)
+        self.layouts["fields_layout"].addWidget(self.category_buttons[self.row], self.row, 1, 1, 1)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""

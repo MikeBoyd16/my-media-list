@@ -84,7 +84,7 @@ class ManageCategories(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
-                height: 50px;
+                width: 40px;
             }
             .QPushButton:hover {
                 background-color: #8CBDAF;
@@ -120,14 +120,14 @@ class ManageCategories(QDialog):
         self.category_buttons[self.row] = QPushButton()
         if self.row < len(self.category_icon_paths):
             self.category_buttons[self.row].setIcon(QIcon(self.category_icon_paths[self.row]))
-            self.category_buttons[self.row].setIconSize(QSize(35, 35))
+            self.category_buttons[self.row].setIconSize(QSize(30, 30))
         else:
-            self.category_buttons[self.row].setText("Set Icon")
+            self.category_buttons[self.row].setText("Icon")
         self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
         self.category_buttons[self.row].clicked.connect(self.set_icon)
         self.set_icon_status()
         self.layouts["fields_layout"].addWidget(self.category_buttons[self.row],
-                                                self.row, 1, 1, 4)
+                                                self.row, 1, 1, 1)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""

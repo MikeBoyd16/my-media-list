@@ -248,7 +248,10 @@ class MainWindow(QMainWindow):
         self.category_icon_paths = manage_categories.category_icon_paths
 
     def fields(self):
-        manage_fields = ManageFields()
+        select_category = SelectCategory()
+        select_category.show()
+        select_category.exec_()
+        manage_fields = ManageFields(select_category.get_category_selection())
         manage_fields.show()
         manage_fields.exec_()
 

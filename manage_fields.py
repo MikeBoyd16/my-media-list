@@ -10,11 +10,11 @@ from PyQt5.QtWidgets import *
 
 
 class ManageFields(QDialog):
-    def __init__(self):
+    def __init__(self, selected_category):
         super().__init__()
         self.row_count = 0
         self.selected_row = 0
-        self.category = ""
+        self.selected_category = selected_category
         self.init_widgets()
         self.init_window()
         self.init_layout()

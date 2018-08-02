@@ -10,8 +10,9 @@ from PyQt5.QtWidgets import *
 
 
 class SelectCategory(QDialog):
-    def __init__(self):
+    def __init__(self, categories):
         super().__init__()
+        self.categories = categories
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -26,7 +27,7 @@ class SelectCategory(QDialog):
     def init_layout(self):
         """Initializes the layout for widgets in the window"""
         grid_layout = QGridLayout()
-        grid_layout.addWidget(self.categories, 0, 0)
+        grid_layout.addWidget(self.category_select, 0, 0)
         grid_layout.addWidget(self.ok, 1, 0)
         self.ok.move(50, 50)
 
@@ -40,9 +41,12 @@ class SelectCategory(QDialog):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
-        self.categories = QComboBox(self)
-        self.categories.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
-
+        self.category_select = QComboBox(self)
+        if len(self.categories) > 0:
+            for category in self.categories:
+                self.category_select.addItem(category)
+        else:
+            self.category_select.addItem("No categories created")
         self.ok = QPushButton("OK", self)
         self.ok.clicked.connect(self.submit)
 
@@ -59,7 +63,7 @@ class SelectCategory(QDialog):
 
     def get_category_selection(self):
         """Returns the currently selected media type"""
-        return self.categories.currentText()
+        return self.category_select.currentText()
 
     def submit(self):
         self.hide()

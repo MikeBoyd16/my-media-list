@@ -231,22 +231,23 @@ class MainWindow(QMainWindow):
 
     def add_item(self):
         """Adds a new catalog item to the catalog"""
-        select_category = SelectCategory()
+        select_category = SelectCategory(self.category_names)
         select_category.show()
         select_category.exec_()
 
-        add_item = AddItem(select_category.get_category_selection())
-        add_item.exec_()
-        add_item.temp_input["Media"] = add_item.category
-        now = datetime.datetime.now()
-        add_item.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
-                                          str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+        if select_category.get_category_selection() != "No categories created":
+            add_item = AddItem(select_category.get_category_selection())
+            add_item.exec_()
+            add_item.temp_input["Media"] = add_item.category
+            now = datetime.datetime.now()
+            add_item.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
+                                              str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
-        if "Title" in add_item.temp_input:  # Fields for key won't exist if the dialog is closed prematurely
-            self.catalog[add_item.temp_input["Title"] + "-" +
-                         add_item.temp_input["Media"] + "-" +
-                         add_item.temp_input["Date Entered"]] = add_item.temp_input
-            self.update_catalog()
+            if "Title" in add_item.temp_input:  # Fields for key won't exist if the dialog is closed prematurely
+                self.catalog[add_item.temp_input["Title"] + "-" +
+                             add_item.temp_input["Media"] + "-" +
+                             add_item.temp_input["Date Entered"]] = add_item.temp_input
+                self.update_catalog()
 
     def categories(self):
         manage_categories = ManageCategories(self.category_names, self.category_icon_paths)
@@ -256,12 +257,14 @@ class MainWindow(QMainWindow):
         self.category_icon_paths = manage_categories.category_icon_paths
 
     def fields(self):
-        select_category = SelectCategory()
+        select_category = SelectCategory(self.category_names)
         select_category.show()
         select_category.exec_()
-        manage_fields = ManageFields(select_category.get_category_selection())
-        manage_fields.show()
-        manage_fields.exec_()
+
+        if select_category.get_category_selection() != "No categories created":
+            manage_fields = ManageFields(select_category.get_category_selection())
+            manage_fields.show()
+            manage_fields.exec_()
 
     def remove_item(self):
         pass

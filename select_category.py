@@ -12,7 +12,6 @@ from PyQt5.QtWidgets import *
 class SelectCategory(QDialog):
     def __init__(self):
         super().__init__()
-        self.temp_input = {}
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -45,7 +44,7 @@ class SelectCategory(QDialog):
         self.categories.addItems(["Music", "Audiobook", "Movie", "TV", "Anime", "Book", "Manga", "Video Game"])
 
         self.ok = QPushButton("OK", self)
-        self.ok.clicked.connect(self.go_to_add_item)
+        self.ok.clicked.connect(self.submit)
 
     def init_styles(self):
         """Sets all stylesheet properties"""
@@ -62,14 +61,5 @@ class SelectCategory(QDialog):
         """Returns the currently selected media type"""
         return self.categories.currentText()
 
-    def go_to_add_item(self):
-        """Displays a new AddMedia form and places the resulting
-        input in a temporary dictionary variable"""
-        add_item_window = AddItem(self.get_category_selection())
-        add_item_window.exec_()
-        self.temp_input = add_item_window.temp_input
-        self.temp_input["Media"] = self.categories.currentText()
-        now = datetime.datetime.now()
-        self.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
-                                          str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+    def submit(self):
         self.hide()

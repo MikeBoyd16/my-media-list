@@ -231,13 +231,21 @@ class MainWindow(QMainWindow):
 
     def add_item(self):
         """Adds a new catalog item to the catalog"""
-        select_category_window = SelectCategory()
-        select_category_window.show()
-        select_category_window.exec_()
-        if "Title" in select_category_window.temp_input:  # Fields for key won't exist if the dialog is closed prematurely
-            self.catalog[select_category_window.temp_input["Title"] + "-" +
-                         select_category_window.temp_input["Media"] + "-" +
-                         select_category_window.temp_input["Date Entered"]] = select_category_window.temp_input
+        select_category = SelectCategory()
+        select_category.show()
+        select_category.exec_()
+
+        add_item = AddItem(select_category.get_category_selection())
+        add_item.exec_()
+        add_item.temp_input["Media"] = add_item.category
+        now = datetime.datetime.now()
+        add_item.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
+                                          str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+
+        if "Title" in add_item.temp_input:  # Fields for key won't exist if the dialog is closed prematurely
+            self.catalog[add_item.temp_input["Title"] + "-" +
+                         add_item.temp_input["Media"] + "-" +
+                         add_item.temp_input["Date Entered"]] = add_item.temp_input
             self.update_catalog()
 
     def categories(self):

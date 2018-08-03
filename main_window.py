@@ -18,6 +18,7 @@ class MainWindow(QMainWindow):
         self.catalog = {}
         self.category_names = []
         self.category_icon_paths = []
+        self.category_fields = {}
         self.current_file = ""
         self.init_widgets()
         self.init_window()
@@ -262,9 +263,10 @@ class MainWindow(QMainWindow):
         select_category.exec_()
 
         if select_category.get_category_selection() != "No categories created":
-            manage_fields = ManageFields(select_category.get_category_selection())
+            manage_fields = ManageFields(select_category.get_category_selection(), self.category_fields)
             manage_fields.show()
             manage_fields.exec_()
+            self.category_fields = manage_fields.category_fields
 
     def remove_item(self):
         pass

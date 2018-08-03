@@ -10,11 +10,12 @@ from PyQt5.QtWidgets import *
 
 
 class ManageFields(QDialog):
-    def __init__(self, selected_category):
+    def __init__(self, category, category_fields):
         super().__init__()
         self.row_count = 0
         self.selected_row = 0
-        self.selected_category = selected_category
+        self.category = category
+        self.category_fields = category_fields
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -101,6 +102,31 @@ class ManageFields(QDialog):
             }
         """)
 
+    def init_category_fields(self):
+        for current_row in range(len(self.category_fields)):
+            self.row_count += 1
+
+            self.field_names[current_row] = QLineEdit()
+            self.field_names[current_row].setText(self.category_fields[self.category][current_row][0])
+            self.field_names[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.layouts["fields_layout"].addWidget(self.field_names[current_row], current_row, 0)
+
+            self.field_combos[current_row] = QComboBox()
+            self.field_combos[current_row].addItems(["Text", "Dropdown"])
+            if self.category_fields[self.category][current_row][1] == "Dropdown":
+                self.field_combos[current_row].setCurrentIndex(1)
+            self.field_combos[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.field_combos[current_row].currentIndexChanged.connect(self.combo_button_status)
+            self.layouts["fields_layout"].addWidget(self.field_combos[current_row], current_row, 1)
+
+            self.combo_buttons[current_row] = QPushButton(" . . . ")
+            self.combo_buttons[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.combo_buttons[current_row].clicked.connect(self.get_combo_items)
+            self.combo_button_status()
+            self.layouts["fields_layout"].addWidget(self.combo_buttons[current_row], current_row, 2)
+
+            self.combo_items[current_row] = self.category_fields[self.category][current_row][2]
+
     def center_window(self):
         """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
@@ -144,7 +170,10 @@ class ManageFields(QDialog):
             self.row_count -= 1
 
     def ok(self):
-        """Returns focus to the main window"""
+        for current_row in range(self.row_count):
+            self.category_fields[self.category][current_row] = [self.field_names[current_row].text(),
+                                                                self.field_combos[current_row].currentText(),
+                                                                self.combo_items[current_row]]
         self.hide()
 
     def combo_button_status(self):

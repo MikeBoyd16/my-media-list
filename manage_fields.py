@@ -12,13 +12,14 @@ from PyQt5.QtWidgets import *
 class ManageFields(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
-        self.row = 0
+        self.row = -1
         self.category = category
         self.category_fields = category_fields
         self.init_widgets()
         self.init_window()
         self.init_layout()
         self.init_styles()
+        self.init_category_fields()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
@@ -102,29 +103,30 @@ class ManageFields(QDialog):
         """)
 
     def init_category_fields(self):
-        for current_row in range(len(self.category_fields)):
-            self.row += 1
+        if self.category in self.category_fields:
+            for current_row in range(len(self.category_fields[self.category])):
+                self.row += 1
 
-            self.field_names[current_row] = QLineEdit()
-            self.field_names[current_row].setText(self.category_fields[self.category][current_row][0])
-            self.field_names[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-            self.layouts["fields_layout"].addWidget(self.field_names[current_row], current_row, 0)
+                self.field_names[current_row] = QLineEdit()
+                self.field_names[current_row].setText(self.category_fields[self.category][current_row][0])
+                self.field_names[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.layouts["fields_layout"].addWidget(self.field_names[current_row], current_row, 0)
 
-            self.field_types[current_row] = QComboBox()
-            self.field_types[current_row].addItems(["Text", "Dropdown"])
-            if self.category_fields[self.category][current_row][1] == "Dropdown":
-                self.field_types[current_row].setCurrentIndex(1)
-            self.field_types[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-            self.field_types[current_row].currentIndexChanged.connect(self.combo_button_status)
-            self.layouts["fields_layout"].addWidget(self.field_types[current_row], current_row, 1)
+                self.field_types[current_row] = QComboBox()
+                self.field_types[current_row].addItems(["Text", "Dropdown"])
+                if self.category_fields[self.category][current_row][1] == "Dropdown":
+                    self.field_types[current_row].setCurrentIndex(1)
+                self.field_types[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.field_types[current_row].currentIndexChanged.connect(self.combo_button_status)
+                self.layouts["fields_layout"].addWidget(self.field_types[current_row], current_row, 1)
 
-            self.combo_items_buttons[current_row] = QPushButton(" . . . ")
-            self.combo_items_buttons[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-            self.combo_items_buttons[current_row].clicked.connect(self.get_combo_items)
-            self.combo_button_status()
-            self.layouts["fields_layout"].addWidget(self.combo_items_buttons[current_row], current_row, 2)
+                self.combo_items_buttons[current_row] = QPushButton(" . . . ")
+                self.combo_items_buttons[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.combo_items_buttons[current_row].clicked.connect(self.get_combo_items)
+                self.combo_button_status()
+                self.layouts["fields_layout"].addWidget(self.combo_items_buttons[current_row], current_row, 2)
 
-            self.combo_items[current_row] = self.category_fields[self.category][current_row][2]
+                self.combo_items[current_row] = self.category_fields[self.category][current_row][2]
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -156,7 +158,7 @@ class ManageFields(QDialog):
 
     def remove_field(self):
         """Removes an existing field where a category could be entered"""
-        if self.row != 0:
+        if self.row >= 0:
             self.field_names[self.row].setParent(None)
             del(self.field_names[self.row])
             self.field_types[self.row].setParent(None)
@@ -164,20 +166,27 @@ class ManageFields(QDialog):
             self.combo_items_buttons[self.row].setParent(None)
             del (self.combo_items_buttons[self.row])
             if self.row in self.combo_items:
-                self.combo_items[self.row].setParent(None)
                 del(self.combo_items[self.row])
             self.row -= 1
 
     def ok(self):
-        for current_row in range(self.row):
-            self.category_fields[self.category][current_row] = [self.field_names[current_row].text(),
-                                                                self.field_types[current_row].currentText(),
-                                                                self.combo_items[current_row]]
+        self.category_fields[self.category] = {}
+        field_count = 0
+        for current_row in range(self.row + 1):
+            if self.field_names[current_row].text():
+                self.category_fields[self.category][field_count] = []
+                self.category_fields[self.category][field_count].append(self.field_names[current_row].text())
+                self.category_fields[self.category][field_count].append(self.field_types[current_row].currentText())
+                if current_row in self.combo_items:
+                    self.category_fields[self.category][field_count].append(self.field_types[current_row].currentText())
+                else:
+                    self.category_fields[self.category][field_count].append("")
+                field_count += 1
         self.hide()
 
     def combo_button_status(self):
         """Enables/disables combo buttons based on the field combo selection"""
-        for idx in range(1, self.row + 1):
+        for idx in range(self.row + 1):
             if self.field_types[idx].currentText() == "Text":
                 self.combo_items_buttons[idx].setEnabled(False)
                 self.combo_items_buttons[idx].setStyleSheet(".QPushButton {background-color: #D7E7EE;}")

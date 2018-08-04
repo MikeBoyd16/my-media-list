@@ -267,6 +267,7 @@ class MainWindow(QMainWindow):
             manage_fields.show()
             manage_fields.exec_()
             self.category_fields = manage_fields.category_fields
+            var = 1
 
     def remove_item(self):
         pass

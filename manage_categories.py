@@ -179,9 +179,7 @@ class ManageCategories(QDialog):
     def set_icon(self):
         """Sets the icon for a particular category"""
         current_button = self.sender()
-        one_based_list = 1
-        row_offset = 3
-        current_row = (self.layouts["fields_layout"].indexOf(current_button) + one_based_list) // row_offset
+        current_row = ((self.layouts["fields_layout"].indexOf(current_button) + 1) // 2) - 1
 
         original_icon_path = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
         if original_icon_path[0]:
@@ -212,7 +210,13 @@ class ManageCategories(QDialog):
     def ok(self):
         """Returns focus to the main window"""
         self.category_names = {}
+        temp_category_icon_paths = {}
+        category_count = 0
         for idx in range(len(self.category_fields)):
             if self.category_fields[idx].text():
-                self.category_names[idx] = self.category_fields[idx].text()
+                self.category_names[category_count] = self.category_fields[idx].text()
+                if idx in self.category_icon_paths:
+                    temp_category_icon_paths[category_count] = self.category_icon_paths[idx]
+                category_count += 1
+        self.category_icon_paths = temp_category_icon_paths
         self.hide()

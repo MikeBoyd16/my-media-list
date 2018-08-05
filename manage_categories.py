@@ -108,7 +108,10 @@ class ManageCategories(QDialog):
             self.layouts["fields_layout"].addWidget(self.category_fields[idx], idx, 0, 1, 1)
 
             self.category_buttons[idx] = QPushButton()
-            self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            if idx in self.category_icon_paths:
+                self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            else:
+                self.category_buttons[idx].setText("Icon")
             self.category_buttons[idx].setIconSize(QSize(30, 30))
             self.category_buttons[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
             self.category_buttons[idx].clicked.connect(self.set_icon)

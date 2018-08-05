@@ -16,8 +16,8 @@ class MainWindow(QMainWindow):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.catalog = {}
-        self.category_names = []
-        self.category_icon_paths = []
+        self.category_names = {}
+        self.category_icon_paths = {}
         self.category_fields = {}
         self.current_file = ""
         self.init_widgets()

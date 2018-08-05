@@ -191,7 +191,7 @@ class ManageCategories(QDialog):
 
         new_icon_path = "images/category-icons/" + str(self.category_fields[current_row].text()) + ".jpg"
         icon_object.save(new_icon_path)
-        self.category_icon_paths.insert(current_row, new_icon_path)
+        self.category_icon_paths[current_row] = new_icon_path
 
         current_button.setText("")
         current_button.setIcon(QIcon(self.category_icon_paths[current_row]))
@@ -199,16 +199,17 @@ class ManageCategories(QDialog):
 
     def update_icon_name(self, idx):
         if -1 < self.row < len(self.category_icon_paths):
-            icon_path = "images/category-icons/" + str(self.category_fields[idx].text()) + ".jpg"
-            if icon_path != self.category_icon_paths[idx]:
-                os.rename(self.category_icon_paths[idx], icon_path)
-                self.category_icon_paths[idx] = icon_path
-                self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            if idx in self.category_icon_paths:
+                icon_path = "images/category-icons/" + str(self.category_fields[idx].text()) + ".jpg"
+                if icon_path not in self.category_icon_paths[idx]:
+                    os.rename(self.category_icon_paths[idx], icon_path)
+                    self.category_icon_paths[idx] = icon_path
+                    self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
 
     def ok(self):
         """Returns focus to the main window"""
-        self.category_names = []
+        self.category_names = {}
         for idx in range(len(self.category_fields)):
             if self.category_fields[idx].text():
-                self.category_names.append(self.category_fields[idx].text())
+                self.category_names[idx] = self.category_fields[idx].text()
         self.hide()

@@ -202,7 +202,8 @@ class ManageFields(QDialog):
         current_button = self.sender()
         current_row = (self.layouts["fields_layout"].indexOf(current_button) + 1) / 3
 
-        input_dialog = GetComboItems(self.field_names[current_row].text())
+        input_dialog = GetComboItems(self.field_names[current_row].text(),
+                                     self.category_fields[self.category][current_row][2])
         input_dialog.show()
         input_dialog.exec_()
 
@@ -211,13 +212,15 @@ class ManageFields(QDialog):
 
 
 class GetComboItems(QDialog):
-    def __init__(self, field_name):
+    def __init__(self, field_name, combo_items):
         super().__init__()
         self.field_name = field_name
+        self.combo_items = combo_items
         self.init_widgets()
         self.init_window()
         self.init_layout()
         self.init_styles()
+        self.init_combo_items()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
@@ -272,6 +275,10 @@ class GetComboItems(QDialog):
                 width: 100px;
             }
         """)
+
+    def init_combo_items(self):
+        if self.combo_items != "":
+            self.input_field.setText("".join(self.combo_items))
 
     def center_window(self):
         """Positions the window in the center of the screen"""

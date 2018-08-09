@@ -56,7 +56,7 @@ class ManageFields(QDialog):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
-        self.header = QLabel(self.category + "Fields")
+        self.header = QLabel(self.category + " Fields")
         self.buttons = {"add_field": QPushButton(), "remove_field": QPushButton(), "ok": QPushButton()}
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]

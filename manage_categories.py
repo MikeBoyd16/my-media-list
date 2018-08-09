@@ -156,9 +156,11 @@ class ManageCategories(QDialog):
             del(self.category_fields[self.row])
             self.category_buttons[self.row].setParent(None)
             del(self.category_buttons[self.row])
-            os.remove(self.category_icon_paths[self.row])
-            del(self.category_icon_paths[self.row])
-            del(self.category_names[self.row])
+            if self.row in self.category_icon_paths:
+                os.remove(self.category_icon_paths[self.row])
+                del(self.category_icon_paths[self.row])
+            if self.row in self.category_names:
+                del(self.category_names[self.row])
             self.row -= 1
 
     def set_icon_status(self):

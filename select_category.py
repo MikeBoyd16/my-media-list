@@ -43,7 +43,7 @@ class SelectCategory(QDialog):
         """Initializes widgets and their properties"""
         self.category_select = QComboBox(self)
         if len(self.categories) > 0:
-            for category in self.categories:
+            for category in self.categories.values():
                 self.category_select.addItem(category)
         else:
             self.category_select.addItem("No categories created")

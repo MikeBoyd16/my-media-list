@@ -175,12 +175,12 @@ class ManageFields(QDialog):
         for current_row in range(self.row + 1):
             if self.field_names[current_row].text():
                 self.category_fields[self.category][field_count] = []
-                self.category_fields[self.category][field_count].append(self.field_names[current_row].text())
-                self.category_fields[self.category][field_count].append(self.field_types[current_row].currentText())
+                self.category_fields[self.category][field_count].insert(0, self.field_names[current_row].text())
+                self.category_fields[self.category][field_count].insert(1, self.field_types[current_row].currentText())
                 if current_row in self.combo_items:
-                    self.category_fields[self.category][field_count].append(self.field_types[current_row].currentText())
+                    self.category_fields[self.category][field_count].insert(2, self.combo_items[current_row])
                 else:
-                    self.category_fields[self.category][field_count].append("")
+                    self.category_fields[self.category][field_count].insert(2, "")
                 field_count += 1
         self.hide()
 

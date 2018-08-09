@@ -39,8 +39,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1566">
-              <caret line="174" column="47" lean-forward="true" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="47" />
+            <state relative-caret-position="185">
+              <caret line="178" column="28" lean-forward="true" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -435,13 +435,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00044" summary="Change 'date entered' field to include hours, minutes, and seconds.">
-      <created>1530658807084</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1530658807084</updated>
-    </task>
     <task id="LOCAL-00045" summary="Overhaul the UI">
       <created>1530675613129</created>
       <option name="number" value="00045" />
@@ -778,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533824856549</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field.">
+      <created>1533825609813</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1533825609813</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TodoView">
@@ -864,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Implement the enable/disable feature for combo item buttons in the ManageFields window." />
     <MESSAGE value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
     <MESSAGE value="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked." />
     <MESSAGE value="Add the GetComboItems class to the manage_fields module." />
@@ -889,11 +888,12 @@
     <MESSAGE value="Fix a bug where icons aren't matching category names correctly under certain circumstances." />
     <MESSAGE value="Add the initial code to pre-populate ManageFields with existing combo items." />
     <MESSAGE value="Fix a bug where removing empty categories causes the program to crash." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where removing empty categories causes the program to crash." />
+    <MESSAGE value="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1065,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1566">
-          <caret line="174" column="47" lean-forward="true" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="47" />
+        <state relative-caret-position="185">
+          <caret line="178" column="28" lean-forward="true" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
           <folding />
         </state>
       </provider>

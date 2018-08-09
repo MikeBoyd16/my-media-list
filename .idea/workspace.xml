@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/category-icons/Music.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
-      <change beforePath="$PROJECT_DIR$/select_category.py" afterPath="$PROJECT_DIR$/select_category.py" />
+      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
+            <state relative-caret-position="-35">
               <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3332">
-              <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+            <state relative-caret-position="-1566">
+              <caret line="174" column="47" lean-forward="true" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -109,6 +107,7 @@
       <find>self.combo_buttons</find>
       <find>self.category_icon_paths</find>
       <find>self.category_names</find>
+      <find>self.category_fields</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,9 +141,9 @@
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
         <option value="$PROJECT_DIR$/main_window.py" />
-        <option value="$PROJECT_DIR$/manage_fields.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
+        <option value="$PROJECT_DIR$/manage_fields.py" />
       </list>
     </option>
   </component>
@@ -435,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Add header and title to the top of the main window with their own layout.">
-      <created>1530583206369</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1530583206369</updated>
     </task>
     <task id="LOCAL-00044" summary="Change 'date entered' field to include hours, minutes, and seconds.">
       <created>1530658807084</created>
@@ -779,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533745225373</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Fix a bug where removing empty categories causes the program to crash.">
+      <created>1533824856549</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1533824856549</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView">
@@ -865,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add widgets and styles to the ManageFields window." />
     <MESSAGE value="Implement the enable/disable feature for combo item buttons in the ManageFields window." />
     <MESSAGE value="Add &quot;get_combo_items&quot; functionality to the ManageFields class." />
     <MESSAGE value="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked." />
@@ -890,7 +888,8 @@
     <MESSAGE value="Fix a bug where the program crashes when an existing category doesn't have an icon." />
     <MESSAGE value="Fix a bug where icons aren't matching category names correctly under certain circumstances." />
     <MESSAGE value="Add the initial code to pre-populate ManageFields with existing combo items." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add the initial code to pre-populate ManageFields with existing combo items." />
+    <MESSAGE value="Fix a bug where removing empty categories causes the program to crash." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where removing empty categories causes the program to crash." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,18 +1055,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage_fields.py">
+    <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3332">
-          <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+        <state relative-caret-position="-35">
+          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage_categories.py">
+    <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="162" column="16" lean-forward="false" selection-start-line="162" selection-start-column="16" selection-end-line="162" selection-end-column="16" />
+        <state relative-caret-position="-1566">
+          <caret line="174" column="47" lean-forward="true" selection-start-line="174" selection-start-column="47" selection-end-line="174" selection-end-column="47" />
           <folding />
         </state>
       </provider>

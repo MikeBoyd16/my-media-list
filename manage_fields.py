@@ -200,10 +200,14 @@ class ManageFields(QDialog):
     def get_combo_items(self):
         """Calls an input dialog window to retrieve field items"""
         current_button = self.sender()
-        current_row = (self.layouts["fields_layout"].indexOf(current_button) + 1) / 3
+        current_row = ((self.layouts["fields_layout"].indexOf(current_button) + 1) // 3) - 1
 
-        input_dialog = GetComboItems(self.field_names[current_row].text(),
-                                     self.category_fields[self.category][current_row][2])
+        if self.category in self.category_fields and current_row in self.category_fields[self.category]:
+            input_dialog = GetComboItems(self.field_names[current_row].text(),
+                                         self.category_fields[self.category][current_row][2])
+        else:
+            input_dialog = GetComboItems(self.field_names[current_row].text())
+
         input_dialog.show()
         input_dialog.exec_()
 
@@ -212,7 +216,7 @@ class ManageFields(QDialog):
 
 
 class GetComboItems(QDialog):
-    def __init__(self, field_name, combo_items):
+    def __init__(self, field_name, combo_items=""):
         super().__init__()
         self.field_name = field_name
         self.combo_items = combo_items

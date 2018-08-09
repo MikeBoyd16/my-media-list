@@ -282,7 +282,7 @@ class GetComboItems(QDialog):
 
     def init_combo_items(self):
         if self.combo_items != "":
-            self.input_field.setText("".join(self.combo_items))
+            self.input_field.setText("".join(self.combo_items).replace(" ", ", "))
 
     def center_window(self):
         """Positions the window in the center of the screen"""

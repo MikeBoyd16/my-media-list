@@ -61,7 +61,7 @@ class SelectCategory(QDialog):
         frame_geometry.moveCenter(center_point)
         self.move(frame_geometry.topLeft())
 
-    def get_category_selection(self):
+    def get_category(self):
         """Returns the currently selected media type"""
         return self.category_select.currentText()
 

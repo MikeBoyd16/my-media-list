@@ -236,18 +236,18 @@ class MainWindow(QMainWindow):
         select_category.show()
         select_category.exec_()
 
-        if select_category.get_category_selection() != "No categories created":
-            add_item = AddItem(select_category.get_category_selection())
+        if select_category.get_category() != "No categories created":
+            add_item = AddItem(select_category.get_category())
             add_item.exec_()
-            add_item.temp_input["Media"] = add_item.category
+            add_item.item["Media"] = add_item.category
             now = datetime.datetime.now()
-            add_item.temp_input["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
+            add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
                                               str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
-            if "Title" in add_item.temp_input:  # Fields for key won't exist if the dialog is closed prematurely
-                self.catalog[add_item.temp_input["Title"] + "-" +
-                             add_item.temp_input["Media"] + "-" +
-                             add_item.temp_input["Date Entered"]] = add_item.temp_input
+            if "Title" in add_item.item:  # Fields for key won't exist if the dialog is closed prematurely
+                self.catalog[add_item.item["Title"] + "-" +
+                             add_item.item["Media"] + "-" +
+                             add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()
 
     def categories(self):
@@ -262,8 +262,8 @@ class MainWindow(QMainWindow):
         select_category.show()
         select_category.exec_()
 
-        if select_category.get_category_selection() != "No categories created":
-            manage_fields = ManageFields(select_category.get_category_selection(), self.category_fields)
+        if select_category.get_category() != "No categories created":
+            manage_fields = ManageFields(select_category.get_category(), self.category_fields)
             manage_fields.show()
             manage_fields.exec_()
             self.category_fields = manage_fields.category_fields

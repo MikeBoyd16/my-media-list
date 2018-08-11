@@ -8,9 +8,10 @@ from PyQt5.QtWidgets import *
 
 
 class AddItem(QDialog):
-    def __init__(self, category):
+    def __init__(self, category, category_fields):
         super().__init__()
         self.category = category
+        self.category_fields = category_fields
         self.item = {}
         self.init_widgets()
         self.init_window()
@@ -44,18 +45,19 @@ class AddItem(QDialog):
         """
         Populates the form with the correct widgets for the selected category
         """
-        widgets = {}
+        self.labels, self.inputs = {}, {}
+        for idx in range(len(self.category_fields[self.category])):
+            field_name = self.category_fields[self.category][idx][0]
+            field_type = self.category_fields[self.category][idx][1]
+            field_items = self.category_fields[self.category][idx][2]
 
-        # Populate the form with widgets based on the selected template
-        self.labels = {}
-        self.inputs = {}
-        for key, value in widgets.items():
-            self.labels[key] = QLabel()
-            self.labels[key].setText(key)
-            if value == "line":
-                self.inputs[key] = QLineEdit()
-            elif value == "combo":
-                self.inputs[key] = QComboBox()
+            self.labels[field_name] = QLabel()
+            self.labels[field_name].setText(field_name)
+            if field_type == "Text":
+                self.inputs[field_name] = QLineEdit()
+            else:
+                self.inputs[field_name] = QComboBox()
+                self.inputs[field_name].addItems(field_items)
 
         self.submit = QPushButton("Submit", self)
         self.submit.setFixedHeight(40)

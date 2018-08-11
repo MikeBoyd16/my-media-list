@@ -237,7 +237,7 @@ class MainWindow(QMainWindow):
         select_category.exec_()
 
         if select_category.get_category() != "No categories created":
-            add_item = AddItem(select_category.get_category())
+            add_item = AddItem(select_category.get_category(), self.category_fields)
             add_item.exec_()
             add_item.item["Media"] = add_item.category
             now = datetime.datetime.now()

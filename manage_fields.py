@@ -104,29 +104,29 @@ class ManageFields(QDialog):
 
     def init_category_fields(self):
         if self.category in self.category_fields:
-            for current_row in range(len(self.category_fields[self.category])):
+            for idx in range(len(self.category_fields[self.category])):
                 self.row += 1
 
-                self.field_names[current_row] = QLineEdit()
-                self.field_names[current_row].setText(self.category_fields[self.category][current_row][0])
-                self.field_names[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-                self.layouts["fields_layout"].addWidget(self.field_names[current_row], current_row, 0)
+                self.field_names[idx] = QLineEdit()
+                self.field_names[idx].setText(self.category_fields[self.category][idx][0])
+                self.field_names[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.layouts["fields_layout"].addWidget(self.field_names[idx], idx, 0)
 
-                self.field_types[current_row] = QComboBox()
-                self.field_types[current_row].addItems(["Text", "Dropdown"])
-                if self.category_fields[self.category][current_row][1] == "Dropdown":
-                    self.field_types[current_row].setCurrentIndex(1)
-                self.field_types[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-                self.field_types[current_row].currentIndexChanged.connect(self.combo_button_status)
-                self.layouts["fields_layout"].addWidget(self.field_types[current_row], current_row, 1)
+                self.field_types[idx] = QComboBox()
+                self.field_types[idx].addItems(["Text", "Dropdown"])
+                if self.category_fields[self.category][idx][1] == "Dropdown":
+                    self.field_types[idx].setCurrentIndex(1)
+                self.field_types[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.field_types[idx].currentIndexChanged.connect(self.combo_button_status)
+                self.layouts["fields_layout"].addWidget(self.field_types[idx], idx, 1)
 
-                self.combo_items_buttons[current_row] = QPushButton(" . . . ")
-                self.combo_items_buttons[current_row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-                self.combo_items_buttons[current_row].clicked.connect(self.get_combo_items)
+                self.combo_items_buttons[idx] = QPushButton(" . . . ")
+                self.combo_items_buttons[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+                self.combo_items_buttons[idx].clicked.connect(self.get_combo_items)
                 self.combo_button_status()
-                self.layouts["fields_layout"].addWidget(self.combo_items_buttons[current_row], current_row, 2)
+                self.layouts["fields_layout"].addWidget(self.combo_items_buttons[idx], idx, 2)
 
-                self.combo_items[current_row] = self.category_fields[self.category][current_row][2]
+                self.combo_items[idx] = self.category_fields[self.category][idx][2]
 
     def center_window(self):
         """Positions the window in the center of the screen"""

@@ -11,7 +11,7 @@ class AddItem(QDialog):
     def __init__(self, category):
         super().__init__()
         self.category = category
-        self.temp_input = {}
+        self.item = {}
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -80,7 +80,7 @@ class AddItem(QDialog):
         """Places the inputs from the input fields into a temp data structure"""
         for key in self.inputs:
             if isinstance(self.inputs[key], QComboBox):
-                self.temp_input[key] = self.inputs[key].currentText()
+                self.item[key] = self.inputs[key].currentText()
             else:
                 # If there are multiple inputs for one field, split them
                 if "," in self.inputs[key].text():
@@ -92,7 +92,7 @@ class AddItem(QDialog):
                         if input_list[idx][0] == " ":
                             input_list[idx] = input_list[idx][1:]
 
-                    self.temp_input[key] = input_list
+                    self.item[key] = input_list
                 else:
-                    self.temp_input[key] = self.inputs[key].text()
+                    self.item[key] = self.inputs[key].text()
         self.hide()

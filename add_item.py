@@ -3,6 +3,8 @@ import json
 import datetime
 from manage_categories import *
 from manage_fields import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
 from select_category import *
 from PyQt5.QtWidgets import *
 
@@ -26,20 +28,31 @@ class AddItem(QDialog):
 
     def init_layout(self):
         """Initializes the layout for the widgets in the window"""
-        grid_layout = QGridLayout()
+        self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(),
+                        "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
 
+        self.layouts["header_layout"].addWidget(self.header)
+        self.header.setAlignment(Qt.AlignCenter)
+
+        self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
+        self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
         row = 0
         for key in self.labels:
-            grid_layout.addWidget(self.labels[key], row, 0)
-            grid_layout.addWidget(self.inputs[key], row, 1)
+            self.layouts["fields_layout"].addWidget(self.labels[key], row, 0)
+            self.layouts["fields_layout"].addWidget(self.inputs[key], row, 1)
             row += 1
 
-        group_box = QGroupBox("")
-        group_box.setLayout(grid_layout)
-        v_box_layout = QVBoxLayout()
-        v_box_layout.addWidget(group_box)
-        v_box_layout.addWidget(self.submit)
-        self.setLayout(v_box_layout)
+        self.layouts["submit_layout"].addWidget(self.submit)
+        self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.layouts["submit_layout"].addStretch(1)
+
+        for layout in self.layouts:
+            if layout != "main_layout":
+                self.layouts["main_layout"].addLayout(self.layouts[layout])
+            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
+            self.layouts[layout].setSpacing(15)
+
+        self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """

@@ -45,6 +45,7 @@ class AddItem(QDialog):
         """
         Populates the form with the correct widgets for the selected category
         """
+        self.header = QLabel("Add " + self.category)
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
             field_name = self.category_fields[self.category][idx][0]

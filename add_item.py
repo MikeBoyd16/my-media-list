@@ -22,7 +22,6 @@ class AddItem(QDialog):
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-        self.setWindowTitle("Add Music")
         self.setGeometry(100, 100, 250, 600)
         self.center_window()
 

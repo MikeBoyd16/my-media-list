@@ -59,8 +59,8 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="391">
+              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -430,13 +430,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00054" summary="Remove the set_item_color() method.">
-      <created>1531236384102</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1531236384102</updated>
-    </task>
     <task id="LOCAL-00055" summary="Add 'Profile' button to the main window.">
       <created>1531238798236</created>
       <option name="number" value="00055" />
@@ -773,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534089673286</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Redo the layout in AddItem.">
+      <created>1534090738091</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1534090738091</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -859,7 +859,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add dynamic renaming of category icon file names when changes are made to the name of the category from ManageCategories." />
     <MESSAGE value="Change the size of the 'set icon' button in ManageCategories to better fit the preferred dimensions of category icons." />
     <MESSAGE value="Upon re-opening the ManageCategories window, pre-populate it with widgets for existing categories." />
     <MESSAGE value="When removing a category from the ManageCategories window, the associated data for that category is also removed." />
@@ -884,7 +883,8 @@
     <MESSAGE value="Change all instances of 'get_category_selection()' to 'get_category()' in MainWindow and SelectCategory." />
     <MESSAGE value="Replace outdated code for initializing category fields in AddItem." />
     <MESSAGE value="Add a header to AddItem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a header to AddItem." />
+    <MESSAGE value="Redo the layout in AddItem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Redo the layout in AddItem." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1056,8 +1056,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="391">
+          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

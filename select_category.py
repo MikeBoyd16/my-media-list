@@ -27,6 +27,7 @@ class SelectCategory(QDialog):
     def init_layout(self):
         """Initializes the layout for widgets in the window"""
         widget_layout = QVBoxLayout()
+        widget_layout.addWidget(self.header)
         widget_layout.addWidget(self.category_select)
         widget_layout.addWidget(self.ok)
 
@@ -34,6 +35,7 @@ class SelectCategory(QDialog):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+        self.header = QLabel("Select Category")
         self.category_select = QComboBox(self)
         if len(self.categories) > 0:
             for category in self.categories.values():
@@ -49,7 +51,10 @@ class SelectCategory(QDialog):
         self.setStyleSheet("""
             .QLabel {
                 font-weight: bold;
+                font-size: 24px;
                 color: #247ba0;
+                margin-top: -20px;
+                height: 5px;
             }
             .QPushButton {
                 background-color: #247ba0;
@@ -57,7 +62,9 @@ class SelectCategory(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
-                width: 100px;
+                max-width: 100px;
+                min-height: 35px;
+                margin: 20px 0px 10px 45px;
             }
             .QPushButton:hover {
                 background-color: #8CBDAF;
@@ -68,10 +75,12 @@ class SelectCategory(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
+                max-width: 160px;
+                min-height: 20px;
+                margin-left: 20px;
             }
-            .QLineEdit {
-                width: 50px;
-                margin: 10px 20px 10px 20px;
+            .QComboBox QAbstractItemView { 
+                max-width: 160px;
             }
         """)
 

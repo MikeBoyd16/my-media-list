@@ -39,8 +39,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+            <state relative-caret-position="274">
+              <caret line="114" column="51" lean-forward="true" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -51,8 +51,8 @@
       <file leaf-file-name="select_category.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="304">
+              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -63,8 +63,8 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+            <state relative-caret-position="223">
+              <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -112,6 +112,7 @@
       <find>self.category_fields</find>
       <find>temp_input</find>
       <find>get_category_selection</find>
+      <find>setSizePolicy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -433,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00061" summary="Implement basic functionality for the 'ManageCategories' class.">
-      <created>1531407405516</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1531407405516</updated>
     </task>
     <task id="LOCAL-00062" summary="Add 'Add Icon' buttons next to the fields in the 'Categories' section and format the widgets.">
       <created>1531498227409</created>
@@ -777,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534782958829</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Simplify SelectCategory layout.">
+      <created>1534783128677</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1534783128677</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TodoView">
@@ -863,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add initial code to store category field data when transitioning from ManageFields to MainWindow and back." />
     <MESSAGE value="Overhaul naming scheme of variables in ManageFields." />
     <MESSAGE value="Pre-populate ManageFields rows with existing category field data." />
     <MESSAGE value="Change category_icon_names and category_icon_paths from lists to dicts." />
@@ -888,7 +888,8 @@
     <MESSAGE value="Remove the title from SelectCategory." />
     <MESSAGE value="Remove window hints from the top of the window in SelectCategory." />
     <MESSAGE value="Change stylesheet properties for SelectCategory to better fit current theme." />
-    <option name="LAST_COMMIT_MESSAGE" value="Change stylesheet properties for SelectCategory to better fit current theme." />
+    <MESSAGE value="Simplify SelectCategory layout." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplify SelectCategory layout." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1024,16 +1025,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1052,10 +1043,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/add_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="84" column="42" lean-forward="true" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+        <state relative-caret-position="274">
+          <caret line="114" column="51" lean-forward="true" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1064,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="304">
+          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

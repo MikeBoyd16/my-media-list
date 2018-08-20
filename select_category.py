@@ -26,18 +26,11 @@ class SelectCategory(QDialog):
 
     def init_layout(self):
         """Initializes the layout for widgets in the window"""
-        grid_layout = QGridLayout()
-        grid_layout.addWidget(self.category_select, 0, 0)
-        grid_layout.addWidget(self.ok, 1, 0)
-        self.ok.move(50, 50)
+        widget_layout = QVBoxLayout()
+        widget_layout.addWidget(self.category_select)
+        widget_layout.addWidget(self.ok)
 
-        group_box = QGroupBox("")
-        group_box.setLayout(grid_layout)
-
-        v_box_layout = QVBoxLayout()
-        v_box_layout.addWidget(group_box)
-
-        self.setLayout(v_box_layout)
+        self.setLayout(widget_layout)
 
     def init_widgets(self):
         """Initializes widgets and their properties"""

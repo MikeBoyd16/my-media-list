@@ -83,26 +83,26 @@ class AddItem(QDialog):
         """Sets the stylesheet properties for widgets"""
         self.setPalette(QPalette(QColor("#f3ffbd")))
         self.setStyleSheet("""
-                    .QLabel {
-                        font-weight: bold;
-                        color: #247ba0;
-                    }
-                    .QPushButton {
-                        background-color: #247ba0;
-                        border: 1px solid #8CBDAF;
-                        font-weight: bold;
-                        font-size: 12px;
-                        color: #f3ffbd;
-                        width: 100px;
-                    }
-                    .QPushButton:hover {
-                        background-color: #8CBDAF;
-                    }
-                    .QLineEdit {
-                        width: 50px;
-                        margin: 10px 20px 10px 20px;
-                    }
-                """)
+            .QLabel {
+                font-weight: bold;
+                color: #247ba0;
+            }
+            .QPushButton {
+                background-color: #247ba0;
+                border: 1px solid #8CBDAF;
+                font-weight: bold;
+                font-size: 12px;
+                color: #f3ffbd;
+                width: 100px;
+            }
+            .QPushButton:hover {
+                background-color: #8CBDAF;
+            }
+            .QLineEdit {
+                width: 50px;
+                margin: 10px 20px 10px 20px;
+            }
+        """)
 
     def center_window(self):
         """Positions the window in the center of the screen"""

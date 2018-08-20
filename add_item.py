@@ -59,6 +59,7 @@ class AddItem(QDialog):
         Populates the form with the correct widgets for the selected category
         """
         self.header = QLabel("Add " + self.category)
+        self.header.setStyleSheet(".QLabel{font-size: 24px;}")
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
             field_name = self.category_fields[self.category][idx][0]
@@ -67,6 +68,7 @@ class AddItem(QDialog):
 
             self.labels[field_name] = QLabel()
             self.labels[field_name].setText(field_name)
+            self.labels[field_name].setStyleSheet(".QLabel{font-size: 14px;}")
             if field_type == "Text":
                 self.inputs[field_name] = QLineEdit()
             else:
@@ -79,11 +81,28 @@ class AddItem(QDialog):
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""
+        self.setPalette(QPalette(QColor("#f3ffbd")))
         self.setStyleSheet("""
-                        QMainWindow {
-                            background: #BCBCBC;
-                            }
-                        """)
+                    .QLabel {
+                        font-weight: bold;
+                        color: #247ba0;
+                    }
+                    .QPushButton {
+                        background-color: #247ba0;
+                        border: 1px solid #8CBDAF;
+                        font-weight: bold;
+                        font-size: 12px;
+                        color: #f3ffbd;
+                        width: 100px;
+                    }
+                    .QPushButton:hover {
+                        background-color: #8CBDAF;
+                    }
+                    .QLineEdit {
+                        width: 50px;
+                        margin: 10px 20px 10px 20px;
+                    }
+                """)
 
     def center_window(self):
         """Positions the window in the center of the screen"""

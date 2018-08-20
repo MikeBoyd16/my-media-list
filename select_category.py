@@ -21,6 +21,7 @@ class SelectCategory(QDialog):
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
         self.setGeometry(100, 100, 200, 200)
+        self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
     def init_layout(self):

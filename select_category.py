@@ -20,7 +20,7 @@ class SelectCategory(QDialog):
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 200, 200)
+        self.setGeometry(100, 100, 100, 225)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
@@ -28,21 +28,32 @@ class SelectCategory(QDialog):
         """Initializes the layout for widgets in the window"""
         widget_layout = QVBoxLayout()
         widget_layout.addWidget(self.header)
+        widget_layout.setAlignment(self.header, Qt.AlignHCenter)
         widget_layout.addWidget(self.category_select)
+        widget_layout.setAlignment(self.category_select, Qt.AlignHCenter)
         widget_layout.addWidget(self.ok)
+        widget_layout.setAlignment(self.ok, Qt.AlignHCenter)
 
         self.setLayout(widget_layout)
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
         self.header = QLabel("Select Category")
+        self.header.setMaximumHeight(25)
+
         self.category_select = QComboBox(self)
+        self.category_select.setFixedWidth(150)
+        self.category_select.setMinimumHeight(22)
+
         if len(self.categories) > 0:
             for category in self.categories.values():
                 self.category_select.addItem(category)
         else:
             self.category_select.addItem("No categories created")
+
         self.ok = QPushButton("OK", self)
+        self.ok.setMinimumWidth(100)
+        self.ok.setMinimumHeight(30)
         self.ok.clicked.connect(self.submit)
 
     def init_styles(self):
@@ -51,10 +62,8 @@ class SelectCategory(QDialog):
         self.setStyleSheet("""
             .QLabel {
                 font-weight: bold;
-                font-size: 24px;
+                font-size: 20px;
                 color: #247ba0;
-                margin-top: -20px;
-                height: 5px;
             }
             .QPushButton {
                 background-color: #247ba0;
@@ -62,9 +71,6 @@ class SelectCategory(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
-                max-width: 100px;
-                min-height: 35px;
-                margin: 20px 0px 10px 45px;
             }
             .QPushButton:hover {
                 background-color: #8CBDAF;
@@ -75,12 +81,7 @@ class SelectCategory(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
-                max-width: 160px;
-                min-height: 20px;
-                margin-left: 20px;
-            }
-            .QComboBox QAbstractItemView { 
-                max-width: 160px;
+                margin: 0;
             }
         """)
 

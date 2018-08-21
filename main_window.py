@@ -15,10 +15,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
-        self.catalog = {}
-        self.category_names = {}
-        self.category_icon_paths = {}
-        self.category_fields = {}
+        self.catalog = {"Profile": {"Category Names": {}, "Category Fields": {}, "Icon Paths": {}}, "Data": {}}
         self.current_file = ""
         self.init_widgets()
         self.init_window()
@@ -217,7 +214,7 @@ class MainWindow(QMainWindow):
     def update_catalog(self):
         """Updates the catalog with the current set of items"""
         self.catalog_items.clear()
-        for key, data in reversed(list(self.catalog.items())):
+        for key, data in reversed(list(self.catalog["Data"].items())):
             catalog_item = QListWidgetItem(data["Title"])
             catalog_item.setData(Qt.UserRole, data)
             catalog_item.setSizeHint(QSize(35, 35))
@@ -232,17 +229,17 @@ class MainWindow(QMainWindow):
 
     def add_item(self):
         """Adds a new catalog item to the catalog"""
-        select_category = SelectCategory(self.category_names)
+        select_category = SelectCategory(self.catalog["Profile"]["Category Names"])
         select_category.show()
         select_category.exec_()
 
         if select_category.get_category() != "No categories created":
-            add_item = AddItem(select_category.get_category(), self.category_fields)
+            add_item = AddItem(select_category.get_category(), self.catalog["Profile"]["Category Fields"])
             add_item.exec_()
             add_item.item["Media"] = add_item.category
             now = datetime.datetime.now()
-            add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" + \
-                                              str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+            add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" +\
+                                            str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
             if "Title" in add_item.item:  # Fields for key won't exist if the dialog is closed prematurely
                 self.catalog[add_item.item["Title"] + "-" +
@@ -251,23 +248,23 @@ class MainWindow(QMainWindow):
                 self.update_catalog()
 
     def categories(self):
-        manage_categories = ManageCategories(self.category_names, self.category_icon_paths)
+        manage_categories = ManageCategories(self.catalog["Profile"]["Category Names"],
+                                             self.catalog["Profile"]["Icon Paths"])
         manage_categories.show()
         manage_categories.exec_()
-        self.category_names = manage_categories.category_names
-        self.category_icon_paths = manage_categories.category_icon_paths
+        self.catalog["Profile"]["Category Names"] = manage_categories.category_names
+        self.catalog["Profile"]["Icon Paths"] = manage_categories.category_icon_paths
 
     def fields(self):
-        select_category = SelectCategory(self.category_names)
+        select_category = SelectCategory(self.catalog["Profile"]["Category Names"])
         select_category.show()
         select_category.exec_()
 
         if select_category.get_category() != "No categories created":
-            manage_fields = ManageFields(select_category.get_category(), self.category_fields)
+            manage_fields = ManageFields(select_category.get_category(), self.catalog["Profile"]["Category Fields"])
             manage_fields.show()
             manage_fields.exec_()
-            self.category_fields = manage_fields.category_fields
-            var = 1
+            self.catalog["Profile"]["Category Fields"] = manage_fields.category_fields
 
     def remove_item(self):
         pass
@@ -284,14 +281,14 @@ class MainWindow(QMainWindow):
         item = self.catalog_items.currentItem()
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
-        for label in self.catalog[item_key]:
+        for label in self.catalog["Data"][item_key]:
             if label not in ["Status", "Media", "Date Entered"]:  # Do not display certain labels and data
-                if self.catalog[item_key][label]:  # Only display a label if there is data associated with it
+                if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
                     # If a label's associated data is in a list, display a comma separated string of that data
-                    if isinstance(self.catalog[item_key][label], list):
-                        self.item_details.append(label + ": " + ", ".join(self.catalog[item_key][label]) + "\n")
+                    if isinstance(self.catalog["Data"][item_key][label], list):
+                        self.item_details.append(label + ": " + ", ".join(self.catalog["Data"][item_key][label]) + "\n")
                     else:
-                        self.item_details.append(label + ": " + str(self.catalog[item_key][label]) + "\n")
+                        self.item_details.append(label + ": " + str(self.catalog["Data"][item_key][label]) + "\n")
 
 
 def main():

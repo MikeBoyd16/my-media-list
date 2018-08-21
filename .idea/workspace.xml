@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/select_category.py" afterPath="$PROJECT_DIR$/select_category.py" />
+      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="234" column="61" lean-forward="false" selection-start-line="234" selection-start-column="61" selection-end-line="234" selection-end-column="61" />
+            <state relative-caret-position="4165">
+              <caret line="254" column="84" lean-forward="true" selection-start-line="254" selection-start-column="84" selection-end-line="254" selection-end-column="84" />
               <folding>
-                <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+                <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
               </folding>
             </state>
           </provider>
@@ -29,7 +29,7 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
+            <state relative-caret-position="153">
               <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding />
             </state>
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_category.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="select_category.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+            <state relative-caret-position="355">
+              <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -63,7 +63,7 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="612">
               <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -83,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update_styles</find>
       <find>export_list</find>
       <find>add_media</find>
       <find>set_item</find>
@@ -107,12 +106,13 @@
       <find>self.selected_row</find>
       <find>self.field_combos</find>
       <find>self.combo_buttons</find>
-      <find>self.category_icon_paths</find>
       <find>self.category_names</find>
-      <find>self.category_fields</find>
       <find>temp_input</find>
       <find>get_category_selection</find>
       <find>setSizePolicy</find>
+      <find>self.category_icon_paths</find>
+      <find>self.category_fields</find>
+      <find>self.catalog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
-        <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
+        <option value="$PROJECT_DIR$/main_window.py" />
       </list>
     </option>
   </component>
@@ -434,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Fix resizing button problem when adding and removing categories.">
-      <created>1531590960943</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1531590960943</updated>
     </task>
     <task id="LOCAL-00064" summary="Separate each class into its own file.">
       <created>1531670490906</created>
@@ -778,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534784416656</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Adjust SelectCategory widget dimensions and placement.">
+      <created>1534865320895</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1534865320895</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TodoView">
@@ -802,7 +802,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -864,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Pre-populate ManageFields rows with existing category field data." />
     <MESSAGE value="Change category_icon_names and category_icon_paths from lists to dicts." />
     <MESSAGE value="Fix a bug where the program crashes when an existing category doesn't have an icon." />
     <MESSAGE value="Fix a bug where icons aren't matching category names correctly under certain circumstances." />
@@ -889,7 +888,8 @@
     <MESSAGE value="Change stylesheet properties for SelectCategory to better fit current theme." />
     <MESSAGE value="Simplify SelectCategory layout." />
     <MESSAGE value="Add header to SelectCategory and update stylesheet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add header to SelectCategory and update stylesheet." />
+    <MESSAGE value="Adjust SelectCategory widget dimensions and placement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust SelectCategory widget dimensions and placement." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -907,7 +907,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -923,7 +923,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -939,7 +939,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -955,7 +955,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -971,7 +971,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -981,7 +981,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -991,7 +991,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1027,19 +1027,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
+        <state relative-caret-position="153">
           <caret line="78" column="32" lean-forward="false" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,22 +1043,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.py">
+    <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="234" column="61" lean-forward="false" selection-start-line="234" selection-start-column="61" selection-end-line="234" selection-end-column="61" />
+        <state relative-caret-position="355">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding>
-            <marker date="1534006059491" expanded="true" signature="12161:12313" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select_category.py">
+    <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="44" column="45" lean-forward="false" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        <state relative-caret-position="612">
+          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4165">
+          <caret line="254" column="84" lean-forward="true" selection-start-line="254" selection-start-column="84" selection-end-line="254" selection-end-column="84" />
+          <folding>
+            <marker date="1534875735250" expanded="true" signature="12392:12544" ph="..." />
           </folding>
         </state>
       </provider>

@@ -99,24 +99,25 @@ class ManageCategories(QDialog):
 
     def init_categories(self):
         for idx in range(len(self.category_names)):
+            key = str(idx)
             self.row += 1
 
-            self.category_fields[idx] = QLineEdit()
-            self.category_fields[idx].setText(str(self.category_names[idx]))
-            self.category_fields[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-            self.category_fields[idx].textChanged.connect(self.set_icon_status)
-            self.layouts["fields_layout"].addWidget(self.category_fields[idx], idx, 0, 1, 1)
+            self.category_fields[key] = QLineEdit()
+            self.category_fields[key].setText(str(self.category_names[key]))
+            self.category_fields[key].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.category_fields[key].textChanged.connect(self.set_icon_status)
+            self.layouts["fields_layout"].addWidget(self.category_fields[key], idx, 0, 1, 1)
 
-            self.category_buttons[idx] = QPushButton()
-            if idx in self.category_icon_paths:
-                self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            self.category_buttons[key] = QPushButton()
+            if key in self.category_icon_paths:
+                self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
             else:
-                self.category_buttons[idx].setText("Icon")
-            self.category_buttons[idx].setIconSize(QSize(30, 30))
-            self.category_buttons[idx].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-            self.category_buttons[idx].clicked.connect(self.set_icon)
+                self.category_buttons[key].setText("Icon")
+            self.category_buttons[key].setIconSize(QSize(30, 30))
+            self.category_buttons[key].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+            self.category_buttons[key].clicked.connect(self.set_icon)
             self.set_icon_status()
-            self.layouts["fields_layout"].addWidget(self.category_buttons[idx], idx, 1, 1, 1)
+            self.layouts["fields_layout"].addWidget(self.category_buttons[key], idx, 1, 1, 1)
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -128,60 +129,64 @@ class ManageCategories(QDialog):
     def add_category(self):
         """Adds a new field where a category can be entered"""
         self.row += 1
+        key = str(self.row)
 
-        self.category_fields[self.row] = QLineEdit()
+        self.category_fields[key] = QLineEdit()
         if self.row < len(self.category_names):
-            self.category_fields[self.row].setText(str(self.category_names[self.row]))
+            self.category_fields[key].setText(str(self.category_names[key]))
         else:
-            self.category_fields[self.row].setPlaceholderText("Enter a category name")
-        self.category_fields[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.category_fields[self.row].textChanged.connect(self.set_icon_status)
-        self.layouts["fields_layout"].addWidget(self.category_fields[self.row], self.row, 0, 1, 1)
+            self.category_fields[key].setPlaceholderText("Enter a category name")
+        self.category_fields[key].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_fields[key].textChanged.connect(self.set_icon_status)
+        self.layouts["fields_layout"].addWidget(self.category_fields[key], self.row, 0, 1, 1)
 
-        self.category_buttons[self.row] = QPushButton()
+        self.category_buttons[key] = QPushButton()
         if self.row < len(self.category_icon_paths):
-            self.category_buttons[self.row].setIcon(QIcon(self.category_icon_paths[self.row]))
-            self.category_buttons[self.row].setIconSize(QSize(30, 30))
+            self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
+            self.category_buttons[key].setIconSize(QSize(30, 30))
         else:
-            self.category_buttons[self.row].setText("Icon")
-        self.category_buttons[self.row].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.category_buttons[self.row].clicked.connect(self.set_icon)
+            self.category_buttons[key].setText("Icon")
+        self.category_buttons[key].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        self.category_buttons[key].clicked.connect(self.set_icon)
         self.set_icon_status()
-        self.layouts["fields_layout"].addWidget(self.category_buttons[self.row], self.row, 1, 1, 1)
+        self.layouts["fields_layout"].addWidget(self.category_buttons[key], self.row, 1, 1, 1)
 
     def remove_category(self):
         """Removes an existing field where a category could be entered"""
         if self.row >= 0:
-            self.category_fields[self.row].setParent(None)
-            del(self.category_fields[self.row])
-            self.category_buttons[self.row].setParent(None)
-            del(self.category_buttons[self.row])
-            if self.row in self.category_icon_paths:
-                os.remove(self.category_icon_paths[self.row])
-                del(self.category_icon_paths[self.row])
-            if self.row in self.category_names:
-                del(self.category_names[self.row])
+            key = str(self.row)
+            self.category_fields[key].setParent(None)
+            del(self.category_fields[key])
+            self.category_buttons[key].setParent(None)
+            del(self.category_buttons[key])
+            if key in self.category_icon_paths:
+                os.remove(self.category_icon_paths[key])
+                del(self.category_icon_paths[key])
+            if key in self.category_names:
+                del(self.category_names[key])
             self.row -= 1
 
     def set_icon_status(self):
         """Enables/disables combo buttons based on the field combo selection"""
         for idx in range(self.row + 1):
-            if self.category_fields[idx].text():
-                self.category_buttons[idx].setEnabled(True)
-                self.category_buttons[idx].setStyleSheet("""
+            key = str(idx)
+            if self.category_fields[key].text():
+                self.category_buttons[key].setEnabled(True)
+                self.category_buttons[key].setStyleSheet("""
                                     .QPushButton {background-color: #247ba0;}
                                     .QPushButton:hover {background-color: #8CBDAF;}
                                 """)
             else:
-                self.category_buttons[idx].setEnabled(False)
-                self.category_buttons[idx].setStyleSheet(".QPushButton {background-color: #D7E7EE;}")
+                self.category_buttons[key].setEnabled(False)
+                self.category_buttons[key].setStyleSheet(".QPushButton {background-color: #D7E7EE;}")
 
-            self.update_icon_name(idx)
+            self.update_icon_name(key)
 
     def set_icon(self):
         """Sets the icon for a particular category"""
         current_button = self.sender()
         current_row = ((self.layouts["fields_layout"].indexOf(current_button) + 1) // 2) - 1
+        key = str(current_row)
 
         original_icon_path = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
         if original_icon_path[0]:
@@ -192,22 +197,22 @@ class ManageCategories(QDialog):
         else:
             return
 
-        new_icon_path = "images/category-icons/" + str(self.category_fields[current_row].text()) + ".jpg"
+        new_icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
         icon_object.save(new_icon_path)
-        self.category_icon_paths[current_row] = new_icon_path
+        self.category_icon_paths[key] = new_icon_path
 
         current_button.setText("")
-        current_button.setIcon(QIcon(self.category_icon_paths[current_row]))
+        current_button.setIcon(QIcon(self.category_icon_paths[key]))
         current_button.setIconSize(QSize(35, 35))
 
-    def update_icon_name(self, idx):
+    def update_icon_name(self, key):
         if -1 < self.row < len(self.category_icon_paths):
-            if idx in self.category_icon_paths:
-                icon_path = "images/category-icons/" + str(self.category_fields[idx].text()) + ".jpg"
-                if icon_path not in self.category_icon_paths[idx]:
-                    os.rename(self.category_icon_paths[idx], icon_path)
-                    self.category_icon_paths[idx] = icon_path
-                    self.category_buttons[idx].setIcon(QIcon(self.category_icon_paths[idx]))
+            if key in self.category_icon_paths:
+                icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
+                if icon_path not in self.category_icon_paths[key]:
+                    os.rename(self.category_icon_paths[key], icon_path)
+                    self.category_icon_paths[key] = icon_path
+                    self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
 
     def ok(self):
         """Returns focus to the main window"""
@@ -215,10 +220,11 @@ class ManageCategories(QDialog):
         temp_category_icon_paths = {}
         category_count = 0
         for idx in range(len(self.category_fields)):
-            if self.category_fields[idx].text():
-                self.category_names[category_count] = self.category_fields[idx].text()
-                if idx in self.category_icon_paths:
-                    temp_category_icon_paths[category_count] = self.category_icon_paths[idx]
+            key = str(idx)
+            if self.category_fields[key].text():
+                self.category_names[str(category_count)] = self.category_fields[key].text()
+                if key in self.category_icon_paths:
+                    temp_category_icon_paths[str(category_count)] = self.category_icon_paths[key]
                 category_count += 1
         self.category_icon_paths = temp_category_icon_paths
         self.hide()

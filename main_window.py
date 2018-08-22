@@ -242,9 +242,9 @@ class MainWindow(QMainWindow):
                                             str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
             if "Title" in add_item.item:  # Fields for key won't exist if the dialog is closed prematurely
-                self.catalog[add_item.item["Title"] + "-" +
-                             add_item.item["Media"] + "-" +
-                             add_item.item["Date Entered"]] = add_item.item
+                self.catalog["Data"][add_item.item["Title"] + "-" +
+                                     add_item.item["Media"] + "-" +
+                                     add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()
 
     def categories(self):

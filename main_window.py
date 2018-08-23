@@ -30,39 +30,30 @@ class MainWindow(QMainWindow):
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
-        self.main_layout = QHBoxLayout(self.central_widget)
-        self.logo_layout = QGridLayout(self.central_widget)
-        self.left_layout = QVBoxLayout(self.central_widget)
-        self.center_layout = QVBoxLayout(self.central_widget)
-        self.right_layout = QVBoxLayout(self.central_widget)
+        self.layouts = {"main_layout": QHBoxLayout(self.central_widget),
+                        "logo_layout": QGridLayout(self.central_widget),
+                        "left_layout": QVBoxLayout(self.central_widget),
+                        "center_layout": QVBoxLayout(self.central_widget),
+                        "right_layout": QVBoxLayout(self.central_widget)}
 
-        self.logo_layout.addWidget(self.header_logo, 0, 0)
-        self.logo_layout.addWidget(self.header_title, 1, 0)
-        self.left_layout.addLayout(self.logo_layout)
+        self.layouts["logo_layout"].addWidget(self.header_logo, 0, 0)
+        self.layouts["logo_layout"].addWidget(self.header_title, 1, 0)
+        self.layouts["left_layout"].addLayout(self.layouts["logo_layout"])
 
         for button in self.buttons:
-            self.left_layout.addWidget(self.buttons[button])
+            self.layouts["left_layout"].addWidget(self.buttons[button])
 
-        self.center_layout.addWidget(self.catalog_items)
+        self.layouts["center_layout"].addWidget(self.catalog_items)
 
-        self.right_layout.addWidget(self.item_details)
+        self.layouts["right_layout"].addWidget(self.item_details)
 
-        self.main_layout.setContentsMargins(0, 0, 0, 0)
-        self.main_layout.setSpacing(0)
-        self.logo_layout.setContentsMargins(0, 0, 0, 0)
-        self.logo_layout.setSpacing(0)
-        self.left_layout.setContentsMargins(0, 0, 0, 0)
-        self.left_layout.setSpacing(0)
-        self.center_layout.setContentsMargins(0, 0, 0, 0)
-        self.center_layout.setSpacing(0)
-        self.right_layout.setContentsMargins(0, 0, 0, 0)
-        self.right_layout.setSpacing(0)
+        for layout in self.layouts:
+            if layout != "main_layout":
+                self.layouts["main_layout"].addLayout(self.layouts[layout])
+            self.layouts[layout].setContentsMargins(0, 0, 0, 0)
+            self.layouts[layout].setSpacing(0)
 
-        self.main_layout.addLayout(self.left_layout)
-        self.main_layout.addLayout(self.center_layout)
-        self.main_layout.addLayout(self.right_layout)
-
-        self.setLayout(self.main_layout)
+        self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """Initializes widgets and their properties"""

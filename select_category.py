@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import *
 class SelectCategory(QDialog):
     def __init__(self, categories):
         super().__init__()
+        self.setModal(True)
         self.categories = categories
         self.init_widgets()
         self.init_window()

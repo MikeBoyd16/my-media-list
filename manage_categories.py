@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import *
 class ManageCategories(QDialog):
     def __init__(self, category_names, category_icon_paths):
         super().__init__()
+        self.setModal(True)
         self.row = -1
         self.category_names = category_names
         self.category_icon_paths = category_icon_paths

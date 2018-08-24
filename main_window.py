@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
         self.setGeometry(100, 100, 625, 650)
-        self.setWindowFlags(Qt.FramelessWindowHint)  # Removes the outer frame from the window
+        self.setWindowFlags(Qt.FramelessWindowHint)
         self.center_window()
 
     def init_layout(self):

@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import *
 class AddItem(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
+        self.setModal(True)
         self.category = category
         self.category_fields = category_fields
         self.item = {}

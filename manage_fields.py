@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import *
 class ManageFields(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
+        self.setModal(True)
         self.row = -1
         self.category = category
         self.category_fields = category_fields
@@ -223,6 +224,7 @@ class ManageFields(QDialog):
 class GetComboItems(QDialog):
     def __init__(self, field_name, combo_items=""):
         super().__init__()
+        self.setModal(True)
         self.field_name = field_name
         self.combo_items = combo_items
         self.init_widgets()

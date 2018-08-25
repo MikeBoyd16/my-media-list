@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
+      <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2442">
-              <caret line="104" column="13" lean-forward="false" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="207" column="31" lean-forward="true" selection-start-line="207" selection-start-column="31" selection-end-line="207" selection-end-column="31" />
               <folding>
                 <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
               </folding>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state relative-caret-position="474">
+              <caret line="133" column="37" lean-forward="true" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -83,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>media</find>
       <find>list</find>
       <find>combo_items</find>
       <find>category_count</find>
@@ -107,12 +106,13 @@
       <find>self.catalog</find>
       <find>self.row</find>
       <find>current_row</find>
-      <find>idx</find>
       <find>key</find>
       <find>row_key</find>
       <find>layout</find>
       <find>Title</find>
       <find>header_logo</find>
+      <find>title</find>
+      <find>idx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
-        <option value="$PROJECT_DIR$/add_item.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
         <option value="$PROJECT_DIR$/main_window.py" />
+        <option value="$PROJECT_DIR$/add_item.py" />
       </list>
     </option>
   </component>
@@ -434,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00069" summary="Add &quot;get_combo_items&quot; functionality to the ManageFields class.">
-      <created>1532106249716</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1532106249717</updated>
     </task>
     <task id="LOCAL-00070" summary="Fix a bug where combo buttons in the ManageFields class will not be removed when the remove button is clicked.">
       <created>1532184203116</created>
@@ -778,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535142153396</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow.">
+      <created>1535209502347</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1535209502347</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TodoView">
@@ -864,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field." />
     <MESSAGE value="Fix a bug where field type, rather than combo items, is loaded into the input field in GetComboItems." />
     <MESSAGE value="Add commas to pre-populated combo items in GetComboItems." />
     <MESSAGE value="Adjust the formatting of the header in ManageFields." />
@@ -889,7 +888,8 @@
     <MESSAGE value="Convert all key values in ManageCategories and ManageFields to strings." />
     <MESSAGE value="Insert MainWindow layouts into a dict and optimize init_layout method." />
     <MESSAGE value="Set the modality to true for all classes except MainWindow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set the modality to true for all classes except MainWindow." />
+    <MESSAGE value="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1053,22 +1053,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_item.py">
+    <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="176">
+          <caret line="207" column="31" lean-forward="true" selection-start-line="207" selection-start-column="31" selection-end-line="207" selection-end-column="31" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.py">
+    <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2442">
-          <caret line="104" column="13" lean-forward="false" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
+        <state relative-caret-position="474">
+          <caret line="133" column="37" lean-forward="true" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
           <folding>
-            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

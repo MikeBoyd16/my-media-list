@@ -63,9 +63,10 @@ class AddItem(QDialog):
         self.header.setStyleSheet(".QLabel{font-size: 24px;}")
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
-            field_name = self.category_fields[self.category][idx][0]
-            field_type = self.category_fields[self.category][idx][1]
-            field_items = self.category_fields[self.category][idx][2]
+            key = str(idx)
+            field_name = self.category_fields[self.category][key][0]
+            field_type = self.category_fields[self.category][key][1]
+            field_items = self.category_fields[self.category][key][2]
 
             self.labels[field_name] = QLabel()
             self.labels[field_name].setText(field_name)

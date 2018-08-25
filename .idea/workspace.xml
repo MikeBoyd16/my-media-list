@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="Set the modality to true for all classes except MainWindow.">
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
       <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
-      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
-      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
-      <change beforePath="$PROJECT_DIR$/select_category.py" afterPath="$PROJECT_DIR$/select_category.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-138">
-              <caret line="243" column="30" lean-forward="true" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
+            <state relative-caret-position="-2442">
+              <caret line="104" column="13" lean-forward="false" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
               <folding>
-                <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+                <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
               </folding>
             </state>
           </provider>
@@ -33,7 +29,7 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3164">
+            <state relative-caret-position="102">
               <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
@@ -43,7 +39,7 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="3706">
               <caret line="226" column="27" lean-forward="false" selection-start-line="226" selection-start-column="27" selection-end-line="226" selection-end-column="27" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -55,8 +51,8 @@
       <file leaf-file-name="select_category.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-733">
-              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state relative-caret-position="340">
+              <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -67,7 +63,7 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="102">
               <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -87,8 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>media_type</find>
-      <find>submit_media</find>
       <find>media</find>
       <find>list</find>
       <find>combo_items</find>
@@ -117,6 +111,8 @@
       <find>key</find>
       <find>row_key</find>
       <find>layout</find>
+      <find>Title</find>
+      <find>header_logo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,11 +144,11 @@
         <option value="$PROJECT_DIR$/main-window.py" />
         <option value="$PROJECT_DIR$/select_media.py" />
         <option value="$PROJECT_DIR$/add_media.py" />
-        <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
+        <option value="$PROJECT_DIR$/main_window.py" />
       </list>
     </option>
   </component>
@@ -180,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,7 +188,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -438,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00068" summary="Implement the enable/disable feature for combo item buttons in the ManageFields window.">
-      <created>1532028003887</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1532028003889</updated>
     </task>
     <task id="LOCAL-00069" summary="Add &quot;get_combo_items&quot; functionality to the ManageFields class.">
       <created>1532106249716</created>
@@ -782,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535038100395</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Set the modality to true for all classes except MainWindow.">
+      <created>1535142153395</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1535142153396</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TodoView">
@@ -868,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix a bug where removing empty categories causes the program to crash." />
     <MESSAGE value="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field." />
     <MESSAGE value="Fix a bug where field type, rather than combo items, is loaded into the input field in GetComboItems." />
     <MESSAGE value="Add commas to pre-populated combo items in GetComboItems." />
@@ -893,7 +888,8 @@
     <MESSAGE value="Fix a bug where new catalog items aren't inserted into the catalog." />
     <MESSAGE value="Convert all key values in ManageCategories and ManageFields to strings." />
     <MESSAGE value="Insert MainWindow layouts into a dict and optimize init_layout method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Insert MainWindow layouts into a dict and optimize init_layout method." />
+    <MESSAGE value="Set the modality to true for all classes except MainWindow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set the modality to true for all classes except MainWindow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,7 +907,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -927,7 +923,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -943,7 +939,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -959,7 +955,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -975,7 +971,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -985,7 +981,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -995,7 +991,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1031,7 +1027,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3164">
+        <state relative-caret-position="102">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
@@ -1039,7 +1035,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="3706">
           <caret line="226" column="27" lean-forward="false" selection-start-line="226" selection-start-column="27" selection-end-line="226" selection-end-column="27" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1049,8 +1045,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-733">
-          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+        <state relative-caret-position="340">
+          <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1059,7 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="102">
           <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1069,10 +1065,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="243" column="30" lean-forward="true" selection-start-line="243" selection-start-column="30" selection-end-line="243" selection-end-column="30" />
+        <state relative-caret-position="-2442">
+          <caret line="104" column="13" lean-forward="false" selection-start-line="104" selection-start-column="13" selection-end-line="104" selection-end-column="13" />
           <folding>
-            <marker date="1535041379914" expanded="true" signature="12145:12297" ph="..." />
+            <marker date="1535209411727" expanded="true" signature="12074:12226" ph="..." />
           </folding>
         </state>
       </provider>

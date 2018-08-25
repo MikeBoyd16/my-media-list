@@ -36,8 +36,8 @@ class MainWindow(QMainWindow):
                         "center_layout": QVBoxLayout(self.central_widget),
                         "right_layout": QVBoxLayout(self.central_widget)}
 
-        self.layouts["logo_layout"].addWidget(self.header_logo, 0, 0)
-        self.layouts["logo_layout"].addWidget(self.header_title, 1, 0)
+        self.layouts["logo_layout"].addWidget(self.logo, 0, 0)
+        self.layouts["logo_layout"].addWidget(self.header, 1, 0)
         self.layouts["left_layout"].addLayout(self.layouts["logo_layout"])
 
         for button in self.buttons:
@@ -57,13 +57,13 @@ class MainWindow(QMainWindow):
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
-        self.header_logo = QLabel(self)
-        self.header_logo.setPixmap(QPixmap("images/omnilog_logo.png"))
-        self.header_logo.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        self.header_title = QLabel(self)
-        self.header_title.setText("OmniLog")
-        self.header_title.setAlignment(Qt.AlignCenter)
-        self.header_title.setFixedSize(130, 50)
+        self.logo = QLabel(self)
+        self.logo.setPixmap(QPixmap("images/omnilog_logo.png"))
+        self.logo.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.header = QLabel(self)
+        self.header.setText("OmniLog")
+        self.header.setAlignment(Qt.AlignCenter)
+        self.header.setFixedSize(130, 50)
 
         self.buttons = {"import_catalog": QPushButton(), "export_catalog": QPushButton(), "save_catalog": QPushButton(),
                         "categories": QPushButton(), "fields": QPushButton(), "search_catalog": QPushButton(),
@@ -102,12 +102,12 @@ class MainWindow(QMainWindow):
                 background-color: #8CBDAF;
             }
         """)
-        self.header_logo.setStyleSheet("""
+        self.logo.setStyleSheet("""
             .QLabel {
                 background-color: #f3ffbd;
             }
         """)
-        self.header_title.setStyleSheet("""
+        self.header.setStyleSheet("""
             .QLabel {
                 background-color: #f3ffbd;
                 color: #247ba0;

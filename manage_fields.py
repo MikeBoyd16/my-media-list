@@ -180,7 +180,7 @@ class ManageFields(QDialog):
 
     def remove_field(self):
         """Removes an existing field where a category could be entered"""
-        if self.row >= 0:
+        if self.row > 0:
             key = str(self.row)
             self.field_names[key].setParent(None)
             del(self.field_names[key])

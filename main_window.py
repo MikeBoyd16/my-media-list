@@ -212,8 +212,10 @@ class MainWindow(QMainWindow):
 
             # Set the 'selected' and 'unselected' versions of each list item icon
             catalog_item_icon = QIcon()
-            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" + str(data["Media"]) + " Selected.png"), QIcon.Normal)
-            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" + str(data["Media"]) + ".png"), QIcon.Selected)
+            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" +
+                                                str(data["Category"]) + " Selected.png"), QIcon.Normal)
+            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" +
+                                                str(data["Category"]) + ".png"), QIcon.Selected)
             catalog_item.setIcon(catalog_item_icon)
 
             self.catalog_items.addItem(catalog_item)
@@ -227,14 +229,14 @@ class MainWindow(QMainWindow):
         if select_category.get_category() != "No categories created":
             add_item = AddItem(select_category.get_category(), self.catalog["Profile"]["Category Fields"])
             add_item.exec_()
-            add_item.item["Media"] = add_item.category
+            add_item.item["Category"] = add_item.category
             now = datetime.datetime.now()
             add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" +\
                                             str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
             if "Title" in add_item.item:  # Fields for key won't exist if the dialog is closed prematurely
                 self.catalog["Data"][add_item.item["Title"] + "-" +
-                                     add_item.item["Media"] + "-" +
+                                     add_item.item["Category"] + "-" +
                                      add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()
 
@@ -271,9 +273,9 @@ class MainWindow(QMainWindow):
         self.item_details.clear()
         item = self.catalog_items.currentItem()
         item_data = item.data(Qt.UserRole)
-        item_key = item_data["Title"] + "-" + item_data["Media"] + "-" + item_data["Date Entered"]
+        item_key = item_data["Title"] + "-" + item_data["Category"] + "-" + item_data["Date Entered"]
         for label in self.catalog["Data"][item_key]:
-            if label not in ["Status", "Media", "Date Entered"]:  # Do not display certain labels and data
+            if label not in ["Status", "Category", "Date Entered"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
                     # If a label's associated data is in a list, display a comma separated string of that data
                     if isinstance(self.catalog["Data"][item_key][label], list):

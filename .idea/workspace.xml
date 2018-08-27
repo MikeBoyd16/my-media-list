@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/82220181" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
+      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +15,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1717">
-              <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+            <state relative-caret-position="1536">
+              <caret line="271" column="68" lean-forward="true" selection-start-line="271" selection-start-column="68" selection-end-line="271" selection-end-column="68" />
               <folding>
-                <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+                <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
               </folding>
             </state>
           </provider>
@@ -36,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="644">
@@ -63,7 +64,7 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
+            <state relative-caret-position="737">
               <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -83,7 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>list</find>
       <find>combo_items</find>
       <find>category_count</find>
       <find>row_count</find>
@@ -113,6 +113,7 @@
       <find>header_logo</find>
       <find>idx</find>
       <find>title</find>
+      <find>media</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,8 +148,8 @@
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
-        <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
+        <option value="$PROJECT_DIR$/main_window.py" />
       </list>
     </option>
   </component>
@@ -183,12 +184,17 @@
               <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
               <item name="omnilog" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
+              <item name="test-files" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,13 +440,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00073" summary="Rename and rearrange layouts in ManageCategories.">
-      <created>1532363853212</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1532363853214</updated>
     </task>
     <task id="LOCAL-00074" summary="Rearrange layouts in ManageFields.">
       <created>1532364128320</created>
@@ -778,7 +777,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535302697560</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time.">
+      <created>1535310044265</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1535310044265</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TodoView">
@@ -828,7 +834,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -864,7 +870,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Rename 'current_row' to 'idx' in init_category_fields in ManageFields." />
     <MESSAGE value="Remove hardcoded categories and fields (and related code) from AddItem." />
     <MESSAGE value="Change all instances of 'temp_input' to 'item' in AddItem." />
     <MESSAGE value="Change all instances of 'get_category_selection()' to 'get_category()' in MainWindow and SelectCategory." />
@@ -889,7 +894,8 @@
     <MESSAGE value="Fix a bug where keys in AddItem are integers instead of strings." />
     <MESSAGE value="Initialize the first row in ManageFields when there are no fields." />
     <MESSAGE value="Prevent the first row from being removed in ManageFields." />
-    <option name="LAST_COMMIT_MESSAGE" value="Prevent the first row from being removed in ManageFields." />
+    <MESSAGE value="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -907,7 +913,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -923,7 +929,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -939,7 +945,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -955,7 +961,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -971,7 +977,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -981,7 +987,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -991,7 +997,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1043,9 +1049,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage_fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="135" column="32" lean-forward="false" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
+        <state relative-caret-position="737">
           <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1055,20 +1071,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1717">
-          <caret line="110" column="21" lean-forward="false" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="21" />
+        <state relative-caret-position="1536">
+          <caret line="271" column="68" lean-forward="true" selection-start-line="271" selection-start-column="68" selection-end-line="271" selection-end-column="68" />
           <folding>
-            <marker date="1535215351970" expanded="true" signature="12074:12226" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage_fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="135" column="32" lean-forward="false" selection-start-line="135" selection-start-column="32" selection-end-line="135" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
           </folding>
         </state>
       </provider>

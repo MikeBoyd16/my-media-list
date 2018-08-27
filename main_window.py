@@ -206,7 +206,9 @@ class MainWindow(QMainWindow):
         """Updates the catalog with the current set of items"""
         self.catalog_items.clear()
         for key, data in reversed(list(self.catalog["Data"].items())):
-            catalog_item = QListWidgetItem(data["Title"])
+            field_category = data["Category"]
+            field_id = self.catalog["Profile"]["Category Fields"][field_category]["0"][0]
+            catalog_item = QListWidgetItem(data[field_id])
             catalog_item.setData(Qt.UserRole, data)
             catalog_item.setSizeHint(QSize(35, 35))
 
@@ -234,9 +236,8 @@ class MainWindow(QMainWindow):
             add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + ":" +\
                                             str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
-            if "Title" in add_item.item:  # Fields for key won't exist if the dialog is closed prematurely
-                self.catalog["Data"][add_item.item["Title"] + "-" +
-                                     add_item.item["Category"] + "-" +
+            if "0" in self.catalog["Profile"]["Category Fields"][add_item.category]:
+                self.catalog["Data"][add_item.item["Category"] + "-" +
                                      add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()
 
@@ -273,7 +274,7 @@ class MainWindow(QMainWindow):
         self.item_details.clear()
         item = self.catalog_items.currentItem()
         item_data = item.data(Qt.UserRole)
-        item_key = item_data["Title"] + "-" + item_data["Category"] + "-" + item_data["Date Entered"]
+        item_key = item_data["Category"] + "-" + item_data["Date Entered"]
         for label in self.catalog["Data"][item_key]:
             if label not in ["Status", "Category", "Date Entered"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it

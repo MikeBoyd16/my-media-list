@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test-files/82220181" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
@@ -18,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1536">
-              <caret line="271" column="68" lean-forward="true" selection-start-line="271" selection-start-column="68" selection-end-line="271" selection-end-column="68" />
+            <state relative-caret-position="237">
+              <caret line="218" column="75" lean-forward="true" selection-start-line="218" selection-start-column="75" selection-end-line="218" selection-end-column="75" />
               <folding>
-                <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+                <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
               </folding>
             </state>
           </provider>
@@ -64,7 +63,7 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
+            <state relative-caret-position="1239">
               <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -112,8 +111,8 @@
       <find>Title</find>
       <find>header_logo</find>
       <find>idx</find>
-      <find>title</find>
       <find>media</find>
+      <find>title</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -440,13 +439,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Rearrange layouts in ManageFields.">
-      <created>1532364128320</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1532364128320</updated>
     </task>
     <task id="LOCAL-00075" summary="Maintain state of category names when the ManageCategories window closes.">
       <created>1532447701794</created>
@@ -784,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535310044265</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="Change all instances of 'Media' to 'Category' in MainWindow.">
+      <created>1535387295926</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1535387295929</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TodoView">
@@ -870,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Remove hardcoded categories and fields (and related code) from AddItem." />
     <MESSAGE value="Change all instances of 'temp_input' to 'item' in AddItem." />
     <MESSAGE value="Change all instances of 'get_category_selection()' to 'get_category()' in MainWindow and SelectCategory." />
     <MESSAGE value="Replace outdated code for initializing category fields in AddItem." />
@@ -895,7 +893,8 @@
     <MESSAGE value="Initialize the first row in ManageFields when there are no fields." />
     <MESSAGE value="Prevent the first row from being removed in ManageFields." />
     <MESSAGE value="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time." />
+    <MESSAGE value="Change all instances of 'Media' to 'Category' in MainWindow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change all instances of 'Media' to 'Category' in MainWindow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -913,7 +912,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -929,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -945,7 +944,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -961,7 +960,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -977,7 +976,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -987,7 +986,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -997,7 +996,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1061,7 +1060,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
+        <state relative-caret-position="1239">
           <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1071,10 +1070,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="271" column="68" lean-forward="true" selection-start-line="271" selection-start-column="68" selection-end-line="271" selection-end-column="68" />
+        <state relative-caret-position="237">
+          <caret line="218" column="75" lean-forward="true" selection-start-line="218" selection-start-column="75" selection-end-line="218" selection-end-column="75" />
           <folding>
-            <marker date="1535387130885" expanded="true" signature="12188:12340" ph="..." />
+            <marker date="1535391216095" expanded="true" signature="12208:12360" ph="..." />
           </folding>
         </state>
       </provider>

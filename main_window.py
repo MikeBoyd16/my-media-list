@@ -237,8 +237,7 @@ class MainWindow(QMainWindow):
                                             str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
             if "0" in self.catalog["Profile"]["Category Fields"][add_item.category]:
-                self.catalog["Data"][add_item.item["Category"] + "-" +
-                                     add_item.item["Date Entered"]] = add_item.item
+                self.catalog["Data"][add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()
 
     def categories(self):
@@ -274,7 +273,7 @@ class MainWindow(QMainWindow):
         self.item_details.clear()
         item = self.catalog_items.currentItem()
         item_data = item.data(Qt.UserRole)
-        item_key = item_data["Category"] + "-" + item_data["Date Entered"]
+        item_key = item_data["Date Entered"]
         for label in self.catalog["Data"][item_key]:
             if label not in ["Status", "Category", "Date Entered"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it

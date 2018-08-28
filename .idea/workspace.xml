@@ -17,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="235" column="106" lean-forward="false" selection-start-line="235" selection-start-column="106" selection-end-line="235" selection-end-column="106" />
+            <state relative-caret-position="253">
+              <caret line="280" column="30" lean-forward="false" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
               <folding>
-                <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+                <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,7 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>combo_items</find>
       <find>category_count</find>
       <find>row_count</find>
       <find>self.combo_button_status</find>
@@ -113,6 +112,7 @@
       <find>idx</find>
       <find>media</find>
       <find>title</find>
+      <find>status</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -439,13 +439,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00077" summary="Add enable/disable behavior for the &quot;set icon&quot; button in ManageCategories based on the presence or absence of text.">
-      <created>1532791123558</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1532791123558</updated>
     </task>
     <task id="LOCAL-00078" summary="Add dynamic renaming of category icon file names when changes are made to the name of the category from ManageCategories.">
       <created>1532878190455</created>
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535470456391</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="Change the formatting of the internal 'Date Entered' field.">
+      <created>1535470564045</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1535470564045</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TodoView">
@@ -807,7 +807,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Replace outdated code for initializing category fields in AddItem." />
     <MESSAGE value="Add a header to AddItem." />
     <MESSAGE value="Redo the layout in AddItem." />
     <MESSAGE value="Remove the window title from AddItem." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Change all instances of 'Media' to 'Category' in MainWindow." />
     <MESSAGE value="Replace all instances of 'Title' with the appropriate user-created  category ID in MainWindow." />
     <MESSAGE value="Remove the internal 'Category' field from each record's unique ID." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove the internal 'Category' field from each record's unique ID." />
+    <MESSAGE value="Change the formatting of the internal 'Date Entered' field." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the formatting of the internal 'Date Entered' field." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,7 +912,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -944,7 +944,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -960,7 +960,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -976,7 +976,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -986,7 +986,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -996,7 +996,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1070,10 +1070,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="235" column="106" lean-forward="false" selection-start-line="235" selection-start-column="106" selection-end-line="235" selection-end-column="106" />
+        <state relative-caret-position="253">
+          <caret line="280" column="30" lean-forward="false" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
           <folding>
-            <marker date="1535470474829" expanded="true" signature="12107:12259" ph="..." />
+            <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
           </folding>
         </state>
       </provider>

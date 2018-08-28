@@ -275,7 +275,7 @@ class MainWindow(QMainWindow):
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Date Entered"]
         for label in self.catalog["Data"][item_key]:
-            if label not in ["Status", "Category", "Date Entered"]:  # Do not display certain labels and data
+            if label not in ["Category", "Date Entered"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
                     # If a label's associated data is in a list, display a comma separated string of that data
                     if isinstance(self.catalog["Data"][item_key][label], list):

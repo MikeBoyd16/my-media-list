@@ -51,6 +51,10 @@ class ManageCategories(QDialog):
         for layout in self.layouts:
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
+                if layout == "controls_layout":
+                    self.layouts["main_layout"].addWidget(self.top_line)
+                elif layout == "fields_layout":
+                    self.layouts["main_layout"].addWidget(self.bottom_line)
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
 
@@ -67,6 +71,11 @@ class ManageCategories(QDialog):
         for button in self.buttons:
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
+
+        self.top_line = QFrame()
+        self.top_line.setFrameShape(QFrame.HLine)
+        self.bottom_line = QFrame()
+        self.bottom_line.setFrameShape(QFrame.HLine)
 
         self.category_fields = {}
         self.category_buttons = {}

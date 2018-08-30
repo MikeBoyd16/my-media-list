@@ -74,8 +74,17 @@ class ManageCategories(QDialog):
 
         self.top_line = QFrame()
         self.top_line.setFrameShape(QFrame.HLine)
+        self.top_line_shadow = QGraphicsDropShadowEffect()
+        self.top_line_shadow.setBlurRadius(7.0)
+        self.top_line_shadow.setOffset(2.3)
+        self.top_line.setGraphicsEffect(self.top_line_shadow)
+
         self.bottom_line = QFrame()
         self.bottom_line.setFrameShape(QFrame.HLine)
+        self.bottom_line_shadow = QGraphicsDropShadowEffect()
+        self.bottom_line_shadow.setBlurRadius(7.0)
+        self.bottom_line_shadow.setOffset(-2.3)
+        self.bottom_line.setGraphicsEffect(self.bottom_line_shadow)
 
         self.category_fields = {}
         self.category_buttons = {}

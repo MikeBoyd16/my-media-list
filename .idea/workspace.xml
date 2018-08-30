@@ -29,8 +29,8 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1411">
-              <caret line="107" column="12" lean-forward="false" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+            <state relative-caret-position="323">
+              <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -440,13 +440,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00079" summary="Change the size of the 'set icon' button in ManageCategories to better fit the preferred dimensions of category icons.">
-      <created>1532959078837</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1532959078838</updated>
-    </task>
     <task id="LOCAL-00080" summary="Upon re-opening the ManageCategories window, pre-populate it with widgets for existing categories.">
       <created>1532968974116</created>
       <option name="number" value="00080" />
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535470731376</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Add separators before and after categories in ManageCategories.">
+      <created>1535648538593</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1535648538594</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Redo the layout in AddItem." />
     <MESSAGE value="Remove the window title from AddItem." />
     <MESSAGE value="Remove window hints from the top of the window in AddItem." />
     <MESSAGE value="Change stylesheet properties for AddItem to better fit current theme." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Remove the internal 'Category' field from each record's unique ID." />
     <MESSAGE value="Change the formatting of the internal 'Date Entered' field." />
     <MESSAGE value="Remove the now defunct 'Status' label from the list of labels not to&#10;display when showing record data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove the now defunct 'Status' label from the list of labels not to&#10;display when showing record data." />
+    <MESSAGE value="Add separators before and after categories in ManageCategories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add separators before and after categories in ManageCategories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1072,8 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="107" column="12" lean-forward="false" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+        <state relative-caret-position="323">
+          <caret line="79" column="16" lean-forward="true" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
           <folding />
         </state>
       </provider>

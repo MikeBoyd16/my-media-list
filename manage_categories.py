@@ -25,7 +25,7 @@ class ManageCategories(QDialog):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 250, 500)
+        self.setGeometry(100, 100, 270, 500)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
@@ -55,7 +55,7 @@ class ManageCategories(QDialog):
                     self.layouts["main_layout"].addWidget(self.top_line)
                 elif layout == "fields_layout":
                     self.layouts["main_layout"].addWidget(self.bottom_line)
-            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
+            self.layouts[layout].setContentsMargins(0, 10, 0, 10)
             self.layouts[layout].setSpacing(15)
 
         self.setLayout(self.layouts["main_layout"])

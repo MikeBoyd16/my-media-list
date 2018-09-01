@@ -138,6 +138,10 @@ class ManageCategories(QDialog):
             self.set_icon_status()
             self.layouts["fields_layout"].addWidget(self.category_buttons[key], idx, 1, 1, 1)
 
+        # If there are fewer than four categories, populate the window with additional empty category fields.
+        while self.row < 3:
+            self.add_category()
+
     def center_window(self):
         """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()

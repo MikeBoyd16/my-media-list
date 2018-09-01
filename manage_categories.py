@@ -49,13 +49,13 @@ class ManageCategories(QDialog):
         self.layouts["submit_layout"].addStretch(1)
 
         for layout in self.layouts:
+            if layout == "fields_layout":
+                self.layouts["main_layout"].addWidget(self.top_line)
+            elif layout == "submit_layout":
+                self.layouts["main_layout"].addWidget(self.bottom_line)
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
-                if layout == "controls_layout":
-                    self.layouts["main_layout"].addWidget(self.top_line)
-                elif layout == "fields_layout":
-                    self.layouts["main_layout"].addWidget(self.bottom_line)
-            self.layouts[layout].setContentsMargins(0, 10, 0, 10)
+            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
 
         self.setLayout(self.layouts["main_layout"])

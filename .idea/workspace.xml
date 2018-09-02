@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
+      <change beforePath="$PROJECT_DIR$/manage_fields.py" afterPath="$PROJECT_DIR$/manage_fields.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +17,7 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4188">
+            <state relative-caret-position="4607">
               <caret line="280" column="30" lean-forward="false" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
               <folding>
                 <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
@@ -26,21 +26,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="140" column="109" lean-forward="false" selection-start-line="140" selection-start-column="109" selection-end-line="140" selection-end-column="109" />
+            <state relative-caret-position="168">
+              <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
+            <state relative-caret-position="321">
+              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -51,7 +51,7 @@
       <file leaf-file-name="select_category.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
+            <state relative-caret-position="340">
               <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -63,7 +63,7 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="890">
+            <state relative-caret-position="2125">
               <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
-        <option value="$PROJECT_DIR$/manage_fields.py" />
         <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
+        <option value="$PROJECT_DIR$/manage_fields.py" />
       </list>
     </option>
   </component>
@@ -176,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,6 +193,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,13 +439,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00083" summary="Move the intermediate add_item code from SelectCategory to MainWindow.">
-      <created>1533235637443</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1533235637443</updated>
     </task>
     <task id="LOCAL-00084" summary="Remove hard-coded categories from SelectCategory and pass in user-created categories instead.">
       <created>1533237149207</created>
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535821706985</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Display a minimum of four category fields in ManageCategories.">
+      <created>1535824870314</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1535824870314</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TodoView">
@@ -802,11 +802,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Remove the title from SelectCategory." />
     <MESSAGE value="Remove window hints from the top of the window in SelectCategory." />
     <MESSAGE value="Change stylesheet properties for SelectCategory to better fit current theme." />
     <MESSAGE value="Simplify SelectCategory layout." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Add shadows to each separator in ManageCategories." />
     <MESSAGE value="Remove horizontal margins from all layouts in ManageCategories." />
     <MESSAGE value="Rework init_layout method code in ManageCategories." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rework init_layout method code in ManageCategories." />
+    <MESSAGE value="Display a minimum of four category fields in ManageCategories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Display a minimum of four category fields in ManageCategories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,7 +1032,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4188">
+        <state relative-caret-position="4607">
           <caret line="280" column="30" lean-forward="false" selection-start-line="280" selection-start-column="30" selection-end-line="280" selection-end-column="30" />
           <folding>
             <marker date="1535470589955" expanded="true" signature="12097:12249" ph="..." />
@@ -1040,19 +1040,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage_fields.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="162" column="43" lean-forward="false" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
+        <state relative-caret-position="340">
           <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1062,7 +1052,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="890">
+        <state relative-caret-position="2125">
           <caret line="133" column="37" lean-forward="false" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1072,9 +1062,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="140" column="109" lean-forward="false" selection-start-line="140" selection-start-column="109" selection-end-line="140" selection-end-column="109" />
+        <state relative-caret-position="168">
+          <caret line="77" column="36" lean-forward="true" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage_fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

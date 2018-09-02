@@ -48,6 +48,10 @@ class ManageFields(QDialog):
         self.layouts["submit_layout"].addStretch(1)
 
         for layout in self.layouts:
+            if layout == "fields_layout":
+                self.layouts["main_layout"].addWidget(self.top_line)
+            elif layout == "submit_layout":
+                self.layouts["main_layout"].addWidget(self.bottom_line)
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
@@ -71,6 +75,20 @@ class ManageFields(QDialog):
         self.field_types = {}
         self.combo_items_buttons = {}
         self.combo_items = {}
+
+        self.top_line = QFrame()
+        self.top_line.setFrameShape(QFrame.HLine)
+        self.top_line_shadow = QGraphicsDropShadowEffect()
+        self.top_line_shadow.setBlurRadius(7.0)
+        self.top_line_shadow.setOffset(2.3)
+        self.top_line.setGraphicsEffect(self.top_line_shadow)
+
+        self.bottom_line = QFrame()
+        self.bottom_line.setFrameShape(QFrame.HLine)
+        self.bottom_line_shadow = QGraphicsDropShadowEffect()
+        self.bottom_line_shadow.setBlurRadius(7.0)
+        self.bottom_line_shadow.setOffset(-2.3)
+        self.bottom_line.setGraphicsEffect(self.bottom_line_shadow)
 
     def init_styles(self):
         """Sets the stylesheet properties for widgets"""

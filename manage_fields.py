@@ -55,7 +55,7 @@ class ManageFields(QDialog):
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
-            self.layouts[layout].setSpacing(15)
+            self.layouts[layout].setSpacing(20)
 
         self.setLayout(self.layouts["main_layout"])
 
@@ -66,7 +66,7 @@ class ManageFields(QDialog):
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
             self.buttons[button].setText("  " + button_text)
-            self.buttons[button].setFixedSize(QSize(100, 40))
+            self.buttons[button].setFixedSize(QSize(100, 35))
         for button in self.buttons:
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
@@ -117,7 +117,7 @@ class ManageFields(QDialog):
                 color: #f3ffbd;
             }
             .QLineEdit {
-                width: 100px;
+                width: 75px;
             }
         """)
 
@@ -141,7 +141,7 @@ class ManageFields(QDialog):
                     self.field_types[key].currentIndexChanged.connect(self.combo_button_status)
                     self.layouts["fields_layout"].addWidget(self.field_types[key], idx, 1)
 
-                    self.combo_items_buttons[key] = QPushButton(" . . . ")
+                    self.combo_items_buttons[key] = QPushButton(". . .")
                     self.combo_items_buttons[key].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
                     self.combo_items_buttons[key].clicked.connect(self.get_combo_items)
                     self.combo_button_status()

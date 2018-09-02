@@ -67,7 +67,7 @@ class ManageCategories(QDialog):
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
             self.buttons[button].setText("  " + button_text)
-            self.buttons[button].setFixedSize(QSize(100, 40))
+            self.buttons[button].setFixedSize(QSize(100, 35))
         for button in self.buttons:
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)

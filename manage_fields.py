@@ -153,8 +153,8 @@ class ManageFields(QDialog):
         else:
             self.init_id_field()
 
-        # If there are fewer than seven fields, populate the window with additional empty fields.
-        while self.row < 6:
+        # If there are fewer than six fields, populate the window with additional empty fields.
+        while self.row < 5:
             self.add_field()
 
     def init_id_field(self):

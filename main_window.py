@@ -266,7 +266,11 @@ class MainWindow(QMainWindow):
         pass
 
     def quit_program(self):
-        sys.exit()
+        """Prompts the user for confirmation that they want to quit the program"""
+        confirm_exit = QMessageBox.question(self, "Confirm exit", "Are you sure you want to quit?",
+                                            QMessageBox.Yes, QMessageBox.No)
+        if confirm_exit == QMessageBox.Yes:
+            sys.exit()
 
     def show_item_details(self):
         """Displays the currently selected catalog item's details"""

@@ -17,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="272" column="22" lean-forward="true" selection-start-line="272" selection-start-column="22" selection-end-line="272" selection-end-column="22" />
+            <state relative-caret-position="219">
+              <caret line="264" column="48" lean-forward="false" selection-start-line="264" selection-start-column="48" selection-end-line="264" selection-end-column="48" />
               <folding>
-                <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+                <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
               </folding>
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1949">
+            <state relative-caret-position="2584">
               <caret line="160" column="20" lean-forward="false" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -51,7 +51,7 @@
       <file leaf-file-name="select_category.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/select_category.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-470">
+            <state relative-caret-position="340">
               <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -176,6 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -193,7 +194,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,13 +439,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Change category_icon_names and category_icon_paths from lists to dicts.">
-      <created>1533486674742</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1533486674742</updated>
     </task>
     <task id="LOCAL-00089" summary="Fix a bug where the program crashes when an existing category doesn't have an icon.">
       <created>1533487063414</created>
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535912835435</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="Add a confirmation dialog that prompts the user to confirm that they&#10;want to quit the program when the 'Quit' button is pressed.">
+      <created>1536084460939</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1536084460939</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="TodoView">
@@ -807,7 +807,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Adjust SelectCategory widget dimensions and placement." />
     <MESSAGE value="Integrate the catalog profile and data into the the same structure." />
     <MESSAGE value="Fix a bug where new catalog items aren't inserted into the catalog." />
     <MESSAGE value="Convert all key values in ManageCategories and ManageFields to strings." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Display a minimum of seven fields in ManageFields." />
     <MESSAGE value="Adjust button size and widget spacing in ManageCategories and       ManageFields." />
     <MESSAGE value="Reduce the number of default fields displayed in ManageFields by one." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduce the number of default fields displayed in ManageFields by one." />
+    <MESSAGE value="Add a confirmation dialog that prompts the user to confirm that they&#10;want to quit the program when the 'Quit' button is pressed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a confirmation dialog that prompts the user to confirm that they&#10;want to quit the program when the 'Quit' button is pressed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,7 +912,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -944,7 +944,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -960,7 +960,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -976,7 +976,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -986,7 +986,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -996,7 +996,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1050,7 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1949">
+        <state relative-caret-position="2584">
           <caret line="160" column="20" lean-forward="false" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="20" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1060,7 +1060,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
+        <state relative-caret-position="340">
           <caret line="28" column="62" lean-forward="false" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -1070,10 +1070,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="272" column="22" lean-forward="true" selection-start-line="272" selection-start-column="22" selection-end-line="272" selection-end-column="22" />
+        <state relative-caret-position="219">
+          <caret line="264" column="48" lean-forward="false" selection-start-line="264" selection-start-column="48" selection-end-line="264" selection-end-column="48" />
           <folding>
-            <marker date="1536084355614" expanded="true" signature="12405:12557" ph="..." />
+            <marker date="1536161791337" expanded="true" signature="12992:13144" ph="..." />
           </folding>
         </state>
       </provider>

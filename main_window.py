@@ -260,7 +260,17 @@ class MainWindow(QMainWindow):
             self.catalog["Profile"]["Category Fields"] = manage_fields.category_fields
 
     def remove_item(self):
-        pass
+        """Removes the selected item from the catalog"""
+        confirm_remove = QMessageBox.question(self, "Remove Item",
+                                              "Remove this item from the catalog?",
+                                              QMessageBox.Yes, QMessageBox.No)
+        if confirm_remove == QMessageBox.Yes:
+            item = self.catalog_items.currentItem()
+            item_data = item.data(Qt.UserRole)
+            item_key = item_data["Date Entered"]
+            del self.catalog["Data"][item_key]
+            self.item_details.clear()
+            self.update_catalog()
 
     def edit_item(self):
         pass

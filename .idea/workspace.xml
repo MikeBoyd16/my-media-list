@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
+    <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
@@ -17,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+            <state relative-caret-position="461">
+              <caret line="206" column="33" lean-forward="false" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
               <folding>
-                <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+                <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
               </folding>
             </state>
           </provider>
@@ -440,13 +440,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00091" summary="Add the initial code to pre-populate ManageFields with existing combo items.">
-      <created>1533745225373</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1533745225373</updated>
-    </task>
     <task id="LOCAL-00092" summary="Fix a bug where removing empty categories causes the program to crash.">
       <created>1533824856549</created>
       <option name="number" value="00092" />
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536344160810</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Store the file name of a catalog when it is exported.">
+      <created>1536344468118</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1536344468118</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="TodoView">
@@ -801,13 +801,13 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Convert all key values in ManageCategories and ManageFields to strings." />
     <MESSAGE value="Insert MainWindow layouts into a dict and optimize init_layout method." />
     <MESSAGE value="Set the modality to true for all classes except MainWindow." />
     <MESSAGE value="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Add a confirmation dialog that prompts the user to confirm that they&#10;want to quit the program when the 'Quit' button is pressed." />
     <MESSAGE value="Implement the functionality for the 'Remove' button in MainWindow." />
     <MESSAGE value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
+    <MESSAGE value="Store the file name of a catalog when it is exported." />
+    <option name="LAST_COMMIT_MESSAGE" value="Store the file name of a catalog when it is exported." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,7 +912,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -944,7 +944,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -960,7 +960,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -976,7 +976,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -986,7 +986,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -996,7 +996,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1071,10 +1071,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
+        <state relative-caret-position="461">
+          <caret line="206" column="33" lean-forward="false" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
           <folding>
-            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
+            <marker date="1536344500223" expanded="true" signature="13239:13391" ph="..." />
           </folding>
         </state>
       </provider>

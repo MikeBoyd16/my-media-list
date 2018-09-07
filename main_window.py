@@ -203,6 +203,8 @@ class MainWindow(QMainWindow):
             confirm_save = QMessageBox()
             confirm_save.setText("Your changes have been saved successfully.")
             confirm_save.exec_()
+        else:
+            self.export_catalog()
 
     def search_catalog(self):
         pass

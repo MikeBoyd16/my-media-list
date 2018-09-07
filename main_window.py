@@ -199,6 +199,10 @@ class MainWindow(QMainWindow):
             file = open(self.current_file, "w")
             json.dump(self.catalog, file)
 
+            confirm_save = QMessageBox()
+            confirm_save.setText("Your changes have been saved successfully.")
+            confirm_save.exec_()
+
     def search_catalog(self):
         pass
 

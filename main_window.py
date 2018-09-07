@@ -192,6 +192,7 @@ class MainWindow(QMainWindow):
         if file_name[0]:
             file = open(file_name[0], "w")
             json.dump(self.catalog, file)
+            self.current_file = file_name[0]
 
     def save_catalog(self):
         """Saves changes from the current session to the file the catalog was imported from"""

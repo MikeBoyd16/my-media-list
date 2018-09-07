@@ -17,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="179" column="29" lean-forward="true" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+            <state relative-caret-position="427">
+              <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
               <folding>
-                <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+                <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
               </folding>
             </state>
           </provider>
@@ -440,13 +440,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00090" summary="Fix a bug where icons aren't matching category names correctly under certain circumstances.">
-      <created>1533489904637</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1533489904637</updated>
-    </task>
     <task id="LOCAL-00091" summary="Add the initial code to pre-populate ManageFields with existing combo items.">
       <created>1533745225373</created>
       <option name="number" value="00091" />
@@ -783,7 +776,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536161879411</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Add a confirmation dialog that is displayed when the 'Save' action is successful.">
+      <created>1536344160810</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1536344160810</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TodoView">
@@ -869,7 +869,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix a bug where new catalog items aren't inserted into the catalog." />
     <MESSAGE value="Convert all key values in ManageCategories and ManageFields to strings." />
     <MESSAGE value="Insert MainWindow layouts into a dict and optimize init_layout method." />
     <MESSAGE value="Set the modality to true for all classes except MainWindow." />
@@ -894,7 +893,8 @@
     <MESSAGE value="Reduce the number of default fields displayed in ManageFields by one." />
     <MESSAGE value="Add a confirmation dialog that prompts the user to confirm that they&#10;want to quit the program when the 'Quit' button is pressed." />
     <MESSAGE value="Implement the functionality for the 'Remove' button in MainWindow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement the functionality for the 'Remove' button in MainWindow." />
+    <MESSAGE value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,7 +912,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -928,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -944,7 +944,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -960,7 +960,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -976,7 +976,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -986,7 +986,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -996,7 +996,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1071,10 +1071,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="179" column="29" lean-forward="true" selection-start-line="179" selection-start-column="29" selection-end-line="179" selection-end-column="29" />
+        <state relative-caret-position="427">
+          <caret line="195" column="0" lean-forward="true" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
           <folding>
-            <marker date="1536344054519" expanded="true" signature="13146:13298" ph="..." />
+            <marker date="1536344190244" expanded="true" signature="13191:13343" ph="..." />
           </folding>
         </state>
       </provider>

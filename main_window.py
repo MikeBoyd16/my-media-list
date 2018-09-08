@@ -21,6 +21,7 @@ class MainWindow(QMainWindow):
         self.init_window()
         self.init_layout()
         self.init_styles()
+        self.load_last_catalog()
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
@@ -282,11 +283,31 @@ class MainWindow(QMainWindow):
     def edit_item(self):
         pass
 
+    def load_last_catalog(self):
+        """Loads the address of the last used catalog into the program"""
+        file = open("last_used_catalog.txt", "r")
+        self.current_file = file.read()
+        file.close()
+
+        file = open(self.current_file, "r")
+        self.catalog = json.load(file)
+        file.close()
+
+        self.update_catalog()
+
+
+    def store_last_catalog(self):
+        """Stores the address of the last used catalog into a text file"""
+        file = open("last_used_catalog.txt", "w")
+        file.write(self.current_file)
+        file.close()
+
     def quit_program(self):
         """Prompts the user for confirmation that they want to quit the program"""
         confirm_exit = QMessageBox.question(self, "Confirm exit", "Are you sure you want to quit?",
                                             QMessageBox.Yes, QMessageBox.No)
         if confirm_exit == QMessageBox.Yes:
+            self.store_last_catalog()
             sys.exit()
 
     def show_item_details(self):

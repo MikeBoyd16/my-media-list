@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalogs/3333" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/last_used_catalog.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/catalogs/4444" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Anime Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Anime.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Audiobook Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Audiobook.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Book Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Book.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Manga Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Manga.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Movie Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Movie.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Music Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Music.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/TV Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/TV.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Video Game Selected.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Video Game.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/8222018" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/82220181" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/abc.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/list.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/list_backup.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list2.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list3.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list4.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/test-files/test_media_list5.json" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,8 +43,8 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2652">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="-2977">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
               </folding>
@@ -31,7 +55,7 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2790">
+            <state relative-caret-position="782">
               <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
               <folding />
             </state>
@@ -179,6 +203,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,16 +211,10 @@
               <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
               <item name="omnilog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
-              <item name="catalogs" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,13 +460,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Fix a bug where the current row is off by one when adding new or editing existing combo items to a category field.">
-      <created>1533825609813</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1533825609813</updated>
     </task>
     <task id="LOCAL-00094" summary="Fix a bug where field type, rather than combo items, is loaded into the input field in GetComboItems.">
       <created>1533826485673</created>
@@ -785,7 +797,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536344889211</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit.">
+      <created>1536429744993</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1536429744993</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TodoView">
@@ -800,7 +819,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
@@ -809,7 +828,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28463203" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -871,7 +890,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Set the modality to true for all classes except MainWindow." />
     <MESSAGE value="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow." />
     <MESSAGE value="Fix a bug where keys in AddItem are integers instead of strings." />
     <MESSAGE value="Initialize the first row in ManageFields when there are no fields." />
@@ -896,7 +914,8 @@
     <MESSAGE value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
     <MESSAGE value="Store the file name of a catalog when it is exported." />
     <MESSAGE value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
-    <option name="LAST_COMMIT_MESSAGE" value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
+    <MESSAGE value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1059,13 +1078,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
           <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2790">
+        <state relative-caret-position="782">
           <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
           <folding />
         </state>
@@ -1073,8 +1091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2652">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="-2977">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
           </folding>

@@ -2,34 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/catalogs/4444" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/category-icons/1123.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/category-icons/45676.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Anime Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Anime.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Audiobook Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Audiobook.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Book Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Book.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Manga Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Manga.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Movie Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Movie.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Music Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Music.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/TV Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/TV.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Video Game Selected.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/images/list-item-icons/Video Game.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/8222018" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/82220181" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/abc.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/list.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/list_backup.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list2.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list3.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list4.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test-files/test_media_list5.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/catalogs/3333" afterPath="$PROJECT_DIR$/catalogs/3333" />
+      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,10 +20,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2977">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="338">
+              <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
               <folding>
-                <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+                <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
               </folding>
             </state>
           </provider>
@@ -461,13 +438,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00094" summary="Fix a bug where field type, rather than combo items, is loaded into the input field in GetComboItems.">
-      <created>1533826485673</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1533826485673</updated>
-    </task>
     <task id="LOCAL-00095" summary="Add commas to pre-populated combo items in GetComboItems.">
       <created>1533826754459</created>
       <option name="number" value="00095" />
@@ -804,7 +774,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536429744993</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="Remove the outdated 'test-files' and 'list-item-icons' folders from the project.">
+      <created>1536506438925</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1536506438926</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TodoView">
@@ -890,7 +867,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow." />
     <MESSAGE value="Fix a bug where keys in AddItem are integers instead of strings." />
     <MESSAGE value="Initialize the first row in ManageFields when there are no fields." />
     <MESSAGE value="Prevent the first row from being removed in ManageFields." />
@@ -915,7 +891,8 @@
     <MESSAGE value="Store the file name of a catalog when it is exported." />
     <MESSAGE value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
     <MESSAGE value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
+    <MESSAGE value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,7 +910,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -949,7 +926,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -965,7 +942,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -981,7 +958,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -997,7 +974,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1007,7 +984,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1017,7 +994,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1091,10 +1068,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2977">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="338">
+          <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
           <folding>
-            <marker date="1536429177443" expanded="true" signature="13885:14037" ph="..." />
+            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
           </folding>
         </state>
       </provider>

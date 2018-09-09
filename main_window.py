@@ -220,12 +220,15 @@ class MainWindow(QMainWindow):
             catalog_item.setData(Qt.UserRole, data)
             catalog_item.setSizeHint(QSize(35, 35))
 
-            # Set the 'selected' and 'unselected' versions of each list item icon
+            # Find the icon address for the item's category
+            icon_address = ""
+            for key, value in self.catalog["Profile"]["Category Names"].items():
+                if value == field_category:
+                    icon_address = self.catalog["Profile"]["Icon Paths"][key]
+
+            # Add the icon to the item
             catalog_item_icon = QIcon()
-            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" +
-                                                str(data["Category"]) + " Selected.png"), QIcon.Normal)
-            catalog_item_icon.addPixmap(QPixmap("images/list-item-icons/" +
-                                                str(data["Category"]) + ".png"), QIcon.Selected)
+            catalog_item_icon.addPixmap(QPixmap(icon_address), QIcon.Normal)
             catalog_item.setIcon(catalog_item_icon)
 
             self.catalog_items.addItem(catalog_item)

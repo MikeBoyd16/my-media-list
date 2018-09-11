@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/category-icons/1123.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/category-icons/45676.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/catalogs/3333" afterPath="$PROJECT_DIR$/catalogs/3333" />
       <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +17,10 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
+            <state relative-caret-position="334">
+              <caret line="229" column="15" lean-forward="true" selection-start-line="229" selection-start-column="15" selection-end-line="229" selection-end-column="15" />
               <folding>
-                <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+                <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
               </folding>
             </state>
           </provider>
@@ -179,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -192,6 +188,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -437,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Add commas to pre-populated combo items in GetComboItems.">
-      <created>1533826754459</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1533826754459</updated>
     </task>
     <task id="LOCAL-00096" summary="Adjust the formatting of the header in ManageFields.">
       <created>1533826933189</created>
@@ -781,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536506438926</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Remove and replace outdated code in MainWindow that sets the icon for &#10;each list item.">
+      <created>1536509510923</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1536509510923</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -796,7 +793,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
@@ -867,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fix a bug where keys in AddItem are integers instead of strings." />
     <MESSAGE value="Initialize the first row in ManageFields when there are no fields." />
     <MESSAGE value="Prevent the first row from being removed in ManageFields." />
     <MESSAGE value="Fix a bug where the first row in ManageFields isn't initialized when the window opens without data a second time." />
@@ -892,7 +888,8 @@
     <MESSAGE value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
     <MESSAGE value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
     <MESSAGE value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
+    <MESSAGE value="Remove and replace outdated code in MainWindow that sets the icon for &#10;each list item." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove and replace outdated code in MainWindow that sets the icon for &#10;each list item." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -910,7 +907,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -926,7 +923,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -942,7 +939,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -958,7 +955,7 @@
         <state relative-caret-position="85">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -974,7 +971,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -984,7 +981,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -994,7 +991,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1068,10 +1065,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="228" column="38" lean-forward="true" selection-start-line="228" selection-start-column="38" selection-end-line="228" selection-end-column="38" />
+        <state relative-caret-position="334">
+          <caret line="229" column="15" lean-forward="true" selection-start-line="229" selection-start-column="15" selection-end-line="229" selection-end-column="15" />
           <folding>
-            <marker date="1536508980549" expanded="true" signature="13860:14012" ph="..." />
+            <marker date="1536697587692" expanded="true" signature="14077:14229" ph="..." />
           </folding>
         </state>
       </provider>

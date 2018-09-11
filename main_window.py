@@ -231,7 +231,12 @@ class MainWindow(QMainWindow):
             catalog_item_icon.addPixmap(QPixmap(icon_address), QIcon.Normal)
             catalog_item.setIcon(catalog_item_icon)
 
+            # Add the item to the list of catalog items
             self.catalog_items.addItem(catalog_item)
+
+            # Display the top item in the list of catalog items by default
+            self.catalog_items.setCurrentRow(0)
+            self.show_item_details()
 
     def add_item(self):
         """Adds a new catalog item to the catalog"""

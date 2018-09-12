@@ -130,6 +130,7 @@ class MainWindow(QMainWindow):
             }
             .QListWidget::Item:selected {
                 background-color: #C5D7D3;
+                color: #FFFFFF;
             }
         """)
         self.item_details.setStyleSheet("""

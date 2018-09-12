@@ -148,34 +148,10 @@ class ManageFields(QDialog):
                     self.layouts["fields_layout"].addWidget(self.combo_items_buttons[key], idx, 2)
 
                     self.combo_items[key] = self.category_fields[self.category][key][2]
-            else:
-                self.init_id_field()
-        else:
-            self.init_id_field()
 
         # If there are fewer than six fields, populate the window with additional empty fields.
         while self.row < 5:
             self.add_field()
-
-    def init_id_field(self):
-        self.row = 0
-
-        self.field_names["0"] = QLineEdit()
-        self.field_names["0"].setPlaceholderText("Enter category ID")
-        self.field_names["0"].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.layouts["fields_layout"].addWidget(self.field_names["0"], 0, 0)
-
-        self.field_types["0"] = QComboBox()
-        self.field_types["0"].addItems(["Text", "Dropdown"])
-        self.field_types["0"].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.field_types["0"].currentIndexChanged.connect(self.combo_button_status)
-        self.layouts["fields_layout"].addWidget(self.field_types["0"], 0, 1)
-
-        self.combo_items_buttons["0"] = QPushButton(" . . . ")
-        self.combo_items_buttons["0"].setSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        self.combo_items_buttons["0"].clicked.connect(self.get_combo_items)
-        self.combo_button_status()
-        self.layouts["fields_layout"].addWidget(self.combo_items_buttons["0"], 0, 2)
 
     def center_window(self):
         """Positions the window in the center of the screen"""

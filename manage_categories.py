@@ -17,6 +17,7 @@ class ManageCategories(QDialog):
         self.row = -1
         self.category_names = category_names
         self.category_icon_paths = category_icon_paths
+        self.frame_height = 250
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -25,7 +26,7 @@ class ManageCategories(QDialog):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 270, 500)
+        self.setFixedSize(270, self.frame_height)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
@@ -118,6 +119,7 @@ class ManageCategories(QDialog):
 
     def init_categories(self):
         for idx in range(len(self.category_names)):
+            self.update_frame_height("increase")
             key = str(idx)
             self.row += 1
 
@@ -151,6 +153,7 @@ class ManageCategories(QDialog):
 
     def add_category(self):
         """Adds a new field where a category can be entered"""
+        self.update_frame_height("increase")
         self.row += 1
         key = str(self.row)
 
@@ -174,6 +177,9 @@ class ManageCategories(QDialog):
         self.set_icon_status()
         self.layouts["fields_layout"].addWidget(self.category_buttons[key], self.row, 1, 1, 1)
 
+        # Re-center the window after a new row has been added
+        self.center_window()
+
     def remove_category(self):
         """Removes an existing field where a category could be entered"""
         if self.row >= 0:
@@ -182,12 +188,16 @@ class ManageCategories(QDialog):
             del(self.category_fields[key])
             self.category_buttons[key].setParent(None)
             del(self.category_buttons[key])
+
             if key in self.category_icon_paths:
                 os.remove(self.category_icon_paths[key])
                 del(self.category_icon_paths[key])
             if key in self.category_names:
                 del(self.category_names[key])
+
             self.row -= 1
+            self.update_frame_height("decrease")
+            self.center_window()
 
     def set_icon_status(self):
         """Enables/disables combo buttons based on the field combo selection"""
@@ -236,6 +246,17 @@ class ManageCategories(QDialog):
                     os.rename(self.category_icon_paths[key], icon_path)
                     self.category_icon_paths[key] = icon_path
                     self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
+
+    def update_frame_height(self, change_type):
+        """Increases or decreases the height of the frame"""
+        if change_type == "increase":
+            self.frame_height += 65
+        elif change_type == "decrease":
+            self.frame_height -= 65
+        else:
+            raise ValueError("An invalid value was entered for the type of change in frame height.")
+
+        self.setFixedHeight(self.frame_height)
 
     def ok(self):
         """Returns focus to the main window"""

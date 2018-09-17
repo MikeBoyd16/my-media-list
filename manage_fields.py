@@ -16,7 +16,9 @@ class ManageFields(QDialog):
         self.row = -1
         self.category = category
         self.category_fields = category_fields
-        self.frame_height = 250
+        self.frame_length = 250
+        self.horizontal_position = 0
+        self.vertical_position = 400
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -25,9 +27,9 @@ class ManageFields(QDialog):
 
     def init_window(self):
         """Initializes the window, its dimensions, and content"""
-        self.setFixedSize(300, self.frame_height)
+        self.setFixedSize(300, self.frame_length)
         self.setWindowFlags(Qt.CustomizeWindowHint)
-        self.center_window()
+        self.init_center_position()
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
@@ -126,7 +128,7 @@ class ManageFields(QDialog):
         if self.category in self.category_fields:
             if len(self.category_fields[self.category]) > 0:
                 for idx in range(len(self.category_fields[self.category])):
-                    self.update_frame_height("increase")
+                    self.update_frame_length("increase")
                     key = str(idx)
                     self.row += 1
 
@@ -155,16 +157,17 @@ class ManageFields(QDialog):
         while self.row < 5:
             self.add_field()
 
-    def center_window(self):
+    def init_center_position(self):
         """Positions the window in the center of the screen"""
         frame_geometry = self.frameGeometry()
         center_point = QDesktopWidget().availableGeometry().center()
         frame_geometry.moveCenter(center_point)
-        self.move(frame_geometry.topLeft())
+        self.horizontal_position = frame_geometry.left()
+        self.move(self.horizontal_position, self.vertical_position)
 
     def add_field(self):
         """Adds a new field where a category can be entered"""
-        self.update_frame_height("increase")
+        self.update_frame_length("increase")
         self.row += 1
         key = str(self.row)
 
@@ -185,9 +188,6 @@ class ManageFields(QDialog):
         self.combo_button_status()
         self.layouts["fields_layout"].addWidget(self.combo_items_buttons[key], self.row, 2)
 
-        # Re-center the window after a new row has been added
-        self.center_window()
-
     def remove_field(self):
         """Removes an existing field where a category could be entered"""
         if self.row > 0:
@@ -202,19 +202,21 @@ class ManageFields(QDialog):
                 del(self.combo_items[key])
 
             self.row -= 1
-            self.update_frame_height("decrease")
-            self.center_window()
+            self.update_frame_length("decrease")
 
-    def update_frame_height(self, change_type):
-        """Increases or decreases the height of the frame"""
+    def update_frame_length(self, change_type):
+        """Increases or decreases the length and height of the frame"""
         if change_type == "increase":
-            self.frame_height += 45
+            self.frame_length += 40
+            self.vertical_position -= 20
         elif change_type == "decrease":
-            self.frame_height -= 45
+            self.frame_length -= 40
+            self.vertical_position += 20
         else:
             raise ValueError("An invalid value was entered for the type of change in frame height.")
 
-        self.setFixedHeight(self.frame_height)
+        self.setFixedHeight(self.frame_length)
+        self.move(self.horizontal_position, self.vertical_position)
 
     def ok(self):
         self.category_fields[self.category] = {}

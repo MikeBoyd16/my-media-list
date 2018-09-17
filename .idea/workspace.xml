@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="31" />
+              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -39,8 +39,8 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+            <state relative-caret-position="308">
+              <caret line="209" column="23" lean-forward="false" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -83,10 +83,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setIconS</find>
-      <find>self.categories</find>
-      <find>category_fields</find>
-      <find>self.row_count</find>
       <find>self.selected_row</find>
       <find>self.field_combos</find>
       <find>self.combo_buttons</find>
@@ -113,6 +109,10 @@
       <find>self.update_catalog</find>
       <find>self.current_file</find>
       <find>init_id_field</find>
+      <find>setFixed</find>
+      <find>setGeo</find>
+      <find>center_window</find>
+      <find>frame_height</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -434,13 +434,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00100" summary="Change all instances of 'get_category_selection()' to 'get_category()' in MainWindow and SelectCategory.">
-      <created>1534003230818</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1534003230819</updated>
     </task>
     <task id="LOCAL-00101" summary="Replace outdated code for initializing category fields in AddItem.">
       <created>1534006149952</created>
@@ -778,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537029584927</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Switch from dynamic to manual resizing of the ManageFields frame.">
+      <created>1537112294558</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1537112294558</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TodoView">
@@ -864,7 +864,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Replace all instances of 'Title' with the appropriate user-created  category ID in MainWindow." />
     <MESSAGE value="Remove the internal 'Category' field from each record's unique ID." />
     <MESSAGE value="Change the formatting of the internal 'Date Entered' field." />
     <MESSAGE value="Remove the now defunct 'Status' label from the list of labels not to&#10;display when showing record data." />
@@ -889,7 +888,8 @@
     <MESSAGE value="Change a catalog item's color to white while it is selected." />
     <MESSAGE value="Remove code from ManageFields pertaining to a category ID." />
     <MESSAGE value="Switch from dynamic to manual resizing of the ManageCategories frame." />
-    <option name="LAST_COMMIT_MESSAGE" value="Switch from dynamic to manual resizing of the ManageCategories frame." />
+    <MESSAGE value="Switch from dynamic to manual resizing of the ManageFields frame." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switch from dynamic to manual resizing of the ManageFields frame." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1058,15 +1058,15 @@
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="31" />
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+        <state relative-caret-position="308">
+          <caret line="209" column="23" lean-forward="false" selection-start-line="209" selection-start-column="23" selection-end-line="209" selection-end-column="23" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

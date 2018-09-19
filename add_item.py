@@ -37,15 +37,25 @@ class AddItem(QDialog):
 
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
+
+        self.layouts["submit_layout"].addWidget(self.submit)
+        self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+        self.layouts["submit_layout"].addStretch(1)
+
+        if len(self.category_fields[self.category]) > 0:
+            self.init_fields_layouts()
+        else:
+            self.init_no_fields_layouts()
+
+        self.setLayout(self.layouts["main_layout"])
+
+    def init_fields_layouts(self):
+        """Arranges the frame's layouts to include category fields"""
         row = 0
         for key in self.labels:
             self.layouts["fields_layout"].addWidget(self.labels[key], row, 0)
             self.layouts["fields_layout"].addWidget(self.inputs[key], row, 1)
             row += 1
-
-        self.layouts["submit_layout"].addWidget(self.submit)
-        self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        self.layouts["submit_layout"].addStretch(1)
 
         for layout in self.layouts:
             if layout != "main_layout":
@@ -53,7 +63,18 @@ class AddItem(QDialog):
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
 
-        self.setLayout(self.layouts["main_layout"])
+    def init_no_fields_layouts(self):
+        """Arranges the frame's layouts to not include category fields"""
+        self.layouts["fields_layout"].addWidget(self.no_field_message, 0, 0, 2, 1)
+        for layout in self.layouts:
+            if layout != "main_layout":
+                self.layouts["main_layout"].addLayout(self.layouts[layout])
+            if layout == "fields_layout":
+                self.layouts["main_layout"].addSpacerItem(QSpacerItem(100, 260))
+            elif layout == "header_layout":
+                self.layouts["main_layout"].addSpacerItem(QSpacerItem(100, 100))
+            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
+            self.layouts[layout].setSpacing(15)
 
     def init_widgets(self):
         """
@@ -61,6 +82,10 @@ class AddItem(QDialog):
         """
         self.header = QLabel("Add " + self.category)
         self.header.setStyleSheet(".QLabel{font-size: 24px;}")
+        self.no_field_message = QLabel("The " + self.category + " category doesn't have any fields.")
+        self.no_field_message.setWordWrap(True)
+        self.no_field_message.setStyleSheet(".QLabel{font-size: 14px;}")
+
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
             key = str(idx)

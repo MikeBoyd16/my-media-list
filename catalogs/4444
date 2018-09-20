@@ -1,1 +1,31 @@
-{"Profile": {"Category Names": {"0": "45676", "1": "Music"}, "Category Fields": {"45676": {"0": ["123123", "Text", ""], "1": ["1231231", "Text", ""]}, "Music": {"0": ["Title", "Text", ""]}}, "Icon Paths": {}}, "Data": {"9.7.2018-11:21:59": {"123123": "qwewqe", "1231231": "qwsfds", "Category": "45676", "Date Entered": "9.7.2018-11:21:59"}, "9.9.2018-8:13:36": {"Title": "123", "Category": "Music", "Date Entered": "9.9.2018-8:13:36"}}}
+{
+	"Profile": {
+		"Category Names": {
+			"0": "45676",
+			"1": "Music"
+		},
+		"Category Fields": {
+			"45676": {
+				"0": ["123123", "Text", ""],
+				"1": ["1231231", "Text", ""]
+			},
+			"Music": {
+				"0": ["Title", "Text", ""]
+			}
+		},
+		"Icon Paths": {}
+	},
+	"Data": {
+		"9.7.2018-11:21:59": {
+			"123123": "qwewqe",
+			"1231231": "qwsfds",
+			"Category": "45676",
+			"Date Entered": "9.7.2018-11:21:59"
+		},
+		"9.9.2018-8:13:36": {
+			"Title": "123",
+			"Category": "Music",
+			"Date Entered": "9.9.2018-8:13:36"
+		}
+	}
+}

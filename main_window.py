@@ -258,6 +258,7 @@ class MainWindow(QMainWindow):
                 self.update_catalog()
 
     def categories(self):
+        """Creates and displays a ManageCategories frame with any existing profile data"""
         manage_categories = ManageCategories(self.catalog["Profile"]["Category Names"],
                                              self.catalog["Profile"]["Icon Paths"])
         manage_categories.show()
@@ -265,7 +266,13 @@ class MainWindow(QMainWindow):
         self.catalog["Profile"]["Category Names"] = manage_categories.category_names
         self.catalog["Profile"]["Icon Paths"] = manage_categories.category_icon_paths
 
+        # If a category doesn't yet exist in the Category Fields section, initialize it
+        for row, category in self.catalog["Profile"]["Category Names"].items():
+            if category not in self.catalog["Profile"]["Category Fields"]:
+                self.catalog["Profile"]["Category Fields"][category] = {}
+
     def fields(self):
+        """Creates and displays a ManageFields frame with any existing profile data"""
         select_category = SelectCategory(self.catalog["Profile"]["Category Names"])
         select_category.show()
         select_category.exec_()

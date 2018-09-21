@@ -30,10 +30,14 @@ class AddItem(QDialog):
     def init_layout(self):
         """Initializes the layout for the widgets in the window"""
         self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(),
-                        "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
+                        "image_layout": QVBoxLayout(), "fields_layout": QGridLayout(),
+                        "submit_layout": QVBoxLayout()}
 
         self.layouts["header_layout"].addWidget(self.header)
         self.header.setAlignment(Qt.AlignCenter)
+
+        self.layouts["image_layout"].addWidget(self.image_container)
+        self.layouts["image_layout"].addWidget(self.browse_image)
 
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
@@ -86,6 +90,11 @@ class AddItem(QDialog):
         self.no_field_message.setWordWrap(True)
         self.no_field_message.setStyleSheet(".QLabel{font-size: 14px;}")
 
+        self.image_container = QLabel()
+        self.image = QPixmap()
+        self.browse_image = QPushButton("Browse")
+        self.browse_image.clicked.connect(self.select_image)
+
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
             key = str(idx)
@@ -130,6 +139,9 @@ class AddItem(QDialog):
                 margin: 10px 20px 10px 20px;
             }
         """)
+
+    def select_image(self):
+        pass
 
     def center_window(self):
         """Positions the window in the center of the screen"""

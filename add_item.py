@@ -23,7 +23,7 @@ class AddItem(QDialog):
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 250, 600)
+        self.setGeometry(100, 100, 260, 600)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
@@ -34,17 +34,24 @@ class AddItem(QDialog):
                         "submit_layout": QVBoxLayout()}
 
         self.layouts["header_layout"].addWidget(self.header)
-        self.header.setAlignment(Qt.AlignCenter)
+        self.layouts["header_layout"].setContentsMargins(10, 10, 10, 10)
+        self.layouts["header_layout"].setSpacing(5)
 
         self.layouts["image_layout"].addWidget(self.image_container)
         self.layouts["image_layout"].addWidget(self.browse_image)
+        self.layouts["image_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.layouts["image_layout"].setContentsMargins(0, 15, 0, 15)
+        self.layouts["image_layout"].setSpacing(20)
 
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
-        self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
+        self.layouts["fields_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.layouts["fields_layout"].setContentsMargins(10, 0, 10, 0)
+        self.layouts["fields_layout"].setSpacing(5)
 
         self.layouts["submit_layout"].addWidget(self.submit)
         self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
-        self.layouts["submit_layout"].addStretch(1)
+        self.layouts["submit_layout"].setContentsMargins(10, 10, 10, 10)
+        self.layouts["submit_layout"].setSpacing(5)
 
         if len(self.category_fields[self.category]) > 0:
             self.init_fields_layouts()
@@ -64,8 +71,6 @@ class AddItem(QDialog):
         for layout in self.layouts:
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
-            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
-            self.layouts[layout].setSpacing(15)
 
     def init_no_fields_layouts(self):
         """Arranges the frame's layouts to not include category fields"""
@@ -77,8 +82,6 @@ class AddItem(QDialog):
                 self.layouts["main_layout"].addSpacerItem(QSpacerItem(100, 260))
             elif layout == "header_layout":
                 self.layouts["main_layout"].addSpacerItem(QSpacerItem(100, 100))
-            self.layouts[layout].setContentsMargins(10, 10, 10, 10)
-            self.layouts[layout].setSpacing(15)
 
     def init_widgets(self):
         """
@@ -86,14 +89,21 @@ class AddItem(QDialog):
         """
         self.header = QLabel("Add " + self.category)
         self.header.setStyleSheet(".QLabel{font-size: 24px;}")
+        self.header.setFixedHeight(20)
+        self.header.setAlignment(Qt.AlignCenter)
+
         self.no_field_message = QLabel("The " + self.category + " category doesn't have any fields.")
         self.no_field_message.setWordWrap(True)
         self.no_field_message.setStyleSheet(".QLabel{font-size: 14px;}")
 
-        self.image_container = QLabel()
+        self.image_container = QLabel("Your image here")
+        self.image_container.setFixedSize(150, 150)
+        self.image_container.setAlignment(Qt.AlignCenter)
         self.image = QPixmap()
+
         self.browse_image = QPushButton("Browse")
         self.browse_image.clicked.connect(self.select_image)
+        self.browse_image.setFixedSize(120, 30)
 
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
@@ -135,8 +145,26 @@ class AddItem(QDialog):
                 background-color: #8CBDAF;
             }
             .QLineEdit {
-                width: 50px;
+                width: 90px;
                 margin: 10px 20px 10px 20px;
+            }
+        """)
+        self.image_container.setStyleSheet("""
+            .QLabel {
+                width: 50 px;
+                height: 50px;
+                background-color: #FFFFFF;
+                border: 1px solid #8CBDAF;
+            }
+        """)
+        self.browse_image.setStyleSheet("""
+            .QPushButton {
+                background-color: #FFFFFF;
+                color: #000000;
+                margin-left: 25px;
+            }
+            .QPushButton:hover {
+                background-color: #F6F6F6;
             }
         """)
 

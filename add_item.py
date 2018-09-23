@@ -23,14 +23,14 @@ class AddItem(QDialog):
 
     def init_window(self):
         """Initialize the window, its dimensions, and content"""
-        self.setGeometry(100, 100, 260, 600)
+        self.setGeometry(100, 100, 250, 600)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
     def init_layout(self):
         """Initializes the layout for the widgets in the window"""
         self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(),
-                        "image_layout": QVBoxLayout(), "fields_layout": QGridLayout(),
+                        "image_layout": QVBoxLayout(), "fields_layout": QVBoxLayout(),
                         "submit_layout": QVBoxLayout()}
 
         self.layouts["header_layout"].addWidget(self.header)
@@ -45,8 +45,8 @@ class AddItem(QDialog):
 
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        self.layouts["fields_layout"].setContentsMargins(10, 0, 10, 0)
-        self.layouts["fields_layout"].setSpacing(5)
+        self.layouts["fields_layout"].setContentsMargins(0, 10, 0, 0)
+        self.layouts["fields_layout"].setSpacing(10)
 
         self.layouts["submit_layout"].addWidget(self.submit)
         self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
@@ -62,11 +62,9 @@ class AddItem(QDialog):
 
     def init_fields_layouts(self):
         """Arranges the frame's layouts to include category fields"""
-        row = 0
         for key in self.labels:
-            self.layouts["fields_layout"].addWidget(self.labels[key], row, 0)
-            self.layouts["fields_layout"].addWidget(self.inputs[key], row, 1)
-            row += 1
+            self.layouts["fields_layout"].addWidget(self.labels[key])
+            self.layouts["fields_layout"].addWidget(self.inputs[key])
 
         for layout in self.layouts:
             if layout != "main_layout":
@@ -74,7 +72,7 @@ class AddItem(QDialog):
 
     def init_no_fields_layouts(self):
         """Arranges the frame's layouts to not include category fields"""
-        self.layouts["fields_layout"].addWidget(self.no_field_message, 0, 0, 2, 1)
+        self.layouts["fields_layout"].addWidget(self.no_field_message)
         for layout in self.layouts:
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
@@ -96,7 +94,7 @@ class AddItem(QDialog):
         self.no_field_message.setWordWrap(True)
         self.no_field_message.setStyleSheet(".QLabel{font-size: 14px;}")
 
-        self.image_container = QLabel("Your image here")
+        self.image_container = QLabel("Your image here \n(150px x 150px)")
         self.image_container.setFixedSize(150, 150)
         self.image_container.setAlignment(Qt.AlignCenter)
         self.image = QPixmap()
@@ -115,14 +113,16 @@ class AddItem(QDialog):
             self.labels[field_name] = QLabel()
             self.labels[field_name].setText(field_name)
             self.labels[field_name].setStyleSheet(".QLabel{font-size: 14px;}")
+            self.labels[field_name].setAlignment(Qt.AlignCenter)
             if field_type == "Text":
                 self.inputs[field_name] = QLineEdit()
             else:
                 self.inputs[field_name] = QComboBox()
                 self.inputs[field_name].addItems(field_items)
+            self.inputs[field_name].setFixedSize(120, 20)
 
         self.submit = QPushButton("Submit", self)
-        self.submit.setFixedHeight(40)
+        self.submit.setFixedSize(100, 40)
         self.submit.clicked.connect(self.submit_item)
 
     def init_styles(self):
@@ -139,14 +139,9 @@ class AddItem(QDialog):
                 font-weight: bold;
                 font-size: 12px;
                 color: #f3ffbd;
-                width: 100px;
             }
             .QPushButton:hover {
                 background-color: #8CBDAF;
-            }
-            .QLineEdit {
-                width: 90px;
-                margin: 10px 20px 10px 20px;
             }
         """)
         self.image_container.setStyleSheet("""

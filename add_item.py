@@ -57,6 +57,8 @@ class AddItem(QDialog):
             self.init_fields_layouts()
         else:
             self.init_no_fields_layouts()
+            self.browse_image.setEnabled(False)
+            self.browse_image.setStyleSheet(".QPushButton {background-color: #F2F2F2;}")
 
         self.setLayout(self.layouts["main_layout"])
 

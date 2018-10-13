@@ -263,7 +263,7 @@ class ManageFields(QDialog):
         input_dialog.exec_()
 
         if input_dialog.input_field.text():
-            self.combo_items[key] = input_dialog.input_field.text().split(",")
+            self.combo_items[key] = input_dialog.input_field.text().replace(" ", "").split(",")
 
 
 class GetComboItems(QDialog):

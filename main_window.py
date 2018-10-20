@@ -80,6 +80,10 @@ class MainWindow(QMainWindow):
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
 
+        # Disable the "Search Catalog" and "Edit Item" buttons for the current release
+        self.buttons["search_catalog"].setEnabled(False)
+        self.buttons["edit_item"].setEnabled(False)
+
         self.catalog_items = QListWidget(self)
         self.catalog_items.setIconSize(QSize(30, 30))
         self.catalog_items.itemClicked.connect(self.show_item_details)
@@ -171,6 +175,10 @@ class MainWindow(QMainWindow):
         """)
         self.catalog_items.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
         self.item_details.verticalScrollBar().setStyleSheet(scrollbar_stylesheet)
+
+        # Gray out the disabled buttons
+        self.buttons["search_catalog"].setStyleSheet(""".QPushButton {background-color: #84888E;}""")
+        self.buttons["edit_item"].setStyleSheet(""".QPushButton {background-color: #84888E;}""")
 
     def center_window(self):
         """Positions the window in the center of the screen"""

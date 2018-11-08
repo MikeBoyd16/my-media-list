@@ -15,6 +15,7 @@ class AddItem(QDialog):
         self.setModal(True)
         self.category = category
         self.category_fields = category_fields
+        self.image_path = ""
         self.item = {}
         self.init_widgets()
         self.init_window()
@@ -166,6 +167,24 @@ class AddItem(QDialog):
         """)
 
     def select_image(self):
+        """Sets the image for the item"""
+        image = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
+        self.image_path = image[0]
+        if self.image_path:
+            icon = QPixmap(self.image_path)
+
+            # Maintain the size of images that have dimensions less than 150px
+            # and scale down images that have dimensions greater than 150px
+            if QPixmap.width(icon) <= 150 and QPixmap.height(icon) > 150:
+                icon = icon.scaled(QPixmap.width(icon), 150, Qt.KeepAspectRatio)
+            elif QPixmap.width(icon) > 150 and QPixmap.height(icon) <= 150:
+                icon = icon.scaled(150, QPixmap.height(icon), Qt.KeepAspectRatio)
+            elif QPixmap.width(icon) > 150 and QPixmap.height(icon) > 150:
+                icon = icon.scaled(150, 150, Qt.KeepAspectRatio)
+
+            self.image_container.setPixmap(icon)
+
+    def save_image(self):
         pass
 
     def center_window(self):

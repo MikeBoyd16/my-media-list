@@ -15,7 +15,8 @@ class AddItem(QDialog):
         self.setModal(True)
         self.category = category
         self.category_fields = category_fields
-        self.image_path = ""
+        self.original_image_path = ""
+        self.new_image_path = ""
         self.item = {}
         self.init_widgets()
         self.init_window()
@@ -169,9 +170,9 @@ class AddItem(QDialog):
     def select_image(self):
         """Sets the image for the item"""
         image = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
-        self.image_path = image[0]
-        if self.image_path:
-            icon = QPixmap(self.image_path)
+        self.original_image_path = image[0]
+        if self.original_image_path:
+            icon = QPixmap(self.original_image_path)
 
             # Maintain the size of images that have dimensions less than 150px
             # and scale down images that have dimensions greater than 150px
@@ -185,7 +186,23 @@ class AddItem(QDialog):
             self.image_container.setPixmap(icon)
 
     def save_image(self):
-        pass
+        """Copies an image to the program directory and saves the path to the item record"""
+
+        # Remove special characters from the item's 'Date Entered' field to make it compatible as a file name
+        unformatted_date = self.item["Date Entered"].replace(":", "").replace(".", "").replace("-", "")
+
+        # Add the new image path to the item record
+        self.new_image_path = "images/item-images/" + unformatted_date + ".jpg"
+        self.item["Image Path"] = self.new_image_path
+
+        # Create an image object from the original image path
+        image_object = QImage()
+        image_object.load(self.original_image_path)
+        image = QPixmap.fromImage(image_object)
+        image_object = image.toImage()
+
+        # Save the image as a new file at the new image path location
+        image_object.save(self.new_image_path)
 
     def center_window(self):
         """Positions the window in the center of the screen"""
@@ -219,4 +236,8 @@ class AddItem(QDialog):
         self.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + "-" + \
                                         str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
+        # Save the image to the program directory
+        self.save_image()
+
+        # Close the window
         self.hide()

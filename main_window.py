@@ -256,11 +256,6 @@ class MainWindow(QMainWindow):
         if select_category.get_category() != "No categories created":
             add_item = AddItem(select_category.get_category(), self.catalog["Profile"]["Category Fields"])
             add_item.exec_()
-            add_item.item["Category"] = add_item.category
-            now = datetime.datetime.now()
-            add_item.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + "-" +\
-                                            str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
-
             if "0" in self.catalog["Profile"]["Category Fields"][add_item.category]:
                 self.catalog["Data"][add_item.item["Date Entered"]] = add_item.item
                 self.update_catalog()

@@ -213,4 +213,10 @@ class AddItem(QDialog):
                     self.item[key] = input_list
                 else:
                     self.item[key] = self.inputs[key].text()
+
+        self.item["Category"] = self.category
+        now = datetime.datetime.now()
+        self.item["Date Entered"] = str(now.month) + "." + str(now.day) + "." + str(now.year) + "-" + \
+                                        str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
+
         self.hide()

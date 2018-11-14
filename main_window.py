@@ -330,10 +330,20 @@ class MainWindow(QMainWindow):
 
     def show_item_details(self):
         """Displays the currently selected catalog item's details"""
+
+        # Clear the item details area
         self.item_details.clear()
+
+        # Retrieve the currently selected item
         item = self.catalog_items.currentItem()
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Date Entered"]
+
+        # Display the item's image
+        if "Image Path" in item_data:
+            self.item_details.setHtml("<img src='" + item_data["Image Path"] + "' />")
+
+        # Display the item's fields
         for label in self.catalog["Data"][item_key]:
             if label not in ["Category", "Date Entered", "Image Path"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
@@ -342,7 +352,6 @@ class MainWindow(QMainWindow):
                         self.item_details.append(label + ": " + ", ".join(self.catalog["Data"][item_key][label]) + "\n")
                     else:
                         self.item_details.append(label + ": " + str(self.catalog["Data"][item_key][label]) + "\n")
-
 
 def main():
     app = QApplication(sys.argv)

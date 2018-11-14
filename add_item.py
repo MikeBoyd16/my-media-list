@@ -101,7 +101,6 @@ class AddItem(QDialog):
         self.image_container = QLabel("Your image here \n(150px x 150px)")
         self.image_container.setFixedSize(150, 150)
         self.image_container.setAlignment(Qt.AlignCenter)
-        self.image = QPixmap()
 
         self.browse_image = QPushButton("Browse")
         self.browse_image.clicked.connect(self.select_image)

@@ -314,7 +314,6 @@ class MainWindow(QMainWindow):
 
         self.update_catalog()
 
-
     def store_last_catalog(self):
         """Stores the address of the last used catalog into a text file"""
         file = open("last_used_catalog.txt", "w")

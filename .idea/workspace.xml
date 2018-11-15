@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1115201895048.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1115201895920.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
-      <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
+      <change beforePath="$PROJECT_DIR$/images/item-images/11112018105414.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/item-images/1113201894641.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/item-images/1114201891310.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/item-images/111420189145.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/item-images/1115201895048.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +67,8 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="186" column="14" lean-forward="false" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
+            <state relative-caret-position="480">
+              <caret line="213" column="32" lean-forward="false" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -192,6 +196,12 @@
               <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
               <item name="omnilog" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="item-images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -444,13 +454,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Convert all key values in ManageCategories and ManageFields to strings.">
-      <created>1534962203416</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1534962203416</updated>
     </task>
     <task id="LOCAL-00116" summary="Insert MainWindow layouts into a dict and optimize init_layout method.">
       <created>1535038100394</created>
@@ -788,7 +791,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542215854739</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Add image width and height variables to AddItem.">
+      <created>1542304310170</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1542304310171</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TodoView">
@@ -874,7 +884,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
     <MESSAGE value="Store the file name of a catalog when it is exported." />
     <MESSAGE value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
     <MESSAGE value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
@@ -899,7 +908,8 @@
     <MESSAGE value="Omit the 'Image Path' field when showing item details in MainWindow." />
     <MESSAGE value="Remove the unused 'self.image' variable from AddItem." />
     <MESSAGE value="When selected, display an item's image in the item details area in MainWindow." />
-    <option name="LAST_COMMIT_MESSAGE" value="When selected, display an item's image in the item details area in MainWindow." />
+    <MESSAGE value="Add image width and height variables to AddItem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image width and height variables to AddItem." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1068,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="186" column="14" lean-forward="false" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
+        <state relative-caret-position="480">
+          <caret line="213" column="32" lean-forward="false" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

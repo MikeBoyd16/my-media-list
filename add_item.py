@@ -205,6 +205,12 @@ class AddItem(QDialog):
     def save_image(self):
         """Copies an image to the program directory and saves the path to the item record"""
 
+        # Create an image object from the original image path
+        image = Image.open(self.original_image_path)
+
+        # Resize the image
+        image_resized = image.resize((self.image_width, self.image_height), Image.ANTIALIAS)
+
         # Remove special characters from the item's 'Date Entered' field to make it compatible as a file name
         unformatted_date = self.item["Date Entered"].replace(":", "").replace(".", "").replace("-", "")
 
@@ -212,14 +218,8 @@ class AddItem(QDialog):
         self.new_image_path = "images/item-images/" + unformatted_date + ".jpg"
         self.item["Image Path"] = self.new_image_path
 
-        # Create an image object from the original image path
-        image_object = QImage()
-        image_object.load(self.original_image_path)
-        image = QPixmap.fromImage(image_object)
-        image_object = image.toImage()
-
         # Save the image as a new file at the new image path location
-        image_object.save(self.new_image_path)
+        image_resized.save(self.new_image_path, 'JPEG', quality=90)
 
     def center_window(self):
         """Positions the window in the center of the screen"""

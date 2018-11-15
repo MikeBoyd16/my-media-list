@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1114201891310.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/111420189145.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1115201895048.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
       <change beforePath="$PROJECT_DIR$/main_window.py" afterPath="$PROJECT_DIR$/main_window.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="353" column="114" lean-forward="false" selection-start-line="353" selection-start-column="114" selection-end-line="353" selection-end-column="114" />
+            <state relative-caret-position="2981">
+              <caret line="359" column="20" lean-forward="true" selection-start-line="359" selection-start-column="20" selection-end-line="359" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -29,8 +29,8 @@
       <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="214" column="33" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="33" />
+            <state relative-caret-position="261">
+              <caret line="243" column="13" lean-forward="false" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="171" column="40" lean-forward="true" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
+            <state relative-caret-position="204">
+              <caret line="186" column="14" lean-forward="false" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -147,8 +147,8 @@
         <option value="$PROJECT_DIR$/select_category.py" />
         <option value="$PROJECT_DIR$/manage_categories.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
-        <option value="$PROJECT_DIR$/add_item.py" />
         <option value="$PROJECT_DIR$/main_window.py" />
+        <option value="$PROJECT_DIR$/add_item.py" />
       </list>
     </option>
   </component>
@@ -203,7 +203,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -444,13 +444,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00114" summary="Fix a bug where new catalog items aren't inserted into the catalog.">
-      <created>1534950808831</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1534950808831</updated>
     </task>
     <task id="LOCAL-00115" summary="Convert all key values in ManageCategories and ManageFields to strings.">
       <created>1534962203416</created>
@@ -788,7 +781,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542214084794</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="When selected, display an item's image in the item details area in MainWindow.">
+      <created>1542215854739</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1542215854739</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TodoView">
@@ -806,6 +806,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32359308" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
@@ -818,7 +819,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -874,7 +874,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Implement the functionality for the 'Remove' button in MainWindow." />
     <MESSAGE value="Add a confirmation dialog that is displayed when the 'Save' action is successful." />
     <MESSAGE value="Store the file name of a catalog when it is exported." />
     <MESSAGE value="If a current file doesn't exist when pressing the 'Save' button, export     the catalog instead." />
@@ -899,7 +898,8 @@
     <MESSAGE value="Implement saving an item's image to the program directory when adding&#10;a new item." />
     <MESSAGE value="Omit the 'Image Path' field when showing item details in MainWindow." />
     <MESSAGE value="Remove the unused 'self.image' variable from AddItem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove the unused 'self.image' variable from AddItem." />
+    <MESSAGE value="When selected, display an item's image in the item details area in MainWindow." />
+    <option name="LAST_COMMIT_MESSAGE" value="When selected, display an item's image in the item details area in MainWindow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1040,6 +1040,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2981">
+          <caret line="359" column="20" lean-forward="true" selection-start-line="359" selection-start-column="20" selection-end-line="359" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/select_category.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1052,27 +1060,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="214" column="33" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="33" />
+        <state relative-caret-position="261">
+          <caret line="243" column="13" lean-forward="false" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="171" column="40" lean-forward="true" selection-start-line="171" selection-start-column="40" selection-end-line="171" selection-end-column="40" />
+        <state relative-caret-position="204">
+          <caret line="186" column="14" lean-forward="false" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="353" column="114" lean-forward="false" selection-start-line="353" selection-start-column="114" selection-end-line="353" selection-end-column="114" />
-          <folding />
         </state>
       </provider>
     </entry>

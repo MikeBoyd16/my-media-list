@@ -7,17 +7,28 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from select_category import *
 from PyQt5.QtWidgets import *
+from PIL import Image
 
 
 class AddItem(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
         self.setModal(True)
+
+        # Initialize category variables
         self.category = category
         self.category_fields = category_fields
+
+        # Initialize image variables
         self.original_image_path = ""
         self.new_image_path = ""
+        self.image_width = 0
+        self.image_height = 0
+
+        # Initialize item variables
         self.item = {}
+
+        # Initialize window variables
         self.init_widgets()
         self.init_window()
         self.init_layout()
@@ -172,16 +183,23 @@ class AddItem(QDialog):
         self.original_image_path = image[0]
         if self.original_image_path:
             icon = QPixmap(self.original_image_path)
+            self.image_width = QPixmap.width(icon)
+            self.image_height = QPixmap.height(icon)
 
             # Maintain the size of images that have dimensions less than 150px
             # and scale down images that have dimensions greater than 150px
-            if QPixmap.width(icon) <= 150 and QPixmap.height(icon) > 150:
-                icon = icon.scaled(QPixmap.width(icon), 150, Qt.KeepAspectRatio)
-            elif QPixmap.width(icon) > 150 and QPixmap.height(icon) <= 150:
-                icon = icon.scaled(150, QPixmap.height(icon), Qt.KeepAspectRatio)
-            elif QPixmap.width(icon) > 150 and QPixmap.height(icon) > 150:
-                icon = icon.scaled(150, 150, Qt.KeepAspectRatio)
+            if self.image_width <= 150 and self.image_height > 150:
+                self.image_height = 150
+            elif self.image_width > 150 and self.image_height <= 150:
+                self.image_width = 150
+            elif self.image_width > 150 and self.image_height > 150:
+                self.image_width = 150
+                self.image_height = 150
 
+            # Set the scaled dimensions of the icon to fit the container
+            icon = icon.scaled(self.image_width, self.image_height, Qt.KeepAspectRatio)
+
+            # Add the icon to the container
             self.image_container.setPixmap(icon)
 
     def save_image(self):

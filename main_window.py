@@ -353,6 +353,7 @@ class MainWindow(QMainWindow):
                     else:
                         self.item_details.append(label + ": " + str(self.catalog["Data"][item_key][label]) + "\n")
 
+
 def main():
     app = QApplication(sys.argv)
     main_window = MainWindow()

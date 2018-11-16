@@ -254,7 +254,8 @@ class AddItem(QDialog):
                                         str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
 
         # Save the image to the program directory
-        self.save_image()
+        if self.original_image_path:
+            self.save_image()
 
         # Close the window
         self.hide()

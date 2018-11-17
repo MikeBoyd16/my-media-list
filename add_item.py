@@ -179,12 +179,12 @@ class AddItem(QDialog):
 
     def select_image(self):
         """Sets the image for the item"""
-        image = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
-        self.original_image_path = image[0]
+        image_file = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
+        self.original_image_path = image_file[0]
         if self.original_image_path:
-            icon = QPixmap(self.original_image_path)
-            self.image_width = QPixmap.width(icon)
-            self.image_height = QPixmap.height(icon)
+            image = QPixmap(self.original_image_path)
+            self.image_width = QPixmap.width(image)
+            self.image_height = QPixmap.height(image)
 
             # Calculate the image's aspect ratio
             width_ratio = 1.0
@@ -204,10 +204,10 @@ class AddItem(QDialog):
             self.image_height = int(self.image_height)
 
             # Set the scaled dimensions of the icon to fit the container
-            icon = icon.scaled(self.image_width, self.image_height, Qt.KeepAspectRatio)
+            image = image.scaled(self.image_width, self.image_height, Qt.KeepAspectRatio)
 
             # Add the icon to the container
-            self.image_container.setPixmap(icon)
+            self.image_container.setPixmap(image)
 
     def save_image(self):
         """Copies an image to the program directory and saves the path to the item record"""

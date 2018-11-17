@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1117201881226.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1117201882212.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
-      <change beforePath="$PROJECT_DIR$/images/item-images/1116201892347.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <state relative-caret-position="487">
+              <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -83,7 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.category_fields</find>
       <find>self.catalog</find>
       <find>self.row</find>
       <find>current_row</find>
@@ -113,6 +111,7 @@
       <find>self.image_path</find>
       <find>self.update_icon_name</find>
       <find>self.image</find>
+      <find>image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -451,13 +450,6 @@
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
     </task>
-    <task id="LOCAL-00118" summary="Change 'header_title' to 'header' and 'header_logo' to 'logo' in MainWindow.">
-      <created>1535209502347</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1535209502347</updated>
-    </task>
     <task id="LOCAL-00119" summary="Fix a bug where keys in AddItem are integers instead of strings.">
       <created>1535212336527</created>
       <option name="number" value="00119" />
@@ -794,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542390167079</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Resize images that have dimensions greater than 150px while &#10;maintaining the correct aspect ratio in AddItem.">
+      <created>1542471510640</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1542471510640</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TodoView">
@@ -818,7 +817,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2564935" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2564935" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -880,7 +879,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Add a method to MainWindow that loads the last used catalog from the previous session when the program starts and a method that saves the current catalog's address to a text file on exit." />
     <MESSAGE value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
     <MESSAGE value="Remove and replace outdated code in MainWindow that sets the icon for &#10;each list item." />
     <MESSAGE value="Display the top item in the list of catalog items by default." />
@@ -905,7 +903,8 @@
     <MESSAGE value="Add image width and height variables to AddItem." />
     <MESSAGE value="Resize images in AddItem before they are saved to the program directory." />
     <MESSAGE value="Fix a bug where the program crashes if an image isn't selected when&#10;adding an item." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where the program crashes if an image isn't selected when&#10;adding an item." />
+    <MESSAGE value="Resize images that have dimensions greater than 150px while &#10;maintaining the correct aspect ratio in AddItem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Resize images that have dimensions greater than 150px while &#10;maintaining the correct aspect ratio in AddItem." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1081,8 +1080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        <state relative-caret-position="487">
+          <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

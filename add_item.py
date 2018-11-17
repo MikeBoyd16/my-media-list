@@ -186,15 +186,22 @@ class AddItem(QDialog):
             self.image_width = QPixmap.width(icon)
             self.image_height = QPixmap.height(icon)
 
-            # Maintain the size of images that have dimensions less than 150px
-            # and scale down images that have dimensions greater than 150px
-            if self.image_width <= 150 and self.image_height > 150:
-                self.image_height = 150
-            elif self.image_width > 150 and self.image_height <= 150:
-                self.image_width = 150
-            elif self.image_width > 150 and self.image_height > 150:
-                self.image_width = 150
-                self.image_height = 150
+            # Calculate the image's aspect ratio
+            width_ratio = 1.0
+            height_ratio = 1.0
+            if self.image_width > self.image_height:
+                width_ratio = self.image_width / self.image_height
+            else:
+                height_ratio = self.image_height / self.image_width
+
+            # Reduce image dimensions to be less than or equal to 150
+            while self.image_width > 150 or self.image_height > 150:
+                self.image_width -= width_ratio
+                self.image_height -= height_ratio
+
+            # Convert image dimensions back to integers
+            self.image_width = int(self.image_width)
+            self.image_height = int(self.image_height)
 
             # Set the scaled dimensions of the icon to fit the container
             icon = icon.scaled(self.image_width, self.image_height, Qt.KeepAspectRatio)

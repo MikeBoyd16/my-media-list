@@ -8,6 +8,7 @@ from add_item import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PIL import Image
 
 
 class ManageCategories(QDialog):
@@ -15,8 +16,18 @@ class ManageCategories(QDialog):
         super().__init__()
         self.setModal(True)
         self.row = -1
+
+        # Initialize category variables
         self.category_names = category_names
+
+        # Initialize icon variables
         self.category_icon_paths = category_icon_paths
+        self.original_icon_path = ""
+        self.new_icon_path = ""
+        self.icon_width = 0
+        self.icon_height = 0
+
+        # initialize window variables
         self.frame_length = 250
         self.horizontal_position = 0
         self.vertical_position = 375
@@ -220,22 +231,53 @@ class ManageCategories(QDialog):
         current_row = ((self.layouts["fields_layout"].indexOf(current_button) + 1) // 2) - 1
         key = str(current_row)
 
-        original_icon_path = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
-        if original_icon_path[0]:
-            icon_object = QImage()
-            icon_object.load(original_icon_path[0])
-            icon = QPixmap.fromImage(icon_object)
-            icon_object = icon.toImage()
-        else:
-            return
+        icon_file = QFileDialog.getOpenFileName(self, "Open Image", "c:\\", "Image Files (*.png *.jpg *.bmp)")
+        self.original_icon_path = icon_file[0]
+        if self.original_icon_path:
+            icon = QPixmap(self.original_icon_path)
+            self.icon_width = QPixmap.width(icon)
+            self.icon_height = QPixmap.height(icon)
 
-        new_icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
-        icon_object.save(new_icon_path)
-        self.category_icon_paths[key] = new_icon_path
+            # Calculate the icon's aspect ratio
+            width_ratio = 1.0
+            height_ratio = 1.0
+            if self.icon_width > self.icon_height:
+                width_ratio = self.icon_width / self.icon_height
+            else:
+                height_ratio = self.icon_height / self.icon_width
 
-        current_button.setText("")
-        current_button.setIcon(QIcon(self.category_icon_paths[key]))
-        current_button.setIconSize(QSize(35, 35))
+            # Reduce icon dimensions to be less than or equal to 35
+            while self.icon_width > 35 or self.icon_height > 35:
+                self.icon_width -= width_ratio
+                self.icon_height -= height_ratio
+
+            # Convert icon dimensions back to integers
+            self.icon_width = int(self.icon_width)
+            self.icon_height = int(self.icon_height)
+
+            # Set the scaled dimensions of the icon to fit the container
+            icon = icon.scaled(self.icon_width, self.icon_height, Qt.KeepAspectRatio)
+
+            # Create a new icon path and save it at that location
+            self.new_icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
+            self.category_icon_paths[key] = self.new_icon_path
+            self.save_icon()
+
+            # Add the icon to the container
+            current_button.setText("")
+            current_button.setIcon(QIcon(icon))
+
+    def save_icon(self):
+        """Copies an icon to the program directory and saves the path to the category record"""
+
+        # Create an icon image object from the original icon path
+        icon = Image.open(self.original_icon_path)
+
+        # Resize the icon
+        icon_resized = icon.resize((self.icon_width, self.icon_height), Image.ANTIALIAS)
+
+        # Save the image as a new file at the new image path location
+        icon_resized.save(self.new_icon_path, 'JPEG', quality=90)
 
     def update_icon_name(self, key):
         if -1 < self.row < len(self.category_icon_paths):

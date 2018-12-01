@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/item-images/1117201882212.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/add_item.py" afterPath="$PROJECT_DIR$/add_item.py" />
+      <change beforePath="$PROJECT_DIR$/images/category-icons/123.jpg" afterPath="$PROJECT_DIR$/images/category-icons/123.jpg" />
+      <change beforePath="$PROJECT_DIR$/manage_categories.py" afterPath="$PROJECT_DIR$/manage_categories.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,19 +19,32 @@
       <file leaf-file-name="main_window.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-588">
+            <state relative-caret-position="1393">
               <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manage_categories.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3978">
-              <caret line="243" column="13" lean-forward="false" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="2175">
+              <caret line="267" column="47" lean-forward="false" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
+              <folding>
+                <element signature="e#1033#1228#0" expanded="false" />
+                <element signature="e#1265#2807#0" expanded="false" />
+                <element signature="e#2845#4123#0" expanded="false" />
+                <element signature="e#4160#4928#0" expanded="false" />
+                <element signature="e#4969#6316#0" expanded="false" />
+                <element signature="e#6362#6704#0" expanded="false" />
+                <element signature="e#6742#8033#0" expanded="false" />
+                <element signature="e#8074#8715#0" expanded="false" />
+                <element signature="e#8756#9484#0" expanded="false" />
+                <element signature="e#11873#12366#0" expanded="false" />
+                <element signature="e#12424#12950#0" expanded="false" />
+                <element signature="e#12978#13601#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,7 +52,7 @@
       <file leaf-file-name="manage_fields.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/manage_fields.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4420">
+            <state relative-caret-position="1805">
               <caret line="268" column="29" lean-forward="false" selection-start-line="268" selection-start-column="29" selection-end-line="268" selection-end-column="29" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -59,13 +73,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_item.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state relative-caret-position="668">
+              <caret line="208" column="27" lean-forward="false" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#899#1081#0" expanded="false" />
+                <element signature="e#1118#2830#0" expanded="false" />
+                <element signature="e#2875#3261#0" expanded="false" />
+                <element signature="e#3309#3845#0" expanded="false" />
+                <element signature="e#3883#5774#0" expanded="false" />
+                <element signature="e#5811#6916#0" expanded="false" />
+                <element signature="e#9262#9523#0" expanded="false" />
+                <element signature="e#9560#10886#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -82,7 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.catalog</find>
       <find>self.row</find>
       <find>current_row</find>
       <find>key</find>
@@ -112,6 +132,7 @@
       <find>self.update_icon_name</find>
       <find>self.image</find>
       <find>image</find>
+      <find>original_icon_path</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,10 +165,10 @@
         <option value="$PROJECT_DIR$/select_media.py" />
         <option value="$PROJECT_DIR$/add_media.py" />
         <option value="$PROJECT_DIR$/select_category.py" />
-        <option value="$PROJECT_DIR$/manage_categories.py" />
         <option value="$PROJECT_DIR$/manage_fields.py" />
         <option value="$PROJECT_DIR$/main_window.py" />
         <option value="$PROJECT_DIR$/add_item.py" />
+        <option value="$PROJECT_DIR$/manage_categories.py" />
       </list>
     </option>
   </component>
@@ -176,6 +197,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,13 +219,18 @@
               <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
               <item name="omnilog" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="category-icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="omnilog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="omnilog" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
               <item name="item-images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,13 +476,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Fix a bug where keys in AddItem are integers instead of strings.">
-      <created>1535212336527</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1535212336527</updated>
     </task>
     <task id="LOCAL-00120" summary="Initialize the first row in ManageFields when there are no fields.">
       <created>1535302618442</created>
@@ -793,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542471510640</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Rename variables from select_image() in AddItem.">
+      <created>1542471823920</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1542471823920</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TodoView">
@@ -806,18 +833,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23340358" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23337713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32359308" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32328483" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21320346" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2564935" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21413721" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -879,7 +906,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Remove the outdated 'test-files' and 'list-item-icons' folders from the project." />
     <MESSAGE value="Remove and replace outdated code in MainWindow that sets the icon for &#10;each list item." />
     <MESSAGE value="Display the top item in the list of catalog items by default." />
     <MESSAGE value="Change a catalog item's color to white while it is selected." />
@@ -904,14 +930,15 @@
     <MESSAGE value="Resize images in AddItem before they are saved to the program directory." />
     <MESSAGE value="Fix a bug where the program crashes if an image isn't selected when&#10;adding an item." />
     <MESSAGE value="Resize images that have dimensions greater than 150px while &#10;maintaining the correct aspect ratio in AddItem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Resize images that have dimensions greater than 150px while &#10;maintaining the correct aspect ratio in AddItem." />
+    <MESSAGE value="Rename variables from select_image() in AddItem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename variables from select_image() in AddItem." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="42" />
+      <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1034,21 +1061,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PIL/Image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="1658" column="61" lean-forward="true" selection-start-line="1658" selection-start-column="61" selection-end-line="1658" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/manage_fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4420">
+        <state relative-caret-position="1805">
           <caret line="268" column="29" lean-forward="false" selection-start-line="268" selection-start-column="29" selection-end-line="268" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage_categories.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3978">
-          <caret line="243" column="13" lean-forward="false" selection-start-line="243" selection-start-column="13" selection-end-line="243" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,28 +1088,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/add_item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="208" column="27" lean-forward="false" selection-start-line="208" selection-start-column="27" selection-end-line="208" selection-end-column="27" />
+          <folding>
+            <element signature="e#899#1081#0" expanded="false" />
+            <element signature="e#1118#2830#0" expanded="false" />
+            <element signature="e#2875#3261#0" expanded="false" />
+            <element signature="e#3309#3845#0" expanded="false" />
+            <element signature="e#3883#5774#0" expanded="false" />
+            <element signature="e#5811#6916#0" expanded="false" />
+            <element signature="e#9262#9523#0" expanded="false" />
+            <element signature="e#9560#10886#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-588">
+        <state relative-caret-position="1393">
           <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/PIL/Image.py">
+    <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="1658" column="61" lean-forward="true" selection-start-line="1658" selection-start-column="61" selection-end-line="1658" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/add_item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+        <state relative-caret-position="2175">
+          <caret line="267" column="47" lean-forward="false" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="47" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#1033#1228#0" expanded="false" />
+            <element signature="e#1265#2807#0" expanded="false" />
+            <element signature="e#2845#4123#0" expanded="false" />
+            <element signature="e#4160#4928#0" expanded="false" />
+            <element signature="e#4969#6316#0" expanded="false" />
+            <element signature="e#6362#6704#0" expanded="false" />
+            <element signature="e#6742#8033#0" expanded="false" />
+            <element signature="e#8074#8715#0" expanded="false" />
+            <element signature="e#8756#9484#0" expanded="false" />
+            <element signature="e#11873#12366#0" expanded="false" />
+            <element signature="e#12424#12950#0" expanded="false" />
+            <element signature="e#12978#13601#0" expanded="false" />
           </folding>
         </state>
       </provider>

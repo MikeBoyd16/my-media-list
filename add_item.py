@@ -206,7 +206,7 @@ class AddItem(QDialog):
             # Set the scaled dimensions of the icon to fit the container
             image = image.scaled(self.image_width, self.image_height, Qt.KeepAspectRatio)
 
-            # Add the icon to the container
+            # Add the image to the container
             self.image_container.setPixmap(image)
 
     def save_image(self):

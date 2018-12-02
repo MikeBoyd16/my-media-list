@@ -339,19 +339,22 @@ class MainWindow(QMainWindow):
         item_data = item.data(Qt.UserRole)
         item_key = item_data["Date Entered"]
 
-        # Display the item's image
+        # Display the item's image and add spacing
         if "Image Path" in item_data:
-            self.item_details.setHtml("<img src='" + item_data["Image Path"] + "' />")
+            self.item_details.setHtml("<br><br><br><img src='" + item_data["Image Path"] + "' /><br><br>")
+        else:
+            self.item_details.setHtml("<br><br>")
 
         # Display the item's fields
         for label in self.catalog["Data"][item_key]:
+            self.item_details.setAlignment(Qt.AlignCenter)
             if label not in ["Category", "Date Entered", "Image Path"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
                     # If a label's associated data is in a list, display a comma separated string of that data
                     if isinstance(self.catalog["Data"][item_key][label], list):
-                        self.item_details.append(label + ": " + ", ".join(self.catalog["Data"][item_key][label]) + "\n")
+                        self.item_details.append(label + ":\n" + ", ".join(self.catalog["Data"][item_key][label]) + "\n")
                     else:
-                        self.item_details.append(label + ": " + str(self.catalog["Data"][item_key][label]) + "\n")
+                        self.item_details.append(label + ":\n" + str(self.catalog["Data"][item_key][label]) + "\n")
 
 
 def main():

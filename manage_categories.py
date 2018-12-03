@@ -14,8 +14,10 @@ from PIL import Image
 class ManageCategories(QDialog):
     def __init__(self, category_names, category_icon_paths):
         super().__init__()
-        self.setModal(True)
         self.row = -1
+
+        # Set this window to always be on top when visible
+        self.setModal(True)
 
         # Initialize category variables
         self.category_names = category_names
@@ -38,7 +40,7 @@ class ManageCategories(QDialog):
         self.init_categories()
 
     def init_window(self):
-        """Initializes the window, its dimensions, and content"""
+        """Initializes the window and its dimensions"""
         self.setFixedSize(270, self.frame_length)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.init_center_position()
@@ -48,20 +50,25 @@ class ManageCategories(QDialog):
         self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(), "controls_layout": QHBoxLayout(),
                         "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
 
+        # Add the header to the header layout
         self.layouts["header_layout"].addWidget(self.header)
         self.header.setAlignment(Qt.AlignCenter)
 
+        # Add the add and remove category buttons to the controls layout
         self.layouts["controls_layout"].addWidget(self.buttons["add_category"])
         self.layouts["controls_layout"].addWidget(self.buttons["remove_category"])
         self.layouts["controls_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
 
+        # Format the fields layout
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
 
+        # Add the OK button to the submit layout
         self.layouts["submit_layout"].addWidget(self.buttons["ok"])
         self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         self.layouts["submit_layout"].addStretch(1)
 
+        # Add all layouts and spacers to the main layout and set margins and spacing
         for layout in self.layouts:
             if layout == "fields_layout":
                 self.layouts["main_layout"].addWidget(self.top_line)
@@ -72,11 +79,16 @@ class ManageCategories(QDialog):
             self.layouts[layout].setContentsMargins(10, 10, 10, 10)
             self.layouts[layout].setSpacing(15)
 
+        # Set the main layout as the window's layout
         self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+
+        # Initialize the header
         self.header = QLabel("Manage Categories")
+
+        # Initialize, format, and set the event for all buttons
         self.buttons = {"add_category": QPushButton(), "remove_category": QPushButton(), "ok": QPushButton()}
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
@@ -86,6 +98,7 @@ class ManageCategories(QDialog):
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
 
+        # Initialize the top separator
         self.top_line = QFrame()
         self.top_line.setFrameShape(QFrame.HLine)
         self.top_line_shadow = QGraphicsDropShadowEffect()
@@ -93,6 +106,7 @@ class ManageCategories(QDialog):
         self.top_line_shadow.setOffset(2.3)
         self.top_line.setGraphicsEffect(self.top_line_shadow)
 
+        # Initialize the bottom separator
         self.bottom_line = QFrame()
         self.bottom_line.setFrameShape(QFrame.HLine)
         self.bottom_line_shadow = QGraphicsDropShadowEffect()
@@ -100,6 +114,7 @@ class ManageCategories(QDialog):
         self.bottom_line_shadow.setOffset(-2.3)
         self.bottom_line.setGraphicsEffect(self.bottom_line_shadow)
 
+        # Initialize empty category field and button data structures
         self.category_fields = {}
         self.category_buttons = {}
 
@@ -280,6 +295,7 @@ class ManageCategories(QDialog):
         icon_resized.save(self.new_icon_path, 'JPEG', quality=90)
 
     def update_icon_name(self, key):
+        """Updates the icon file name when the name of the category field changes"""
         if -1 < self.row < len(self.category_icon_paths):
             if key in self.category_icon_paths:
                 icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
@@ -303,7 +319,7 @@ class ManageCategories(QDialog):
         self.move(self.horizontal_position, self.vertical_position)
 
     def ok(self):
-        """Returns focus to the main window"""
+        """Updates catalog categories and returns focus to the main window"""
         self.category_names = {}
         temp_category_icon_paths = {}
         category_count = 0

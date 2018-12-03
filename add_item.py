@@ -13,6 +13,8 @@ from PIL import Image
 class AddItem(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
+
+        # Set this window to always be on top when visible
         self.setModal(True)
 
         # Initialize category variables
@@ -35,7 +37,7 @@ class AddItem(QDialog):
         self.init_styles()
 
     def init_window(self):
-        """Initialize the window, its dimensions, and content"""
+        """Initializes the window and its dimensions"""
         self.setGeometry(100, 100, 250, 600)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
@@ -46,26 +48,31 @@ class AddItem(QDialog):
                         "image_layout": QVBoxLayout(), "fields_layout": QVBoxLayout(),
                         "submit_layout": QVBoxLayout()}
 
+        # Add the header to the header layout
         self.layouts["header_layout"].addWidget(self.header)
         self.layouts["header_layout"].setContentsMargins(10, 10, 10, 10)
         self.layouts["header_layout"].setSpacing(5)
 
+        # Add the image container and browse image button to the image layout
         self.layouts["image_layout"].addWidget(self.image_container)
         self.layouts["image_layout"].addWidget(self.browse_image)
         self.layouts["image_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
         self.layouts["image_layout"].setContentsMargins(0, 15, 0, 15)
         self.layouts["image_layout"].setSpacing(20)
 
+        # Format the fields layout
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignTop)
         self.layouts["fields_layout"].setContentsMargins(0, 10, 0, 0)
         self.layouts["fields_layout"].setSpacing(10)
 
+        # Add the submit button to the submit layout
         self.layouts["submit_layout"].addWidget(self.submit)
         self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         self.layouts["submit_layout"].setContentsMargins(10, 10, 10, 10)
         self.layouts["submit_layout"].setSpacing(5)
 
+        # Initialize category fields
         if len(self.category_fields[self.category]) > 0:
             self.init_fields_layouts()
         else:
@@ -73,6 +80,7 @@ class AddItem(QDialog):
             self.browse_image.setEnabled(False)
             self.browse_image.setStyleSheet(".QPushButton {background-color: #F2F2F2;}")
 
+        # Set the main layout as the window's layout
         self.setLayout(self.layouts["main_layout"])
 
     def init_fields_layouts(self):
@@ -100,23 +108,29 @@ class AddItem(QDialog):
         """
         Populates the form with the correct widgets for the selected category
         """
+
+        # Initialize the header
         self.header = QLabel("Add " + self.category)
         self.header.setStyleSheet(".QLabel{font-size: 24px;}")
         self.header.setFixedHeight(20)
         self.header.setAlignment(Qt.AlignCenter)
 
+        # Initialize the no field message label
         self.no_field_message = QLabel("The " + self.category + " category doesn't have any fields.")
         self.no_field_message.setWordWrap(True)
         self.no_field_message.setStyleSheet(".QLabel{font-size: 14px;}")
 
+        # Initialize the image container
         self.image_container = QLabel("Your image here \n(150px x 150px)")
         self.image_container.setFixedSize(150, 150)
         self.image_container.setAlignment(Qt.AlignCenter)
 
+        # Initialize the browse image button
         self.browse_image = QPushButton("Browse")
         self.browse_image.clicked.connect(self.select_image)
         self.browse_image.setFixedSize(120, 30)
 
+        # Initialize and populate the labels and inputs data structures
         self.labels, self.inputs = {}, {}
         for idx in range(len(self.category_fields[self.category])):
             key = str(idx)
@@ -135,6 +149,7 @@ class AddItem(QDialog):
                 self.inputs[field_name].addItems(field_items)
             self.inputs[field_name].setFixedSize(120, 20)
 
+        # Initialize the submit button
         self.submit = QPushButton("Submit", self)
         self.submit.setFixedSize(100, 40)
         self.submit.clicked.connect(self.submit_item)
@@ -236,7 +251,7 @@ class AddItem(QDialog):
         self.move(frame_geometry.topLeft())
 
     def submit_item(self):
-        """Places the inputs from the input fields into a temp data structure"""
+        """Creates a new item and returns focus to the main window"""
         for key in self.inputs:
             if isinstance(self.inputs[key], QComboBox):
                 self.item[key] = self.inputs[key].currentText()

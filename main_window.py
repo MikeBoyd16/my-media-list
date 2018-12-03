@@ -15,16 +15,24 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
+
+        # Initialize catalog variables
         self.catalog = {"Profile": {"Category Names": {}, "Category Fields": {}, "Icon Paths": {}}, "Data": {}}
+
+        # Initialize file variables
         self.current_file = ""
+
+        # Initialize window variables
         self.init_widgets()
         self.init_window()
         self.init_layout()
         self.init_styles()
+
+        # Load the last catalog used from the previous session
         self.load_last_catalog()
 
     def init_window(self):
-        """Initializes the window, its dimensions, and content"""
+        """Initializes the window and its dimensions"""
         self.setGeometry(100, 100, 625, 650)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.center_window()
@@ -37,35 +45,46 @@ class MainWindow(QMainWindow):
                         "center_layout": QVBoxLayout(self.central_widget),
                         "right_layout": QVBoxLayout(self.central_widget)}
 
+        # Add the logo and header to the logo layout and the logo layout to the left layout
         self.layouts["logo_layout"].addWidget(self.logo, 0, 0)
         self.layouts["logo_layout"].addWidget(self.header, 1, 0)
         self.layouts["left_layout"].addLayout(self.layouts["logo_layout"])
 
+        # Add all buttons to the left layout
         for button in self.buttons:
             self.layouts["left_layout"].addWidget(self.buttons[button])
 
+        # Add the list of catalog items to the center layout
         self.layouts["center_layout"].addWidget(self.catalog_items)
 
+        # Add the item details area to the right layout
         self.layouts["right_layout"].addWidget(self.item_details)
 
+        # Add all layouts to the main layout and set margins and spacing to 0
         for layout in self.layouts:
             if layout != "main_layout":
                 self.layouts["main_layout"].addLayout(self.layouts[layout])
             self.layouts[layout].setContentsMargins(0, 0, 0, 0)
             self.layouts[layout].setSpacing(0)
 
+        # Set the main layout as the window's layout
         self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+
+        # Initialize the logo
         self.logo = QLabel(self)
         self.logo.setPixmap(QPixmap("images/omnilog_logo.png"))
         self.logo.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
+
+        # Initialize the header
         self.header = QLabel(self)
         self.header.setText("OmniLog")
         self.header.setAlignment(Qt.AlignCenter)
         self.header.setFixedSize(130, 50)
 
+        # Initialize, format, and set the event for all buttons
         self.buttons = {"import_catalog": QPushButton(), "export_catalog": QPushButton(), "save_catalog": QPushButton(),
                         "categories": QPushButton(), "fields": QPushButton(), "search_catalog": QPushButton(),
                         "add_item": QPushButton(), "remove_item": QPushButton(), "edit_item": QPushButton(),
@@ -80,14 +99,16 @@ class MainWindow(QMainWindow):
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
 
-        # Disable the "Search Catalog" and "Edit Item" buttons for the current release
+        # Disable the "Search Catalog" and "Edit Item" buttons, as they aren't implemented
         self.buttons["search_catalog"].setEnabled(False)
         self.buttons["edit_item"].setEnabled(False)
 
+        # Initialize the list of catalog items
         self.catalog_items = QListWidget(self)
         self.catalog_items.setIconSize(QSize(30, 30))
         self.catalog_items.itemClicked.connect(self.show_item_details)
 
+        # Initialize the item details area
         self.item_details = QTextEdit(self)
         self.item_details.setReadOnly(True)
 

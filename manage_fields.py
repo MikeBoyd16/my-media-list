@@ -12,10 +12,16 @@ from PyQt5.QtWidgets import *
 class ManageFields(QDialog):
     def __init__(self, category, category_fields):
         super().__init__()
-        self.setModal(True)
         self.row = -1
+
+        # Set this window to always be on top when visible
+        self.setModal(True)
+
+        # Initialize category variables
         self.category = category
         self.category_fields = category_fields
+
+        # Initialize window variables
         self.frame_length = 250
         self.horizontal_position = 0
         self.vertical_position = 400
@@ -26,7 +32,7 @@ class ManageFields(QDialog):
         self.init_category_fields()
 
     def init_window(self):
-        """Initializes the window, its dimensions, and content"""
+        """Initializes the window and its dimensions"""
         self.setFixedSize(300, self.frame_length)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.init_center_position()
@@ -36,20 +42,25 @@ class ManageFields(QDialog):
         self.layouts = {"main_layout": QVBoxLayout(), "header_layout": QHBoxLayout(), "controls_layout": QHBoxLayout(),
                         "fields_layout": QGridLayout(), "submit_layout": QVBoxLayout()}
 
+        # Add the header to the header layout
         self.layouts["header_layout"].addWidget(self.header)
         self.layouts["header_layout"].setAlignment(Qt.AlignCenter)
 
+        # Add the add and remove category buttons to the controls layout
         self.layouts["controls_layout"].addWidget(self.buttons["add_field"])
         self.layouts["controls_layout"].addWidget(self.buttons["remove_field"])
         self.layouts["controls_layout"].setAlignment(Qt.AlignCenter)
 
+        # Format the fields layout
         self.layouts["fields_layout"].setSizeConstraint(QLayout.SetFixedSize)
         self.layouts["fields_layout"].setAlignment(Qt.AlignCenter)
 
+        # Add the OK button to the submit layout
         self.layouts["submit_layout"].addWidget(self.buttons["ok"])
         self.layouts["submit_layout"].setAlignment(Qt.AlignHCenter | Qt.AlignBottom)
         self.layouts["submit_layout"].addStretch(1)
 
+        # Add all layouts and spacers to the main layout and set margins and spacing
         for layout in self.layouts:
             if layout == "fields_layout":
                 self.layouts["main_layout"].addWidget(self.top_line)
@@ -60,11 +71,16 @@ class ManageFields(QDialog):
             self.layouts[layout].setContentsMargins(5, 5, 5, 5)
             self.layouts[layout].setSpacing(20)
 
+        # Set the main layout as the window's layout
         self.setLayout(self.layouts["main_layout"])
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+
+        # Initialize the header
         self.header = QLabel(self.category + " Fields")
+
+        # Initialize, format, and set the event for all buttons
         self.buttons = {"add_field": QPushButton(), "remove_field": QPushButton(), "ok": QPushButton()}
         for button in self.buttons:
             button_text = button.replace("_", " ").title().rsplit(' ', 1)[0]
@@ -74,11 +90,13 @@ class ManageFields(QDialog):
             button_method = getattr(self, button)
             self.buttons[button].clicked.connect(button_method)
 
+        # Initialize field and combo item data structures
         self.field_names = {}
         self.field_types = {}
         self.combo_items_buttons = {}
         self.combo_items = {}
 
+        # Initialize the top separator
         self.top_line = QFrame()
         self.top_line.setFrameShape(QFrame.HLine)
         self.top_line_shadow = QGraphicsDropShadowEffect()
@@ -86,6 +104,7 @@ class ManageFields(QDialog):
         self.top_line_shadow.setOffset(2.3)
         self.top_line.setGraphicsEffect(self.top_line_shadow)
 
+        # Initialize the bottom separator
         self.bottom_line = QFrame()
         self.bottom_line.setFrameShape(QFrame.HLine)
         self.bottom_line_shadow = QGraphicsDropShadowEffect()
@@ -219,6 +238,7 @@ class ManageFields(QDialog):
         self.move(self.horizontal_position, self.vertical_position)
 
     def ok(self):
+        """Updates catalog category fields and returns focus to the main window"""
         self.category_fields[self.category] = {}
         field_count = 0
         for current_row in range(self.row + 1):
@@ -269,7 +289,11 @@ class ManageFields(QDialog):
 class GetComboItems(QDialog):
     def __init__(self, field_name, combo_items=""):
         super().__init__()
+
+        # Set this window to always be on top when visible
         self.setModal(True)
+
+        # Initialize window variables
         self.field_name = field_name
         self.combo_items = combo_items
         self.init_widgets()
@@ -279,30 +303,40 @@ class GetComboItems(QDialog):
         self.init_combo_items()
 
     def init_window(self):
-        """Initializes the window, its dimensions, and content"""
+        """Initializes the window and its dimensions"""
         self.setGeometry(100, 100, 150, 150)
         self.setWindowFlags(Qt.CustomizeWindowHint)
         self.center_window()
 
     def init_layout(self):
         """Initializes the layout and arranges the widgets in the proper order."""
+
+        # Initialize the main layout
         self.main_layout = QVBoxLayout(self)
         self.main_layout.addWidget(self.header)
         self.main_layout.addWidget(self.input_field)
         self.main_layout.addWidget(self.ok)
         self.main_layout.setContentsMargins(10, 10, 10, 10)
         self.main_layout.setSpacing(15)
+
+        # Set the main layout as the window's layout
         self.setLayout(self.main_layout)
 
     def init_widgets(self):
         """Initializes widgets and their properties"""
+
+        # Initialize the header
         if self.field_name:
             self.header = QLabel(self.field_name)
         else:
             self.header = QLabel("No Name")
         self.header.setAlignment(Qt.AlignCenter)
+
+        # Initialize the input field for field items
         self.input_field = QLineEdit()
         self.input_field.setPlaceholderText("Enter field items")
+
+        # Initialize the OK button
         self.ok = QPushButton("OK")
         self.ok.clicked.connect(self.submit)
 
@@ -333,6 +367,7 @@ class GetComboItems(QDialog):
         """)
 
     def init_combo_items(self):
+        """Initializes and formats any existing field items"""
         if self.combo_items != "":
             self.input_field.setText("".join(self.combo_items).replace(" ", ", "))
 

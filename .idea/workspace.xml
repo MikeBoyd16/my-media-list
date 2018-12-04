@@ -182,6 +182,9 @@
       <change beforePath="$PROJECT_DIR$/venv1/Scripts/xlwings64.dll" afterPath="" />
       <change beforePath="$PROJECT_DIR$/venv1/pyvenv.cfg" afterPath="" />
     </list>
+    <ignored path=".idea/" />
+    <ignored path="venv/" />
+    <ignored path="venv1/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +229,7 @@
         <entry file="file://$PROJECT_DIR$/manage_categories.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="635">
-              <caret line="167" column="34" lean-forward="true" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
+              <caret line="167" column="34" lean-forward="false" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
               <folding>
                 <element signature="e#1093#1278#0" expanded="false" />
                 <element signature="e#1315#3198#0" expanded="false" />
@@ -292,7 +295,7 @@
         <entry file="file://$PROJECT_DIR$/add_item.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="850">
-              <caret line="283" column="0" lean-forward="true" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+              <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#319#922#0" expanded="false" />
@@ -430,8 +433,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv1" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -672,13 +675,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00127" summary="Remove the now defunct 'Status' label from the list of labels not to&#10;display when showing record data.">
-      <created>1535470731376</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1535470731376</updated>
     </task>
     <task id="LOCAL-00128" summary="Add separators before and after categories in ManageCategories.">
       <created>1535648538593</created>
@@ -1016,7 +1012,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543946212502</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Update omitted PyCharm files.">
+      <created>1543946984752</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1543946984752</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1102,7 +1105,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Switch from dynamic to manual positioning of the ManageCategories frame." />
     <MESSAGE value="Add a message to AddItem when a category is selected that doesn't have &#10;any fields." />
     <MESSAGE value="Fix a bug where the program would crash when trying to add a record from &#10;a category that doesn't have any fields." />
     <MESSAGE value="Add widgets to AddItem for selecting and displaying an optional image." />
@@ -1127,7 +1129,8 @@
     <MESSAGE value="Fix a bug where the program crashes if last_used_catalog.txt&#10;is empty." />
     <MESSAGE value="Fix a bug where a category's icon file is not automatically&#10;renamed when the name of the category changes." />
     <MESSAGE value="Ignore PyCharm files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ignore PyCharm files." />
+    <MESSAGE value="Update omitted PyCharm files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update omitted PyCharm files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1459,7 +1462,7 @@
     <entry file="file://$PROJECT_DIR$/add_item.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
-          <caret line="283" column="0" lean-forward="true" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
+          <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#319#922#0" expanded="false" />
@@ -1509,7 +1512,7 @@
     <entry file="file://$PROJECT_DIR$/manage_categories.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
-          <caret line="167" column="34" lean-forward="true" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
+          <caret line="167" column="34" lean-forward="false" selection-start-line="167" selection-start-column="34" selection-end-line="167" selection-end-column="34" />
           <folding>
             <element signature="e#1093#1278#0" expanded="false" />
             <element signature="e#1315#3198#0" expanded="false" />

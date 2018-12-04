@@ -328,12 +328,12 @@ class MainWindow(QMainWindow):
         file = open("last_used_catalog.txt", "r")
         self.current_file = file.read()
         file.close()
+        if self.current_file:
+            file = open(self.current_file, "r")
+            self.catalog = json.load(file)
+            file.close()
 
-        file = open(self.current_file, "r")
-        self.catalog = json.load(file)
-        file.close()
-
-        self.update_catalog()
+            self.update_catalog()
 
     def store_last_catalog(self):
         """Stores the address of the last used catalog into a text file"""

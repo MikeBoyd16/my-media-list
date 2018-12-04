@@ -296,13 +296,13 @@ class ManageCategories(QDialog):
 
     def update_icon_name(self, key):
         """Updates the icon file name when the name of the category field changes"""
-        if -1 < self.row < len(self.category_icon_paths):
-            if key in self.category_icon_paths:
-                icon_path = "images/category-icons/" + str(self.category_fields[key].text()) + ".jpg"
-                if icon_path not in self.category_icon_paths[key]:
-                    os.rename(self.category_icon_paths[key], icon_path)
-                    self.category_icon_paths[key] = icon_path
-                    self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
+        if key in self.category_icon_paths:
+            category_name = str(self.category_fields[key].text())
+            icon_path = "images/category-icons/" + category_name + ".jpg"
+            if category_name is not '' and icon_path not in self.category_icon_paths[key]:
+                os.rename(self.category_icon_paths[key], icon_path)
+                self.category_icon_paths[key] = icon_path
+                self.category_buttons[key].setIcon(QIcon(self.category_icon_paths[key]))
 
     def update_frame_length(self, change_type):
         """Increases or decreases the length and height of the frame"""

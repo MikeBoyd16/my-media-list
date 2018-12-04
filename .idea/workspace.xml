@@ -2,8 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7be0bd1-4fe5-4a23-a7b6-346cd55eadbf" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Michael.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/omnilog.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Lib/tcl8.6/init.tcl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_asyncio.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_bz2.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_ctypes.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_ctypes_test.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_decimal.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_elementtree.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_hashlib.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_lzma.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_msi.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_multiprocessing.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_overlapped.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_socket.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_sqlite3.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_ssl.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_testbuffer.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_testcapi.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_testconsole.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_testimportmultiple.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_testmultiphase.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/_tkinter.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-console-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-datetime-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-debug-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-errorhandling-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-file-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-file-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-file-l2-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-handle-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-heap-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-interlocked-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-libraryloader-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-localization-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-memory-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-namedpipe-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-processenvironment-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-processthreads-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-processthreads-l1-1-1.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-profile-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-rtlsupport-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-string-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-synch-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-synch-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-sysinfo-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-timezone-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-core-util-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-conio-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-convert-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-environment-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-filesystem-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-heap-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-locale-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-math-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-multibyte-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-private-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-process-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-runtime-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-stdio-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-string-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-time-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/api-ms-win-crt-utility-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/concrt140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/msvcp140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pyexpat.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/python.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/python3.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/python36.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/select.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/sqlite3.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/tcl86t.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/tk86t.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/ucrtbase.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/unicodedata.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/vccorlib140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/vcomp140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/vcruntime140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/winsound.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings32-0.11.5.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/Scripts/xlwings64-0.11.5.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Lib/tcl8.5/init.tcl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/Activate.ps1" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_asyncio.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_bz2.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_ctypes.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_ctypes_test.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_decimal.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_elementtree.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_hashlib.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_lzma.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_msi.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_multiprocessing.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_overlapped.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_socket.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_sqlite3.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_ssl.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_testbuffer.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_testcapi.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_testconsole.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_testimportmultiple.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_testmultiphase.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/_tkinter.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/activate" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/activate.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-console-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-datetime-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-debug-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-errorhandling-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-file-l2-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-handle-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-heap-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-interlocked-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-libraryloader-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-localization-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-memory-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-namedpipe-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processenvironment-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-processthreads-l1-1-1.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-profile-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-rtlsupport-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-string-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-synch-l1-2-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-sysinfo-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-timezone-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-core-util-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-conio-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-convert-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-environment-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-filesystem-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-heap-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-locale-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-math-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-multibyte-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-private-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-process-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-runtime-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-stdio-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-string-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-time-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/api-ms-win-crt-utility-l1-1-0.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/concrt140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/deactivate.bat" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/msvcp140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/pyexpat.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/python.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/python3.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/python36.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/pythoncom36.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/pythonw.exe" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/pywintypes36.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/select.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/sqlite3.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/tcl86t.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/tk86t.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/ucrtbase.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/unicodedata.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/vccorlib140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/vcomp140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/vcruntime140.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/winsound.pyd" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/xlwings32.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/Scripts/xlwings64.dll" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/pyvenv.cfg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -214,11 +391,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-5" />
-    <option name="y" value="3" />
-    <option name="width" value="1423" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2019" />
+    <option name="width" value="1776" />
+    <option name="height" value="2110" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -496,13 +672,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1526763508010</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Change the formatting of the internal 'Date Entered' field.">
-      <created>1535470564045</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1535470564045</updated>
     </task>
     <task id="LOCAL-00127" summary="Remove the now defunct 'Status' label from the list of labels not to&#10;display when showing record data.">
       <created>1535470731376</created>
@@ -840,7 +1009,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543945225968</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Ignore PyCharm files.">
+      <created>1543946212502</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1543946212502</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TodoView">
@@ -853,16 +1029,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="3862" height="2122" extended-state="6" />
+    <frame x="2019" y="0" width="1776" height="2110" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09329829" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20651542" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16883117" sideWeight="0.54847205" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21311475" sideWeight="0.45152792" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19022869" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900208" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1914226" sideWeight="0.49789253" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289749" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289749" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1533264" sideWeight="0.46838778" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -926,7 +1102,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Switch from dynamic to manual positioning of the ManageFields frame." />
     <MESSAGE value="Switch from dynamic to manual positioning of the ManageCategories frame." />
     <MESSAGE value="Add a message to AddItem when a category is selected that doesn't have &#10;any fields." />
     <MESSAGE value="Fix a bug where the program would crash when trying to add a record from &#10;a category that doesn't have any fields." />
@@ -951,7 +1126,8 @@
     <MESSAGE value="Remove test files." />
     <MESSAGE value="Fix a bug where the program crashes if last_used_catalog.txt&#10;is empty." />
     <MESSAGE value="Fix a bug where a category's icon file is not automatically&#10;renamed when the name of the category changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix a bug where a category's icon file is not automatically&#10;renamed when the name of the category changes." />
+    <MESSAGE value="Ignore PyCharm files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ignore PyCharm files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

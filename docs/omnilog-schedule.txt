@@ -1,0 +1,7 @@
+For release 0.9
+
+- Clean up code / UI / small things
+
+- Create tutorial
+
+- Create example catalog

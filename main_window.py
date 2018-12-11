@@ -362,7 +362,8 @@ class MainWindow(QMainWindow):
 
         # Display the item's image and add spacing
         if "Image Path" in item_data:
-            self.item_details.setHtml("<br><br><br><img src='" + item_data["Image Path"] + "' /><br><br>")
+            self.item_details.setHtml("<br><br><br><table border='1' style='margin: 0px auto;'><tr><td><img src='" +
+                                      item_data["Image Path"] + "' /></td></tr></table><br><br>")
         else:
             self.item_details.setHtml("<br><br>")
 

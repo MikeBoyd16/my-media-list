@@ -161,7 +161,6 @@ class MainWindow(QMainWindow):
         self.item_details.setStyleSheet("""
             .QTextEdit {
                 background-color: #247ba0;
-                color: #f3ffbd;
                 font-weight: bold;
                 font-size: 13px;
                 border: none;
@@ -361,22 +360,32 @@ class MainWindow(QMainWindow):
         item_key = item_data["Date Entered"]
 
         # Display the item's image and add spacing
+        item_details = ""
         if "Image Path" in item_data:
-            self.item_details.setHtml("<br><br><br><table border='1' style='margin: 0px auto;'><tr><td><img src='" +
-                                      item_data["Image Path"] + "' /></td></tr></table><br><br>")
-        else:
-            self.item_details.setHtml("<br><br>")
+            item_details += "<br><br><br><table border='1' cellspacing='0' style='margin: 0px auto; " \
+                            "text-align: center; border-style: solid; border-color: #d8eeea;'><tr><td><img src='" + \
+                            item_data["Image Path"] + "' /></td></tr></table>"
 
         # Display the item's fields
+        item_details += "<br><br><table border='1' cellspacing='3' style='margin: 0px auto; " \
+                        "text-align: center; border-style: solid; border-color: #d8eeea;'>"
         for label in self.catalog["Data"][item_key]:
-            self.item_details.setAlignment(Qt.AlignCenter)
+            # self.item_details.setAlignment(Qt.AlignCenter)
             if label not in ["Category", "Date Entered", "Image Path"]:  # Do not display certain labels and data
                 if self.catalog["Data"][item_key][label]:  # Only display a label if there is data associated with it
                     # If a label's associated data is in a list, display a comma separated string of that data
                     if isinstance(self.catalog["Data"][item_key][label], list):
-                        self.item_details.append(label + ":\n" + ", ".join(self.catalog["Data"][item_key][label]) + "\n")
+                        item_details += "<tr><td style='text-align: center; color: #247ba0; " \
+                                        "background-color: #d8eeea; padding: 6px 30px 6px 30px;'>" + \
+                                        "<div style='text-decoration: underline;'>" + label + "</div><br>" + \
+                                        ", ".join(self.catalog["Data"][item_key][label]) + "</td></tr>"
                     else:
-                        self.item_details.append(label + ":\n" + str(self.catalog["Data"][item_key][label]) + "\n")
+                        item_details += "<tr><td style='text-align: center; color: #247ba0; " \
+                                        "background-color: #d8eeea; padding: 6px 30px 6px 30px;'>" + \
+                                        "<div style='text-decoration: underline;'>" + label + "</div><br>" + \
+                                        str(self.catalog["Data"][item_key][label]) + "</td></tr>"
+        item_details += "</table>"
+        self.item_details.setHtml(item_details)
 
 
 def main():

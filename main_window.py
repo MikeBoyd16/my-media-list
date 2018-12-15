@@ -253,7 +253,8 @@ class MainWindow(QMainWindow):
             icon_address = ""
             for key, value in self.catalog["Profile"]["Category Names"].items():
                 if value == field_category:
-                    icon_address = self.catalog["Profile"]["Icon Paths"][key]
+                    if key in self.catalog["Profile"]["Icon Paths"]:
+                        icon_address = self.catalog["Profile"]["Icon Paths"][key]
 
             # Add the icon to the item
             catalog_item_icon = QIcon()

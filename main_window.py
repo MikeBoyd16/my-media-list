@@ -236,7 +236,9 @@ class MainWindow(QMainWindow):
             json.dump(self.catalog, file)
 
             confirm_save = QMessageBox()
+            confirm_save.setIcon(QMessageBox.Information)
             confirm_save.setText("Your changes have been saved successfully.")
+            confirm_save.setWindowTitle("Save Successful")
             confirm_save.exec_()
         else:
             self.export_catalog()
@@ -348,7 +350,7 @@ class MainWindow(QMainWindow):
 
     def quit_program(self):
         """Prompts the user for confirmation that they want to quit the program"""
-        confirm_exit = QMessageBox.question(self, "Confirm exit", "Are you sure you want to quit?",
+        confirm_exit = QMessageBox.question(self, "Confirm Exit", "Are you sure you want to quit?",
                                             QMessageBox.Yes, QMessageBox.No)
         if confirm_exit == QMessageBox.Yes:
             self.store_last_catalog()

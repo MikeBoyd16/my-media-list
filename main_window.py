@@ -40,6 +40,7 @@ class MainWindow(QMainWindow):
         """Initializes the window and its dimensions"""
         self.setGeometry(100, 100, 625, 650)
         self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setWindowIcon(QIcon("images/omnilog_logo.png"))
         self.center_window()
 
     def init_layout(self):

@@ -1,0 +1,2 @@
+To create the Omnilog executable using PyInstaller:
+pyinstaller --onefile --noconsole --icon=images/omnilog_logo.ico -n Omnilog --clean main_window.py
